@@ -1,0 +1,1 @@
+web: gunicorn ember_ash.wsgi
