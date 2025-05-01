@@ -9,3 +9,6 @@ class Booking(models.Model):
     booking_date = models.DateField()
     booking_time = models.TimeField()
     guests_qty = models.IntegerField(default=1)
+
+    # def __str__(self):
+        # return f"Booking for {self.user_id.first_name} on {self.booking_date}"
