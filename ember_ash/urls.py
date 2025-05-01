@@ -19,6 +19,6 @@ from django.urls import path, include
 from booking import views as booking_views
 
 urlpatterns = [
-    path('', booking_views.booking, name='booking'),
+    path('booking/', booking_views.booking, name='booking'),
     path('admin/', admin.site.urls),
 ]
