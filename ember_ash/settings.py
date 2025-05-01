@@ -86,6 +86,9 @@ DATABASES = {
     dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeinstitute-ide.net", "https://.herokuapp.com"
+]
 
 # TEMPORARILY COMMENTING OUT TO DISABLE
 # DATABASES = {
