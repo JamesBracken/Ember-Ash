@@ -3,12 +3,12 @@ from django.db import models
 
 # Create your models here.
 
-class Booking(models.Model):
+class Booking (models.Model):
     booking_number = models.IntegerField(unique=True)
     # user_id = models.IntegerField()
     booking_date = models.DateField()
     booking_time = models.TimeField()
     guests_qty = models.IntegerField(default=1)
-
+    comment = models.CharField(max_length=200)
     # def __str__(self):
         # return f"Booking for {self.user_id.first_name} on {self.booking_date}"
