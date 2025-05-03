@@ -85,7 +85,14 @@ button:hover {
     box-sizing: border-box;
 }
 
+/* Setting body and HTMl styles to take up the full page */
+html {
+    height: 100%;
+}
 
+body {
+    min-height: 100%;
+}
 /* HEADER STYLES */
 
 /* Company header styles */
@@ -105,4 +112,13 @@ button:hover {
 nav li {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+/* Footer styles */
+
+footer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
 }
