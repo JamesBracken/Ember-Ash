@@ -1,7 +1,7 @@
 /* CSS Variables */
 
 :root {
-    --clr-primary: #f7f6f1
+    --clr-primary: #f7f6f1;
     /* --clr-secondary: */
     --clr-black: #454545;
     --clr-white: #fffff5;
@@ -105,7 +105,9 @@ html {
 body {
     min-height: 100%;
     max-width: 1800px!important;
+    background-color: var(--clr-white);
 }
+
 /* HEADER STYLES */
 
 /* Company header styles */
@@ -118,10 +120,11 @@ body {
 
 header {
     position: fixed;
-    /* height: ; */
     top: 0;
     left: 0;
     width: 100%;
+    background-color: var(--clr-white);
+    box-shadow: var(--box-shadow);
 }
 
 /* Navbar styles */
@@ -131,11 +134,31 @@ nav li {
     padding-right: 10px;
 }
 
+/* Add lines below nav link on hover */
+.nav-link {
+    position: relative;
+}
+
+.nav-link:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    background-color: var(--clr-black);
+    height: 1px;
+    width: 0;
+    transition: width 300ms;
+  }
+  
+  .nav-link:hover:after {
+    width: 100%;
+  }
+
 /*  MAIN CONTENT */
 
 /* Push down main content below header at the top of page */
 main {
-    padding-top: 129px;
+    padding-top: 200px;
     padding-bottom: 2px;
 }
 
