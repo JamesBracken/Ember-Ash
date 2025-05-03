@@ -126,6 +126,7 @@ header {
     width: 100%;
     background-color: var(--clr-white);
     box-shadow: var(--box-shadow);
+    z-index: 99;
 }
 
 /* Navbar styles */
