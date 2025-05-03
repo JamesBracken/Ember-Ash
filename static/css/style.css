@@ -1,7 +1,7 @@
 /* CSS Variables */
 
 :root {
-    /* --clr-primary: */
+    --clr-primary: #f7f6f1
     /* --clr-secondary: */
     --clr-black: #454545;
     --clr-white: #fffff5;
@@ -89,13 +89,22 @@ img {
     width: 100%!important;
 }
 
+hr {
+    color: rgba(0, 0, 0, 0.4)
+}
 /* Setting body and HTMl styles to take up the full page */
+/* Shift content from left to center incase of XL devices */
 html {
     height: 100%;
+    display: flex;
+    justify-content: center;
 }
+
+/* Limit page to 1800px for XL devices*/
 
 body {
     min-height: 100%;
+    max-width: 1800px!important;
 }
 /* HEADER STYLES */
 
@@ -111,6 +120,13 @@ body {
 nav li {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+/*  MAIN CONTENT */
+
+.hero-img {
+    /* height: 300px;
+    max-width: 300px; */
 }
 
 /* Footer styles */
