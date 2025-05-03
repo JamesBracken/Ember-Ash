@@ -136,7 +136,7 @@ nav li {
     padding-right: 10px;
 }
 
-/* Add lines below nav link on hover */
+/* Adds a line below the nav link on hover */
 .nav-link {
     position: relative;
 }
@@ -156,6 +156,25 @@ nav li {
     width: 100%;
   }
 
+  /* Removes the line from the CTA on hover */
+  .nav-link-cta {
+    position: relative;
+  }
+
+  .nav-link-cta:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    background-color: var(--clr-black);
+    height: 1px;
+    width: 100%;
+    transition: width 300ms;
+  }
+
+  .nav-link-cta:hover:after {
+    width: 0;
+  }
 /*  MAIN CONTENT */
 
 /* Push down main content below header at the top of page */
