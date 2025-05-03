@@ -1,10 +1,10 @@
 /* CSS Variables */
 
 :root {
-    --clr-primary: #f7f6f1;
+    --clr-primary: #f2eee8;
     /* --clr-secondary: */
     --clr-black: #454545;
-    --clr-white: #fffff5;
+    --clr-white: #ffffff;
 
     --text-primary: sans serif, sans;
     --text-secondary: "PT Serif", serif;
@@ -87,6 +87,7 @@ button:hover {
 img {
     object-fit: cover!important;
     width: 100%!important;
+    border-radius: 0 !important;
 }
 
 hr {
@@ -162,6 +163,16 @@ main {
     padding-bottom: 2px;
 }
 
+/* Cards */
+.card {
+    background-color: var(--clr-primary)!important;
+    border: none!important;
+    border-radius: 0 !important;
+}
+
+.short-card {
+    max-height: 550px;
+}
 /* Footer styles */
 
 footer {
