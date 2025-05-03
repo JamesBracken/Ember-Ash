@@ -116,7 +116,16 @@ body {
     font-weight: 500;
 }
 
+header {
+    position: fixed;
+    /* height: ; */
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
 /* Navbar styles */
+
 nav li {
     padding-left: 10px;
     padding-right: 10px;
@@ -124,15 +133,17 @@ nav li {
 
 /*  MAIN CONTENT */
 
-.hero-img {
-    /* height: 300px;
-    max-width: 300px; */
+/* Push down main content below header at the top of page */
+main {
+    padding-top: 129px;
+    padding-bottom: 2px;
 }
 
 /* Footer styles */
 
 footer {
-    position: fixed;
+    padding-top: 2px;
+    /* position: fixed; */
     width: 100%;
     left: 0;
     bottom: 0;
