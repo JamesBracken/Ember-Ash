@@ -1,0 +1,9 @@
+.company-header h1 {
+    font-family: 'PT Serif', serif !important; 
+    padding-top: 5px;
+    font-size: 35px;
+}
+
+.company-header {
+    height: 50px;
+}
