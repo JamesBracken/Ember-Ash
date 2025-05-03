@@ -1,9 +1,22 @@
+
+
+/* HEADER STYLES */
+
+/* Company header styles */
 .company-header h1 {
     font-family: 'PT Serif', serif !important; 
     padding-top: 5px;
     font-size: 35px;
+    font-weight: 500;
 }
 
 .company-header {
     height: 50px;
+}
+
+/* Navbar styles */
+
+nav li {
+    padding-left: 10px;
+    padding-right: 10px;
 }
