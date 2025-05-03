@@ -84,11 +84,6 @@ button:hover {
     box-sizing: border-box;
 }
 
-img {
-    object-fit: cover!important;
-    width: 100%!important;
-}
-
 /* Setting body and HTMl styles to take up the full page */
 html {
     height: 100%;
@@ -107,7 +102,12 @@ body {
     font-weight: 500;
 }
 
+/* .company-header {
+    height: 50px; */
+/* } */
+
 /* Navbar styles */
+
 nav li {
     padding-left: 10px;
     padding-right: 10px;
