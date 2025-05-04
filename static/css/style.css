@@ -139,6 +139,7 @@ nav li {
 /* Adds a line below the nav link on hover */
 .nav-link {
     position: relative;
+    display: inline-block;
 }
 
 .nav-link:after {
