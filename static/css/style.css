@@ -207,3 +207,8 @@ footer {
     left: 0;
     bottom: 0;
 }
+
+i {
+    font-size: 40px;
+    color: var(--clr-black);
+}
