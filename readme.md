@@ -29,6 +29,11 @@ Describe the other testing md file
 ## Credits
 ### Content
 ### Media
-### Code
+### Code used
+
+* For my modal I copied code from the Bootstrap docs and tweaked it
+[Bootstrap Modals](https://getbootstrap.com/docs/4.0/components/modal/)
+
+
 ### Acknowledgements
 Separate md Testing
