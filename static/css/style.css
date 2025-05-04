@@ -109,6 +109,11 @@ body {
     background-color: var(--clr-white);
 }
 
+.form-input {
+    border-bottom: solid 1px rgba(128, 128, 128, .5);
+    margin: 5px;
+}
+
 /* HEADER STYLES */
 
 /* Company header styles */
@@ -158,11 +163,13 @@ nav li {
   }
 
   /* Removes the line from the CTA on hover */
-  .nav-link-cta {
+  .nav-link-cta,
+  .modal-nav-link {
     position: relative;
   }
 
-  .nav-link-cta:after {
+  .nav-link-cta:after,
+  .modal-nav-link:after {
     content: "";
     position: absolute;
     left: 0;
@@ -173,7 +180,8 @@ nav li {
     transition: width 300ms;
   }
 
-  .nav-link-cta:hover:after {
+  .nav-link-cta:hover:after,
+  .modal-nav-link:hover:after {
     width: 0;
   }
 
@@ -185,18 +193,24 @@ nav li {
     right: 20px;
     max-width: fit-content;
   }
-
+  
   /* Login modal */
 
   .modal-backdrop {
     z-index: 1040 !important;
   }
+
   .modal {
     z-index: 1050 !important;
   }
 
-  #login-form input{
-    border: solid 1px rgba(128, 128, 128, .5)
+  #login-submit {
+    /* display: inline-block; */
+    /* position: relative; */
+    /* float: right;
+    right: 3px; */
+    /* bottom: 1px; */
+    /* margin: 5px; */
   }
 /*  MAIN CONTENT */
 
