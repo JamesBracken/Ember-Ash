@@ -176,6 +176,15 @@ nav li {
   .nav-link-cta:hover:after {
     width: 0;
   }
+
+  /* Login buttons */
+
+  .login-link {
+    position: fixed;
+    top: 25px;
+    right: 20px;
+  }
+
   /* Login modal */
 
   .modal-backdrop {
