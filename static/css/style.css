@@ -180,9 +180,10 @@ nav li {
   /* Login buttons */
 
   .login-link {
-    position: fixed;
-    top: 25px;
+    position: fixed!important;
+    top: 30px;
     right: 20px;
+    max-width: fit-content;
   }
 
   /* Login modal */
