@@ -139,6 +139,7 @@ nav li {
 /* Adds a line below the nav link on hover */
 .nav-link {
     position: relative;
+    display: inline-block;
 }
 
 .nav-link:after {
@@ -194,6 +195,9 @@ main {
     max-height: 550px;
 }
 
+.tall-card {
+    max-height: 800px;
+}
 .home-card-text {
     font-size: var(--fs-heading-4)!important;
     font-family: var(--text-secondary);
@@ -211,4 +215,13 @@ footer {
 i {
     font-size: 40px;
     color: var(--clr-black);
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    .card-img-top {
+        max-height: 600px!important;
+    }
 }
