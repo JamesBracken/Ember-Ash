@@ -1,10 +1,10 @@
 /* CSS Variables */
 
 :root {
-    /* --clr-primary: */
+    --clr-primary: #f2eee8;
     /* --clr-secondary: */
     --clr-black: #454545;
-    --clr-white: #fffff5;
+    --clr-white: #ffffff;
 
     --text-primary: sans serif, sans;
     --text-secondary: "PT Serif", serif;
@@ -84,14 +84,31 @@ button:hover {
     box-sizing: border-box;
 }
 
+img {
+    object-fit: cover!important;
+    width: 100%!important;
+    border-radius: 0 !important;
+}
+
+hr {
+    color: rgba(0, 0, 0, 0.4)
+}
 /* Setting body and HTMl styles to take up the full page */
+/* Shift content from left to center incase of XL devices */
 html {
     height: 100%;
+    display: flex;
+    justify-content: center;
 }
+
+/* Limit page to 1800px for XL devices*/
 
 body {
     min-height: 100%;
+    max-width: 1800px!important;
+    background-color: var(--clr-white);
 }
+
 /* HEADER STYLES */
 
 /* Company header styles */
@@ -102,9 +119,15 @@ body {
     font-weight: 500;
 }
 
-/* .company-header {
-    height: 50px; */
-/* } */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-white);
+    box-shadow: var(--box-shadow);
+    z-index: 99;
+}
 
 /* Navbar styles */
 
@@ -113,11 +136,79 @@ nav li {
     padding-right: 10px;
 }
 
-/* Footer styles */
+/* Adds a line below the nav link on hover */
+.nav-link {
+    position: relative;
+}
+
+.nav-link:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    background-color: var(--clr-black);
+    height: 1px;
+    width: 0;
+    transition: width 300ms;
+  }
+  
+  .nav-link:hover:after {
+    width: 100%;
+  }
+
+  /* Removes the line from the CTA on hover */
+  .nav-link-cta {
+    position: relative;
+  }
+
+  .nav-link-cta:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    background-color: var(--clr-black);
+    height: 1px;
+    width: 100%;
+    transition: width 300ms;
+  }
+
+  .nav-link-cta:hover:after {
+    width: 0;
+  }
+/*  MAIN CONTENT */
+
+/* Push down main content below header at the top of page */
+main {
+    padding-top: 200px;
+    padding-bottom: 2px;
+}
+
+/* Cards */
+.card {
+    background-color: var(--clr-primary)!important;
+    border: none!important;
+    border-radius: 0 !important;
+}
+
+.short-card {
+    max-height: 550px;
+}
+
+.home-card-text {
+    font-size: var(--fs-heading-4)!important;
+    font-family: var(--text-secondary);
+}
+/* FOOTER STYLES */
 
 footer {
-    position: fixed;
+    padding-top: 2px;
+    /* position: fixed; */
     width: 100%;
     left: 0;
     bottom: 0;
+}
+
+i {
+    font-size: 40px;
+    color: var(--clr-black);
 }
