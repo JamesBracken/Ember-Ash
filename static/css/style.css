@@ -194,6 +194,10 @@ nav li {
   .modal {
     z-index: 1050 !important;
   }
+
+  #login-form input{
+    border: solid 1px rgba(128, 128, 128, .5)
+  }
 /*  MAIN CONTENT */
 
 /* Push down main content below header at the top of page */

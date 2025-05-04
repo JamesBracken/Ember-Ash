@@ -52,10 +52,9 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Gallery</a>
               </li>
-              {% comment %} Testing login nav link {% endcomment %}
-               <li class="nav-item">
-              </li>
-              {% comment %} Testing end {% endcomment %}
+              {% comment %}Testing login nav link{% endcomment %}
+              <li class="nav-item"></li>
+              {% comment %}Testing end{% endcomment %}
             </ul>
           </div>
         </div>
@@ -64,10 +63,11 @@
 
     <main>
       {% block content %}
+
       {% endblock %}
     </main>
     <footer>
-      <hr>
+      <hr />
       <div class="container">
         <div class="row">
           <div class="col-12 d-flex justify-content-evenly">
@@ -95,24 +95,31 @@
       <hr />
       <p class="text-center">&copy; 2025 Ember Ash. All rights reserved. Created by James</p>
     </footer>
-    
-    {% comment %}Start of test modal{% endcomment %}
 
+    {% comment %}LOGIN MODAL{% endcomment %}
     <div class="col-3 float-right">
       <div class="modal fade" id="login-modal-toggle" aria-labelledby="login-modal-toggle-label" tabindex="-1" aria-hidden="true" style="display: none;">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="login-modal-toggle-label">Modal 1</h1>
+              <h1 class="modal-title fs-5" id="login-modal-toggle-label">Login</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">Show a second modal and hide this one with the button below.</div>
+              {% comment %} Form action and method to be filled in {% endcomment %}
+              <form id="login-form"action="" method="">
+                <label for="form-username">Username</label>
+                <input type="text" class="" id="form-username" name="username" required>
+                <label for="form-password">Password</label>
+                <input type="text" class="" id="form-password" name="password" required>
+              </form>
+            </div>
             <div class="modal-footer">
               <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
             </div>
           </div>
         </div>
       </div>
+      {% comment %}SIGNUP MODAL{% endcomment %}
       <div class="modal fade" id="exampleModalToggle2" aria-labelledby="exampleModalToggleLabel2" tabindex="-1" aria-hidden="true" style="display: none;">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -128,7 +135,6 @@
         </div>
       </div>
     </div>
-    {% comment %}End of test modal{% endcomment %}
 
     {% comment %}Font awesome script{% endcomment %}
     <script src="https://kit.fontawesome.com/d51c017cc6.js" crossorigin="anonymous"></script>
