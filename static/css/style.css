@@ -193,7 +193,12 @@ main {
 .short-card {
     max-height: 550px;
 }
-/* Footer styles */
+
+.home-card-text {
+    font-size: var(--fs-heading-4)!important;
+    font-family: var(--text-secondary);
+}
+/* FOOTER STYLES */
 
 footer {
     padding-top: 2px;
