@@ -101,20 +101,29 @@
       <div class="modal fade" id="login-modal-toggle" aria-labelledby="login-modal-toggle-label" tabindex="-1" aria-hidden="true" style="display: none;">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="login-modal-toggle-label">Login</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-              {% comment %} Form action and method to be filled in {% endcomment %}
-              <form id="login-form"action="" method="">
-                <label for="form-username">Username</label>
-                <input type="text" class="" id="form-username" name="username" required>
-                <label for="form-password">Password</label>
-                <input type="text" class="" id="form-password" name="password" required>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+            <div class="row">
+              <div class="col-4">
+                {% comment %} Insert image {% endcomment %}
+              </div>
+              <div class="col-8">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="login-modal-toggle-label">Login</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                {% comment %}Form action and method to be filled in{% endcomment %}
+                <div class="modal-body">
+                  <form id="login-form" action="" method="">
+                    <label for="form-username">Username</label>
+                    <input type="text" class="" id="form-username" name="username" required />
+                    <label for="form-password">Password</label>
+                    <input type="text" class="" id="form-password" name="password" required />
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <p>Dont have an account yet?</p>
+                  <button class="modal-nav-link" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Signup</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
