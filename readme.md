@@ -34,6 +34,10 @@ Describe the other testing md file
 * For my modal I copied code from the Bootstrap docs and tweaked it
 [Bootstrap Modals](https://getbootstrap.com/docs/4.0/components/modal/)
 
+* For the time for loop adding in the available booking times 
+[Time for loop](https://stackoverflow.com/questions/51164326/how-can-i-add-choices-to-a-timefield-in-a-django-form)
+HOUR_CHOICES = [(datetime.time(hour=x), '{:02d}:00'.format(x)) for x in range(9, 23)]
+
 
 ### Acknowledgements
 Separate md Testing
