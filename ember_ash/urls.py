@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .views import ModalLogin
 # from booking import views as booking_views
 
 urlpatterns = [
     path('home/', include('home.urls'), name='home_urls'),
+    path('accounts/login/', ModalLogin.as_view(), name='account_login')
     path('account/', include('allauth.urls')),
     path('', include('booking.urls'), name='booking_urls'),
     path('admin/', admin.site.urls),
