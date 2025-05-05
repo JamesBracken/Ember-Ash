@@ -1,8 +1,19 @@
 {% load static %}
+{% load account %}
+{% with form=login_form %}
 
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
+
+{% comment %} DISPLAYS FORM ERRORS IF ANY {% endcomment %}
+
+{% if form.errors %}
+  <div class="alert alert-danger">
+    {{ form.errors }}
+  </div>
+{% endif %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +43,7 @@
           <div class="col-8 col-md-6 col-lg-5 mt-2">
             <a href="#"><h1 class="text-center inline-block">Ember and ash</h1></a>
           </div>
+          {% comment %} IF CHECK TO DYNAMICALLY UPDATE LOGIN/LOGOUT {% endcomment %}
           {% if user.is_authenticated %}
             {% comment %}My profile Log out{% endcomment %}
             <a href="FILL IN WITH PROFILE LINK"><i class="fa-solid fa-circle-user"></i></a>
@@ -139,15 +151,12 @@
                 </div>
                 {% comment %}Form action and method to be filled in{% endcomment %}
                 <div class="modal-body">
-                  <form id="login-form" action="" method="">
-                    <label for="form-username">Username:</label>
-                    <input type="text" class="form-input" id="form-username" name="username" required />
-                    <label for="form-password">Password:</label>
-                    <input type="text" class="form-input" id="form-password" name="password" required />
-                    <div class="justify-content-right">
-                      <button type="submit" id="login-submit">Login</button>
-                    </div>
+                  {% comment %} TEST FORM  {% endcomment %}
+                  <form method="post" action="{% url 'account_login' %}">
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Login</button>
                   </form>
+                  {% endwith %}
                 </div>
                 <div class="modal-footer">
                   <p>Dont have an account yet?</p>
@@ -174,6 +183,23 @@
         </div>
       </div>
     </div>
+
+
+    {% comment %} PREVIOUSLY USED FORM MODAL  {% endcomment %}
+    {% comment %} <div class="modal-body">
+                  <form id="login-form" action="" method="">
+                    <label for="form-username">Username:</label>
+                    <input type="text" class="form-input" id="form-username" name="username" required />
+                    <label for="form-password">Password:</label>
+                    <input type="text" class="form-input" id="form-password" name="password" required />
+                    <div class="justify-content-right">
+                      <button type="submit" id="login-submit">Login</button>
+                    </div>
+                  </form>
+                </div> 
+                </div>{% endcomment %}
+
+    
 
     {% comment %}Font awesome script{% endcomment %}
     <script src="https://kit.fontawesome.com/d51c017cc6.js" crossorigin="anonymous"></script>
