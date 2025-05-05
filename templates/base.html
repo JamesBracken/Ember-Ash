@@ -1,5 +1,9 @@
 {% load static %}
 
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,7 +32,17 @@
           <div class="col-8 col-md-6 col-lg-5 mt-2">
             <a href="#"><h1 class="text-center inline-block">Ember and ash</h1></a>
           </div>
-          <button class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</button>
+          {% if user.is_authenticated %}
+            {% comment %}My profile Log out{% endcomment %}
+            <a href="FILL IN WITH PROFILE LINK"><i class="fa-solid fa-circle-user"></i></a>
+            {% comment %}WHEN LOGIN MODAL IS CONNECTED------------------------{% endcomment %}
+            {% comment %}
+          {% else %}
+            <a class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a> {% endcomment %}
+          {% endif %}
+          <a class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a>
+
+          {% comment %} <a class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a> {% endcomment %}
         </div>
       </div>
       {% comment %} <hr /> {% endcomment %}
@@ -52,8 +66,21 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Gallery</a>
               </li>
+              {% comment %}USING TEMPORARILY UNTIL LOGIN MODAL WORKS{% endcomment %}
+              {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+              {% else %}
+                <li class="nav-item">
+                  <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+                </li>
+              {% endif %}
               {% comment %}Testing login nav link{% endcomment %}
-              <li class="nav-item"></li>
+              {% comment %} <li class="nav-item"></li> {% endcomment %}
               {% comment %}Testing end{% endcomment %}
             </ul>
           </div>
@@ -103,7 +130,7 @@
           <div class="modal-content">
             <div class="row">
               <div class="col-4">
-                {% comment %} Insert image {% endcomment %}
+                {% comment %}Insert image{% endcomment %}
               </div>
               <div class="col-8">
                 <div class="modal-header">
@@ -113,12 +140,12 @@
                 {% comment %}Form action and method to be filled in{% endcomment %}
                 <div class="modal-body">
                   <form id="login-form" action="" method="">
-                    <label for="form-username">Username:   </label>
+                    <label for="form-username">Username:</label>
                     <input type="text" class="form-input" id="form-username" name="username" required />
-                    <label for="form-password">Password:   </label>
+                    <label for="form-password">Password:</label>
                     <input type="text" class="form-input" id="form-password" name="password" required />
                     <div class="justify-content-right">
-                    <button type="submit" id="login-submit">Login</button>
+                      <button type="submit" id="login-submit">Login</button>
                     </div>
                   </form>
                 </div>
