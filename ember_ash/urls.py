@@ -20,9 +20,9 @@ from .views import ModalLogin
 # from booking import views as booking_views
 
 urlpatterns = [
-    path('home/', include('home.urls'), name='home_urls'),
+    path('', include('home.urls'), name='home_urls'),
     path('accounts/login/', ModalLogin.as_view(), name='account_login'),
-    path('account/', include('allauth.urls')),
+    path('accounts/', include('allauth.urls')),
     path('', include('booking.urls'), name='booking_urls'),
     path('admin/', admin.site.urls),
 ]

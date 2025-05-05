@@ -153,7 +153,23 @@
                 <div class="modal-body">
                   {% comment %} TEST FORM  {% endcomment %}
                   <form method="post" action="{% url 'account_login' %}">
-                    {{ form.as_p }}
+                    {% csrf_token %}
+                    <div>
+                      {{ form.login.label_tag }}
+                      {{ form.login }}
+                      {{ form.login.errors }}
+                    </div>
+                    <div>
+                      {{ form.password.label_tag }}
+                      {{ form.password }}
+                      {{ form.password.errors }}
+                    </div>
+                    {% if form.non_field_errors %}
+                    <div>
+                      {{ form.non_field_errors }}
+                    </div>
+                    {% endif %}
+                    {% comment %} {{ form.as_p }} {% endcomment %}
                     <button type="submit" class="btn btn-primary">Login</button>
                   </form>
                   {% endwith %}
