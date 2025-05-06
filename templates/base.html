@@ -1,19 +1,15 @@
 {% load static %}
 {% load account %}
-{% with form=login_form %}
-
+{% load widget_tweaks %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 
-{% comment %} DISPLAYS FORM ERRORS IF ANY {% endcomment %}
+{% comment %}DISPLAYS FORM ERRORS IF ANY{% endcomment %}
 
 {% if form.errors %}
-  <div class="alert alert-danger">
-    {{ form.errors }}
-  </div>
+  <div class="alert alert-danger">{{ form.errors }}</div>
 {% endif %}
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,21 +39,26 @@
           <div class="col-8 col-md-6 col-lg-5 mt-2">
             <a href="#"><h1 class="text-center inline-block">Ember and ash</h1></a>
           </div>
-          {% comment %} IF CHECK TO DYNAMICALLY UPDATE LOGIN/LOGOUT {% endcomment %}
+          {% comment %}If check to add user profile if authenticated{% endcomment %}
           {% if user.is_authenticated %}
             {% comment %}My profile Log out{% endcomment %}
             <a href="FILL IN WITH PROFILE LINK"><i class="fa-solid fa-circle-user"></i></a>
-            {% comment %}WHEN LOGIN MODAL IS CONNECTED------------------------{% endcomment %}
-            {% comment %}
-          {% else %}
-            <a class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a> {% endcomment %}
           {% endif %}
-          <a class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a>
-
-          {% comment %} <a class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a> {% endcomment %}
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+            </li>
+          {% else %}
+            {% comment %}KEEPING INCASE REGISTER NAV LINK NEEDED{% endcomment %}
+            {% comment %} <li class="nav-item">
+              <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}">Register</a>
+            </li> {% endcomment %}
+            <li class="nav-item">
+              <a class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a>
+            </li>
+          {% endif %}
         </div>
       </div>
-      {% comment %} <hr /> {% endcomment %}
       <nav class="navbar navbar-expand-lg mb-2">
         <div class="container-fluid justify-content-center">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -78,22 +79,6 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Gallery</a>
               </li>
-              {% comment %}USING TEMPORARILY UNTIL LOGIN MODAL WORKS{% endcomment %}
-              {% if user.is_authenticated %}
-                <li class="nav-item">
-                  <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
-                </li>
-              {% else %}
-                <li class="nav-item">
-                  <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}">Register</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
-                </li>
-              {% endif %}
-              {% comment %}Testing login nav link{% endcomment %}
-              {% comment %} <li class="nav-item"></li> {% endcomment %}
-              {% comment %}Testing end{% endcomment %}
             </ul>
           </div>
         </div>
@@ -141,42 +126,44 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="row">
-              <div class="col-4">
+              <div class="col-3">
                 {% comment %}Insert image{% endcomment %}
               </div>
-              <div class="col-8">
+              <div class="col-9">
                 <div class="modal-header">
                   <h1 class="modal-title fs-5" id="login-modal-toggle-label">Login</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 {% comment %}Form action and method to be filled in{% endcomment %}
                 <div class="modal-body">
-                  {% comment %} TEST FORM  {% endcomment %}
-                  <form method="post" action="{% url 'account_login' %}">
-                    {% csrf_token %}
-                    <div>
-                      {{ form.login.label_tag }}
-                      {{ form.login }}
-                      {{ form.login.errors }}
-                    </div>
-                    <div>
-                      {{ form.password.label_tag }}
-                      {{ form.password }}
-                      {{ form.password.errors }}
-                    </div>
-                    {% if form.non_field_errors %}
-                    <div>
-                      {{ form.non_field_errors }}
-                    </div>
-                    {% endif %}
-                    {% comment %} {{ form.as_p }} {% endcomment %}
-                    <button type="submit" class="btn btn-primary">Login</button>
-                  </form>
+                  {% comment %}TEST FORM{% endcomment %}
+                  {% with form=login_form %}
+                    <form method="post" action="{% url 'account_login' %}">
+                      {% csrf_token %}
+                      <div>
+                        {{ form.login.label_tag }}
+                        {{ form.login|add_class:'form-input' }}
+                        {{ form.login.errors }}
+                        {% comment %}form-input{% endcomment %}
+                      </div>
+                      <div>{{ form.password.label_tag }}
+                        {{ form.password|add_class:'form-input' }}
+                        {{ form.password.errors }}
+                      </div>
+                      {% if form.non_field_errors %}
+                        <div>{{ form.non_field_errors }}</div>
+                      {% endif %}
+                      {% comment %} <button type="submit" class="btn btn-primary">Login</button> {% endcomment %}
+                      <div class="d-flex justify-content-center">
+                        <button type="submit" class="button">Login</button>
+                      </div>
+                      {% comment %} <button type="submit" class="button">Login</button> {% endcomment %}
+                    </form>
                   {% endwith %}
                 </div>
                 <div class="modal-footer">
                   <p>Dont have an account yet?</p>
-                  <button class="modal-nav-link" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Signup</button>
+                  <button class="modal-nav-link" data-bs-target="#signup-modal-toggle" data-bs-toggle="modal">Signup</button>
                 </div>
               </div>
             </div>
@@ -184,38 +171,53 @@
         </div>
       </div>
       {% comment %}SIGNUP MODAL{% endcomment %}
-      <div class="modal fade" id="exampleModalToggle2" aria-labelledby="exampleModalToggleLabel2" tabindex="-1" aria-hidden="true" style="display: none;">
+      <div class="modal fade" id="signup-modal-toggle" aria-labelledby="signup-modal-toggle-label" tabindex="-1" aria-hidden="true" style="display: none;">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">Hide this modal and show the first with the button below.</div>
-            <div class="modal-footer">
-              <button class="btn btn-primary" data-bs-target="#login-modal-toggle" data-bs-toggle="modal">Back to first</button>
+            <div class="row">
+              <div class="col-3">
+                {% comment %}Fill in with image{% endcomment %}
+              </div>
+              <div class="col-9">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="signup-modal-toggle-label">Modal 2</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form action="">
+                    {% with form=signup_form %}
+                      {% csrf_token %}
+                      <div>{{ form.username.label_tag }}
+                        {{ form.username|add_class:'form-input' }}
+                        {{ form.username.errors }}</div>
+                      <div>{{ form.email.label_tag }}
+                        {{ form.email|add_class:'form-input' }}
+                        {{ form.email.errors }}</div>
+                      <div>{{ form.password1.label_tag }}
+                        {{ form.password1|add_class:'form-input' }}
+                        {{ form.password1.errors }}</div>
+                      <div>{{ form.password2.label_tag }}
+                        {{ form.password2|add_class:'form-input' }}
+                        {{ form.password2.errors }}</div>
+                    {% endwith %}
+                    {% if form.non_field_errors %}
+                      <div>{{ form.non_field_errors }}</div>
+                    {% endif %}
+                    <div class="d-flex justify-content-center">
+                      <button type="submit" class="button">Sign Up</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <p>Already have an account?</p>
+                  <button class="modal-nav-link" data-bs-target="#login-modal-toggle" data-bs-toggle="modal">Login</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
-    {% comment %} PREVIOUSLY USED FORM MODAL  {% endcomment %}
-    {% comment %} <div class="modal-body">
-                  <form id="login-form" action="" method="">
-                    <label for="form-username">Username:</label>
-                    <input type="text" class="form-input" id="form-username" name="username" required />
-                    <label for="form-password">Password:</label>
-                    <input type="text" class="form-input" id="form-password" name="password" required />
-                    <div class="justify-content-right">
-                      <button type="submit" id="login-submit">Login</button>
-                    </div>
-                  </form>
-                </div> 
-                </div>{% endcomment %}
-
-    
 
     {% comment %}Font awesome script{% endcomment %}
     <script src="https://kit.fontawesome.com/d51c017cc6.js" crossorigin="anonymous"></script>
