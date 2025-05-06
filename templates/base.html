@@ -193,8 +193,8 @@
             </div>
             <div class="modal-body">
               <form action="">
+                {% with form=signup_form %}
                 {% csrf_token %}
-                {% with form=signup_form%}
                 <div>
                   {{ form.username.label_tag }}
                   {{ form.username }}
@@ -215,13 +215,14 @@
                   {{ form.password2 }}
                   {{ form.password2.errors }}
                 </div>
+                {% comment %} {{ form.as_p}} {% endcomment %}
+                {% endwith %}
                 {% if form.non_field_errors %}
                 <div>
                   {{ form.non_field_errors}}
                 </div>
                 {% endif %}
                 <button type="submit">Sign Up</button>
-                {% endwith %}
               </form>
               Hide this modal and show the first with the button below.</div>
             <div class="modal-footer">
@@ -231,23 +232,6 @@
         </div>
       </div>
     </div>
-
-
-    {% comment %} PREVIOUSLY USED FORM MODAL  {% endcomment %}
-    {% comment %} <div class="modal-body">
-                  <form id="login-form" action="" method="">
-                    <label for="form-username">Username:</label>
-                    <input type="text" class="form-input" id="form-username" name="username" required />
-                    <label for="form-password">Password:</label>
-                    <input type="text" class="form-input" id="form-password" name="password" required />
-                    <div class="justify-content-right">
-                      <button type="submit" id="login-submit">Login</button>
-                    </div>
-                  </form>
-                </div> 
-                </div>{% endcomment %}
-
-    
 
     {% comment %}Font awesome script{% endcomment %}
     <script src="https://kit.fontawesome.com/d51c017cc6.js" crossorigin="anonymous"></script>
