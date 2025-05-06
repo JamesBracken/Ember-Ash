@@ -86,7 +86,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'ember_ash.context_processors.login_form'
+                'ember_ash.context_processors.login_form',
+                'ember_ash.context_processors.signup_form'
             ],
         },
     },
