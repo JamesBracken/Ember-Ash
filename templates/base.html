@@ -1,6 +1,5 @@
 {% load static %}
 {% load account %}
-{% with form=login_form %}
 
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
@@ -153,6 +152,7 @@
                 <div class="modal-body">
                   {% comment %} TEST FORM  {% endcomment %}
                   <form method="post" action="{% url 'account_login' %}">
+                    {% with form=login_form %}
                     {% csrf_token %}
                     <div>
                       {{ form.login.label_tag }}
@@ -176,7 +176,7 @@
                 </div>
                 <div class="modal-footer">
                   <p>Dont have an account yet?</p>
-                  <button class="modal-nav-link" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Signup</button>
+                  <button class="modal-nav-link" data-bs-target="#signup-modal-toggle" data-bs-toggle="modal">Signup</button>
                 </div>
               </div>
             </div>
@@ -184,14 +184,46 @@
         </div>
       </div>
       {% comment %}SIGNUP MODAL{% endcomment %}
-      <div class="modal fade" id="exampleModalToggle2" aria-labelledby="exampleModalToggleLabel2" tabindex="-1" aria-hidden="true" style="display: none;">
+      <div class="modal fade" id="signup-modal-toggle" aria-labelledby="signup-modal-toggle-label" tabindex="-1" aria-hidden="true" style="display: none;">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+              <h1 class="modal-title fs-5" id="signup-modal-toggle-label">Modal 2</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">Hide this modal and show the first with the button below.</div>
+            <div class="modal-body">
+              <form action="">
+                {% csrf_token %}
+                {% with form=signup_form%}
+                <div>
+                  {{ form.username.label_tag }}
+                  {{ form.username }}
+                  {{ form.username.errors }}
+                </div>
+                <div>
+                  {{ form.email.label_tag }}
+                  {{ form.email }}
+                  {{ form.email.errors }}
+                </div>
+                <div>
+                  {{ form.password1.label_tag }}
+                  {{ form.password1 }}
+                  {{ form.password1.errors }}
+                </div>
+                <div>
+                  {{ form.password2.label_tag }}
+                  {{ form.password2 }}
+                  {{ form.password2.errors }}
+                </div>
+                {% if form.non_field_errors %}
+                <div>
+                  {{ form.non_field_errors}}
+                </div>
+                {% endif %}
+                <button type="submit">Sign Up</button>
+                {% endwith %}
+              </form>
+              Hide this modal and show the first with the button below.</div>
             <div class="modal-footer">
               <button class="btn btn-primary" data-bs-target="#login-modal-toggle" data-bs-toggle="modal">Back to first</button>
             </div>
