@@ -2,7 +2,7 @@
 
 :root {
     --clr-primary: #f2eee8;
-    /* --clr-secondary: */
+    --clr-secondary: #90775A;
     --clr-black: #454545;
     --clr-white: #ffffff;
 
@@ -57,7 +57,7 @@ button,
 select,
 textarea {
     border: none;
-    color: inherit;
+    /* color: inherit; */
     font: inherit;
     background: none;
 }
@@ -114,6 +114,15 @@ body {
     margin: 5px;
 }
 
+.button {
+    border: solid 1px rgba(128, 128, 128, 1)!important;
+    padding: 5px 35px!important;
+    border-radius: 5px!important;
+    background-color: var(--clr-secondary)!important;
+    color: var(--clr-white);
+    margin-top: 15px;
+    /* font-size: var(--fs-subheading); */
+}
 /* HEADER STYLES */
 
 /* Company header styles */
