@@ -1,18 +1,15 @@
 {% load static %}
 {% load account %}
-
+{% load widget_tweaks %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 
-{% comment %} DISPLAYS FORM ERRORS IF ANY {% endcomment %}
+{% comment %}DISPLAYS FORM ERRORS IF ANY{% endcomment %}
 
 {% if form.errors %}
-  <div class="alert alert-danger">
-    {{ form.errors }}
-  </div>
+  <div class="alert alert-danger">{{ form.errors }}</div>
 {% endif %}
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +39,7 @@
           <div class="col-8 col-md-6 col-lg-5 mt-2">
             <a href="#"><h1 class="text-center inline-block">Ember and ash</h1></a>
           </div>
-          {% comment %} IF CHECK TO DYNAMICALLY UPDATE LOGIN/LOGOUT {% endcomment %}
+          {% comment %}IF CHECK TO DYNAMICALLY UPDATE LOGIN/LOGOUT{% endcomment %}
           {% if user.is_authenticated %}
             {% comment %}My profile Log out{% endcomment %}
             <a href="FILL IN WITH PROFILE LINK"><i class="fa-solid fa-circle-user"></i></a>
@@ -51,12 +48,21 @@
           {% else %}
             <a class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a> {% endcomment %}
           {% endif %}
-          <a class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a>
-
           {% comment %} <a class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a> {% endcomment %}
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+            </li>
+          {% else %}
+            {% comment %} <li class="nav-item">
+              <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}">Register</a>
+            </li> {% endcomment %}
+            <li class="nav-item">
+              <a class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a>
+            </li>
+          {% endif %}
         </div>
       </div>
-      {% comment %} <hr /> {% endcomment %}
       <nav class="navbar navbar-expand-lg mb-2">
         <div class="container-fluid justify-content-center">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -103,6 +109,7 @@
       {% block content %}
 
       {% endblock %}
+      <button class="button">Button</button>
     </main>
     <footer>
       <hr />
@@ -150,28 +157,26 @@
                 </div>
                 {% comment %}Form action and method to be filled in{% endcomment %}
                 <div class="modal-body">
-                  {% comment %} TEST FORM  {% endcomment %}
-                  <form method="post" action="{% url 'account_login' %}">
-                    {% with form=login_form %}
-                    {% csrf_token %}
-                    <div>
-                      {{ form.login.label_tag }}
-                      {{ form.login }}
-                      {{ form.login.errors }}
-                    </div>
-                    <div>
-                      {{ form.password.label_tag }}
-                      {{ form.password }}
-                      {{ form.password.errors }}
-                    </div>
-                    {% if form.non_field_errors %}
-                    <div>
-                      {{ form.non_field_errors }}
-                    </div>
-                    {% endif %}
-                    {% comment %} {{ form.as_p }} {% endcomment %}
-                    <button type="submit" class="btn btn-primary">Login</button>
-                  </form>
+                  {% comment %}TEST FORM{% endcomment %}
+                  {% with form=login_form %}
+                    <form method="post" action="{% url 'account_login' %}">
+                      {% csrf_token %}
+                      <div>
+                        {{ form.login.label_tag }}
+                        {{ form.login|add_class:'form-input' }}
+                        {{ form.login.errors }}
+                        {% comment %}form-input{% endcomment %}
+                      </div>
+                      <div>{{ form.password.label_tag }}
+                        {{ form.password|add_class:'form-input' }}
+                        {{ form.password.errors }}</div>
+                      {% comment %} {% if form.non_field_errors %}
+                        <div>{{ form.non_field_errors }}</div>
+                      {% endif %}
+                      {{ form.as_p }} {% endcomment %}
+                      {% comment %} <button type="submit" class="btn btn-primary">Login</button> {% endcomment %}
+                      <button type="submit" class="button">Login</button>
+                    </form>
                   {% endwith %}
                 </div>
                 <div class="modal-footer">
@@ -194,28 +199,20 @@
             <div class="modal-body">
               <form action="">
                 {% with form=signup_form %}
-                {% csrf_token %}
-                <div>
-                  {{ form.username.label_tag }}
-                  {{ form.username }}
-                  {{ form.username.errors }}
-                </div>
-                <div>
-                  {{ form.email.label_tag }}
-                  {{ form.email }}
-                  {{ form.email.errors }}
-                </div>
-                <div>
-                  {{ form.password1.label_tag }}
-                  {{ form.password1 }}
-                  {{ form.password1.errors }}
-                </div>
-                <div>
-                  {{ form.password2.label_tag }}
-                  {{ form.password2 }}
-                  {{ form.password2.errors }}
-                </div>
-                {% comment %} {{ form.as_p}} {% endcomment %}
+                  {% csrf_token %}
+                  <div>{{ form.username.label_tag }}
+                    {{ form.username|add_class:'form-input' }}
+                    {{ form.username.errors }}</div>
+                  <div>{{ form.email.label_tag }}
+                    {{ form.email|add_class:'form-input' }}
+                    {{ form.email.errors }}</div>
+                  <div>{{ form.password1.label_tag }}
+                    {{ form.password1|add_class:'form-input' }}
+                    {{ form.password1.errors }}</div>
+                  <div>{{ form.password2.label_tag }}
+                    {{ form.password2|add_class:'form-input' }}
+                    {{ form.password2.errors }}</div>
+                  {% comment %} {{ form.as_p }} {% endcomment %}
                 {% endwith %}
                 {% if form.non_field_errors %}
                 <div>
