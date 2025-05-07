@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Booking
 from django.urls import path
 from .forms import BookingForm
@@ -14,19 +14,23 @@ def booking(request):
 
     # Defensive design incase object does not exist
     # booking = get_object_or_404(queryset, slug=slug)
-
+    print("updating")
 
     if request.method == "POST":
         booking_form = BookingForm(data=request.POST)
         if booking_form.is_valid():
             booking_form.save(commit=True)
             # Add messages
-        return render(
-            request,
-            "booking/booking_form.html",
-            {"booking_form": booking_form,
-            }
-        )
+            return redirect('home_urls')
+    else:
+        booking_form = BookingForm()
+        
+    return render(
+        request,
+        "booking/booking_form.html",
+        {"booking_form": booking_form,
+        }
+    )
 
 
         
