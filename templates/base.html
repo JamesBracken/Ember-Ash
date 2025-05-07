@@ -188,7 +188,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form action="">
+                  <form method="POST">
                     {% with form=signup_form %}
                       {% csrf_token %}
                       <div>{{ form.username.label_tag }}
