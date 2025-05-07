@@ -196,10 +196,18 @@ nav li {
 
   /* Login buttons */
 
-  .login-link {
+  .login-link,
+  .logout-link {
     position: fixed!important;
     top: 30px;
     right: 20px;
+    max-width: fit-content;
+  }
+
+  .profile-link {
+    position: fixed!important;
+    top: 30px;
+    left: 20px;
     max-width: fit-content;
   }
   

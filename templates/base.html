@@ -42,20 +42,25 @@
           {% comment %}If check to add user profile if authenticated{% endcomment %}
           {% if user.is_authenticated %}
             {% comment %}My profile Log out{% endcomment %}
-            <a href="FILL IN WITH PROFILE LINK"><i class="fa-solid fa-circle-user"></i></a>
+            {% comment %} <a href="FILL IN WITH PROFILE LINK"><i class="fa-solid fa-circle-user"></i></a> {% endcomment %}
           {% endif %}
           {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
-            </li>
+            <ul>
+              <li class="nav-item">
+                <a class="nav-link nav-link-cta logout-link{% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                <a href="FILL IN WITH PROFILE LINK" class="profile-link"><i class="fa-solid fa-circle-user"></i></a>
+              </li>
+            </ul>
           {% else %}
             {% comment %}KEEPING INCASE REGISTER NAV LINK NEEDED{% endcomment %}
             {% comment %} <li class="nav-item">
               <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}">Register</a>
             </li> {% endcomment %}
-            <li class="nav-item">
-              <a class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a>
-            </li>
+            <ul>
+              <li class="nav-item">
+                <a class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a>
+              </li>
+            </ul>
           {% endif %}
         </div>
       </div>
@@ -71,7 +76,7 @@
                 <a class="nav-link active" aria-current="page" href="#">Menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link nav-link-cta active" aria-current="page" href="#">Make a booking</a>
+                <a class="nav-link nav-link-cta active" aria-current="page" href="{% url 'booking_urls' %}">Make a booking</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">About us</a>
@@ -148,8 +153,7 @@
                       </div>
                       <div>{{ form.password.label_tag }}
                         {{ form.password|add_class:'form-input' }}
-                        {{ form.password.errors }}
-                      </div>
+                        {{ form.password.errors }}</div>
                       {% if form.non_field_errors %}
                         <div>{{ form.non_field_errors }}</div>
                       {% endif %}
