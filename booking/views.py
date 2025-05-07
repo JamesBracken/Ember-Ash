@@ -20,6 +20,7 @@ def booking(request):
         booking_form = BookingForm(data=request.POST)
         if booking_form.is_valid():
             booking_form.save(commit=True)
+            booking.user = request.user
             # Add messages
             return redirect('home_urls')
     else:
