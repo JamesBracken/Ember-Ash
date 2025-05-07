@@ -19,16 +19,14 @@ def booking(request):
     if request.method == "POST":
         booking_form = BookingForm(data=request.POST)
         if booking_form.is_valid():
-            booking_form.save(commit=False)
+            booking_form.save(commit=True)
             # Add messages
-
-    booking_form = BookingForm()
-    return render(
-        request,
-        "booking/booking_form.html",
-        {"booking_form": booking_form,
-         }
-    )
+        return render(
+            request,
+            "booking/booking_form.html",
+            {"booking_form": booking_form,
+            }
+        )
 
 
         
