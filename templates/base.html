@@ -88,6 +88,23 @@
           </div>
         </div>
       </nav>
+      {% comment %} Message code taken from Code institute Codestar project {% endcomment %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      {% for message in messages %}
+      <div class="alert {{ message.tags }} alert-dismissible
+        fade show" id="msg" role="alert">
+        {{ message | safe }}
+        <button type="button" class="btn-close"
+          data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% comment %} TEST END {% endcomment %}
+
     </header>
 
     <main>
@@ -143,7 +160,7 @@
                 <div class="modal-body">
                   {% comment %}TEST FORM{% endcomment %}
                   {% with form=login_form %}
-                    <form method="post" action="{% url 'account_login' %}">
+                    <form method="POST" action="{% url 'account_login' %}">
                       {% csrf_token %}
                       <div>
                         {{ form.login.label_tag }}
@@ -188,7 +205,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form method="POST">
+                  <form method="POST" action="{% url 'account_signup' %}">
                     {% with form=signup_form %}
                       {% csrf_token %}
                       <div>{{ form.username.label_tag }}
