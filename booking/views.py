@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Booking
+from django.contrib import messages
 from django.urls import path
 from .forms import BookingForm
 
@@ -22,7 +23,11 @@ def booking(request):
             booking_form.save(commit=True)
             booking.user = request.user
             # Add messages
-            return redirect('home_urls')
+            messages.add_message(
+                request, messages.SUCCESS,
+                "Booking successfully created, you may view this in your My Profile area"
+            )
+            return redirect("home_urls")
     else:
         booking_form = BookingForm()
         
