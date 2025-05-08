@@ -22,6 +22,7 @@ from .views import ModalLogin
 urlpatterns = [
     path('', include('home.urls'), name='home_urls'),
     path('', include('booking.urls'), name='booking_urls'),
+    path('', include('user.urls'), name='user_urls'),
     path('accounts/login/', ModalLogin.as_view(), name='account_login'),
     path('accounts/', include('allauth.urls')),
     path('admin/', admin.site.urls),
