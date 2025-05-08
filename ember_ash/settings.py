@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'booking',
     'home',
-    'my_profile',
 ]
 
 SITE_ID = 1
