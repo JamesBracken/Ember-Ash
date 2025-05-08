@@ -25,7 +25,7 @@
     --transition-duration: 0.3s;
 }
 
-/* Global styles */
+/* GLOBAL STYLES */
 /* setting all styles across the website here to increase uniformity
 across the code and reduce unexpected behaviours and styles */
 
@@ -57,7 +57,6 @@ button,
 select,
 textarea {
     border: none;
-    /* color: inherit; */
     font: inherit;
     background: none;
 }
@@ -121,7 +120,6 @@ body {
     background-color: var(--clr-secondary)!important;
     color: var(--clr-white);
     margin-top: 15px;
-    /* font-size: var(--fs-subheading); */
 }
 /* HEADER STYLES */
 
@@ -220,15 +218,7 @@ nav li {
   .modal {
     z-index: 1050 !important;
   }
-
-  #login-submit {
-    /* display: inline-block; */
-    /* position: relative; */
-    /* float: right;
-    right: 3px; */
-    /* bottom: 1px; */
-    /* margin: 5px; */
-  }
+  
 /*  MAIN CONTENT */
 
 /* Push down main content below header at the top of page */
