@@ -7,7 +7,7 @@ from booking.models import Booking
 # Create your views here.
 
 def customer_profile(request):
-    user_bookings = Booking.objects.filter(user=request.user)
+    user_bookings = Booking.objects.filter(user=request.user).order_by("-booking_date")
     # template_name = "user/my_profile.html"
     # Consider using Paginate
 
