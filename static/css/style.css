@@ -121,6 +121,15 @@ body {
     color: var(--clr-white);
     margin-top: 15px;
 }
+
+/* Edit and X icons styles */
+
+
+i {
+    font-size: 40px!important;
+    color: var(--clr-black);
+}
+
 /* HEADER STYLES */
 
 /* Company header styles */
@@ -245,6 +254,20 @@ main {
     font-size: var(--fs-heading-4)!important;
     font-family: var(--text-secondary);
 }
+
+/* My profile page */
+
+.border-bottom {
+    border-bottom:1px rgba(123, 123, 123, .7) solid ;
+    /* border-top:1px rgba(123, 123, 123, .6) solid ; */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow)!important;
+    padding: 5px;
+    padding-left: 12px;
+    margin: 6px;
+}
+
+
 /* FOOTER STYLES */
 
 footer {
@@ -253,11 +276,6 @@ footer {
     width: 100%;
     left: 0;
     bottom: 0;
-}
-
-i {
-    font-size: 40px;
-    color: var(--clr-black);
 }
 
 
