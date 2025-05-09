@@ -2,7 +2,7 @@
 
 :root {
     --clr-primary: #f2eee8;
-    /* --clr-secondary: */
+    --clr-secondary: #90775A;
     --clr-black: #454545;
     --clr-white: #ffffff;
 
@@ -25,7 +25,7 @@
     --transition-duration: 0.3s;
 }
 
-/* Global styles */
+/* GLOBAL STYLES */
 /* setting all styles across the website here to increase uniformity
 across the code and reduce unexpected behaviours and styles */
 
@@ -57,7 +57,6 @@ button,
 select,
 textarea {
     border: none;
-    color: inherit;
     font: inherit;
     background: none;
 }
@@ -109,6 +108,28 @@ body {
     background-color: var(--clr-white);
 }
 
+.form-input {
+    border-bottom: solid 1px rgba(128, 128, 128, .5);
+    margin: 5px;
+}
+
+.button {
+    border: solid 1px rgba(128, 128, 128, 1)!important;
+    padding: 5px 35px!important;
+    border-radius: 5px!important;
+    background-color: var(--clr-secondary)!important;
+    color: var(--clr-white);
+    margin-top: 15px;
+}
+
+/* Edit and X icons styles */
+
+
+i {
+    font-size: 40px!important;
+    color: var(--clr-black);
+}
+
 /* HEADER STYLES */
 
 /* Company header styles */
@@ -139,6 +160,7 @@ nav li {
 /* Adds a line below the nav link on hover */
 .nav-link {
     position: relative;
+    display: inline-block;
 }
 
 .nav-link:after {
@@ -157,11 +179,13 @@ nav li {
   }
 
   /* Removes the line from the CTA on hover */
-  .nav-link-cta {
+  .nav-link-cta,
+  .modal-nav-link {
     position: relative;
   }
 
-  .nav-link-cta:after {
+  .nav-link-cta:after,
+  .modal-nav-link:after {
     content: "";
     position: absolute;
     left: 0;
@@ -172,9 +196,38 @@ nav li {
     transition: width 300ms;
   }
 
-  .nav-link-cta:hover:after {
+  .nav-link-cta:hover:after,
+  .modal-nav-link:hover:after {
     width: 0;
   }
+
+  /* Login buttons */
+
+  .login-link,
+  .logout-link {
+    position: fixed!important;
+    top: 30px;
+    right: 20px;
+    max-width: fit-content;
+  }
+
+  .profile-link {
+    position: fixed!important;
+    top: 30px;
+    left: 20px;
+    max-width: fit-content;
+  }
+  
+  /* Login modal */
+
+  .modal-backdrop {
+    z-index: 1040 !important;
+  }
+
+  .modal {
+    z-index: 1050 !important;
+  }
+  
 /*  MAIN CONTENT */
 
 /* Push down main content below header at the top of page */
@@ -194,10 +247,27 @@ main {
     max-height: 550px;
 }
 
+.tall-card {
+    max-height: 800px;
+}
 .home-card-text {
     font-size: var(--fs-heading-4)!important;
     font-family: var(--text-secondary);
 }
+
+/* My profile page */
+
+.border-bottom {
+    border-bottom:1px rgba(123, 123, 123, .7) solid ;
+    /* border-top:1px rgba(123, 123, 123, .6) solid ; */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow)!important;
+    padding: 5px;
+    padding-left: 12px;
+    margin: 6px;
+}
+
+
 /* FOOTER STYLES */
 
 footer {
@@ -208,7 +278,11 @@ footer {
     bottom: 0;
 }
 
-i {
-    font-size: 40px;
-    color: var(--clr-black);
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    .card-img-top {
+        max-height: 600px!important;
+    }
 }
