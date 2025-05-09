@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content%}
-<h1>{{ bookings }}</h1>
-
+{% comment %} <h1>{{ bookings }}</h1> {% endcomment %}
+{% for booking in bookings %}
+<p>Booking user: {{ booking.user }}</p>
+<p>Booking date: {{ booking.booking_date }}</p>
+{% comment %} <p>{{  }}</p>
+<p>{{  }}</p> {% endcomment %}
+{% endfor%}
 {% endblock %}

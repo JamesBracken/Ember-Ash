@@ -48,7 +48,7 @@
             <ul>
               <li class="nav-item">
                 <a class="nav-link nav-link-cta logout-link{% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
-                <a href="FILL IN WITH PROFILE LINK" class="profile-link"><i class="fa-solid fa-circle-user"></i></a>
+                <a href="{% url 'user_urls' %}" class="profile-link"><i class="fa-solid fa-circle-user"></i></a>
               </li>
             </ul>
           {% else %}
