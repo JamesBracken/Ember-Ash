@@ -37,7 +37,7 @@
       <div class="container company-header">
         <div class="row justify-content-center">
           <div class="col-8 col-md-6 col-lg-5 mt-2">
-            <a href="#"><h1 class="text-center inline-block">Ember and ash</h1></a>
+            <a href="{% url 'home_urls' %}"><h1 class="text-center inline-block">Ember and ash</h1></a>
           </div>
           {% comment %}If check to add user profile if authenticated{% endcomment %}
           {% if user.is_authenticated %}
@@ -48,7 +48,7 @@
             <ul>
               <li class="nav-item">
                 <a class="nav-link nav-link-cta logout-link{% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
-                <a href="FILL IN WITH PROFILE LINK" class="profile-link"><i class="fa-solid fa-circle-user"></i></a>
+                <a href="{% url 'user_urls' %}" class="profile-link"><i class="fa-solid fa-circle-user"></i></a>
               </li>
             </ul>
           {% else %}
@@ -70,7 +70,7 @@
           <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0 d-flex gap-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'home_urls' %}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Menu</a>

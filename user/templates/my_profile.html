@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% comment %} <h1>{{ bookings }}</h1> {% endcomment %}
+
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="d-flex justify-content-center mb-4">
+        <h1>My profile</h1>
+      </div>
+      <div class="col-12 col-md-6">
+        <h2 class="text-center mb-4">My details</h2>
+      </div>
+      <div class="col-12 col-md-6">
+        <h2 class="text-center mb-4">My bookings</h2>
+        {% for booking in bookings %}
+          <div class="row">
+            <div class="col-12  border-bottom d-flex">
+            <div class="col-11 col-md-10">
+              <p>Date: {{ booking.booking_date }}</p>
+              <p>Time: {{ booking.booking_time }}</p>
+              <p>Guests: {{ booking.guests_qty }}</p>
+              <p>Comments:{{ booking.comment }}</p>
+            </div>
+            <div class="col-1 col-md-2 justify-content-right">
+            <a href=""><i class="fa-solid fa-xmark mb-4"></i></i></a>
+            <a href=""><i class="fa-solid fa-pencil"></i></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
