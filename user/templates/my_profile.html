@@ -22,10 +22,12 @@
               <p>Guests: {{ booking.guests_qty }}</p>
               <p>Comments:{{ booking.comment }}</p>
             </div>
+            {% if user.is_authenticated and booking.user == user %}
             <div class="col-1 col-md-2 justify-content-right">
-            <a href=""><i class="fa-solid fa-xmark mb-4"></i></i></a>
-            <a href=""><i class="fa-solid fa-pencil"></i></a>
+            <button href=""><i class="fa-solid fa-xmark mb-4"></i></i></button>
+            <button booking_id="{{ booking.booking_id }}" href=""><i class="fa-solid fa-pencil"></i></button>
             </div>
+            {% endif %}
           </div>
         </div>
         {% endfor %}
