@@ -15,7 +15,7 @@ class BookingForm(forms.ModelForm):
         self.fields["guests_qty"].widget.attrs["min"] = 1
     class Meta:
         # Taken from https://stackoverflow.com/questions/51164326/how-can-i-add-choices-to-a-timefield-in-a-django-form
-        HOUR_CHOICES = [(datetime.time(hour=x), '{:02d}:00'.format(x)) for x in range(9, 23)]
+        HOUR_CHOICES = [('{:02d}:00'.format(x), '{:02d}:00'.format(x)) for x in range(9, 23)]
         model = Booking
         fields = ("booking_date", "booking_time", "guests_qty", "comment")
         widgets = {
