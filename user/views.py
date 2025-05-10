@@ -1,9 +1,11 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth.models import User
 from booking.models import Booking
+from booking.forms import BookingForm
 from django.http import HttpResponseRedirect
+
 
 # Create your views here.
 
@@ -21,14 +23,36 @@ def customer_profile(request):
     )
 
 
-def booking_edit(request):
+def booking_edit(request, slug, booking_id):
     """
     This view enables editing for bookings
     """
     if request.method == "POST":
 
-        Booking.objects.all()
-        booking = get_object_or_404(queryset,)
+        queryset = Booking.objects.all()
+        booking = get_object_or_404(queryset, fk=booking_id)
+        booking_form = BookingForm(data=request.POST, instance=booking)
+
+        if booking_form.is_valid() and booking.user == request.user:
+            booking = booking_form.save(commit=False)
+            booking.user = request.user
+            booking.save()
+            
+
+
+            # SAMPLE CODE 
+            
+            # comment.post = post
+            # comment.approved = False
+            # comment.save()
+            # messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+
+
+
+
+
+
+
 
 # def booking_delete():
 
