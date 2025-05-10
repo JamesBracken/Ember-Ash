@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
 
 {% block content %}
   {% comment %} <h1>{{ bookings }}</h1> {% endcomment %}
@@ -52,4 +54,9 @@
       </div>
     </div>
   </div>
+{% endblock content %}
+
+{% block extras %}
+{% comment %} Script to connect booking js {% endcomment %}
+<script src="{% static 'js/booking.js' %}"></script>
 {% endblock %}
