@@ -20,8 +20,9 @@ def booking(request):
     if request.method == "POST":
         booking_form = BookingForm(data=request.POST)
         if booking_form.is_valid():
-            booking_form.save(commit=True)
+            booking = booking_form.save(commit=False)
             booking.user = request.user
+            booking.save()
             # Add messages
             messages.add_message(
                 request, messages.SUCCESS,
