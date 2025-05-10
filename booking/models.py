@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 class Booking (models.Model):
     # Learned AutoField at https://www.geeksforgeeks.org/how-to-add-an-auto-increment-integer-field-in-django/
     # booking_number = models.AutoField(primary_key=True, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings', default=1)
     booking_date = models.DateField()
     booking_time = models.TimeField()
