@@ -13,6 +13,20 @@
       </div>
       <div class="col-12 col-md-6">
         <h2 class="text-center mb-4">My bookings</h2>
+        {% comment %}Hidden form for editing bookings{% endcomment %}
+        <div class="container">
+          {% comment %}Adding user authentication for extra layer of protection{% endcomment %}
+          {% if user.is_authenticated %}
+            <h3>Edit your booking</h3>
+            <form id="bookingForm" method="POST">
+              {{ booking_form|crispy }}
+              {% csrf_token %}
+              <div class="d-flex justify-content-center mb-5">
+                <button id="updateBookingBtn" class="button" type="submit">Update</button>
+              </div>
+            </form>
+          {% endif %}
+        </div>
         {% for booking in bookings %}
           <div class="row">
             <div class="col-12 border-bottom d-flex">

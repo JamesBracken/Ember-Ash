@@ -13,12 +13,14 @@ def customer_profile(request):
     user_bookings = Booking.objects.filter(user=request.user).order_by("-booking_date")
     # template_name = "user/my_profile.html"
     # Consider using Paginate
+    booking_form = BookingForm(data=request.POST)
 
     return render(
         request,
         "my_profile.html",
         {
             "bookings": user_bookings,
+            "booking_form": booking_form
         }
     )
 
@@ -42,19 +44,6 @@ def booking_edit(request, slug, booking_id):
         else:
             messages.add_messages(request, messages.ERROR, 'Error updating booking')
         return HttpResponseRedirect(reverse('my_profile'))
-
-            # SAMPLE CODE 
-            
-            # comment.post = post
-            # comment.approved = False
-            # comment.save()
-            # messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
-
-
-
-
-
-
 
 
 # def booking_delete():
