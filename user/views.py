@@ -1,8 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth.models import User
 from booking.models import Booking
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 
@@ -20,7 +21,14 @@ def customer_profile(request):
     )
 
 
-# def booking_edit():
+def booking_edit(request):
+    """
+    This view enables editing for bookings
+    """
+    if request.method == "POST":
+
+        Booking.objects.all()
+        booking = get_object_or_404(queryset,)
 
 # def booking_delete():
 
