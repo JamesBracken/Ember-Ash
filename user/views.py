@@ -37,8 +37,11 @@ def booking_edit(request, slug, booking_id):
             booking = booking_form.save(commit=False)
             booking.user = request.user
             booking.save()
-            
-
+            # Adds a success message
+            messages.add_message(request, messages.SUCCESS, 'Booking updated!')
+        else:
+            messages.add_messages(request, messages.ERROR, 'Error updating booking')
+        return HttpResponseRedirect(reverse('my_profile'))
 
             # SAMPLE CODE 
             
