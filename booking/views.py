@@ -15,7 +15,6 @@ def booking(request):
 
     # Defensive design incase object does not exist
     # booking = get_object_or_404(queryset, slug=slug)
-    print("updating")
 
     if request.method == "POST":
         booking_form = BookingForm(data=request.POST)
