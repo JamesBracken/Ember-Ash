@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
 
 {% block content %}
   {% comment %} <h1>{{ bookings }}</h1> {% endcomment %}
@@ -10,26 +12,61 @@
       </div>
       <div class="col-12 col-md-6">
         <h2 class="text-center mb-4">My details</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <hr />
+              <p>Username: {{ user }}</p>
+              {% if user.email %}
+                <p>Email: {{ user.email }}</p>
+              {% else %}
+                <p>No email provided</p>
+              {% endif %}
+              <hr />
+              {% comment %}Hidden form for editing bookings{% endcomment %}
+              <div class="container">
+                {% comment %}Adding user authentication for extra layer of protection{% endcomment %}
+                {% if user.is_authenticated %}
+                  <h3 class="text-center">Edit your booking</h3>
+                  <form id="bookingForm" method="POST">
+                    {{ booking_form|crispy }}
+                    {% csrf_token %}
+                    <div class="d-flex justify-content-center mb-5">
+                      <button id="updateBookingBtn" class="button" type="submit">Update</button>
+                    </div>
+                  </form>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-12 col-md-6">
         <h2 class="text-center mb-4">My bookings</h2>
         {% for booking in bookings %}
           <div class="row">
-            <div class="col-12  border-bottom d-flex">
-            <div class="col-11 col-md-10">
-              <p>Date: {{ booking.booking_date }}</p>
-              <p>Time: {{ booking.booking_time }}</p>
-              <p>Guests: {{ booking.guests_qty }}</p>
-              <p>Comments:{{ booking.comment }}</p>
-            </div>
-            <div class="col-1 col-md-2 justify-content-right">
-            <a href=""><i class="fa-solid fa-xmark mb-4"></i></i></a>
-            <a href=""><i class="fa-solid fa-pencil"></i></a>
+            <div class="col-12 border-bottom d-flex">
+              <div class="col-11 col-md-10">
+                <p>Date: {{ booking.booking_date }}</p>
+                <p>Time: {{ booking.booking_time|time:'H:i' }}</p>
+                <p>Guests: {{ booking.guests_qty }}</p>
+                <p>Comments: {{ booking.comment }}</p>
+              </div>
+              {% if user.is_authenticated and booking.user == user %}
+                <div class="col-1 col-md-2 justify-content-right booking-buttons-container" data-booking_id="{{ booking.booking_id }}" data-booking_date="{{ booking.booking_date|date:'Y-m-d' }}" data-booking_time="{{ booking.booking_time|time:'H:i' }}" data-guests_qty="{{ booking.guests_qty }}" data-comment="{{ booking.comment }}" data-booking_slug="{{ booking.slug }}">
+                  <button><i class="fa-solid fa-xmark mb-4"></i></button>
+                  <button class="edit-btn" data-booking_id="{{ booking.booking_id }}"><i class="fa-solid fa-pencil"></i></button>
+                </div>
+              {% endif %}
             </div>
           </div>
-        </div>
         {% endfor %}
       </div>
     </div>
   </div>
+{% endblock %}
+
+{% block extras %}
+  {% comment %}Script to connect booking js{% endcomment %}
+  <script src="{% static 'js/booking.js' %}"></script>
 {% endblock %}
