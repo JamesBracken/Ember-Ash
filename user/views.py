@@ -25,16 +25,14 @@ def customer_profile(request):
     )
 
 
-def booking_edit(request, slug, booking_id):
+def booking_edit(request, slug):
     """
     This view enables editing for bookings
     """
     if request.method == "POST":
-
         queryset = Booking.objects.all()
-        booking = get_object_or_404(queryset, fk=booking_id)
+        booking = get_object_or_404(queryset, slug=slug)
         booking_form = BookingForm(data=request.POST, instance=booking)
-
         if booking_form.is_valid() and booking.user == request.user:
             booking = booking_form.save(commit=False)
             booking.user = request.user
