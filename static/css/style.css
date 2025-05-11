@@ -234,7 +234,17 @@ nav li {
   .modal {
     z-index: 1050 !important;
   }
+
+  /* Success messages styles */
+  .success {
+    background-color: #d1e7dd;
+    border: #badbcc;
+  }
   
+  .error {
+    background-color: #ffb6b9;
+    border: #ff2b32;
+  }
 /*  MAIN CONTENT */
 
 /* Push down main content below header at the top of page */
