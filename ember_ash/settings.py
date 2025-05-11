@@ -45,10 +45,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'cloudinary',
     'crispy_forms',
     'crispy_bootstrap5',
     'widget_tweaks',
@@ -105,6 +107,10 @@ WSGI_APPLICATION = 'ember_ash.wsgi.application'
 DATABASES = {
     'default':
     dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+
+CLOUDINARY_STORAGE = {
+    os.environ.get("")
 }
 
 CSRF_TRUSTED_ORIGINS = [
