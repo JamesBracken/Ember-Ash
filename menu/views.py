@@ -9,6 +9,7 @@ def menu(request):
     """
     Adds a menu item to the menu
     """
+    menu_items = Menu.objects.all()
     menu_form = MenuForm(data=request.POST)
     
     return render(
@@ -17,6 +18,31 @@ def menu(request):
         {"menu_form": menu_form}
     )
 
+def breakfast_menu(request):
+    """
+    Adds a menu item to the menu
+    """
+    menu_items = Menu.objects.all()
+    menu_form = MenuForm(data=request.POST)
+    
+    return render(
+        request,
+        "menu_breakfast.html",
+        {"menu_form": menu_form}
+    )
+
+def dinner_menu(request):
+    """
+    Adds a menu item to the menu
+    """
+    menu_items = Menu.objects.all()
+    menu_form = MenuForm(data=request.POST)
+    
+    return render(
+        request,
+        "menu_dinner.html",
+        {"menu_form": menu_form}
+    )
 
 # def edit_menu_item(request):
     """
