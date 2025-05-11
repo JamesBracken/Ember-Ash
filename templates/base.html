@@ -48,7 +48,7 @@
             <ul>
               <li class="nav-item">
                 <a class="nav-link nav-link-cta logout-link{% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
-                <a href="{% url 'user_urls' %}" class="profile-link"><i class="fa-solid fa-circle-user"></i></a>
+                <a href="{% url 'my_profile' %}" class="profile-link"><i class="fa-solid fa-circle-user"></i></a>
               </li>
             </ul>
           {% else %}
@@ -246,5 +246,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     {% comment %}JS script{% endcomment %}
     <script src="{% static 'js/script.js' %}"></script>
+    {% block extras %}
+    {% endblock %}
   </body>
 </html>
