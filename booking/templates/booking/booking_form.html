@@ -2,6 +2,7 @@
 {% load crispy_forms_tags %}
 {% comment %}Booking form{% endcomment %}
 {% block content %}
+{% if user.is_authenticated %}
   <section>
     <div class="container">
       <div class="row">
@@ -16,4 +17,7 @@
       </div>
     </div>
   </section>
+  {% else %}
+  <h2>Please login first before making a booking</h2>
+  {% endif %}
 {% endblock %}
