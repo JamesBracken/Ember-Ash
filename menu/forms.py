@@ -1,0 +1,15 @@
+from django import forms
+from .models import Menu
+
+
+class AddMenuItem(forms.ModelForm):
+    """
+    Creates a form for :model:`menu.Menu`
+    """
+    class Meta:
+        MEAL_CATEGORIES = ["Breakfast", "Dinner"]
+        model = Menu
+        fields = ("title", "description", "img", "price", "meal_category",)1
+        widgets = {
+            "meal_category": forms.Select(choices=MEAL_CATEGORIES)
+        }
