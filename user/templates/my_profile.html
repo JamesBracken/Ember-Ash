@@ -54,7 +54,7 @@
               </div>
               {% if user.is_authenticated and booking.user == user %}
                 <div class="col-1 col-md-2 justify-content-right booking-buttons-container" data-booking_id="{{ booking.booking_id }}" data-booking_date="{{ booking.booking_date|date:'Y-m-d' }}" data-booking_time="{{ booking.booking_time|time:'H:i' }}" data-guests_qty="{{ booking.guests_qty }}" data-comment="{{ booking.comment }}" data-booking_slug="{{ booking.slug }}">
-                  <button><i class="fa-solid fa-xmark mb-4"></i></button>
+                  <button class="delete-btn"data-booking_id="{{ booking.booking_id }}"><i class="fa-solid fa-xmark mb-4"></i></button>
                   <button class="edit-btn" data-booking_id="{{ booking.booking_id }}"><i class="fa-solid fa-pencil"></i></button>
                 </div>
               {% endif %}
@@ -64,6 +64,30 @@
       </div>
     </div>
   </div>
+  <!-- Delete confirmation modal copied from Code institute codestar blog -->
+<div class="modal fade" id="deleteModal" tabindex="-1"
+aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title"
+        id="deleteModalLabel">Delete comment?</h5>
+      <button type="button" class="btn-close"
+        data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      Are you sure you want to delete your comment?
+      This action cannot be undone.
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary"
+        data-bs-dismiss="modal">Close</button>
+      <a id="deleteConfirm" href="#" class="btn
+        btn-danger">Delete</a>
+    </div>
+  </div>
+</div>
+</div>
 {% endblock %}
 
 {% block extras %}
