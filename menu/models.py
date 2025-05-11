@@ -5,14 +5,14 @@ from cloudinary.models import CloudinaryField
 
 
 class Menu (models.Model):
-    id = models.AutoField(unique=True, primary_key=True, on_delete=models.CASCADE)
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100, unique=True)
     description = models.TextField(max_length=200)
     slug = models.SlugField(unique=True)
     # Can set default img to placeholder just incase
     img = CloudinaryField('image', default='placeholder')
-    price = models.DecimalField()
-    meal_category = models.SelectField()
+    price = models.DecimalField(decimal_places=2, max_digits=4)
+    meal_category = models.CharField()
 
     def save(self, *args, **kwargs):
         if not self.slug:
