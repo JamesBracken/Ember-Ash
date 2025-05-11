@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('home.urls'), name='home_urls'),
     path('', include('booking.urls'), name='booking_urls'),
     path('', include('user.urls'), name='my_profile'),
+    path('', include('menu.urls'), name='menu'),
     path('trigger-login-message', views.trigger_login_message, name='trigger_login_message'),
     path('accounts/login/', views.ModalLogin.as_view(), name='account_login'),
     path('accounts/', include('allauth.urls')),
