@@ -14,13 +14,13 @@ def customer_profile(request):
     # template_name = "user/my_profile.html"
     # Consider using Paginate
     booking_form = BookingForm(data=request.POST)
-
     return render(
         request,
         "my_profile.html",
         {
             "bookings": user_bookings,
-            "booking_form": booking_form
+            "booking_form": booking_form,
+            "user": request.user,
         }
     )
 
