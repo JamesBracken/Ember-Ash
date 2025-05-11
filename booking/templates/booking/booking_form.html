@@ -2,22 +2,22 @@
 {% load crispy_forms_tags %}
 {% comment %}Booking form{% endcomment %}
 {% block content %}
-{% if user.is_authenticated %}
-  <section>
-    <div class="container">
-      <div class="row">
-        <h2>Reservations</h2>
-        <form method="post" action="">
-          {{ booking_form|crispy }}
-          {% csrf_token %}
-          <div class="d-flex justify-content-center">
-            <button type="submit" class="button">Submit</button>
-          </div>
-        </form>
+  {% if user.is_authenticated %}
+    <section>
+      <div class="container">
+        <div class="row">
+          <h2>Reservations</h2>
+          <form method="post" action="">
+            {{ booking_form|crispy }}
+            {% csrf_token %}
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="button">Submit</button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   {% else %}
-  <h2>Please login first before making a booking</h2>
+    <h2>Please login first before making a booking</h2>
   {% endif %}
 {% endblock %}

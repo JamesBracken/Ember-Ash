@@ -4,14 +4,15 @@
 {% block content %}
   <section class="container">
     <div class="row">
-      {% for menu_item in breakfast_menu %}
+      {% for item in breakfast_menu %}
         <div class="col-12 col-md-6 col-lg-4">
           <div class="col-12 col-md-6 col-lg-4 justify-content-center d-flex align-self-center mb-5">
             <div class="card text-center">
-              <img src="{% static 'IMAGE DYNAMIC' %}" class="card-img-top short-card" alt="2 dishes of food with fresh ingredients" />
+              <img src="{% static '{{ item.img }}' %}" class="card-img-top short-card" alt="2 dishes of food with fresh ingredients" />
               <div class="card-body">
-                <h2 class="home-card-text">Title</h2>
-                <p class="home-card-text">Description</p>
+                <h2 class="home-card-text">{{ item.title }}</h2>
+                <p class="home-card-text">{{ item.description }}</p>
+                <p class="subheading">£{{ item.price }}</p>
               </div>
             </div>
           </div>

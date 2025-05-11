@@ -48,6 +48,7 @@ h4 {
 .subheading {
     font-size: var(--fs-subheading)!important;
 }
+
 p {
     font-size: var(--fs-body)!important;
 }
