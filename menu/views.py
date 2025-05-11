@@ -33,19 +33,32 @@ def dinner_menu(request):
     menu_items = Menu.objects.all()
     menu_form = MenuForm(data=request.POST)
 
-# def edit_menu_item(request):
+    return render(request, "menu_dinner.html", {"menu_form": menu_form})
+
+
+def add_menu_item(request):
     """
     Adds a menu item to the menu
     """
     
-    # if request.method == "POST":
-    #     menu_form = MenuForm(data=request.POST)
-    #     if  menu_form.is_valid():
-    #         menu_item = menu_form.save()
-    #         messages.add_message(
-    #             request, messages.SUCCESS, "You have successfully added a menu item"
-    #         )
-    # else:
-    #     menu_form = MenuForm()
+    if request.method == "POST":
+        menu_form = MenuForm(data=request.POST)
+        if menu_form.is_valid and request.user.is_authenticated and request.user.is_staff == True:
+            menu_form.save()
+            messages.add_message(
+                request, messages.SUCCESS, "You have successfully added a menu item"
+            )
+            return redirect("menu")
+    else:
+        menu_form = MenuForm()
+
+    return render(
+        request,
+        "menu/menu_form/.html",
+        {
+            "menu_form": menu_form,
+        },
+    )
+
 
 # def delete_menu_item
