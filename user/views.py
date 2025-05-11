@@ -44,11 +44,11 @@ def booking_edit(request, slug):
         return HttpResponseRedirect(reverse('my_profile'))
 
 
-def booking_delete(request, slug, id):
+def booking_delete(request, slug):
     """
     view to delete a booking
     """
-    queryset = booking.objects.all()
+    queryset = Booking.objects.all()
     booking = get_object_or_404(queryset, slug=slug)
 
     if booking.user == request.user:
