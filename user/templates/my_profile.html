@@ -36,14 +36,16 @@
                 <p>Date: {{ booking.booking_date }}</p>
                 <p>Time: {{ booking.booking_time|time:"H:i"  }}</p>
                 <p>Guests: {{ booking.guests_qty }}</p>
-                <p>Comments:{{ booking.comment }}</p>
+                <p>Comments: {{ booking.comment }}</p>
               </div>
               {% if user.is_authenticated and booking.user == user %}
+              
                 <div class="col-1 col-md-2 justify-content-right  booking-buttons-container"  data-booking_id="{{ booking.booking_id }}"
                 data-booking_date="{{ booking.booking_date|date:"Y-m-d" }}"
                 data-booking_time="{{ booking.booking_time|time:"H:i" }}"
                 data-guests_qty="{{ booking.guests_qty }}"
-                data-comment="{{ booking.comment }}">
+                data-comment="{{ booking.comment }}"
+                data-booking_slug="{{ booking.slug }}">
                   <button><i class="fa-solid fa-xmark mb-4"></i></button>
                   <button class="edit-btn" data-booking_id="{{ booking.booking_id }}"><i class="fa-solid fa-pencil"></i></button>
                 </div>

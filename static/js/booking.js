@@ -24,21 +24,19 @@ for (let button of editButtons) {
 // Makes the form at the top of the page appear when invoked
 // When the form is submitted the edit form is again hidden
 function fillBookingData(e){
-    // let bookingId = e.target.getAttribute("booking_id")
     let parent = e.target.closest('.booking-buttons-container')
+    let bookingId = parent.dataset.booking_id;
+    let slug = parent.dataset.booking_slug;
     let bookingDateContent = parent.dataset.booking_date;
     let bookingTimeContent = parent.dataset.booking_time;
     let bookingGuestsContent = parent.dataset.guests_qty;
     let bookingCommentContent = parent.dataset.comment;
-    
     bookingDateInput.value = bookingDateContent
     bookingTimeInput.value = bookingTimeContent
     bookingGuestsInput.value = bookingGuestsContent
     bookingCommentInput.value = bookingCommentContent
-    // console.log(parent)
-    // console.log(bookingDate, bookingTime, bookingGuests, bookingComment )
 
-    // bookingForm.setAttribute("action", `PASS IN URL FOR EDIT_BOOKING/${BOOKINGID}`)
+    let action = bookingForm.setAttribute("action", `edit_booking/${slug}`)
 }
 // Naked code which doesn't fit into other categories
 
