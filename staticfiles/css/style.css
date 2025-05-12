@@ -48,6 +48,7 @@ h4 {
 .subheading {
     font-size: var(--fs-subheading)!important;
 }
+
 p {
     font-size: var(--fs-body)!important;
 }
@@ -128,6 +129,13 @@ body {
 i {
     font-size: 40px!important;
     color: var(--clr-black);
+}
+
+/* Gives an underline to elements */
+.underline {
+    border-bottom: black solid 1px;
+    /* position: relative;
+    bottom: 3px; */
 }
 
 /* HEADER STYLES */
@@ -227,7 +235,17 @@ nav li {
   .modal {
     z-index: 1050 !important;
   }
+
+  /* Success messages styles */
+  .success {
+    background-color: #d1e7dd;
+    border: #badbcc;
+  }
   
+  .error {
+    background-color: #ffb6b9;
+    border: #ff2b32;
+  }
 /*  MAIN CONTENT */
 
 /* Push down main content below header at the top of page */
@@ -250,7 +268,8 @@ main {
 .tall-card {
     max-height: 800px;
 }
-.home-card-text {
+.home-card-text,
+.menu-card-title {
     font-size: var(--fs-heading-4)!important;
     font-family: var(--text-secondary);
 }
@@ -267,7 +286,14 @@ main {
     margin: 6px;
 }
 
+/* ADMIN FEATURES */
 
+#add-menu-item-button {
+    width: 100px !important;
+    /* position: relative; */
+    float: right
+
+}
 /* FOOTER STYLES */
 
 footer {

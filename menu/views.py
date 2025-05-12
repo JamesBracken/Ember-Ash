@@ -20,10 +20,10 @@ def lunch_menu(request):
     """
     Adds a menu item to the menu
     """
-    menu_items = Menu.objects.all()
+    menu_items = Menu.objects.filter(meal_category="lunch")
     menu_form = MenuForm(data=request.POST)
 
-    return render(request, "menu_lunch.html", {"menu_form": menu_form})
+    return render(request, "menu_lunch.html", {"menu_form": menu_form, "lunch_menu": menu_items})
 
 
 def dinner_menu(request):
@@ -54,7 +54,7 @@ def add_menu_item(request):
 
     return render(
         request,
-        "menu/menu_form/.html",
+        "menu_form.html",
         {
             "menu_form": menu_form,
         },
