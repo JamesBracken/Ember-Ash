@@ -16,14 +16,14 @@ def menu(request):
     return render(request, "menu.html", {"menu_form": menu_form})
 
 
-def breakfast_menu(request):
+def lunch_menu(request):
     """
     Adds a menu item to the menu
     """
     menu_items = Menu.objects.all()
     menu_form = MenuForm(data=request.POST)
 
-    return render(request, "menu_breakfast.html", {"menu_form": menu_form})
+    return render(request, "menu_lunch.html", {"menu_form": menu_form})
 
 
 def dinner_menu(request):
