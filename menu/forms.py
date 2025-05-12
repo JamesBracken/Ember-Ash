@@ -7,7 +7,7 @@ class MenuForm(forms.ModelForm):
     Creates a form for :model:`menu.Menu`
     """
     class Meta:
-        MEAL_CATEGORIES = ["Lunch", "Dinner"]
+        MEAL_CATEGORIES = [("lunch", "Lunch"), ("dinner" ,"Dinner")]
         model = Menu
         fields = ("title", "description", "img", "price", "meal_category",)
         widgets = {
