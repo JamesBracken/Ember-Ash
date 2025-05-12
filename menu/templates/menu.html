@@ -2,40 +2,38 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
+  <div class="container">
     <div class="row d-flex justify-content-center">
-
-        <h1 class="text-center">Menu's</h1>
-        
-            
-        <div class="col-12 col-md-6 justify-content-center d-flex align-self-center mt-4 mb-5">
-            <a href="{% url 'breakfast_menu' %}">
-              <div class="card text-center">
-                <img src="{% static 'images/home_page/menu_img.jpg' %}" class="card-img-top short-card" alt="2 dishes of food with fresh ingredients" />
-                <div class="card-body">
-                  <p class="home-card-text">Breakfast</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 justify-content-center d-flex align-self-center mt-4 mb-5">
-            <a href="{% url 'dinner_menu' %}">
-              <div class="card text-center">
-                <img src="{% static 'images/home_page/menu_img.jpg' %}" class="card-img-top short-card" alt="2 dishes of food with fresh ingredients" />
-                <div class="card-body">
-                  <p class="home-card-text">Dinner</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-
-        {% comment %} {% for menu_item in menu %}
-            <div class="col-12 col-md-6 col-lg-4">
-
+      <h1 class="text-center">Menu's</h1>
+      {% if user.is_staff and user.is_authenticated %}
+      <div class="">
+        <a id="add-menu-item-button" class="button" href="{% url 'add_menu_item' %}">Add menu item</a>
+      </div>
+      {% endif %}
+      <div class="col-12 col-md-6 justify-content-center d-flex align-self-center mt-4 mb-5">
+        <a href="{% url 'lunch_menu' %}">
+          <div class="card text-center">
+            <img src="{% static 'images/home_page/menu_img.jpg' %}" class="card-img-top short-card" alt="2 dishes of food with fresh ingredients" />
+            <div class="card-body">
+              <p class="home-card-text">Lunch</p>
             </div>
-        {% endfor %} {% endcomment %}
-    </div>
-</div>
+          </div>
+        </a>
+      </div>
+      <div class="col-12 col-md-6 justify-content-center d-flex align-self-center mt-4 mb-5">
+        <a href="{% url 'dinner_menu' %}">
+          <div class="card text-center">
+            <img src="{% static 'images/home_page/menu_img.jpg' %}" class="card-img-top short-card" alt="2 dishes of food with fresh ingredients" />
+            <div class="card-body">
+              <p class="home-card-text">Dinner</p>
+            </div>
+          </div>
+        </a>
+      </div>
 
+      {% comment %} {% for menu_item in menu %}
+        <div class="col-12 col-md-6 col-lg-4"></div>
+      {% endfor %} {% endcomment %}
+    </div>
+  </div>
 {% endblock %}

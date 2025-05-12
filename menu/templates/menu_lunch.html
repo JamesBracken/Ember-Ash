@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <section class="container">
+    <div class="row">
+      {% if user.is_staff %}
+      {% for item in lunch_menu %}
+        {% comment %} <div class="col-12 col-md-6 col-lg-4"> {% endcomment %}
+          <div class="col-12 col-md-6 col-lg-4 justify-content-center d-flex align-self-center mb-5">
+            <div class="card text-center">
+              {% comment %} Make edit button blue {% endcomment %}
+              <a class="button"href="">Edit</a>
+              {% comment %} Make delete button red {% endcomment %}
+              <a class="button"href="">Delete</a>
+              <img src="{% static '{{ item.img }}' %}" class="card-img-top short-card" alt="2 dishes of food with fresh ingredients" />
+              <div class="card-body">
+                <h2 class="menu-card-title">{{ item.title }}</h2>
+                <p class="menu-card- body">{{ item.description }}</p>
+                <p class="subheading">£{{ item.price }}</p>
+              </div>
+            {% comment %} </div> {% endcomment %}
+          </div>
+        </div>
+      {% endfor %}
+      {% else %}
+      {% for item in lunch_menu %}
+        {% comment %} <div class="col-12 col-md-6 col-lg-4"> {% endcomment %}
+          <div class="col-12 col-md-6 col-lg-4 justify-content-center d-flex align-self-center mb-5">
+            <div class="card text-center">
+              <img src="{% static '{{ item.img }}' %}" class="card-img-top short-card" alt="2 dishes of food with fresh ingredients" />
+              <div class="card-body">
+                <h2 class="menu-card-title">{{ item.title }}</h2>
+                <p class="menu-card- body">{{ item.description }}</p>
+                <p class="subheading">£{{ item.price }}</p>
+              </div>
+            {% comment %} </div> {% endcomment %}
+          </div>
+        </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+  </section>
+{% endblock %}

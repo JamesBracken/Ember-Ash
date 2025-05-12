@@ -1,19 +1,21 @@
-{% extend 'base.html' %}
+{% extends 'base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
 {% block content %}
 {% if user.is_authenticated and user.is_staff == True %}
     <section>
         <div class="container">
             <div class="row">
                 <h1>Create a menu item</h1>
-                <form method="POST" action="">
+                <form method="POST" action="" id="add-menu-item-form">
                     {{ menu_form|crispy}}
-                    {% csrf token %}
+                    {% csrf_token %}
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="button">Submit</button>
+                        <button id="add-menu-item-submit" type="submit" class="button">Submit</button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
+{% endif %}
 {% endblock %}
