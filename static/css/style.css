@@ -268,7 +268,8 @@ main {
 .tall-card {
     max-height: 800px;
 }
-.home-card-text {
+.home-card-text,
+.menu-card-title {
     font-size: var(--fs-heading-4)!important;
     font-family: var(--text-secondary);
 }
@@ -285,7 +286,14 @@ main {
     margin: 6px;
 }
 
+/* ADMIN FEATURES */
 
+#add-menu-item-button {
+    width: 100px !important;
+    /* position: relative; */
+    float: right
+
+}
 /* FOOTER STYLES */
 
 footer {
