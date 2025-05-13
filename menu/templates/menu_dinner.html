@@ -2,5 +2,54 @@
 {% load static %}
 
 {% block content %}
+  <section class="container">
+    <div class="row">
+        <h1 class="text-center">Dinner menu</h1>
+      {% if user.is_staff %}
+      {% for item in dinner_menu %}
+          <div class="col-12 col-md-6 justify-content-center d-flex align-self-center mb-5">
+            <div class="card text-center">
+              <div class="menu-item-buttons-container" 
+              data-id="{{ item.id }}"
+              data-title ="{{ item.title }}"
+              data-description ="{{ item.description }}"
+              data-image ="{{ item.img.url }}"
+              data-price ="{{ item.price }}"
+              data-meal-category ="{{ item.meal_category }}"
+              >
+              {% comment %} Make edit button blue {% endcomment %}
+              <a class="button menu-edit-item-button" href="{% url 'menu_edit' item.slug %}">Edit</a>
+              {% comment %} Make delete button red {% endcomment %}
+              {% comment %} <a class="button menu-delete-item-button" href={% url "dinner_menu_delete"%}>Delete</a> {% endcomment %}
+              </div>
+              <img src="{{ item.img.url }}" class="card-img-top short-card" alt="{{ item.description}}" />
+              <div class="card-body">
+                <h2 class="menu-card-title">{{ item.title }}</h2>
+                <p class="menu-card- body">{{ item.description }}</p>
+                <p class="subheading">£{{ item.price }}</p>
+              </div>
+          </div>
+        </div>
+      {% endfor %}
+      {% else %}
+      {% for item in dinner_menu %}
+          <div class="col-12 col-md-6 justify-content-center d-flex align-self-center mb-5">
+            <div class="card text-center">
+              <img src="{{ item.img.url }}" class="card-img-top short-card" alt="{{ item.description}}" />
+              <div class="card-body">
+                <h2 class="menu-card-title">{{ item.title }}</h2>
+                <p class="menu-card- body">{{ item.description }}</p>
+                <p class="subheading">£{{ item.price }}</p>
+              </div>
+          </div>
+        </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+  </section>
+{% endblock %}
 
+{% block extras %}
+  {% comment %}Script to connect menu js{% endcomment %}
+  <script src="{% static 'js/menu.js' %}"></script>
 {% endblock %}
