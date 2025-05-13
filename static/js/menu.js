@@ -30,6 +30,25 @@ for (let button of deleteButtons) {
 }
 
 // FUNCTIONS
+function editMenuItem(e) {
+    let parent = e.editMenuItem.target.closest("menu-item-buttons-container")
+    let menuItemId = parent.dataset.id
+    let itemTitle = parent.dataset.title
+    let itemDescription = parent.dataset.description
+    let itemImg = parent.dataset.img
+    let itemPrice = parent.dataset.price
+    let itemMealCategory = parent.dataset.meal_category
+    itemTitleInput.value = itemTitle
+    itemDescriptionInput.value = itemDescription
+    itemImgInput.value = itemImg
+    itemPriceInput.value = itemPrice
+    itemMealCategoryInput.value = itemMealCategory
 
+    let action = addMenuItemForm.setAttribute("action", `edit_menu_item/${menuItemId}`)
+}
+
+function deleteMenuItem(e) {
+
+}
 // NAKED CODE which doesn't fit into other categories
 
