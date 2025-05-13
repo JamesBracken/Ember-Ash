@@ -111,7 +111,7 @@ DATABASES = {
 }
 
 CLOUDINARY_STORAGE = {
-    os.environ.get("")
+    os.environ.get("CLOUDINARY_URL")
 }
 
 CSRF_TRUSTED_ORIGINS = [

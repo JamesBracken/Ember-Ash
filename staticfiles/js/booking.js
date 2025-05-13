@@ -34,7 +34,7 @@ for (let button of deleteButtons) {
 // Makes the form at the top of the page appear when invoked
 // When the form is submitted the edit form is again hidden
 function fillBookingData(e){
-    let parent = e.target.closest('.booking-buttons-container')
+    let parent = e.target.closest(".booking-buttons-container")
     let bookingId = parent.dataset.booking_id;
     let bookingSlug = parent.dataset.booking_slug;
     let bookingDateContent = parent.dataset.booking_date;
@@ -50,7 +50,7 @@ function fillBookingData(e){
 }
 
 function deleteBooking(e) {
-    let parent = e.target.closest('.booking-buttons-container')
+    let parent = e.target.closest(".booking-buttons-container")
     // let bookingId = parent.dataset.booking_id;
     let bookingSlug = parent.dataset.booking_slug
     deleteConfirm.href = `delete_booking/${bookingSlug}`;
