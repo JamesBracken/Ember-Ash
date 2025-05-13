@@ -33,10 +33,10 @@ def dinner_menu(request):
     """
     Adds a menu item to the menu
     """
-    menu_items = Menu.objects.all()
+    menu_items = Menu.objects.filter(meal_category="dinner")
     menu_form = MenuForm(data=request.POST)
 
-    return render(request, "menu_dinner.html", {"menu_form": menu_form})
+    return render(request, "menu_dinner.html", {"menu_form": menu_form, "dinner_menu": menu_items})
 
 
 def add_menu_item(request):
@@ -68,7 +68,8 @@ def edit_menu_item(request, slug):
     """
     This view edits a menu item
     """
-    queryset = Menu.objects.filter(meal_category="lunch")
+    # Edit to queryset all items not just lunch
+    queryset = Menu.objects.all()
     item = get_object_or_404(queryset, slug=slug)
     if request.method == "POST":
         menu_form = MenuForm(request.POST, instance=item)
