@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, reverse, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -43,10 +43,10 @@ def booking_edit(request, slug):
             booking.user = request.user
             booking.save()
             # Adds a success message
-            messages.add_message(request, messages.SUCCESS, 'Booking updated!')
+            messages.add_message(request, messages.SUCCESS, "Booking updated!")
         else:
-            messages.add_messages(request, messages.ERROR, 'Error updating booking')
-        return HttpResponseRedirect(reverse('my_profile'))
+            messages.add_messages(request, messages.ERROR, "Error updating booking")
+        return HttpResponseRedirect(reverse("my_profile"))
 
 
 def booking_delete(request, slug):
@@ -58,11 +58,11 @@ def booking_delete(request, slug):
 
     if booking.user == request.user:
         booking.delete()
-        messages.add_message(request, messages.SUCCESS, 'Booking was deleted!')
+        messages.add_message(request, messages.SUCCESS, "Booking was deleted!")
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own bookings!')
+        messages.add_message(request, messages.ERROR, "You can only delete your own bookings!")
 
-    return HttpResponseRedirect(reverse('my_profile'))
+    return HttpResponseRedirect(reverse("my_profile"))
 
 
 # def signup(request):
