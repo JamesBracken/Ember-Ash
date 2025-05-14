@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row">
                 <h1>Create a menu item</h1>
-                <form method="POST" action="" id="add-menu-item-form">
+                <form method="POST" action="" id="add-menu-item-form"  enctype="multipart/form-data">
                     {{ menu_form|crispy}}
                     {% csrf_token %}
                     <div class="d-flex justify-content-center">
