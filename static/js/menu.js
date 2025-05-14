@@ -48,7 +48,12 @@ function editMenuItem(e) {
 }
 
 function deleteMenuItem(e) {
-
+    console.log("Function activating")
+    let parent = e.target.closest(".booking-buttons-container")
+    let itemId = parent.dataset.item_id;
+    let itemSlug = parent.dataset.booking_id
+    deleteConfirm.href = `delete_booking/${itemId}`;
+    deleteModal.show();
 }
 // NAKED CODE which doesn't fit into other categories
 
