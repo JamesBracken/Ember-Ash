@@ -95,16 +95,16 @@ def edit_menu_item(request, slug):
 
 @staff_member_required
 @login_required
-def delete_menu_item(request, slug):
+def delete_menu_item(request, id):
     """
     view to delete a menu item
     """
     queryset = Menu.objects.all()
-    item = get_object_or_404(queryset, slug)
+    item = get_object_or_404(queryset, id=id)
 
-    if item == True:
-        item.delete()
-        messages.add_message(request, messages.SUCCESS, "Menu item has been deleted")
-    else:
-        messages.add_message(request, messages.ERROR, "An error occurred" )
+    # if item == True:
+    item.delete()
+    messages.add_message(request, messages.SUCCESS, "Menu item has been deleted")
+    # else:
+    messages.add_message(request, messages.ERROR, "An error occurred" )
     return redirect("menu")
