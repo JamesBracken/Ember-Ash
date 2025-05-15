@@ -4,7 +4,10 @@ from cloudinary.models import CloudinaryField
 # Create your models here.
 
 
-class Menu (models.Model):
+class Menu(models.Model):
+    """
+    Stores a menu item entry
+    """
     MEAL_CATEGORIES = [
         ("lunch", "Lunch"),
         ("dinner", "Dinner"),
