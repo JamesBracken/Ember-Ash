@@ -7,6 +7,7 @@
         <div class="container">
             <div class="row">
                 <h1>Create a menu item</h1>
+                {% comment %} Action dynamically injected within JS {% endcomment %}
                 <form method="POST" action="" id="add-menu-item-form"  enctype="multipart/form-data">
                     {{ menu_form|crispy}}
                     {% csrf_token %}

@@ -14,7 +14,6 @@ class Menu (models.Model):
     title = models.CharField(max_length=100, unique=True)
     description = models.TextField(max_length=200)
     slug = models.SlugField(unique=True, max_length=100)
-    # Can set default img to placeholder just incase
     img = CloudinaryField('image', default='cld-sample-4')
     price = models.DecimalField(decimal_places=2, max_digits=6)
     meal_category = models.CharField(choices=MEAL_CATEGORIES)

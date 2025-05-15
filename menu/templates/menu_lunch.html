@@ -6,48 +6,37 @@
     <div class="row">
       <h1 class="text-center mb-5">Lunch Menu</h1>
       {% if user.is_staff %}
-      {% for item in lunch_menu %}
-        {% comment %} <div class="col-12 col-md-6 col-lg-4"> {% endcomment %}
+        {% for item in lunch_menu %}
           <div class="col-12 col-md-6 justify-content-center d-flex align-self-center mb-5">
             <div class="card text-center">
-              <div class="menu-item-buttons-container" 
-              data-id="{{ item.id }}"
-              data-title ="{{ item.title }}"
-              data-description ="{{ item.description }}"
-              data-image ="{{ item.img.url }}"
-              data-price ="{{ item.price }}"
-              data-meal-category ="{{ item.meal_category }}"
-              >
-                {% comment %} Edit btn uses anchor instead of button to open a new page {% endcomment %}
+              <div class="menu-item-buttons-container" data-id="{{ item.id }}" data-title="{{ item.title }}" data-description="{{ item.description }}" data-image="{{ item.img.url }}" data-price="{{ item.price }}" data-meal-category="{{ item.meal_category }}">
+                {% comment %}Edit btn uses anchor instead of button to open a new page{% endcomment %}
                 <a class="button menu-edit-item-button" href="{% url 'menu_edit' item.slug %}">Edit</a>
-                {% comment %} Delete icon uses button instead of anchor as it opens a modal {% endcomment %}
+                {% comment %}Delete icon uses button instead of anchor as it opens a modal{% endcomment %}
                 <button type="button" class="menu-delete-item-button" data-id="{{ item.id }}"><i class="fa-solid fa-xmark mb-4" data-id="{{ item.id }}"></i></button>
               </div>
-              <img src="{{ item.img.url }}" class="card-img-top short-card" alt="{{ item.description}}" />
+              <img src="{{ item.img.url }}" class="card-img-top short-card" alt="{{ item.description }}" />
               <div class="card-body">
                 <h2 class="menu-card-title">{{ item.title }}</h2>
                 <p class="menu-card- body">{{ item.description }}</p>
                 <p class="subheading">£{{ item.price }}</p>
               </div>
-            {% comment %} </div> {% endcomment %}
+            </div>
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
       {% else %}
-      {% for item in lunch_menu %}
-        {% comment %} <div class="col-12 col-md-6 col-lg-4"> {% endcomment %}
+        {% for item in lunch_menu %}
           <div class="col-12 col-md-6 justify-content-center d-flex align-self-center mb-5">
             <div class="card text-center">
-              <img src="{% static '{{ item.img }}' %}" class="card-img-top short-card" alt="{{ item.description}}" />
+              <img src="{% static '{{ item.img }}' %}" class="card-img-top short-card" alt="{{ item.description }}" />
               <div class="card-body">
                 <h2 class="menu-card-title">{{ item.title }}</h2>
                 <p class="menu-card- body">{{ item.description }}</p>
                 <p class="subheading">£{{ item.price }}</p>
               </div>
-            {% comment %} </div> {% endcomment %}
+            </div>
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
       {% endif %}
     </div>
   </section>
