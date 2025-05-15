@@ -73,5 +73,7 @@ def booking_delete(request, slug):
 
     return HttpResponseRedirect(reverse("my_profile"))
 
-        
-
+def trigger_login_message(request):
+    # messages.ERROR(request, "You must login first before making a booking")
+    messages.add_message(request, messages.SUCCESS, "You must login first before making a booking" )
+    return redirect('home_urls')
