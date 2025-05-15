@@ -2,7 +2,7 @@
 
 // CONSTANTS
 // Add & edit item page and link to page
-const addButton = document.getElementById("add-menu-item-button")
+const addItemButton = document.getElementById("add-menu-item-button")
 const addMenuItemForm = document.getElementById("add-menu-item-form")
 const submitMenuItem = document.getElementById("add-menu-item-submit")
 const editButtons = document.getElementsByClassName("menu-edit-item-button")
@@ -31,7 +31,7 @@ for (let button of deleteButtons) {
 
 // FUNCTIONS
 function editMenuItem(e) {
-    let parent = e.editMenuItem.target.closest("menu-item-buttons-container")
+    let parent = e.target.closest(".menu-item-buttons-container")
     let menuItemId = parent.dataset.id
     let itemTitle = parent.dataset.title
     let itemDescription = parent.dataset.description
@@ -43,15 +43,15 @@ function editMenuItem(e) {
     itemImgInput.value = itemImg
     itemPriceInput.value = itemPrice
     itemMealCategoryInput.value = itemMealCategory
+    console.log("JS IS CONNECTED")
 
     let action = addMenuItemForm.setAttribute("action", `edit_menu_item/${menuItemId}`)
 }
+    console.log("JS IS CONNECTED")
 
 function deleteMenuItem(e) {
-    console.log("Function activating")
-    let parent = e.target.closest(".booking-buttons-container")
-    let itemId = parent.dataset.item_id;
-    let itemSlug = parent.dataset.booking_id
+    // console.log(e)
+    let itemId = e.target.getAttribute("data-id")
     deleteConfirm.href = `delete_booking/${itemId}`;
     deleteModal.show();
 }

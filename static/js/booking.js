@@ -45,7 +45,6 @@ function fillBookingData(e){
     bookingTimeInput.value = bookingTimeContent
     bookingGuestsInput.value = bookingGuestsContent
     bookingCommentInput.value = bookingCommentContent
-
     let action = bookingForm.setAttribute("action", `edit_booking/${bookingSlug}`)
 }
 
