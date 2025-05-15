@@ -7,14 +7,13 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.admin.views.decorators import staff_member_required
 
+
 def menu(request):
     """
-    Adds a menu item to the menu
+    Renders the main menu page
     """
-    menu_items = Menu.objects.all()
-    menu_form = MenuForm(data=request.POST)
+    return render(request, "menu.html")
 
-    return render(request, "menu.html", {"menu_form": menu_form})
 # Refactoring code of lunch_menu and dinner_menu into one view was considered
 # however this would actually result in more code so was scrapped
 def lunch_menu(request):
@@ -24,7 +23,10 @@ def lunch_menu(request):
     menu_items = Menu.objects.filter(meal_category="lunch").order_by("id")
     menu_form = MenuForm(data=request.POST)
 
-    return render(request, "menu_lunch.html", {"menu_form": menu_form, "lunch_menu": menu_items})
+    return render(
+        request, "menu_lunch.html", {"menu_form": menu_form, "lunch_menu": menu_items}
+    )
+
 
 def dinner_menu(request):
     """
@@ -33,16 +35,19 @@ def dinner_menu(request):
     menu_items = Menu.objects.filter(meal_category="dinner").order_by("id")
     menu_form = MenuForm(data=request.POST)
 
-    return render(request, "menu_dinner.html", {"menu_form": menu_form, "dinner_menu": menu_items})
+    return render(
+        request, "menu_dinner.html", {"menu_form": menu_form, "dinner_menu": menu_items}
+    )
 
+
+@staff_member_required
 def add_menu_item(request):
     """
     Adds a menu item to the menu
     """
-    
     if request.method == "POST":
         menu_form = MenuForm(data=request.POST)
-        if menu_form.is_valid() and request.user.is_authenticated and request.user.is_staff == True:
+        if menu_form.is_valid():
             menu_form.save()
             messages.add_message(
                 request, messages.SUCCESS, "You have successfully added a menu item"
@@ -59,8 +64,8 @@ def add_menu_item(request):
         },
     )
 
+
 @staff_member_required
-@login_required
 def edit_menu_item(request, slug):
     """
     This view edits a menu item
@@ -71,17 +76,29 @@ def edit_menu_item(request, slug):
         menu_form = MenuForm(request.POST, request.FILES, instance=item)
         if menu_form.is_valid():
             menu_form.save()
-            messages.add_message(request, messages.SUCCESS, "You have successfully edited the menu item")
+            messages.add_message(
+                request, messages.SUCCESS, "You have successfully edited the menu item"
+            )
         else:
-            messages.add_message(request, messages.ERROR, "An error occurred, the menu item was not updated")
+            messages.add_message(
+                request,
+                messages.ERROR,
+                "An error occurred, the menu item was not updated",
+            )
         return HttpResponseRedirect(reverse("menu"))
     else:
         menu_form = MenuForm(instance=item)
-    return render(request, "menu_form.html", {"menu_form": menu_form, "item":item,} 
-                )
+    return render(
+        request,
+        "menu_form.html",
+        {
+            "menu_form": menu_form,
+            "item": item,
+        },
+    )
+
 
 @staff_member_required
-@login_required
 def delete_menu_item(request, id):
     """
     view to delete a menu item
