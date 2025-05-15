@@ -9,6 +9,14 @@ from .forms import BookingForm
 # Creating forms.py then editing this content
 
 def booking(request):
+    """
+    Displays a form to create an instance of :model:`booking.Booking`
+
+    **Context**
+
+    ``booking_form``
+        An instance of :forms:`booking.BookingForm`
+    """
     # latest_object = Status.objects.latest('date_added')
 
     # booking = Booking.objects.all()
@@ -41,7 +49,14 @@ def booking(request):
 
 def booking_edit(request, slug):
     """
-    This view enables editing for bookings
+    Displays an individual booking for edit.
+
+    **Context**
+    
+    ``booking_form``
+        An instance of :forms:`booking.BookingForm`
+    ``booking``
+        An instance of :model:`booking.Booking`
     """
     if request.method == "POST":
         queryset = Booking.objects.all()
@@ -60,7 +75,12 @@ def booking_edit(request, slug):
 
 def booking_delete(request, slug):
     """
-    view to delete a booking
+    Deletes an individual selected instance of :model:`booking.Booking`
+
+    **Context**
+
+    ``booking``
+        An instance of :model:`booking.Booking`
     """
     queryset = Booking.objects.all()
     booking = get_object_or_404(queryset, slug=slug)
@@ -74,6 +94,9 @@ def booking_delete(request, slug):
     return HttpResponseRedirect(reverse("my_profile"))
 
 def trigger_login_message(request):
+    """
+    Displays a message if a user is not authenticated and attempts to make a booking
+    """
     # messages.ERROR(request, "You must login first before making a booking")
     messages.add_message(request, messages.SUCCESS, "You must login first before making a booking" )
     return redirect('home_urls')

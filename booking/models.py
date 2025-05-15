@@ -5,6 +5,9 @@ from django.utils.text import slugify
 # Create your models here.
 
 class Booking (models.Model):
+    """
+    Stores a booking entry to :model:`booking.Booking`.
+    """
     # Learned AutoField at https://www.geeksforgeeks.org/how-to-add-an-auto-increment-integer-field-in-django/
     # booking_number = models.AutoField(primary_key=True, unique=True)
     # TEMPORARILY COMMENTING OUT
