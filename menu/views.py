@@ -18,26 +18,23 @@ def menu(request):
 
     return render(request, "menu.html", {"menu_form": menu_form})
 
-
 def lunch_menu(request):
     """
     Adds a menu item to the menu
     """
-    menu_items = Menu.objects.filter(meal_category="lunch")
+    menu_items = Menu.objects.filter(meal_category="lunch").order_by("id")
     menu_form = MenuForm(data=request.POST)
 
     return render(request, "menu_lunch.html", {"menu_form": menu_form, "lunch_menu": menu_items})
-
 
 def dinner_menu(request):
     """
     Adds a menu item to the menu
     """
-    menu_items = Menu.objects.filter(meal_category="dinner")
+    menu_items = Menu.objects.filter(meal_category="dinner").order_by("id")
     menu_form = MenuForm(data=request.POST)
 
     return render(request, "menu_dinner.html", {"menu_form": menu_form, "dinner_menu": menu_items})
-
 
 def add_menu_item(request):
     """
@@ -105,6 +102,4 @@ def delete_menu_item(request, id):
     # if item == True:
     item.delete()
     messages.add_message(request, messages.SUCCESS, "Menu item has been deleted")
-    # else:
-    messages.add_message(request, messages.ERROR, "An error occurred" )
     return redirect("menu")
