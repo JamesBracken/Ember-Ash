@@ -14,7 +14,6 @@ from pathlib import Path
 import os
 import dj_database_url
 
-
 if os.path.isfile('env.py'):
     import env
 
@@ -32,7 +31,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # Auto sets DEBUG to true in local environments and auto sets to False in production
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 ALLOWED_HOSTS = [".herokuapp.com",
-                 "127.0.0.1",]
+                 "127.0.0.1",
+                 "localhost"]
 
 
 # Application definition

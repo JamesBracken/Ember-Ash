@@ -15,7 +15,7 @@ class Menu (models.Model):
     description = models.TextField(max_length=200)
     slug = models.SlugField(unique=True)
     # Can set default img to placeholder just incase
-    img = CloudinaryField('image', default='placeholder')
+    img = CloudinaryField('image', default='cld-sample-4')
     price = models.DecimalField(decimal_places=2, max_digits=6)
     meal_category = models.CharField(choices=MEAL_CATEGORIES)
 
@@ -24,4 +24,4 @@ class Menu (models.Model):
             super().save(*args, **kwargs)
             self.slug = slugify(str(self.title))
             return super().save(*args, **kwargs)
-        super().save(*args, **kwargs)
+        super().save(*args, **kwargs)   
