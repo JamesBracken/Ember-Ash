@@ -1,7 +1,6 @@
 from django import forms
 from .models import Menu
 
-
 class MenuForm(forms.ModelForm):
     """
     Creates a form for :model:`menu.Menu`
@@ -11,5 +10,8 @@ class MenuForm(forms.ModelForm):
         model = Menu
         fields = ("title", "description", "img", "price", "meal_category",)
         widgets = {
-            "meal_category": forms.Select(choices=MEAL_CATEGORIES)
+            "meal_category": forms.Select(choices=MEAL_CATEGORIES),
+            "title": forms.TextInput(attrs={"maxlength":49}),
+            "description": forms.TextInput(attrs={"maxlength":99}),
+            "price": forms.TextInput(attrs={"maxlength":7}),
         }

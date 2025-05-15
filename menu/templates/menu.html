@@ -6,9 +6,9 @@
     <div class="row d-flex justify-content-center">
       <h1 class="text-center">Menu's</h1>
       {% if user.is_staff and user.is_authenticated %}
-      <div class="">
-        <a id="add-menu-item-button" class="button" href="{% url 'add_menu_item' %}">Add menu item</a>
-      </div>
+        <div class="">
+          <a id="add-menu-item-button" class="button" href="{% url 'add_menu_item' %}">Add menu item</a>
+        </div>
       {% endif %}
       <div class="col-12 col-md-6 justify-content-center d-flex align-self-center mt-4 mb-5">
         <a href="{% url 'lunch_menu' %}">
@@ -30,10 +30,6 @@
           </div>
         </a>
       </div>
-
-      {% comment %} {% for menu_item in menu %}
-        <div class="col-12 col-md-6 col-lg-4"></div>
-      {% endfor %} {% endcomment %}
     </div>
   </div>
 {% endblock %}

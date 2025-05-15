@@ -4,14 +4,21 @@
 {% block content %}
   <section class="container">
     <div class="row">
-      <h1 class="text-center">Dinner menu</h1>
+      <div class="col-12">
+        <h1 class="text-center mb-5">Dinner Menu</h1>
+      </div>
+      {% comment %}If user is_staff then this adds an edit and delete button{% endcomment %}
       {% if user.is_staff %}
+        {% comment %}Loop to render each item within the dinner menu{% endcomment %}
         {% for item in dinner_menu %}
           <div class="col-12 col-md-6 justify-content-center d-flex align-self-center mb-5">
             <div class="card text-center">
-              <div class="menu-item-buttons-container" data-id="{{ item.pk }}" data-title="{{ item.title }}" data-description="{{ item.description }}" data-image="{{ item.img.url }}" data-price="{{ item.price }}" data-meal-category="{{ item.meal_category }}">
-                {% comment %} The edit button uses an anchor instead of a button as it opens a new page {% endcomment %}
+              <div class="menu-item-buttons-container" data-title="{{ item.title }}" data-description="{{ item.description }}" data-image="{{ item.img.url }}" data-price="{{ item.price }}" data-meal-category="{{ item.meal_category }}">
+                {% comment %} Edit btn uses anchor instead of button to open a new page {% endcomment %}
+                {% comment %}Opens a new page to edit the selected menu item{% endcomment %}
                 <a class="button menu-edit-item-button" href="{% url 'menu_edit' item.slug %}">Edit</a>
+                {% comment %} Delete icon uses button instead of anchor as it opens a modal {% endcomment %}
+                {% comment %}Opens a delete confirmation modal{% endcomment %}
                 <button type="button" class="menu-delete-item-button" data-id="{{ item.id }}"><i class="fa-solid fa-xmark mb-4" data-id="{{ item.id }}"></i></button>
               </div>
               <img src="{{ item.img.url }}" class="card-img-top short-card" alt="{{ item.description }}" />
@@ -23,7 +30,8 @@
             </div>
           </div>
         {% endfor %}
-      {% else %}
+        {% comment %}Renders the menu items without edit and delete buttons{% endcomment %}
+        {% else %}
         {% for item in dinner_menu %}
           <div class="col-12 col-md-6 justify-content-center d-flex align-self-center mb-5">
             <div class="card text-center">
@@ -37,33 +45,9 @@
           </div>
         {% endfor %}
       {% endif %}
-
-      {% comment %}BS TEST MODAL{% endcomment %}
-
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Launch demo modal</button>
-
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">...</div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {% comment %}END OF BS TEST MODAL{% endcomment %}
     </div>
   </section>
-  <!-- Delete confirmation modal copied from Code insti tute codestar blog -->
+  <!-- Delete confirmation modal copied from Code institute codestar blog -->
   <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">

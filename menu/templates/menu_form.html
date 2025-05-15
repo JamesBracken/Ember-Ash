@@ -1,23 +1,24 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% load static %}
+
 {% block content %}
-{% if user.is_authenticated and user.is_staff == True %}
-    <section>
-        <div class="container">
-            <div class="row">
-                <h1>Create a menu item</h1>
-                <form method="POST" action="" id="add-menu-item-form"  enctype="multipart/form-data">
-                    {{ menu_form|crispy}}
-                    {% csrf_token %}
-                    <div class="d-flex justify-content-center">
-                        <button id="add-menu-item-submit" type="submit" class="button">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+{% comment %} If user is_staff then display the form to add menu items {% endcomment %}
+  {% if user.is_staff %}
+    <section class="container">
+      <div class="row">
+        <h1>Create a menu item</h1>
+        {% comment %}Action dynamically injected within JS{% endcomment %}
+        <form method="POST" action="" id="add-menu-item-form" enctype="multipart/form-data">
+          {{ menu_form|crispy }}
+          {% csrf_token %}
+          <div class="d-flex justify-content-center">
+            <button id="add-menu-item-submit" type="submit" class="button">Submit</button>
+          </div>
+        </form>
+      </div>
     </section>
-{% endif %}
+  {% endif %}
 {% endblock %}
 
 {% block extras %}
