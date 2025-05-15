@@ -18,8 +18,18 @@ def menu(request):
 # however this would actually result in more code so was scrapped
 def lunch_menu(request):
     """
-    Adds a menu item to the menu
+    Renders the lunch menu list page
+
+    **Context**
+
+    ``menu item``
+        An instance of :model:`menu.Menu`.
+
+    **Template**
+
+    :template:menu/`menu_lunch.html`
     """
+
     menu_items = Menu.objects.filter(meal_category="lunch").order_by("id")
     menu_form = MenuForm(data=request.POST)
 
@@ -30,8 +40,18 @@ def lunch_menu(request):
 
 def dinner_menu(request):
     """
-    Adds a menu item to the menu
+    Renders the dinner menu list page
+
+    **Context**
+
+    ``menu item``
+        An instance of :model:`menu.Menu`.
+
+    **Template**
+
+    :template:menu/`menu_dinner.html`
     """
+    
     menu_items = Menu.objects.filter(meal_category="dinner").order_by("id")
     menu_form = MenuForm(data=request.POST)
 
@@ -43,7 +63,16 @@ def dinner_menu(request):
 @staff_member_required
 def add_menu_item(request):
     """
-    Adds a menu item to the menu
+    Displays a form for admins to add an instance of :model:`menu.Menu`.
+
+    **Context**
+
+    ``menu_form``
+    an instance of :form:`menu.MenuForm`
+
+    **Template**
+
+    :template:menu/`menu_form.html`
     """
     if request.method == "POST":
         menu_form = MenuForm(data=request.POST)
@@ -68,7 +97,18 @@ def add_menu_item(request):
 @staff_member_required
 def edit_menu_item(request, slug):
     """
-    This view edits a menu item
+    Displays a form for admins to edit an existing instance of :model:`menu.Menu`.
+
+    **Context**
+
+    ``menu_item``
+    an instance of :model:`menu.Menu`
+    ``menu_form``
+    an instance of :form:`menu.MenuForm`
+
+    **Template**
+
+    :template:menu/`menu_form.html`
     """
     queryset = Menu.objects.all()
     item = get_object_or_404(queryset, slug=slug)
@@ -101,7 +141,18 @@ def edit_menu_item(request, slug):
 @staff_member_required
 def delete_menu_item(request, id):
     """
-    view to delete a menu item
+    Deletes an instance of :model:`menu.Menu`.
+
+    **Context**
+
+    ``menu_item``
+    an instance of :model:`menu.Menu`
+
+    **Template**
+
+    :template:menu/`menu_lunch.html`
+    OR
+    :template:menu/`menu_dinner.html`
     """
     queryset = Menu.objects.all()
     item = get_object_or_404(queryset, id=id)
