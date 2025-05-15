@@ -2,9 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from .models import Menu
 from .forms import MenuForm
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
-from django.contrib.auth.models import User
 from django.contrib.admin.views.decorators import staff_member_required
 
 
@@ -18,7 +16,7 @@ def menu(request):
 # however this would actually result in more code so was scrapped
 def lunch_menu(request):
     """
-    Renders the lunch menu list page
+    Renders the lunch menu page
 
     **Context**
 
@@ -40,7 +38,7 @@ def lunch_menu(request):
 
 def dinner_menu(request):
     """
-    Renders the dinner menu list page
+    Renders the dinner menu page
 
     **Context**
 
