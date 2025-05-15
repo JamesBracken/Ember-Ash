@@ -24,3 +24,85 @@ I fixed this problem by taking the modal code out of the header and placing it a
 
 
 ## Manual testing
+
+Responsiveness
+|Screen Size|Device Type|Viewport Width|Pass/Fail|
+|-----------|-----------|--------------|---------|
+|Mobile|Smartphone|375px||
+|Tablet|Tablet |768px||
+|Laptop|Small Laptop/Desktop|1024px||
+
+Browser testing
+|Browser|Not Functioning|Partial Functioning|Full Functioning|
+|-------|---------------|-------------------|----------------|
+|<i class="fab fa-chrome"></i>Google Chrome| | ||
+|<i class="fab fa-firefox-browser"></i>Mozilla Firefox| | ||
+|<i class="fab fa-edge"></i>Microsoft Edge| | ||
+|<i class="fab fa-opera"></i>Opera| | ||
+
+Header & Navbar
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+
+Footer
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+||||||
+
+
+Home page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+||||||
+
+My profile page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+||||||
+
+
+Menu page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+||||||
+
+Lunch Menu page 
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+||||||
+
+Dinner menu delete item modal
+
+
+
+Dinner menu page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+||||||
+
+
+Login modal
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+||||||
+
+Signup modal
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+||||||
+
+
+
+
+
+
+
+
+Success page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+||||||
+
+
+404 page
+
