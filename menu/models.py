@@ -13,7 +13,7 @@ class Menu (models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100, unique=True)
     description = models.TextField(max_length=200)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(unique=True, max_length=100)
     # Can set default img to placeholder just incase
     img = CloudinaryField('image', default='cld-sample-4')
     price = models.DecimalField(decimal_places=2, max_digits=6)
@@ -21,7 +21,6 @@ class Menu (models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            super().save(*args, **kwargs)
             self.slug = slugify(str(self.title))
             return super().save(*args, **kwargs)
         super().save(*args, **kwargs)   

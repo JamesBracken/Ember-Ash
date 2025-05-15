@@ -43,7 +43,7 @@ def add_menu_item(request):
     
     if request.method == "POST":
         menu_form = MenuForm(data=request.POST)
-        if menu_form.is_valid and request.user.is_authenticated and request.user.is_staff == True:
+        if menu_form.is_valid() and request.user.is_authenticated and request.user.is_staff == True:
             menu_form.save()
             messages.add_message(
                 request, messages.SUCCESS, "You have successfully added a menu item"
@@ -73,7 +73,7 @@ def edit_menu_item(request, slug):
     if request.method == "POST":
         # print("Second:" + request.FILES)
         menu_form = MenuForm(request.POST, request.FILES, instance=item)
-        if menu_form.is_valid() and request.user.is_staff:
+        if menu_form.is_valid():
             menu_item = menu_form.save()
             # print("Third:" + request.FILES)
             # Add user feedback in messages
