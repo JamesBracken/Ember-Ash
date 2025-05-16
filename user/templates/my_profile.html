@@ -8,6 +8,7 @@
       <div class="d-flex justify-content-center mb-4">
         <h1>My profile</h1>
       </div>
+      {% comment %}My details section{% endcomment %}
       <div class="col-12 col-md-6">
         <h2 class="text-center mb-4">My details</h2>
         <div class="container">
@@ -26,6 +27,7 @@
         </div>
       </div>
       <div class="col-12 col-md-6">
+        {% comment %}My bookings section, 5 bookings displayed per page{% endcomment %}
         <h2 class="text-center mb-4">My bookings</h2>
         {% for booking in page_object %}
           <div class="row">
@@ -46,10 +48,10 @@
           </div>
         {% endfor %}
       </div>
+      {% comment %}Pagination page control{% endcomment %}
       <div class="pagination container mt-5 justify-content-center">
         <div class="row justify-content-center">
           <div class="col-12">
-            {% comment %}PAGINATION CODE{% endcomment %}
             {% if page_object.has_previous %}
               <a href="?page=1"></a>
               <a class="m-3 underline" href="?page={{ page_object.previous_page_number }}">Previous</a>
@@ -61,7 +63,6 @@
               <a class="m-3 underline" href="?page={{ page_object.next_page_number }}">Next</a>
               <a class="underline" href="?page={{ page_object.paginator.num_pages }}">Last</a>
             {% endif %}
-            {% comment %}END OF PAGINATION CODE{% endcomment %}
           </div>
         </div>
       </div>

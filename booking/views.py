@@ -15,6 +15,10 @@ def booking(request):
 
     ``booking_form``
         An instance of :forms:`booking.BookingForm`
+    
+    **Template**
+
+    ``booking_form.html``
     """
     if request.method == "POST":
         booking_form = BookingForm(data=request.POST)
@@ -50,13 +54,16 @@ def booking_edit(request, id):
         An instance of :forms:`booking.BookingForm`
     ``booking``
         An instance of :model:`booking.Booking`
+        
+    **Template**
+
+    ``booking_form.html``
     """
     
     queryset = Booking.objects.all()
     booking = get_object_or_404(queryset, id=id)
     booking_form = BookingForm(data=request.POST, instance=booking)
     if request.method == "POST":
-        # booking_form = BookingForm(data=request.POST, instance=booking)
         if booking_form.is_valid() and booking.user == request.user:
             booking = booking_form.save(commit=False)
             booking.user = request.user

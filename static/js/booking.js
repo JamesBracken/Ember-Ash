@@ -1,17 +1,10 @@
 // GLOBAL VARIABLES
 
 // CONSTANTS
-
 // Booking delete variables
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const deleteButtons = document.getElementsByClassName("delete-btn");
 const deleteConfirm = document.getElementById("deleteConfirm");
-
-// LET AND VAR VARIABLES
-// EVENT LISTENERS
-for (let button of editButtons) {
-    button.addEventListener("click", fillBookingData)
-}
 
 for (let button of deleteButtons) {
     button.addEventListener("click", deleteBooking)
@@ -21,10 +14,7 @@ for (let button of deleteButtons) {
 function deleteBooking(e) {
     let parent = e.target.closest(".booking-buttons-container")
     let bookingId = parent.getAttribute("data-booking_id")
-    console.log(parent)
-    console.log(bookingId)
     deleteConfirm.href = `/booking/delete_booking/${bookingId}`;
     deleteModal.show();
 }
 // NAKED CODE which doesn't fit into other categories
-
