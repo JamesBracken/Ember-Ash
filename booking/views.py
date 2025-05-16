@@ -3,7 +3,7 @@ from .models import Booking
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .forms import BookingForm
-from django.contrib.auth import login_required
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 @login_required
@@ -40,7 +40,7 @@ def booking(request):
     )
 
 @login_required
-def booking_edit(request, slug):
+def booking_edit(request, id):
     """
     Displays an individual booking for edit.
 
@@ -51,19 +51,32 @@ def booking_edit(request, slug):
     ``booking``
         An instance of :model:`booking.Booking`
     """
+    
+    queryset = Booking.objects.all()
+    booking = get_object_or_404(queryset, id=id)
+    booking_form = BookingForm(data=request.POST, instance=booking)
     if request.method == "POST":
-        queryset = Booking.objects.all()
-        booking = get_object_or_404(queryset, slug=slug)
-        booking_form = BookingForm(data=request.POST, instance=booking)
+        # booking_form = BookingForm(data=request.POST, instance=booking)
         if booking_form.is_valid() and booking.user == request.user:
             booking = booking_form.save(commit=False)
             booking.user = request.user
             booking.save()
             # Adds a success message
             messages.add_message(request, messages.SUCCESS, "Booking updated!")
+            return redirect("home_urls")
         else:
             messages.add_messages(request, messages.ERROR, "Error updating booking")
-        return HttpResponseRedirect(reverse("my_profile"))
+            return redirect("home_urls")
+    else:
+        booking_form = BookingForm(instance=booking)
+    # return render
+    return render(
+        request,
+        "booking/booking_form.html", {
+            "booking_form": booking_form,
+            "booking_item": booking,
+        }
+    )
 
 @login_required
 def booking_delete(request, slug):
