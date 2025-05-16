@@ -79,7 +79,7 @@ def booking_edit(request, id):
     )
 
 @login_required
-def booking_delete(request, slug):
+def booking_delete(request, id):
     """
     Deletes an individual selected instance of :model:`booking.Booking`
 
@@ -89,7 +89,7 @@ def booking_delete(request, slug):
         An instance of :model:`booking.Booking`
     """
     queryset = Booking.objects.all()
-    booking = get_object_or_404(queryset, slug=slug)
+    booking = get_object_or_404(queryset, id=id)
 
     if booking.user == request.user:
         booking.delete()
@@ -99,7 +99,7 @@ def booking_delete(request, slug):
             request, messages.ERROR, "You can only delete your own bookings!"
         )
 
-    return HttpResponseRedirect(reverse("my_profile"))
+    return redirect("home_urls")
 
 
 def trigger_login_message(request):

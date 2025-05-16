@@ -20,8 +20,10 @@ for (let button of deleteButtons) {
 // FUNCTIONS
 function deleteBooking(e) {
     let parent = e.target.closest(".booking-buttons-container")
-    let bookingSlug = parent.dataset.booking_slug
-    deleteConfirm.href = `delete_booking/${bookingSlug}`;
+    let bookingId = parent.getAttribute("data-booking_id")
+    console.log(parent)
+    console.log(bookingId)
+    deleteConfirm.href = `/booking/delete_booking/${bookingId}`;
     deleteModal.show();
 }
 // NAKED CODE which doesn't fit into other categories
