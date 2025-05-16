@@ -79,7 +79,7 @@
                 <a class="nav-link nav-link-cta active" aria-current="page" 
                 {% comment %} Adding in if check to see if user is logged in {% endcomment %}
                 {% if user.is_authenticated %}
-                href="{% url 'booking_urls' %}"
+                href="{% url 'booking_form'%}"
                 {% else %}
                 href="{% url 'trigger_login_message' %}" 
                 {% comment %} data-bs-toggle="modal" data-bs-target="#login-modal-toggle" {% endcomment %}
