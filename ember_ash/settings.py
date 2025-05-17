@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'widget_tweaks',
     'booking',
-    'home',
     'user',
     'menu',
 ]
