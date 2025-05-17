@@ -2,14 +2,22 @@ from django.shortcuts import render
 from booking.models import Booking
 from booking.forms import BookingForm
 from django.core.paginator import Paginator
-
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
+@login_required
 def customer_profile(request):
+    """
+    Displays an instance of :model:`user.Customer`
+    AND
+    Display a multiple instances of :model:`booking.Booking`
+
+    **Context**
+
+    `` user_bookings``
+        Instances of :model:`booking.Booking`
+    """
     user_bookings = Booking.objects.filter(user=request.user).order_by("-booking_date")
-    # template_name = "user/my_profile.html"
-    # Consider using Paginate
-    booking_form = BookingForm(data=request.POST)
     paginator = Paginator(user_bookings, 5)
     page_number = request.GET.get('page')
     page_object = paginator.get_page(page_number)
@@ -20,7 +28,6 @@ def customer_profile(request):
         {
             # "bookings": user_bookings,
             "page_object": page_object,
-            "booking_form": booking_form,
             "user": request.user,
         }
     )

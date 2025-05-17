@@ -15,6 +15,10 @@ def booking(request):
 
     ``booking_form``
         An instance of :forms:`booking.BookingForm`
+    
+    **Template**
+
+    ``booking_form.html``
     """
     if request.method == "POST":
         booking_form = BookingForm(data=request.POST)
@@ -50,13 +54,16 @@ def booking_edit(request, id):
         An instance of :forms:`booking.BookingForm`
     ``booking``
         An instance of :model:`booking.Booking`
+        
+    **Template**
+
+    ``booking_form.html``
     """
     
     queryset = Booking.objects.all()
     booking = get_object_or_404(queryset, id=id)
     booking_form = BookingForm(data=request.POST, instance=booking)
     if request.method == "POST":
-        # booking_form = BookingForm(data=request.POST, instance=booking)
         if booking_form.is_valid() and booking.user == request.user:
             booking = booking_form.save(commit=False)
             booking.user = request.user
@@ -79,7 +86,7 @@ def booking_edit(request, id):
     )
 
 @login_required
-def booking_delete(request, slug):
+def booking_delete(request, id):
     """
     Deletes an individual selected instance of :model:`booking.Booking`
 
@@ -89,7 +96,7 @@ def booking_delete(request, slug):
         An instance of :model:`booking.Booking`
     """
     queryset = Booking.objects.all()
-    booking = get_object_or_404(queryset, slug=slug)
+    booking = get_object_or_404(queryset, id=id)
 
     if booking.user == request.user:
         booking.delete()
@@ -99,7 +106,7 @@ def booking_delete(request, slug):
             request, messages.ERROR, "You can only delete your own bookings!"
         )
 
-    return HttpResponseRedirect(reverse("my_profile"))
+    return redirect("home_urls")
 
 
 def trigger_login_message(request):
