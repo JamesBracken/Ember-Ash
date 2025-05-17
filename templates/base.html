@@ -73,9 +73,6 @@
                 <a class="nav-link active" aria-current="page" href="{% url 'home_urls' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'menu' %}">Menu</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link nav-link-cta active" aria-current="page" 
                 {% comment %} Adding in if check to see if user is logged in {% endcomment %}
                 {% if user.is_authenticated %}
@@ -88,10 +85,7 @@
                 >Make a booking</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">About us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Gallery</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'menu' %}">Menu</a>
               </li>
             </ul>
           </div>

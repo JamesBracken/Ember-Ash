@@ -1,6 +1,4 @@
-from allauth.account.views import LoginView
-from django.contrib import messages
-from django.shortcuts import redirect
+from django.shortcuts import render
 # View to connect the custom login modal with allauth
 
 
@@ -8,3 +6,9 @@ from django.shortcuts import redirect
 
 # class ModalLogin(LoginView):
 #     template_name = "base.html"
+
+def home(request):
+    """
+    Renders the home page
+    """
+    return render(request, 'index.html')
