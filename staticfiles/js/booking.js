@@ -6,12 +6,6 @@ const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const deleteButtons = document.getElementsByClassName("delete-btn");
 const deleteConfirm = document.getElementById("deleteConfirm");
 
-// LET AND VAR VARIABLES
-// EVENT LISTENERS
-for (let button of editButtons) {
-    button.addEventListener("click", fillBookingData)
-}
-
 for (let button of deleteButtons) {
     button.addEventListener("click", deleteBooking)
 }
