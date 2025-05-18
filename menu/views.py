@@ -73,7 +73,7 @@ def add_menu_item(request):
     :template:menu/`menu_form.html`
     """
     if request.method == "POST":
-        menu_form = MenuForm(data=request.POST)
+        menu_form = MenuForm(request.POST, request.FILES)
         if menu_form.is_valid():
             menu_form.save()
             messages.add_message(
