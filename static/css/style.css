@@ -226,7 +226,7 @@ nav li {
     max-width: fit-content;
   }
   
-  /* Login modal */
+  /* Login & signup modal */
 
   .modal-backdrop {
     z-index: 1040 !important;
@@ -234,6 +234,16 @@ nav li {
 
   .modal {
     z-index: 1050 !important;
+  }
+
+  .login-modal-img,
+  .signup-modal-img {
+    height: 360px;
+  }
+
+  .login-modal-img-container,
+  .signup-modal-img-container {
+    padding: 0;
   }
 
   /* Success messages styles */
