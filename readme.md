@@ -13,6 +13,31 @@ For the goals of this project I have implemented a kanban board for organisation
 
 My project goals are also displayed below
 
+#### Completed project goals
+
+*User story goals*
+
+**User story 1: Home page(Must have)**
+- As a user I first see a home page so that I can immediately understand the purpose of the website
+
+**User story 2: User login and signup(Must have)**
+- As a potential user, I would liek to have the ability to make my own account and login
+
+**User story 3: Full CRUD for menu items (Must have)**
+- As an Admin I can Create, read, update and delete menu items so that I can keep the menu updated
+
+**User story 4:Full CRUD for bookings (Must have)**
+- As a user I can create, read update and delete bookings so that I can have a reserved table when I need
+
+**User story 5: Restaurant menu(Must have)**
+- As a potential client, I would like to be able to view the menu so that I can see if the menu is to my liking
+
+**User story 6: Responsive website(Must have)**
+- As a user, I would like the website to be responsive so I can use it on different devices
+
+**User story 7: Navigation and footer(Must have)**
+- As a user I can access a navigation bar and footer so that I can navigate around the website and find the information I need
+
 
 ### Scope
 #### Consistent features implemented
