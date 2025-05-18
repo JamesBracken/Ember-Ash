@@ -252,7 +252,19 @@ To help improve UX, bookings are spread across multiple pages if there has been 
 #### Applications
 The flow of information layout of your project, talk about how you place things to attract people to certain items like cta and the organisation of the nav, footer and page info
 ### Skeleton
-#### Wireframes
+**Wireframes**
+- [Home page]()
+- [Menu page]()
+- [Login]()
+- [Signup]()
+- [My profile]()
+- [Booking form page]()
+- [Add menu item form page]()
+
+ADD ANY OTHER PAGE IE IF WE MAKE A CONFIRM SIGNOUT PAGE ETC.
+- []()
+- []()
+
 Here is your wireframe and your ERD, a low fidelity guide for your project
 ### Surface
 #### Colour scheme
