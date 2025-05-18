@@ -351,6 +351,36 @@ To fork this repository follow these steps
 
 Further assistance can be found [HERE](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) on the github Fork a Repo page
 
+**Local development**
+1.Clone your repository from Github by, you can find the "Code" button where you can copy the url from
+2.Open your IDE and open a terminal, make sure you are in the correct directory where you want to clone the repository to.
+3.Type git clone URL, replace URL with the one you just copied in the first step
+4.Setup your virtual environment, type the below commands
+    python3 -m venv [virtual_environment name]
+5.Activate your virtual environment, type the below commands
+Windows: myvenv\Scripts\activate
+Linux/Mac: source myvenv/bin/activate
+6.Type the below items into your IDE terminal, this will install all packages
+    pip install -r requirements.txt
+
+If you want to install your own packages here is some extra step-by-step instructions:
+
+- Type the below items into your IDE terminal
+    pip install Django~=3.2 gunicorn (NOTE: try to use pip3 instead if this does not work)
+- Install libraries your project will need like Postgresql(Handles database), psycopg2(Adapter for Postgresql), cloudinary storage(Allows long term storage of static files I.E. images) and whitenoise(serves compressed content)
+    pip install dj_database_url psycopg2
+    pip install dj3-cloudinary-storage
+- Create your requirements.txt file, this is a list of your installed packages so everytime you install a new package you will need to update it like this
+    pip freeze --local > requirements.txt
+
+7.Setup environmental variables, scroll down to Environmental Variables section
+8.Connect your database by typing this in the terminal(This runs your migrations):
+    python manage.py migrate
+9.Create a superuser account by typing into the terminal:
+    python manage.py createsuperuser
+10.You can run the app in a local environment by typing:
+    python manage.py runserver
+11.If you want to open a deployed version of your app see the steps below in Heroku deployment
 
 ## Credits
 ### Content
