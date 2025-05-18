@@ -37,6 +37,7 @@ across the code and reduce unexpected behaviours and styles */
 
 h1 {
     font-size: var(--fs-heading-1) !important;
+    font-family: var(--text-primary);
 }
 
 h2 {
@@ -315,6 +316,15 @@ main {
     height: 295px !important;
     width: 300px !important;
     /* width: 100% !important; */
+}
+
+/* Menu item cards */
+
+/* .menu-item-card {
+
+} */
+.menu-item-card-img {
+
 }
 
 /* My profile page */
