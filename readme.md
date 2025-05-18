@@ -295,7 +295,12 @@ Text/body : sans serif
 
 
 #### Imagery
-Talk about the appearance and design of your website, chosen design strategies, color palette etc
+
+As they say "We eat with our eyes". In our digital, everything needs to be instagrammable world images are crucial. The best way to get customers from the website to our seats is to give them very appealing photos. I focused on using pictures with fantastic looking food. A lot of very bright pictures and also some very dark themed ones too, a good mix of both worlds!
+
+I used [Pixabay](https://pixabay.com/) and [Pexels](https://www.pexels.com/) for uncopyrighted images.
+
+Additionally I improved website performance and load time by compressing images with [Tiny png](https://tinypng.com/) and [Tiny jpg](https://tinyjpg.com/)
 
 ## Testing
 Describe the other testing md file
