@@ -135,6 +135,59 @@ On each menu item in both the lunch and dinner pages, there is a delete icon whi
 ![Confirm delete modal]()
 To ensure there is no accidental deletion users are also prompted one extra time to confirm deletion of any menu item.
 
+**Make a booking page**
+
+![Booking page]()
+
+The making a booking page is a crucial component of our website. This is where we can translate a website visitor into a paying customer by getting them into our restaurant.
+The user can set a time, date and amount of guests for each booking.
+
+![Comments]()
+The user can additionally put any extra comments, normally guest allergens. This is crucial to ensure customer health and safety is maintained. Also any special requests can be added.
+
+**My profile page**
+
+![My profile page]()
+
+On the my profile page users can find their details, previous and future bookings
+
+**My details section**
+![My details section]()
+
+The users can see their input details, in future iterations of the project we will look to broaden this and add items like if a user wants newsletters and etc.
+
+**My bookings section**
+![My bookings section]()
+
+In the my booking section users are able to see any information about previous and future bookings.
+
+
+**Edit bookings**
+
+![Edit bookings icon]()
+
+If a user wants to make some changes to a booking they are able to do that here. They can update any information about the booking up to a day before the booking. Once the day of the booking arrives users are no longer able to change booking times.
+
+![Edit bookings page ]()
+
+After clicking the edit icon the page loads the booking form and passes in the booking information to ease UX and updating bookings.
+
+**Delete bookings**
+
+![Delete bookings icon]()
+
+If the worst case scenario happens and a user must delete their booking they can do that up until the day before the booking. Once the day of the booking arrives, users are no longer able to delete bookings. Users are also not allowed to delete any previous bookings.
+
+![Confirm delete modal]()
+
+On click of the delete icon a user is prompted by a confirm deletion modal. This is to prevent any accidental deletions, after clicking the confirm delete on the modal bookings are deleted.
+
+**Bookings page control**
+
+![Booking page control]()
+
+To help improve UX, bookings are spread across multiple pages if there has been more than 5 bookings placed on a profile. Bookings are organised with future bookings at the start and older bookings at the end.
+
 #### Features left to implement
 
 ### Structure
