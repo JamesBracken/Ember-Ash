@@ -261,17 +261,29 @@ main {
     border-radius: 0 !important;
 }
 
-.short-card {
-    max-height: 550px;
-}
-
-.tall-card {
-    max-height: 800px;
-}
 .home-card-text,
 .menu-card-title {
     font-size: var(--fs-heading-4)!important;
     font-family: var(--text-secondary);
+}
+
+/* Home card images */
+
+.card-home {
+    /* max-width: 216px!important;
+    height: 516px!important; */
+}
+
+.card-home-container {
+    /* max-height: 380px !important; */
+    /* width: 100% !important; */
+    height: inherit !important;
+}
+
+.card-home-img {
+    height: 295px !important;
+    width: 300px !important;
+    /* width: 100% !important; */
 }
 
 /* My profile page */
@@ -288,12 +300,7 @@ main {
 
 /* ADMIN FEATURES */
 
-#add-menu-item-button {
-    width: 100px !important;
-    /* position: relative; */
-    float: right
 
-}
 /* FOOTER STYLES */
 
 footer {
