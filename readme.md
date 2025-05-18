@@ -15,9 +15,57 @@ My project goals are also displayed below
 
 ### Scope
 #### Consistent features implemented
+
+**Navbar**
+![Navbar image when a user is logged out]()
+
+For navigating around the website I used a bootstrap navbar and implemented this within the base.html to follow DRY(Dont repeat yourself). I added our company logo to further the mission of spreading awareness of our company and help drive footfall. All navigation across the website, any page which we can direct to is found in the navigation. The navigation is visible no matter which page you are on and no matter where you are on the page. The nav is always visible to help improve UX and to ease navigation around different pages of the site. The navigation follows the simplistic elegant look that the page has.
+
+![Nav items on hover]()
+
+To improve UX, nav items are underlined on hover.
+
+![CTA on hover]()
+
+To improve UX, nav items underlines are removed on hover.
+
+![Navbar image when a user is logged in]()
+When a user logs in the navbar updates to include user logged-in features. After login the user can now create bookings for our restaurant to ensure they have their own space. They can also access these bookings within the my profile section which also appears on login. The my profile section enables the display of already created user bookings and the updating and deleting of each of these. 
+
+![CTA Booking]()
+![CTA Login]()
+Our Call to action buttons are also located within the navbar. These further our company's interests by helping to drive customers to the company goals of translating website visitors into account holding users and increasing bookings. The CTA navigation items are also underlined to attract focus to these buttons.
+
+**Buttons**
+
+![Buttons]()
+Buttons across our website use the same design to keep a consistent feel to the website. They have a nice light brown color.
+
+
+**Social media section**
+![Social media section]()
+
+A section which is a component of our footer, which is also found just above the footer on every page. Social media is a crucial component of every company nowadays, making sure your company has social media exposure can make or break a company. Social media is especially influential in the hospitality industry. Using the social media icons, users can be redirected to our social media pages where users can find more information about us  and help drive user interest in our company.
+
+**Footer**
+![Footer]()
+
+Our footer is found at the bottom of every page. Here we help ensure our customers are aware of our opening times and how they can get into contact with us.
+
+**Login(maybe modal)**
+![Login image]()
+
+**Signup(maybe modal)**
+![Signup image]()
+
+**Messages(user feedback)**
+
+![]()
+
+To improve UX we display feedback messages for our users at the top of our page. These feedback messages stand out so our users are able to immediately see the feedback and can understand what is happening. Users are able to understand if something worked or didnt and we can reduce user frustration by keeping them updated.
 #### Unique features implemented 
 #### Features left to implement
-Covering what your project covers and how much it covers
+
 ### Structure
 #### Database model
 #### Applications
