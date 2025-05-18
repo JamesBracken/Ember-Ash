@@ -307,15 +307,12 @@ main {
 }
 
 .card-home-container {
-    /* max-height: 380px !important; */
-    /* width: 100% !important; */
     height: inherit !important;
 }
 
 .card-home-img {
     height: 295px !important;
     width: 300px !important;
-    /* width: 100% !important; */
 }
 
 /* Menu item cards */
@@ -323,15 +320,20 @@ main {
 /* .menu-item-card {
 
 } */
-.menu-item-card-img {
+.menu-item-card-container {
+    height: 700px;
+    width: 300px;
+}
 
+.menu-item-card-img {
+    height: 350px !important;
+    width: 300px;
 }
 
 /* My profile page */
 
 .border-bottom {
     border-bottom: 1px rgba(123, 123, 123, .7) solid;
-    /* border-top:1px rgba(123, 123, 123, .6) solid ; */
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow) !important;
     padding: 5px;
@@ -355,16 +357,48 @@ footer {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 768px) {
-    .card-img-top {
-        max-height: 600px !important;
-    }
-}
 
 /* Media query to push main content below header  */
 @media screen and (max-width: 524px) {
     main {
         padding-top: 250px !important;
         padding-bottom: 2px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card-img-top {
+        max-height: 600px !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .menu-item-card-container {
+        min-height: 762px !important;
+        min-width: 336px !important;
+    }
+    .menu-item-card-img {
+        height: 300px !important;
+        /* width: 336px !important; */
+    }
+}
+@media screen and (min-width: 1024px) {
+    .menu-item-card-container {
+        min-height: 692px !important;
+        min-width: 456px !important;
+    }
+    .menu-item-card-img {
+        height: 350px !important;
+        /* width: 456px !important; */
+    }
+}
+@media screen and (min-width: 1440px) {
+    .menu-item-card-container {
+        min-height: 632px !important;
+        min-width: 636px !important;
+    }
+    .menu-item-card-img {
+        height: 350px !important;
+        /* width: 456px !important; */
     }
 }
