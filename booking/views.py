@@ -15,7 +15,7 @@ def is_date_in_future(date):
 
         date passed in as a parameter to check if it is in the future
     """
-    today = date.today() + timedelta(days=1)
+    today = date.today()
     return date > today
 
 
@@ -102,7 +102,7 @@ def booking_edit(request, id):
             }
         )
     else: 
-        messages.add_message(request, messages.ERROR, "You cannot edit a booking which is today, tomorrow or in the past")
+        messages.add_message(request, messages.ERROR, "You cannot edit a booking which is today or in the past")
         return redirect("my_profile")
 
 @login_required
@@ -125,7 +125,7 @@ def booking_delete(request, id):
     if is_date_in_future(booking_date):
         return redirect("home_urls")
     else: 
-        messages.add_message(request, messages.ERROR, "You cannot delete a booking which is today, tomorrow or in the past")
+        messages.add_message(request, messages.ERROR, "You cannot delete a booking which is today or in the past")
         return redirect("my_profile")
 
 
