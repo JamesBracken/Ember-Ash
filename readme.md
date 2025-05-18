@@ -79,6 +79,62 @@ The landing page of our website, absolutely pivotal to a great first impression 
 To help increase user interest upon visiting the site we have our navigation cards which are located on the home page. These help intrigue users into looking further into our website, linking to the menu, booking page and to also leave a review for us on google after a satisfied visit.
 
 
+**Menu page(Main menu page)**
+
+![Menu page]()
+
+The main navigation for our menu's, here you can navigate to either the lunch or the dinner page.
+
+**Add menu item(Main menu page)**)
+
+![Add menu button]()
+
+Using this add button, admins are easily able to add menu items. The add icon is only visible to admins so regular users are unable to add menu items. Admin only need to fill out the following form and items are instantly added to the lunch or dinner menu.
+
+**Add menu item page**
+
+![Add menu item page]()
+
+This is the form to add items to either the lunch or the dinner menu. Admins can use this page to easily create dinner and lunch menu items. For each the admin is able to add descriptive text to grab customer interest and add beautiful imagery of each food item.
+
+**Menu items**
+
+![]()
+
+Each menu item is created in a the same style each time. The user can get a consistent feel to the website across both menu's.
+
+**Lunch menu page**
+
+![Lunch menu page]()
+
+Any lunch menu item added by admins appear here. Each item gives descriptive text and beautiful imagery to further interest potential clients.
+
+
+**Dinner menu page**
+
+![Dinner menu page]()
+
+Any dinner menu item added by admins appear here. Each item gives descriptive text and beautiful imagery to further insterest potential clients.
+
+**Edit menu item icon**
+
+![Edit menu item icon]()
+
+On each menu item in both the lunch and dinner pages, there is an edit icon which is accessible to site admins. Admins are able to update any information they want about the menu with a simple click of a button. They can add new images, change out text etc.
+
+![Edit menu item form]()
+
+On click of the edit menu item icon, the user is directed to the form page where these items are also created. The data from the item is automatically added to the form to ease updating of each item.
+
+**Delete menu item icon**
+
+![Delete menu item icon]()
+
+On each menu item in both the lunch and dinner pages, there is a delete icon which is accessible to site admins. Admins are able to delete outdated and no longer wanted items from the menu with ease.
+
+![Confirm delete modal]()
+To ensure there is no accidental deletion users are also prompted one extra time to confirm deletion of any menu item.
+
 #### Features left to implement
 
 ### Structure
