@@ -337,6 +337,20 @@ To clone a repository follow these steps
 5.Finally use "git push origin main" to push your changes to the main branch of your github repository
 
 
+**Forking**
+
+To fork this repository follow these steps
+
+1.Setup Git and make sure your git has github authentication
+2.Go to the web page repository [Ember & Ash](https://github.com/JamesBracken/Ember-Ash) 
+3.Click on *fork* on the upper right portion of the page.
+4.This has now forked the repository to your own profile. 
+5.Go to your profile and navigate to the forked repository.
+6.Click on *Code* above the list of forked files
+7.Choose the option you need from the dropdown menu. 
+
+Further assistance can be found [HERE](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) on the github Fork a Repo page
+
 
 ## Credits
 ### Content
