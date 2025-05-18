@@ -1,8 +1,7 @@
 {% load static %}
 {% load account %}
 {% load widget_tweaks %}
-{% comment %} {% url 'account_login' as login_url %} {% endcomment %}
-{% comment %} {% url 'account_login' as login_url %} {% endcomment %}
+{% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 
@@ -164,8 +163,10 @@
                 <div class="modal-body">
                   {% comment %}TEST FORM{% endcomment %}
                   {% with form=login_form %}
-                    {% comment %} <form id="login-form" method="POST" action="{% url 'account_login' %}"> {% endcomment %}
-                    <form id="login-form" method="POST" action="{% url 'login_url' %}">
+                  {% comment %} Original form syntax {% endcomment %}
+                    <form id="login-form" method="POST" action="{% url 'account_login' %}">
+                      {% comment %} New form testing syntax {% endcomment %}
+                    {% comment %} <form id="login-form" method="POST" action="{% url 'login_url' %}"> {% endcomment %}
                       {% csrf_token %}
                       <div>
                         {{ form.login.label_tag }}
