@@ -268,6 +268,21 @@ ADD ANY OTHER PAGE IE IF WE MAKE A CONFIRM SIGNOUT PAGE ETC.
 Here is your wireframe and your ERD, a low fidelity guide for your project
 ### Surface
 #### Colour scheme
+
+![Colour palette](./static/images/readme/color-palette.PNG)
+
+I went with a lot of black and white for the website to create a simplistic yet elegant feel for the website. To complement these colours the website also used minimal amounts of Isabelline and the buttons were made with a brownish Chamoisee. Within the images is something simillar with dark and light colour schemes.
+The colour scheme used in the website consists of colours:
+
+Primary: #F2EEE8
+
+Secondary: #90775A
+
+White: #FFFFFF
+
+Black: #454545
+
+
 #### Typography
 #### Imagery
 Talk about the appearance and design of your website, chosen design strategies, color palette etc
