@@ -284,6 +284,16 @@ Black: #454545
 
 
 #### Typography
+
+When I was thinking which fonts to go with for my website as I wanted elegant and simplistic I went with a very classic Sans serif for the body content. For headings to stand out I went with a nice PT serif, fonts were sourced from [Google fonts](https://fonts.google.com/)
+
+Headings : PT Serif
+
+![PT serif](./static/images/readme/pt-serif-font.PNG)
+
+Text/body : sans serif
+
+
 #### Imagery
 Talk about the appearance and design of your website, chosen design strategies, color palette etc
 
