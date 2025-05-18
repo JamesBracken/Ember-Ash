@@ -13,10 +13,40 @@ I fixed this problem by taking the modal code out of the header and placing it a
 
 ### Lighthouse
 
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
 ### HTML validator
+[]()
+[]()
+[]()
+[]()
+
 ### CSS validator
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
 ### ESLint validator
-### WAVE
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+### WAVE(Optional)
 ###
 ###
 
@@ -79,8 +109,10 @@ Header & Navbar
 Footer
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
-
+|Responsive|Information displays well on multiple devices|Window resize|||
+|Social media links |Each link opens the right page|Click links|||
+|Social media links|Each links open the page on a new tab|Click links|||
+|Footer availability|Footer is displayed on every page|Check the bottom of each page|||
 
 Home page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
