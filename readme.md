@@ -307,6 +307,24 @@ Describe the other testing md file
 ## Deployment
 ### How to run this project locally
 
+### Github guide
+
+**Cloning**
+To clone a repository follow these steps
+
+1.Login in to Github or create an account if you haven't already
+
+2.Go to this project repository [Ember & Ash](https://github.com/JamesBracken/Ember-Ash)
+
+3.Click on the *Code* button and select whether you would like to cline with HTTPS, SSH or the Github CLI and then copy the link shown
+
+4.Open your terminal in your IDE/code editor of choice then change the current working directory to the location you would like to use for the cloned directory
+
+5.Type "git clone" into the terminal and paste the link you copied in the third step then press Enter
+
+6.To install the dependencies you can run **npm install** in your IDE(integrated development environment) terminal, the dependencies you need are listed in the package.json and package-lock.json files
+
+
 ## Credits
 ### Content
 ### Technologies used
