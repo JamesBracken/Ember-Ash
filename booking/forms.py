@@ -1,6 +1,7 @@
 from django import forms
 from .models import Booking
 import datetime
+from datetime import timedelta
 class BookingForm(forms.ModelForm):
     """
     Creates a form for :model:`booking.Booking`
@@ -8,7 +9,7 @@ class BookingForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         today = datetime.date.today()
-        self.fields["booking_date"].widget.attrs["min"] = today
+        self.fields["booking_date"].widget.attrs["min"] = today + timedelta(days=1)
         # guest_qty widgets
         self.fields["guests_qty"].widget.attrs["max"] = 100
         self.fields["guests_qty"].widget.attrs["min"] = 1
