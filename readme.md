@@ -9,7 +9,8 @@ Welcome to Ember & Ash, want a fine dining, elegant and fantastic customer exper
 The main components of the website is the home page, the menu, my profile and the booking pages. The project was made with a simplistic and yet an elegant feel and a posh look in mind. Eating out and finding instagramable food and experiences is the wants of the many nowadays. A fine dining experience would entail higher costs than the normal day out hence what I found with my extensive research is that our general customer base and targets would be young adults and mature adults. Simple and elegant is the focus of the website.
 
 #### Project goals
-For the goals of this project I have implemented a kanban board for organisation found [Here!](https://github.com/users/JamesBracken/projects/13/views/1)
+For the goals of this project I have implemented a kanban board for organisation found [Here!](https://github.com/users/JamesBracken/projects/13/views/1). My project has also been organised with the moscow method separating each user story into must have, should have, could have and wont have. By organising my content with importance I can focus my attention on the most important components at any given time and stay on target.
+
 My project goals are also displayed below
 
 
