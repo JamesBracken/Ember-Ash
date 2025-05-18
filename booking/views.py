@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from .models import Booking
 from django.contrib import messages
-from django.http import HttpResponseRedirect
 from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
 
