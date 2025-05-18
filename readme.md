@@ -64,6 +64,21 @@ Our footer is found at the bottom of every page. Here we help ensure our custome
 
 To improve UX we display feedback messages for our users at the top of our page. These feedback messages stand out so our users are able to immediately see the feedback and can understand what is happening. Users are able to understand if something worked or didnt and we can reduce user frustration by keeping them updated.
 #### Unique features implemented 
+
+**Home page** 
+
+![Home page]()
+
+The landing page of our website, absolutely pivotal to a great first impression of a user visiting our website. The user can immediately understand the websites purpose through images and website content.
+
+
+**Navigation cards(Home page)**
+
+![Navigation cards]()
+
+To help increase user interest upon visiting the site we have our navigation cards which are located on the home page. These help intrigue users into looking further into our website, linking to the menu, booking page and to also leave a review for us on google after a satisfied visit.
+
+
 #### Features left to implement
 
 ### Structure
