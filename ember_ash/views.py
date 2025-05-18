@@ -8,9 +8,6 @@ from django.http import JsonResponse
 
 
 
-# class ModalLogin(LoginView):
-#     template_name = "base.html"
-
 def home(request):
     """
     Renders the home page
