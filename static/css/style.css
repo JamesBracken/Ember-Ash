@@ -243,7 +243,10 @@ nav li {
     z-index: 1050 !important;
 }
 
-.login-modal-img,
+.login-modal-img {
+    height: 280px;
+}
+
 .signup-modal-img {
     height: 360px;
 }
