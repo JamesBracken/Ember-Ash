@@ -151,8 +151,9 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="row">
-              <div class="col-3">
-                {% comment %}Insert image{% endcomment %}
+              <div class="col-3 login-modal-img-container">
+                <img class="login-modal-img" src="{% static 'images/home-page/login-modal-img.jfif
+                ' %}" alt="">
               </div>
               <div class="col-9">
                 <div class="modal-header">
@@ -199,12 +200,13 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="row">
-              <div class="col-3">
+              <div class="col-3 signup-modal-img-container">
                 {% comment %}Fill in with image{% endcomment %}
+                <img class="signup-modal-img" src="{% static 'images/home_page/signup-modal-img.webp' %}" alt="">
               </div>
               <div class="col-9">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="signup-modal-toggle-label">Modal 2</h1>
+                  <h1 class="modal-title fs-5" id="signup-modal-toggle-label">Signup</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
