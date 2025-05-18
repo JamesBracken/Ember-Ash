@@ -303,9 +303,9 @@ I used [Pixabay](https://pixabay.com/) and [Pexels](https://www.pexels.com/) for
 Additionally I improved website performance and load time by compressing images with [Tiny png](https://tinypng.com/) and [Tiny jpg](https://tinyjpg.com/)
 
 ## Testing
-Describe the other testing md file
+
+All testing has been performed in a separate Testing.md file which can be found in this project 
 ## Deployment
-### How to run this project locally
 
 ### Github guide
 
