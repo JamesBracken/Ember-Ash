@@ -324,6 +324,19 @@ To clone a repository follow these steps
 
 6.To install the dependencies you can run **npm install** in your IDE(integrated development environment) terminal, the dependencies you need are listed in the package.json and package-lock.json files
 
+**Commiting and Pushing Changes**
+
+1.Open the termin in the directory of your cloned repository
+
+2.Using "git status" check to see your changes are correct
+
+3.If you are ready to commit  type "git add ." to stage all saved changes to be commited, you can alternatively use "git add YOUR_FILENAME" to stage specific files for commit
+
+4.Using "git commit -m "Write your commit message here" commit your changes with a descriptive message, give a good amount of detail but try not to go over 50 characters
+
+5.Finally use "git push origin main" to push your changes to the main branch of your github repository
+
+
 
 ## Credits
 ### Content
