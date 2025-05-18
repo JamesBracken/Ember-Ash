@@ -144,6 +144,21 @@ My profile page
 |Edit booking redirect|After editing a booking and submitting user is redirected to the home page|Edit a booking and submit|||
 |Edit booking|On click of a booking on the day or before the user is not directed to the edit page|Click edit on a booking in the past or current day|||
 |Edit booking|On click of a booking on the day or before the user is displayed an error message|Click edit on a booking in the past or current day|||
+|Delete booking Icon|On each booking item a delete booking icon is present|Check bookings|||
+|Delete booking|On click of the delete booking icon a confirmation modal opens|Click delete icon|||
+|Delete booking confirmation modal|On click of close the modal closes|Click Close|||
+|Delete booking confirmation modal|On click of x the modal closes|Click x|||
+|Delete booking confirmation modal|On click of Delete the modal closes|Click delete|||
+|Delete booking confirmation modal|On click of Delete the booking is deleted|Click delete|||
+|Delete booking confirmation modal|On click outside of the modal the modal closes|Click outside of modal|||
+|Delete booking confirmation modal|On click of delete and open of modal background greys out|Click delete icon|||
+|Delete booking modal|If a user attempts to delete a booking from the past or on the same day as the booking the page just refreshes and does delete the modal|Click the delete button|||
+|Delete booking modal|If a user attempts to delete a booking from the past or on the same day as the booking an error message is displayed|Click the delete button|||
+|Pagination|If there is more than 5 bookings pagination activates and displays 2 pages at the bottom|Create more than 5 bookings and check my profile page|||
+|Pagination|If there is more than 5 bookings pagination activates and displays a next page if there is a next page|Check if next page is present|||
+|Pagination|If there is more than 5 bookings pagination activates, on click of next page the user is redirected to the next page|Click next page|||
+|Pagination|If there is more than 5 bookings pagination activates, on click of previous page the user is redirected to the previous page|Click previous page|||
+|Pagination|If there is more than 1 page pagination displays a counter of pages and shows which page you are on|Check bottom of page|||
 
 
 Menu page
