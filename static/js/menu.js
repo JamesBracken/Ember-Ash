@@ -1,5 +1,4 @@
 // GLOBAL VARIABLES
-
 // CONSTANTS
 // Add & edit item page and link to page
 const addItemButton = document.getElementById("add-menu-item-button")

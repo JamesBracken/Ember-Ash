@@ -1,7 +1,8 @@
 {% load static %}
 {% load account %}
 {% load widget_tweaks %}
-{% url 'account_login' as login_url %}
+{% comment %} {% url 'account_login' as login_url %} {% endcomment %}
+{% comment %} {% url 'account_login' as login_url %} {% endcomment %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 
@@ -163,13 +164,13 @@
                 <div class="modal-body">
                   {% comment %}TEST FORM{% endcomment %}
                   {% with form=login_form %}
-                    <form method="POST" action="{% url 'account_login' %}">
+                    {% comment %} <form id="login-form" method="POST" action="{% url 'account_login' %}"> {% endcomment %}
+                    <form id="login-form" method="POST" action="{% url 'login_url' %}">
                       {% csrf_token %}
                       <div>
                         {{ form.login.label_tag }}
                         {{ form.login|add_class:'form-input' }}
-                        {{ form.login.errors }}
-                        {% comment %}form-input{% endcomment %}
+                        {{ form.login.errors|add_class:'login-username-errors' }}
                       </div>
                       <div>{{ form.password.label_tag }}
                         {{ form.password|add_class:'form-input' }}
@@ -177,11 +178,10 @@
                       {% if form.non_field_errors %}
                         <div>{{ form.non_field_errors }}</div>
                       {% endif %}
-                      {% comment %} <button type="submit" class="btn btn-primary">Login</button> {% endcomment %}
-                      <div class="d-flex justify-content-center">
+                      {% comment %} TEMPORARILY COMMENTING OUT SUBMIT BTN CONTAINER {% endcomment %}
+                      {% comment %} <div class="d-flex justify-content-center"> {% endcomment %}
                         <button type="submit" class="button">Login</button>
-                      </div>
-                      {% comment %} <button type="submit" class="button">Login</button> {% endcomment %}
+                      {% comment %} </div> {% endcomment %}
                     </form>
                   {% endwith %}
                 </div>
@@ -248,8 +248,8 @@
     <script src="https://kit.fontawesome.com/d51c017cc6.js" crossorigin="anonymous"></script>
     {% comment %}BS Javascript{% endcomment %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-    {% comment %}JS script{% endcomment %}
-    {% comment %} <script src="{% static 'js/script.js' %}"></script> {% endcomment %}
+    {% comment %}JS login script{% endcomment %}
+    <script src="{% static 'js/login.js' %}"></script>
     {% block extras %}
     {% endblock %}
   </body>
