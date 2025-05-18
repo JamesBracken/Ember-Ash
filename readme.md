@@ -38,6 +38,37 @@ My project goals are also displayed below
 **User story 7: Navigation and footer(Must have)**
 - As a user I can access a navigation bar and footer so that I can navigate around the website and find the information I need
 
+#### Uncompleted project goals
+
+**User story 8: View client booking details(Could have)**
+- As a manager, I would like to be able to see individual client details on each booking so I can cater the customer experience to the client
+
+**User story 9: Admins CRUD for user bookings(Should have)**
+- As a manager, I would like to be able to read, delete and create bookings so I can correct any errors or cancel bookings
+
+**User story 10: Improved display of available bookings(Should have)**
+- As a signed-in user, after selecting a date there is a consolidated view of available times displayed so I can better understand the restaurant availability
+
+**User story 11: View daily bookings(Should have)**
+- As a manager, I would like to have a consolidated view of daily bookings details so I can organise seating
+
+**User story 12: Newsletter(Should have)**
+- As a owner, I would like to offer a newsletter so that I can keep our clients interested and help drive footfall and increase customer retention
+
+**User story 13: Advanced alcohol orders(Could have)**
+- As a signed-in user, I would like to be able to order wines and other alcohols ahead of my booking so I can have it served on arrival
+
+**User story 14: Updated profile details(Could have)**
+- As a user, I can edit my personal information so that I can keep it up to date
+
+**User story 15: Table management system(Could have)**
+- As a manager, I can view the tables which are booked and not booked from a table management system so I can organise my service
+
+**User story 16: About page(Could have)**
+- As a user, I would like to view more information about the website on an about page
+
+**User story 17: Gallery()**
+- As a user I can see images of the food so that I can get a better understanding each menu item and get enticed
 
 ### Scope
 #### Consistent features implemented
