@@ -117,7 +117,12 @@ Footer
 Home page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
+|Hero img responsiveness|The hero image looks good on multiple screen sizes|Window resize|||
+|Images alt|Images contain alt tags|Check alt tags in console|||
+|Navigation cards|Cards are responsive and display well on multiple screen sizes|Window resize|||
+|Navigation cards links|On click of the navigation cards these link to the correct website page|Click navigation cards|||
+|Review Navigation card |Opens googleon another tab|Click review navigation card|||
+|Navigation cards(Menu and booking)|Redirect the current page|Click navigation cards|||
 
 My profile page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
