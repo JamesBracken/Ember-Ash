@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login
 from django.shortcuts import render
+from django.contrib import messages
 from django.http import JsonResponse
 # View to connect the custom login modal with allauth
 
@@ -21,7 +22,8 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return JsonResponse({"success": True, "home_url": "home_urls" })
+            messages.add_message(request, messages.SUCCESS, "You have successfully logged in")
+            return JsonResponse({"success": True, "home_url": "" })
         else:
             errors = form.errors.as_json()
             print(errors)
