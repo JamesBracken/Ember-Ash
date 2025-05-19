@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <h1 class="text-center">500 error </h1> 
+        <h2>The server encountered an error and cannot complete your request</h2>
+        <div class=" d-flex justify-content-center">
+            <a class="button" href="{% url 'home_urls' %}">Take me back home</a>
+        </div>
+    </div>
+</div>   
+
+{% endblock %}

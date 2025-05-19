@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <h1 class="text-center">405 Error</h1>
+        <h2 class="text-center">Method not allowed</h2> 
+        <h3 class="text-center">The content exists, but access is blocked</h3> 
+        <div class=" d-flex justify-content-center"> 
+            <a class="button" href="{% url 'home_urls' %}">Take me back home</a>
+        </div>
+    </div>
+</div>   
+
+{% endblock %}
