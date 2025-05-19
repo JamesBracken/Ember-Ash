@@ -1,6 +1,8 @@
 {% load static %}
 {% load account %}
 {% load widget_tweaks %}
+
+{% comment %} {% load form_tags %} {% endcomment %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -159,30 +161,27 @@
                   <h1 class="modal-title fs-5" id="login-modal-toggle-label">Login</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                {% comment %}Form action and method to be filled in{% endcomment %}
                 <div class="modal-body">
-                  {% comment %}TEST FORM{% endcomment %}
                   {% with form=login_form %}
-                  {% comment %} Original form syntax {% endcomment %}
-                    <form id="login-form" method="POST" action="{% url 'account_login' %}">
-                      {% comment %} New form testing syntax {% endcomment %}
-                    {% comment %} <form id="login-form" method="POST" action="{% url 'login_url' %}"> {% endcomment %}
+                    <form id="login-form" method="POST" action="{% url 'login_url' %}">
                       {% csrf_token %}
                       <div>
-                        {{ form.login.label_tag }}
-                        {{ form.login|add_class:'form-input' }}
-                        {{ form.login.errors|add_class:'login-username-errors' }}
+                        {{ form.username.label_tag }}
+                        {{ form.username|add_class:"form-input" }}
                       </div>
                       <div>{{ form.password.label_tag }}
                         {{ form.password|add_class:'form-input' }}
                         {{ form.password.errors }}</div>
+                        <div class="login-errors">
+                          {{ form.username.errors}}
+                          {{ form.password.errors}}
+                        </div>
                       {% if form.non_field_errors %}
                         <div>{{ form.non_field_errors }}</div>
                       {% endif %}
-                      {% comment %} TEMPORARILY COMMENTING OUT SUBMIT BTN CONTAINER {% endcomment %}
-                      {% comment %} <div class="d-flex justify-content-center"> {% endcomment %}
+                      <div class="d-flex justify-content-center">
                         <button type="submit" class="button">Login</button>
-                      {% comment %} </div> {% endcomment %}
+                      </div>
                     </form>
                   {% endwith %}
                 </div>
