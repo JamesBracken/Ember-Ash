@@ -12,7 +12,6 @@ I fixed this problem by taking the modal code out of the header and placing it a
 ## Validators
 
 ### Lighthouse
-
 []()
 []()
 []()
@@ -127,7 +126,6 @@ Home page
 My profile page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
 |Profile icon|Users who are not logged in cannot see this icon leading to the my profile page|Log out and check nav|||
 |Profile icon|Users who are logged in can see the my profile icon|Login and check nav|||
 |My profile page|My profile page opens on click of profile icon|Click profile icon|||
@@ -164,13 +162,17 @@ My profile page
 Menu page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
+|Meal cards|Meal cards are displayed|Visual check|||
+|Meal cards|When clicking anywhere on the card, navigate to their respective page|Click cards|||
+|Meal cards responsiveness|Each card remains the same size on multiple screen sizes|Screen resize|||
+|Add menu icon|Clicking the add menu icon navigates the user to the add menu item form|Click the + icon|||
+|Add menu icon|Admins can see an add menu icon|Login to an admin account and check|||
+|Add menu icon|Regular users cannot see an add menu icon|Login to a normal user account and check|||
 
-Lunch Menu page 
+Add item page 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
 ||||||
-
 Dinner menu delete item modal
 
 
@@ -206,3 +208,8 @@ Success page
 
 404 page
 
+500 page
+
+405 page
+
+403 page
