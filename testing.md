@@ -172,6 +172,54 @@ Menu page
 Add item page 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
+|Add menu item|All form fields are required|Test form fields|||
+|Add menu item|All form fields have a label|Visual check|||
+|Add menu item|Images post to cloudinary and reflect on the item|Add an image and check added item|||
+|Add menu item|A meal category must be selected or the form cant submit|Dont select meal category and submit|||
+|Add menu item|If an item is added without an image being added the default image is added instead|Check image is added|||
+|Add menu item|If a user submits a valid form that data populates the database|Check if item is reflected in lunch or menu page|||
+|Title input|Any characters can be placed into the title|Type different characters and numbers etc|||
+|Description input|Any characters can be placed into the description|Type different characters and numbers etc|||
+|Image input|Users can select a file to be passed in|Add image|||
+|Price input|Users can only add numbers|Type characters and numbers|||
+|Price input|Users cannot add more than 4 digits before the decimal point|Type numbers|||
+|Price input|Users cannot add more than 2 decimal digits|Type decimal digits|||
+|Price input|Users cannot add more than 4 digits before the decimal point and 2 decimal digits at the same time|Add digits before and after the decimal point|||
+|Mead category|Users can only select Lunch or Dinner|Attempt to type|||
+|Unique title|Users cannot add a title which is already in use|Add a title which is already used|||
+|Submit button|If the form is filled out correctly on submission of the form the user is redirect back to the menu page|Fill out form and submit|||
+|Submit button|If the form is not filled out correctly on submission of the for the user is not redirected to another page|Dont fill out form and submit|||
+
+
+
+
+Lunch Menu page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+|A|||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
 ||||||
 Dinner menu delete item modal
 
