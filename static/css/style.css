@@ -42,14 +42,17 @@ h1 {
 
 h2 {
     font-size: var(--fs-heading-2) !important;
+    font-family: var(--text-primary);
 }
 
 h3 {
     font-size: var(--fs-heading-3) !important;
+    font-family: var(--text-primary);
 }
 
 h4 {
     font-size: var(--fs-heading-4) !important;
+    font-family: var(--text-primary);
 }
 
 .subheading {
@@ -242,10 +245,11 @@ nav li {
 
 .modal {
     z-index: 1050 !important;
+    --bs-modal-border-radius: 0!important;
 }
 
 .login-modal-img {
-    height: 280px;
+    height: 330px;
 }
 
 .signup-modal-img {
@@ -257,6 +261,9 @@ nav li {
     padding: 0;
 }
 
+.login-errors {
+    height: 48px;
+}
 /* Success messages styles */
 .success {
     background-color: #d1e7dd;
