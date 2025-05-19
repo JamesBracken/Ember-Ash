@@ -13,5 +13,5 @@ class MenuForm(forms.ModelForm):
             "meal_category": forms.Select(choices=MEAL_CATEGORIES),
             "title": forms.TextInput(attrs={"maxlength":49}),
             "description": forms.TextInput(attrs={"maxlength":99}),
-            "price": forms.TextInput(attrs={"maxlength":7}),
+            "price": forms.TextInput(attrs={"max_digits":6}),
         }

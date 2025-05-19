@@ -12,11 +12,40 @@ I fixed this problem by taking the modal code out of the header and placing it a
 ## Validators
 
 ### Lighthouse
-
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
 ### HTML validator
+[]()
+[]()
+[]()
+[]()
+
 ### CSS validator
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
 ### ESLint validator
-### WAVE
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+### WAVE(Optional)
 ###
 ###
 
@@ -79,30 +108,119 @@ Header & Navbar
 Footer
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
-
+|Responsive|Information displays well on multiple devices|Window resize|||
+|Social media links |Each link opens the right page|Click links|||
+|Social media links|Each links open the page on a new tab|Click links|||
+|Footer availability|Footer is displayed on every page|Check the bottom of each page|||
 
 Home page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
+|Hero img responsiveness|The hero image looks good on multiple screen sizes|Window resize|||
+|Images alt|Images contain alt tags|Check alt tags in console|||
+|Navigation cards|Cards are responsive and display well on multiple screen sizes|Window resize|||
+|Navigation cards links|On click of the navigation cards these link to the correct website page|Click navigation cards|||
+|Review Navigation card |Opens googleon another tab|Click review navigation card|||
+|Navigation cards(Menu and booking)|Redirect the current page|Click navigation cards|||
 
 My profile page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
+|Profile icon|Users who are not logged in cannot see this icon leading to the my profile page|Log out and check nav|||
+|Profile icon|Users who are logged in can see the my profile icon|Login and check nav|||
+|My profile page|My profile page opens on click of profile icon|Click profile icon|||
+|My Bookings|Any bookings I previously made and have not deleted are displayed|Check bookings|||
+|My bookings|Any bookings I will make will display in my bookings|Make a booking and check my bookings|||
+|My bookings|Any bookings I make will immediately reflect in my bookings|Open 1 tab of my profile, open 1 tab and make a booking, then refresh the my profile tab |||
+|My bookings data|Each booking displays the booking date, time, guests and comments|Check each booking|||
+|My bookings data|Bookings are displayed in order of farthest in the future first and farthest in the past last|Check booking dates order|||
+|Booking edit|Each booking has an edit icon present|Check bookings|||
+|Booking edit|Each booking edit icon can be clicked to redirect to edit booking page|Click edit icon|||
+|Edit booking page|After redirection to edit page, information that was present on the booking is pre-filled on the edit form|Click edit icon, check inputs|||
+|Edit booking page|After editing a booking and submitting the data is immediately reflected in the booking in the my bookings|Edit a booking then check my bookings|||
+|Edit booking message|After editing a booking and submitting a success message is displayed|Edit a form and submit then Check if message displays|||
+|Edit booking redirect|After editing a booking and submitting user is redirected to the home page|Edit a booking and submit|||
+|Edit booking|On click of a booking on the day or before the user is not directed to the edit page|Click edit on a booking in the past or current day|||
+|Edit booking|On click of a booking on the day or before the user is displayed an error message|Click edit on a booking in the past or current day|||
+|Delete booking Icon|On each booking item a delete booking icon is present|Check bookings|||
+|Delete booking|On click of the delete booking icon a confirmation modal opens|Click delete icon|||
+|Delete booking confirmation modal|On click of close the modal closes|Click Close|||
+|Delete booking confirmation modal|On click of x the modal closes|Click x|||
+|Delete booking confirmation modal|On click of Delete the modal closes|Click delete|||
+|Delete booking confirmation modal|On click of Delete the booking is deleted|Click delete|||
+|Delete booking confirmation modal|On click outside of the modal the modal closes|Click outside of modal|||
+|Delete booking confirmation modal|On click of delete and open of modal background greys out|Click delete icon|||
+|Delete booking modal|If a user attempts to delete a booking from the past or on the same day as the booking the page just refreshes and does delete the modal|Click the delete button|||
+|Delete booking modal|If a user attempts to delete a booking from the past or on the same day as the booking an error message is displayed|Click the delete button|||
+|Pagination|If there is more than 5 bookings pagination activates and displays 2 pages at the bottom|Create more than 5 bookings and check my profile page|||
+|Pagination|If there is more than 5 bookings pagination activates and displays a next page if there is a next page|Check if next page is present|||
+|Pagination|If there is more than 5 bookings pagination activates, on click of next page the user is redirected to the next page|Click next page|||
+|Pagination|If there is more than 5 bookings pagination activates, on click of previous page the user is redirected to the previous page|Click previous page|||
+|Pagination|If there is more than 1 page pagination displays a counter of pages and shows which page you are on|Check bottom of page|||
 
 
 Menu page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
+|Meal cards|Meal cards are displayed|Visual check|||
+|Meal cards|When clicking anywhere on the card, navigate to their respective page|Click cards|||
+|Meal cards responsiveness|Each card remains the same size on multiple screen sizes|Screen resize|||
+|Add menu icon|Clicking the add menu icon navigates the user to the add menu item form|Click the + icon|||
+|Add menu icon|Admins can see an add menu icon|Login to an admin account and check|||
+|Add menu icon|Regular users cannot see an add menu icon|Login to a normal user account and check|||
 
-Lunch Menu page 
+Add item page 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
+|Add menu item|All form fields are required|Test form fields|||
+|Add menu item|All form fields have a label|Visual check|||
+|Add menu item|Images post to cloudinary and reflect on the item|Add an image and check added item|||
+|Add menu item|A meal category must be selected or the form cant submit|Dont select meal category and submit|||
+|Add menu item|If an item is added without an image being added the default image is added instead|Check image is added|||
+|Add menu item|If a user submits a valid form that data populates the database|Check if item is reflected in lunch or menu page|||
+|Title input|Any characters can be placed into the title|Type different characters and numbers etc|||
+|Description input|Any characters can be placed into the description|Type different characters and numbers etc|||
+|Image input|Users can select a file to be passed in|Add image|||
+|Price input|Users can only add numbers|Type characters and numbers|||
+|Price input|Users cannot add more than 4 digits before the decimal point|Type numbers|||
+|Price input|Users cannot add more than 2 decimal digits|Type decimal digits|||
+|Price input|Users cannot add more than 4 digits before the decimal point and 2 decimal digits at the same time|Add digits before and after the decimal point|||
+|Mead category|Users can only select Lunch or Dinner|Attempt to type|||
+|Unique title|Users cannot add a title which is already in use|Add a title which is already used|||
+|Submit button|If the form is filled out correctly on submission of the form the user is redirect back to the menu page|Fill out form and submit|||
+|Submit button|If the form is not filled out correctly on submission of the for the user is not redirected to another page|Dont fill out form and submit|||
 
+
+
+
+Lunch Menu page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+|A|||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
 Dinner menu delete item modal
 
 
@@ -138,3 +256,8 @@ Success page
 
 404 page
 
+500 page
+
+405 page
+
+403 page
