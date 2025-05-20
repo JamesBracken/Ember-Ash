@@ -4,10 +4,6 @@ from django.contrib.auth import login
 from django.shortcuts import render
 from django.contrib import messages
 from django.http import JsonResponse
-# View to connect the custom login modal with allauth
-
-
-
 
 def home(request):
     """

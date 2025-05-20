@@ -1,5 +1,5 @@
 from django.contrib import admin
 from .models import Customer
 
-# Register your models here.
+# Registers customer models for admins
 admin.site.register(Customer)

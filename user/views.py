@@ -10,7 +10,7 @@ def customer_profile(request):
     """
     Displays an instance of :model:`user.Customer`
     AND
-    Display a multiple instances of :model:`booking.Booking`
+    Display multiple instances of :model:`booking.Booking`
 
     **Context**
 
@@ -26,7 +26,6 @@ def customer_profile(request):
         request,
         "my_profile.html",
         {
-            # "bookings": user_bookings,
             "page_object": page_object,
             "user": request.user,
         }

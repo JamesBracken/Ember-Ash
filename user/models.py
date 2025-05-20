@@ -7,6 +7,9 @@ from django.contrib.auth.models import User
 # Not the right naming conventions however I did this on purpose
 # to avoid name conflicts with the built in User model in Django
 class Customer(models.Model):
+    """
+    Creates and stores a single customer instance 
+    """
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
