@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login
 from django.shortcuts import render
@@ -23,7 +23,7 @@ def login_view(request):
             user = form.get_user()
             login(request, user)
             messages.add_message(request, messages.SUCCESS, "You have successfully logged in")
-            return JsonResponse({"success": True, "home_url": "" })
+            return JsonResponse({"success": True, "home_url": reverse("home_urls") })
         else:
             errors = form.errors.as_json()
             print(errors)
