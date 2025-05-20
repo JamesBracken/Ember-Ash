@@ -11,7 +11,7 @@ class MenuForm(forms.ModelForm):
         fields = ("title", "description", "img", "price", "meal_category",)
         widgets = {
             "meal_category": forms.Select(choices=MEAL_CATEGORIES),
-            "title": forms.TextInput(attrs={"maxlength":49}),
-            "description": forms.TextInput(attrs={"maxlength":99}),
+            "title": forms.TextInput(attrs={"maxlength":74}),
+            "description": forms.TextInput(attrs={"maxlength":149}),
             "price": forms.TextInput(attrs={"max_digits":6}),
         }

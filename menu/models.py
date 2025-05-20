@@ -11,9 +11,9 @@ class Menu(models.Model):
         ("dinner", "Dinner"),
     ]
 # Delete the below id, its redundant
-    title = models.CharField(max_length=50, unique=True)
-    description = models.TextField(max_length=100)
-    slug = models.SlugField(unique=True, max_length=50)
+    title = models.CharField(max_length=75, unique=True)
+    description = models.TextField(max_length=150)
+    slug = models.SlugField(unique=True, max_length=75)
     img = CloudinaryField('image', default='cld-sample-4')
     price = models.DecimalField(decimal_places=2, max_digits=6)
     meal_category = models.CharField(choices=MEAL_CATEGORIES)
