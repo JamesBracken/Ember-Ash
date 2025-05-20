@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
+
+{% block title %}
+| Booking form
+{% endblock %}
+
+{% block metadata %}
+<meta name="description" content="Booking form, create your booking here." />
+{% endblock %}
+
 {% block content %}
 {% comment %} If a user is_authenticated display the booking_form {% endcomment %}
   {% if user.is_authenticated %}

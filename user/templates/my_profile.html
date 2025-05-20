@@ -2,6 +2,14 @@
 {% load crispy_forms_tags %}
 {% load static %}
 
+{% block title %}
+| My Profile
+{% endblock %}
+
+{% block metadata %}
+<meta name="description" content="My profile page for the ember and ash restaurant. You can see, edit and delete your bookings here and also see your profile details." />
+{% endblock %}
+
 {% block content %}
   <div class="container" id="profile-page">
     <div class="row d-flex justify-content-center">
