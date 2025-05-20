@@ -46,7 +46,7 @@ def booking(request):
                 messages.SUCCESS,
                 "Booking successfully created, you may view this in your My Profile area",
             )
-            return redirect("home_urls")
+            return redirect("my_profile")
     else:
         booking_form = BookingForm()
     return render(
@@ -86,13 +86,12 @@ def booking_edit(request, id):
             booking.save()
             # Adds a success message
             messages.add_message(request, messages.SUCCESS, "Booking updated!")
-            return redirect("home_urls")
+            return redirect("my_profile")
         else:
             messages.add_message(request, messages.ERROR, "Error updating booking")
-            return redirect("home_urls")
+            return redirect("my_profile")
     else:
         booking_form = BookingForm(instance=booking)
-    # return render
     if  is_date_in_future(booking_date):
         return render(
             request,
@@ -123,7 +122,7 @@ def booking_delete(request, id):
         booking.delete()
         messages.add_message(request, messages.SUCCESS, "Booking was deleted!")
     if is_date_in_future(booking_date):
-        return redirect("home_urls")
+        return redirect("my_profile")
     else: 
         messages.add_message(request, messages.ERROR, "You cannot delete a booking which is today or in the past")
         return redirect("my_profile")
