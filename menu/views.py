@@ -69,11 +69,18 @@ def add_menu_item(request):
     if request.method == "POST":
         menu_form = MenuForm(request.POST, request.FILES)
         if menu_form.is_valid():
+            meal_category = menu_form.cleaned_data['meal_category']
             menu_form.save()
             messages.add_message(
                 request, messages.SUCCESS, "You have successfully added a menu item"
             )
-            return redirect("menu")
+            # Checks if meal_category selected is lunch or menu and redirects to 
+            # the corresponding page
+        if(meal_category == "lunch"):
+            return redirect("lunch_menu")
+        elif(meal_category == "dinner"):
+            return redirect("dinner_menu")
+
     else:
         menu_form = MenuForm()
 
@@ -107,6 +114,7 @@ def edit_menu_item(request, slug):
     if request.method == "POST":
         menu_form = MenuForm(request.POST, request.FILES, instance=item)
         if menu_form.is_valid():
+            meal_category = menu_form.cleaned_data['meal_category']
             menu_form.save()
             messages.add_message(
                 request, messages.SUCCESS, "You have successfully edited the menu item"
@@ -117,7 +125,12 @@ def edit_menu_item(request, slug):
                 messages.ERROR,
                 "An error occurred, the menu item was not updated",
             )
-        return HttpResponseRedirect(reverse("menu"))
+            # Checks if meal_category selected is lunch or menu and redirects to 
+            # the corresponding page
+        if(meal_category == "lunch"):
+            return redirect("lunch_menu")
+        elif(meal_category == "dinner"):
+            return redirect("dinner_menu")
     else:
         menu_form = MenuForm(instance=item)
     return render(
@@ -148,6 +161,12 @@ def delete_menu_item(request, id):
     """
     queryset = Menu.objects.all()
     item = get_object_or_404(queryset, id=id)
+    meal_category = item.meal_category
     item.delete()
     messages.add_message(request, messages.SUCCESS, "Menu item has been deleted")
-    return redirect("menu")
+    # Checks if meal_category selected is lunch or menu and redirects to 
+    # the corresponding page
+    if(meal_category == "lunch"):
+        return redirect("lunch_menu")
+    elif(meal_category == "dinner"):
+        return redirect("dinner_menu")
