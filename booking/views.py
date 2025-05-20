@@ -78,8 +78,8 @@ def booking_edit(request, id):
     queryset = Booking.objects.all()
     booking = get_object_or_404(queryset, id=id)
     booking_form = BookingForm(data=request.POST, instance=booking)
-    booking_date = booking.booking_date
-    if request.method == "POST"  and is_date_in_future(booking_date):
+    is_booking_in_future = is_date_in_future(booking.booking_date)
+    if request.method == "POST"  and is_booking_in_future:
         if booking_form.is_valid() and booking.user == request.user:
             booking = booking_form.save()
             # Adds a success message
@@ -90,7 +90,7 @@ def booking_edit(request, id):
             return redirect("my_profile")
     else:
         booking_form = BookingForm(instance=booking)
-    if  is_date_in_future(booking_date):
+    if  is_booking_in_future:
         return render(
             request,
             "booking/booking_form.html", {
@@ -114,12 +114,12 @@ def booking_delete(request, id):
     """
     queryset = Booking.objects.all()
     booking = get_object_or_404(queryset, id=id)
-    booking_date = booking.booking_date
+    is_booking_in_future = is_date_in_future(booking.booking_date)
 
-    if booking.user == request.user and is_date_in_future(booking_date):
+    if booking.user == request.user and is_booking_in_future:
         booking.delete()
         messages.add_message(request, messages.SUCCESS, "Booking was deleted!")
-    if is_date_in_future(booking_date):
+    if is_booking_in_future:
         return redirect("my_profile")
     else: 
         messages.add_message(request, messages.ERROR, "You cannot delete a booking which is today or in the past")
