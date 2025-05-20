@@ -27,12 +27,9 @@ def lunch_menu(request):
 
     :template:menu/`menu_lunch.html`
     """
-
     menu_items = Menu.objects.filter(meal_category="lunch").order_by("id")
-    menu_form = MenuForm(data=request.POST)
-
     return render(
-        request, "menu_lunch.html", {"menu_form": menu_form, "lunch_menu": menu_items}
+        request, "menu_lunch.html", {"lunch_menu": menu_items}
     )
 
 
@@ -49,12 +46,9 @@ def dinner_menu(request):
 
     :template:menu/`menu_dinner.html`
     """
-    
     menu_items = Menu.objects.filter(meal_category="dinner").order_by("id")
-    menu_form = MenuForm(data=request.POST)
-
     return render(
-        request, "menu_dinner.html", {"menu_form": menu_form, "dinner_menu": menu_items}
+        request, "menu_dinner.html", {"dinner_menu": menu_items}
     )
 
 
