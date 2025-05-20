@@ -81,9 +81,7 @@ def booking_edit(request, id):
     booking_date = booking.booking_date
     if request.method == "POST"  and is_date_in_future(booking_date):
         if booking_form.is_valid() and booking.user == request.user:
-            booking = booking_form.save(commit=False)
-            booking.user = request.user
-            booking.save()
+            booking = booking_form.save()
             # Adds a success message
             messages.add_message(request, messages.SUCCESS, "Booking updated!")
             return redirect("my_profile")
