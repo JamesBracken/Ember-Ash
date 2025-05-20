@@ -5,10 +5,20 @@ const loginForm = document.getElementById("login-form")
 // LET AND VAR VARIABLES
 
 // EVENT LISTENERS
-// document.addEventListener("DOMContentLoaded", handleLogin)
 loginForm.addEventListener("submit", handleLogin)
+
 // FUNCTIONS
 
+/* This function takes the data input in the login modal form and 
+handles user login errors found within base.html.
+Using ajax we display errors to the user without having to refresh
+the page.
+
+
+*@param {Click} e - This is information of the event that triggers the
+ function
+
+*/
 function handleLogin(e) {
     // Prevent default page reload behaviour
     e.preventDefault()
@@ -17,9 +27,9 @@ function handleLogin(e) {
     const formData = new FormData(loginForm)
     // console.log("FormData:" + [...formData.entries()])
 
-    for(const[key, value] of formData.entries()) {
-        console.log(`${key}: ${value}`)
-    }
+    // for(const[key, value] of formData.entries()) {
+    //     console.log(`${key}: ${value}`)
+    // }
     fetch(loginForm.action, {
         method: "POST",
         headers: {
@@ -29,7 +39,10 @@ function handleLogin(e) {
     })
         .then(response => response.json())
         .then(data => {
+            console.log(data)
             if (data.success) {
+            console.log("Inside if check" + data)
+
                 window.location.href = data.home_url
             } else {
                 const loginErrorsDisplay = document.getElementsByClassName("login-errors")[0]

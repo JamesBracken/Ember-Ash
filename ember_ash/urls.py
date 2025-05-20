@@ -23,6 +23,7 @@ from booking.views import trigger_login_message
 
 urlpatterns = [
     path('', views.home, name='home_urls'),
+    # path('', views.login_view, name='login_url'),
     path('login/', views.login_view, name='login_url'),
     # path('', include('home.urls'), name='home_urls'),
     path('', include('booking.urls'), name='booking_form'),
