@@ -1,5 +1,5 @@
-from django.shortcuts import render, reverse
-from django.contrib.auth.forms import AuthenticationForm
+from django.shortcuts import render, reverse, redirect
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import login
 from django.shortcuts import render
 from django.contrib import messages
@@ -26,3 +26,19 @@ def login_view(request):
             return JsonResponse({"success": False, "errors": errors}, status=400)
 
     return render(request, "index.html", {"login_form": form}) 
+
+def signup_view(request):
+    # form = UserCreationForm(request, data=request.POST or None)
+
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # user = form.get_user()
+            # login(request, user)
+            messages.add_message(request, messages.SUCCESS, "You have successfully signed up and logged in")
+            return redirect("home_urls")
+    else:
+        form = UserCreationForm()
+        return render(request, "account/signup.html", {"form": form})
+    
