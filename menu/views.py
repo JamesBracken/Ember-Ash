@@ -1,8 +1,7 @@
-from django.shortcuts import render, redirect, get_object_or_404, reverse
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Menu
 from .forms import MenuForm
 from django.contrib import messages
-from django.http import HttpResponseRedirect
 from django.contrib.admin.views.decorators import staff_member_required
 
 
@@ -12,7 +11,7 @@ def menu(request):
     """
     return render(request, "menu.html")
 
-# Refactoring code of lunch_menu and dinner_menu into one view was considered
+# Considered refactoring code of lunch_menu and dinner_menu into one view was 
 # however this would actually result in more code so was scrapped
 def lunch_menu(request):
     """
@@ -20,8 +19,8 @@ def lunch_menu(request):
 
     **Context**
 
-    ``menu item``
-        An instance of :model:`menu.Menu`.
+    ``menu items``
+        All instances of :model:`menu.Menu` where meal_category == `lunch`.
 
     **Template**
 
@@ -40,7 +39,7 @@ def dinner_menu(request):
     **Context**
 
     ``menu item``
-        An instance of :model:`menu.Menu`.
+        All instances of :model:`menu.Menu` where meal_category == `dinner`.
 
     **Template**
 
@@ -74,8 +73,8 @@ def add_menu_item(request):
             messages.add_message(
                 request, messages.SUCCESS, "You have successfully added a menu item"
             )
-            # Checks if meal_category selected is lunch or menu and redirects to 
-            # the corresponding page
+        # Checks if meal_category selected is lunch or menu and redirects to 
+        # the corresponding page
         if(meal_category == "lunch"):
             return redirect("lunch_menu")
         elif(meal_category == "dinner"):
@@ -101,7 +100,7 @@ def edit_menu_item(request, slug):
     **Context**
 
     ``menu_item``
-    an instance of :model:`menu.Menu`
+    The selected instance of :model:`menu.Menu`
     ``menu_form``
     an instance of :form:`menu.MenuForm`
 
@@ -125,8 +124,8 @@ def edit_menu_item(request, slug):
                 messages.ERROR,
                 "An error occurred, the menu item was not updated",
             )
-            # Checks if meal_category selected is lunch or menu and redirects to 
-            # the corresponding page
+            # Checks if meal_category selected is lunch or dinner and redirects to 
+            # the corresponding menu page
         if(meal_category == "lunch"):
             return redirect("lunch_menu")
         elif(meal_category == "dinner"):
@@ -151,7 +150,7 @@ def delete_menu_item(request, id):
     **Context**
 
     ``menu_item``
-    an instance of :model:`menu.Menu`
+    The selected instance of :model:`menu.Menu`
 
     **Template**
 
@@ -164,8 +163,8 @@ def delete_menu_item(request, id):
     meal_category = item.meal_category
     item.delete()
     messages.add_message(request, messages.SUCCESS, "Menu item has been deleted")
-    # Checks if meal_category selected is lunch or menu and redirects to 
-    # the corresponding page
+    # Checks if meal_category selected is lunch or dinner and redirects to 
+    # the corresponding menu page
     if(meal_category == "lunch"):
         return redirect("lunch_menu")
     elif(meal_category == "dinner"):

@@ -10,7 +10,6 @@ class Menu(models.Model):
         ("lunch", "Lunch"),
         ("dinner", "Dinner"),
     ]
-# Delete the below id, its redundant
     title = models.CharField(max_length=75, unique=True)
     description = models.TextField(max_length=150)
     slug = models.SlugField(unique=True, max_length=75)
