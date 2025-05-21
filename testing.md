@@ -210,6 +210,25 @@ Lunch Menu page
 |Delete item confirmation modal|On click of delete in the modal the user stays on the dinner page|Click the button and check|||
 Image alt|Alt attribute is added automatically and is equal to the description||||
 
+Dinner menu page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
+|---------|-------------------|-------------------|--------|-----------|
+|Dinner menu items|Items on the page or only data-meal_category = Dinner|Check if items are data-meal_category = Dinner|||
+|Dinner menu items|All data displays properly|Check image, title, description, price|||
+|Dinner menu item image|If an image is not selected the default img appears instead|Check image|||
+|Menu item card responsiveness|Displays well on across screen sizes|Window resize|||
+|Menu item card responsiveness|Items are 2 per row on medium |Check items|||
+|Menu item card responsiveness|Items are 1 per row on small devices|Check items|||
+|Nav and footer|Nav and footer render correctly||||
+|Edit icon|Displays for admins|Visual check|||
+|Edit icon|Does not display for normal users|Visual check|||
+|Edit icon|On click of the edit icon the user is redirected to the edit form page|Click the edit icon|||
+|Delete icon|Displays for admins|Visual check|||
+|Delete icon|Does not display for regular users|Visual check|||
+|Delete item confirmation modal|On click of the delete icon the delete confirmation modal appears |Click delete icon|||
+|Delete item confirmation modal|On click of delete in the modal the item is deleted|Click the button and check|||
+|Delete item confirmation modal|On click of delete in the modal the user stays on the dinner page|Click the button and check|||
+|Image alt|Alt attribute is added automatically and is equal to the description||||
 
 
 Lunch Menu page
