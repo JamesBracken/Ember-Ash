@@ -188,55 +188,7 @@
                 <div class="modal-footer">
                   <p>Dont have an account yet?</p>
                   {% comment %} <button class="modal-nav-link" data-bs-target="#signup-modal-toggle" data-bs-toggle="modal">Signup</button> {% endcomment %}
-                  <a href="{% url 'account_signup' %}">Signup</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% comment %}SIGNUP MODAL{% endcomment %}
-      <div class="modal fade" id="signup-modal-toggle" aria-labelledby="signup-modal-toggle-label" tabindex="-1" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="row">
-              <div class="col-3 signup-modal-img-container">
-                {% comment %}Fill in with image{% endcomment %}
-                <img class="signup-modal-img" src="{% static 'images/home-page/signup-modal-img.webp' %}" alt="">
-              </div>
-              <div class="col-9">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="signup-modal-toggle-label">Signup</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form method="POST" action="{% url 'account_signup' %}">
-                    {% with form=signup_form %}
-                      {% csrf_token %}
-                      <div>{{ form.username.label_tag }}
-                        {{ form.username|add_class:'form-input' }}
-                        {{ form.username.errors }}</div>
-                      <div>{{ form.email.label_tag }}
-                        {{ form.email|add_class:'form-input' }}
-                        {{ form.email.errors }}</div>
-                      <div>{{ form.password1.label_tag }}
-                        {{ form.password1|add_class:'form-input' }}
-                        {{ form.password1.errors }}</div>
-                      <div>{{ form.password2.label_tag }}
-                        {{ form.password2|add_class:'form-input' }}
-                        {{ form.password2.errors }}</div>
-                    {% endwith %}
-                    {% if form.non_field_errors %}
-                      <div>{{ form.non_field_errors }}</div>
-                    {% endif %}
-                    <div class="d-flex justify-content-center">
-                      <button type="submit" class="button">Sign Up</button>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <p>Already have an account?</p>
-                  <button class="modal-nav-link" data-bs-target="#login-modal-toggle" data-bs-toggle="modal">Login</button>
+                  <a href="{% url 'account_signup' %} ">Signup</a>
                 </div>
               </div>
             </div>
