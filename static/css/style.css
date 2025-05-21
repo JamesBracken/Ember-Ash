@@ -273,6 +273,10 @@ nav li {
     height: 48px;
 }
 
+.login-errors p {
+    color: #ff2b32;
+}
+
 /* Success messages styles */
 .success {
     background-color: #d1e7dd;
