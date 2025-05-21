@@ -1,21 +1,37 @@
-{% extends "account/base.html" %}
+{% extends 'base.html' %}
+{% comment %} {% extends 'account/base.html' %} {% endcomment %}
+{% load widget_tweaks %}
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Signup" %}{% endblock head_title %}
+{% block head_title %}
+  {% trans 'Signup' %}
+{% endblock %}
 
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
+  <h1>{% trans 'Sign Up' %}</h1>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
-
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
-
-{% endblock content %}
+  <p>
+    {% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
+  </p>
+  <div class="container">
+    <div class="row">
+      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        {% for field in form %}
+          <div class="col-12 mb-2">
+            {{ field.label_tag }}
+            {{ field|add_class:'form-input' }}
+            {{ field.errors }}
+          </div>
+        {% endfor %}
+        {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="button">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

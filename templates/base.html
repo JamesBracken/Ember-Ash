@@ -1,5 +1,4 @@
 {% load static %}
-{% load account %}
 {% load widget_tweaks %}
 
 {% comment %} {% load form_tags %} {% endcomment %}
@@ -184,7 +183,8 @@
                 </div>
                 <div class="modal-footer">
                   <p>Dont have an account yet?</p>
-                  <button class="modal-nav-link" data-bs-target="#signup-modal-toggle" data-bs-toggle="modal">Signup</button>
+                  {% comment %} <button class="modal-nav-link" data-bs-target="#signup-modal-toggle" data-bs-toggle="modal">Signup</button> {% endcomment %}
+                  <a href="{% url 'account_signup' %}">Signup</a>
                 </div>
               </div>
             </div>
