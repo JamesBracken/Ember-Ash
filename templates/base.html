@@ -1,8 +1,6 @@
 {% load static %}
 {% load widget_tweaks %}
 
-{% comment %} {% load form_tags %} {% endcomment %}
-{% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 
@@ -32,16 +30,11 @@
     </title></head>
   <body>
     <header>
-      <div class="container company-header">
+      <div class="container">
         <div class="row justify-content-center">
           <div class="col-8 col-md-6 col-lg-5 mt-2">
-            <a href="{% url 'home_urls' %}"><h1 class="text-center inline-block">Ember and ash</h1></a>
+            <a href="{% url 'home_urls' %}" aria-label="Go to home page"><h1 class="text-center inline-block">Ember and ash</h1></a>
           </div>
-          {% comment %}If check to add user profile if authenticated{% endcomment %}
-          {% if user.is_authenticated %}
-            {% comment %}My profile Log out{% endcomment %}
-            {% comment %} <a href="FILL IN WITH PROFILE LINK"><i class="fa-solid fa-circle-user"></i></a> {% endcomment %}
-          {% endif %}
           {% if user.is_authenticated %}
             <ul>
               <li class="nav-item">
@@ -52,7 +45,7 @@
           {% else %}
             <ul>
               <li class="nav-item">
-                <a class="nav-link nav-link-cta login-link " data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a>
+                <a class="nav-link nav-link-cta login-link " data-bs-toggle="modal" data-bs-target="#login-modal-toggle" aria-label="Opens login modal">Login</a>
               </li>
             </ul>
           {% endif %}
@@ -64,11 +57,11 @@
           <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0 d-flex gap-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'home_urls' %}">Home</a>
+                <a class="nav-link active" aria-current="Home" href="{% url 'home_urls' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link nav-link-cta active" aria-current="page" 
-                {% comment %} Adding in if check to see if user is logged in {% endcomment %}
+                {% comment %} If check to see if user is logged in {% endcomment %}
+                <a class="nav-link nav-link-cta active" 
                 {% if user.is_authenticated %}
                 href="{% url 'booking_form'%}"
                 {% else %}
@@ -78,25 +71,13 @@
                 >Make a booking</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'menu' %}">Menu</a>
+                <a class="nav-link active" href="{% url 'menu' %}">Menu</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-        fade show" id="msg" role="alert">
-        {{ message | safe }}
-        <button type="button" class="btn-close"
-          data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-{% comment %} TEST END {% endcomment %}
-
     </header>
-
     <main>
       {% comment %} Message code taken from Code institute Codestar practice project which was done in the course  {% endcomment %}
       <div class="container">
@@ -122,9 +103,9 @@
       <div class="container">
         <div class="row">
           <div class="col-12 d-flex justify-content-evenly">
-            <a href="https://www.facebook.com/" target="_blank " rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://x.com/" target="_blank " rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.instagram.com/" target="_blank " rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/" target="_blank " rel="noopener noreferrer"aria-label="Open facebook in a new tab" ><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://x.com/" target="_blank " rel="noopener noreferrer" aria-label="Open twitter in a new tab"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank " rel="noopener noreferrer" aria-label="Open instagram in a new tab"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
       </div>
@@ -154,7 +135,7 @@
           <div class="modal-content">
             <div class="row">
               <div class="col-3 login-modal-img-container">
-                <img class="login-modal-img" src="{% static 'images/home-page/login-modal-img.jfif' %}" alt="">
+                <img class="login-modal-img" src="{% static 'images/home-page/login-modal-img.jfif' %}" alt="Multiple dishes of food">
               </div>
               <div class="col-9">
                 <div class="modal-header">
@@ -196,7 +177,6 @@
         </div>
       </div>
     </div>
-
     {% comment %}Font awesome script{% endcomment %}
     <script src="https://kit.fontawesome.com/d51c017cc6.js" crossorigin="anonymous"></script>
     {% comment %}BS Javascript{% endcomment %}

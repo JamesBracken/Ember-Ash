@@ -20,7 +20,7 @@
     <div class="row justify-content-center card-home-container">
       <div class="col-12 col-md-6 col-lg-4 justify-content-center d-flex align-self-center mb-5">
         <a href="{% url 'menu' %}">
-          <div class="card card-home text-center  align-self-center">
+          <div class="card text-center align-self-center">
             <img src="{% static 'images/home-page/menu-img.jpg' %}" class="card-img-top card-home-img" alt="2 dishes of food with fresh ingredients"/>
             <div class="card-body">
               <p class="home-card-text">Menu</p>
@@ -35,9 +35,10 @@
                 {% else %}
                 href="{% url 'trigger_login_message' %}" 
                 {% endif %}
+                 aria-label="booking page"
         >
-          <div class="card card-home text-center card-home-container">
-            <img src="{% static 'images/home_page/booking-card-img.webp' %}" class="card-img-top card-home-img" alt="2 dishes of food with fresh ingredients"/>
+          <div class="card text-center card-home-container">
+            <img src="{% static 'images/home_page/booking-card-img.webp' %}" class="card-img-top card-home-img" alt="The ember and ash restaurant front"/>
             <div class="card-body">
               <p class="home-card-text">Booking</p>
             </div>
@@ -45,9 +46,9 @@
         </a>
       </div>
       <div class="col-12 col-md-6 col-lg-4 justify-content-center d-flex align-self-center mb-5">
-        <a target="_blank" href="https://www.tripadvisor.co.uk/">
-          <div class="card card-home text-center card-home-container">
-            <img src="{% static 'images/home_page/review-img.jpg' %}" class="card-img-top card-home-img" alt="2 dishes of food with fresh ingredients" />
+        <a target="_blank" href="https://www.tripadvisor.co.uk/" aria-label="Opens tripadvisor page(opens in a new tab)">
+          <div class="card text-center card-home-container">
+            <img src="{% static 'images/home_page/review-img.jpg' %}" class="card-img-top card-home-img" alt="Leave us a review, restaurant background" />
             <div class="card-body">
               <p class="home-card-text">Review</p>
             </div>

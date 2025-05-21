@@ -28,4 +28,3 @@ function deleteBooking(e) {
     deleteConfirm.href = `/booking/delete_booking/${bookingId}`;
     deleteModal.show();
 }
-// NAKED CODE which doesn't fit into other categories
