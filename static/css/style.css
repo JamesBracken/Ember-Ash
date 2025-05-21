@@ -149,6 +149,10 @@ i {
     bottom: 3px; */
 }
 
+.errorlist li {
+    color: #ff2b32;
+}
+
 /* HEADER STYLES */
 
 /* Company header styles */
@@ -347,6 +351,7 @@ main {
     padding-left: 12px;
     margin: 6px;
 }
+
 
 /* ADMIN FEATURES */
 
