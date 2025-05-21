@@ -70,7 +70,7 @@ Browser testing
 |<i class="fab fa-opera"></i>Opera| | ||
 
 Header & Navbar
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
 |Navigation links|On initial open of the page the navbar is immediately visible to the user|Open webpage on incognito|||
 |Navbar|The navbar is visible regardless of which page and where you are on these pages|Load different pages and scroll down|||
@@ -84,6 +84,9 @@ Header & Navbar
 |Nav links|The Booking CTA stands out and is eyecatching|Visual check of the Booking CTA and check it is underlined to make it stand out from the other buttons|||
 |Nav links|The CTA underline transition disappears on hover|Hover mouse over Booking CTA|||
 |Nav links|The Booking CTA gets transitions an underline again after mouse exits hover|Hover over Booking CTA and then remove the mouse from hovering|||
+|Nav links|On smaller devices the navigation collapses into an expandable navigation|Window resize|||
+|Hamburger icon|On click the navigation items display|Click icon|||
+|Hamburger icon|If opened, on click the navigation items disappear|Click the icon after opening|||
 |Login and Logout button|There is a login button on the right of the nav|Visual check|||
 |Login and Logout button|The login button is underlined to stand out|Visual check|||
 |Login and Logout button|The login button underline transition removes on hover|Hover mouse over|||
@@ -94,19 +97,21 @@ Header & Navbar
 |Login and Logout button|The logout button has an underline to attract attention|Visual check|||
 |Login and Logout button|The logout button on hover transition removes the underline|Hover mouse over|||
 |Login and Logout button|The logout button on mouse exit after hover regains the underline|Hover mouse over then mouse exit|||
+|Login and logout button|One link or the other is always present even on smaller devices|Visual check|||
 |Regular nav links|Have no underline |Visual check|||
 |Regular nav links|Transition underline on hover|Hover mouse over|||
 |Regular nav links|Transition remove underline on mouse exit|Hover mouse over then mouse exit|||
-|My profile icon|On login the my profile icon is found on the left of the navbar||||
+|My profile icon|On login the my profile icon is found on the left of the navbar|Visual check|||
 |My profile icon|If not logged in the my profile icon is not present|Log out and check if the my profile icon is present|||
 |My profile icon|If logged in clicking the my profile icon leads the user to the my profile page|Login and click the my profile icon|||
+|My profile icon|If logged in the icon is always present even on smaller devices|Visual check|||
 |Button, anchor links, logo and my profile icon|On hover over any of these links the mouse become a pointer|Hover over links, buttons and icon|||
-|Responsive|The navbar looks good and functions on many screen sizes|Window resize||||||||
+|Responsive|The navbar looks good and functions on many screen sizes|Window resize|||
 |Spelling check|There are no spelling errors in any of the links or the company logo within the nav|Read through links and company logo|||
-
+|Active|If a user is on a page an active class is added and the text or icon changes thickness or color|Go to pages and check icon or link|||
 
 Footer
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
 |Responsive|Information displays well on multiple devices|Window resize|||
 |Social media links |Each link opens the right page|Click links|||
@@ -114,7 +119,7 @@ Footer
 |Footer availability|Footer is displayed on every page|Check the bottom of each page|||
 
 Home page
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
 |Hero img responsiveness|The hero image looks good on multiple screen sizes|Window resize|||
 |Images alt|Images contain alt tags|Check alt tags in console|||
@@ -124,7 +129,7 @@ Home page
 |Navigation cards(Menu and booking)|Redirect the current page|Click navigation cards|||
 
 My profile page
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
 |Profile icon|Users who are not logged in cannot see this icon leading to the my profile page|Log out and check nav|||
 |Profile icon|Users who are logged in can see the my profile icon|Login and check nav|||
@@ -158,9 +163,8 @@ My profile page
 |Pagination|If there is more than 5 bookings pagination activates, on click of previous page the user is redirected to the previous page|Click previous page|||
 |Pagination|If there is more than 1 page pagination displays a counter of pages and shows which page you are on|Check bottom of page|||
 
-
 Menu page
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
 |Meal cards|Meal cards are displayed|Visual check|||
 |Meal cards|When clicking anywhere on the card, navigate to their respective page|Click cards|||
@@ -170,7 +174,7 @@ Menu page
 |Add menu icon|Regular users cannot see an add menu icon|Login to a normal user account and check|||
 
 Add item page 
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
 |Add menu item|All form fields are required|Test form fields|||
 |Add menu item|All form fields have a label|Visual check|||
@@ -190,74 +194,129 @@ Add item page
 |Submit button|If the form is filled out correctly on submission of the form the user is redirect back to the menu page|Fill out form and submit|||
 |Submit button|If the form is not filled out correctly on submission of the for the user is not redirected to another page|Dont fill out form and submit|||
 
-
-
-
 Lunch Menu page
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-|A|||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-Dinner menu delete item modal
-
-
+|Lunch menu items|Items on the page or only data-meal_category = lunch|Check if items are data-meal_category = lunch|||
+|Lunch menu items|All data displays properly|Check image, title, description, price|||
+|Lunch menu item image|If an image is not selected the default img appears instead|Check image|||
+|Menu item card responsiveness|Displays well on across screen sizes|Window resize|||
+|Menu item card responsiveness|Items are 2 per row on medium |Check items|||
+|Menu item card responsiveness|Items are 1 per row on small devices|Check items|||
+|Nav and footer|Nav and footer render correctly||||
+|Edit icon|Displays for admins|Visual check|||
+|Edit icon|Does not display for normal users|Visual check|||
+|Edit icon|On click of the edit icon the user is redirected to the edit form page|Click the edit icon|||
+|Delete icon|Displays for admins|Visual check|||
+|Delete icon|Does not display for regular users|Visual check|||
+|Delete item confirmation modal|On click of the delete icon the delete confirmation modal appears |Click delete icon|||
+|Delete item confirmation modal|On click of delete in the modal the item is deleted|Click the button and check|||
+|Delete item confirmation modal|On click of delete in the modal the user stays on the dinner page|Click the button and check|||
+Image alt|Alt attribute is added automatically and is equal to the description||||
 
 Dinner menu page
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
-
+|Dinner menu items|Items on the page or only data-meal_category = Dinner|Check if items are data-meal_category = Dinner|||
+|Dinner menu items|All data displays properly|Check image, title, description, price|||
+|Dinner menu item image|If an image is not selected the default img appears instead|Check image|||
+|Menu item card responsiveness|Displays well on across screen sizes|Window resize|||
+|Menu item card responsiveness|Items are 2 per row on medium |Check items|||
+|Menu item card responsiveness|Items are 1 per row on small devices|Check items|||
+|Nav and footer|Nav and footer render correctly||||
+|Edit icon|Displays for admins|Visual check|||
+|Edit icon|Does not display for normal users|Visual check|||
+|Edit icon|On click of the edit icon the user is redirected to the edit form page|Click the edit icon|||
+|Delete icon|Displays for admins|Visual check|||
+|Delete icon|Does not display for regular users|Visual check|||
+|Delete item confirmation modal|On click of the delete icon the delete confirmation modal appears |Click delete icon|||
+|Delete item confirmation modal|On click of delete in the modal the item is deleted|Click the button and check|||
+|Delete item confirmation modal|On click of delete in the modal the user stays on the dinner page|Click the button and check|||
+|Image alt|Alt attribute is added automatically and is equal to the description||||
 
 Login modal
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
+|---------|-------------------|-------------------|--------|-----------|
+|Login link|On click it opens the login modal|Click link|||
+|Login modal|Username and password inputs are present|Visual check|||
+|Login modal|Image loads normally on left side |Visual check|||
+|Login modal |If user fills out form incorrectly the page does not refresh|Fill out incorrectly and press login|||
+|Login modal|If username is not filled out an HTML validation warning appears|Dont fill in and submit|||
+|Login modal|If password is not filled out an HTML validation warning appears|Dont fill in and submit|||
+|Signup link|There is a signup link present which stands out |Visual check|||
+|Login modal error handling|Errors are not present on open of the modal|Open modal|||
+|Login modal error handling|If form is filled out incorrectly errors display||||
+|Signup link|Link opens the signup page |Click link|||
+
+Signup page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
 ||||||
-
-Signup modal
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-|---------|-------------------|-------------------|--------|-----------|
+||||||
+||||||
+||||||
 ||||||
 
-
-
-
-
-
-
-
-Success page
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+Logout page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
 ||||||
-
+||||||
+||||||
+||||||
+||||||
+Django messages
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
+|---------|-------------------|-------------------|--------|-----------|
+||||||
+||||||
+||||||
+||||||
 
 404 page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
+|---------|-------------------|-------------------|--------|-----------|
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
 
 500 page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
+|---------|-------------------|-------------------|--------|-----------|
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
 
 405 page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
+|---------|-------------------|-------------------|--------|-----------|
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
 
 403 page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
+|---------|-------------------|-------------------|--------|-----------|
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
