@@ -134,6 +134,15 @@ body {
     margin-top: 15px;
 }
 
+.button:hover {
+    border: solid 1px rgba(128, 128, 128, 1) !important;
+    padding: 5px 35px !important;
+    border-radius: 5px !important;
+    background-color:  #a99074 !important;
+    color: var(--clr-white);
+    margin-top: 15px;
+}
+
 /* Edit and X icons styles */
 
 
