@@ -19,7 +19,7 @@
   <div class="container">
     <div class="row justify-content-center card-home-container">
       <div class="col-12 col-md-6 col-lg-4 justify-content-center d-flex align-self-center mb-5">
-        <a href="">
+        <a href="{% url 'menu' %}">
           <div class="card card-home text-center  align-self-center">
             <img src="{% static 'images/home-page/menu-img.jpg' %}" class="card-img-top card-home-img" alt="2 dishes of food with fresh ingredients"/>
             <div class="card-body">
@@ -29,7 +29,13 @@
         </a>
       </div>
       <div class="col-12 col-md-6 col-lg-4 justify-content-center mb-5 d-flex">
-        <a href="">
+        <a
+        {% if user.is_authenticated %}
+                href="{% url 'booking_form'%}"
+                {% else %}
+                href="{% url 'trigger_login_message' %}" 
+                {% endif %}
+        >
           <div class="card card-home text-center card-home-container">
             <img src="{% static 'images/home_page/booking-card-img.webp' %}" class="card-img-top card-home-img" alt="2 dishes of food with fresh ingredients"/>
             <div class="card-body">
@@ -39,7 +45,7 @@
         </a>
       </div>
       <div class="col-12 col-md-6 col-lg-4 justify-content-center d-flex align-self-center mb-5">
-        <a href="">
+        <a target="_blank" href="https://www.tripadvisor.co.uk/">
           <div class="card card-home text-center card-home-container">
             <img src="{% static 'images/home_page/review-img.jpg' %}" class="card-img-top card-home-img" alt="2 dishes of food with fresh ingredients" />
             <div class="card-body">
