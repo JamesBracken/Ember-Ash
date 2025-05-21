@@ -18,10 +18,10 @@
           <h1 class="text-center mb-4">Reservations</h1>
         </div>
         <div class="col-12">
-        {% comment %}Action is injected dynamically with JS{% endcomment %}
-          <form method="post" action="">
-            {{ booking_form|crispy }}
+        {% comment %}Action is injected dynamically within views{% endcomment %}
+          <form method="POST" action="">
             {% csrf_token %}
+            {{ booking_form|crispy }}
             <div class="d-flex justify-content-center mb-4">
               <button type="submit" class="button">Submit</button>
             </div>
@@ -32,6 +32,6 @@
   {% else %}
   {% comment %} In the unlikely scenario a user is not is_authenticated
   and they arrive to this page  {% endcomment %}
-    <h2>Please login first before making a booking</h2>
+    <h1>Please login first before making a booking</h1>
   {% endif %}
 {% endblock %}

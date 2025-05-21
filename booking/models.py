@@ -15,6 +15,9 @@ class Booking (models.Model):
     comment = models.CharField(max_length=200, blank=True)
 
     def clean(self):
+        """
+        Protection from users creating a booking with an incorrect date
+        """
         super().clean()
         next_day = timezone.now().date() + timedelta(days=1)
         if self.booking_date < next_day:

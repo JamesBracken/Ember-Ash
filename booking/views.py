@@ -3,16 +3,14 @@ from .models import Booking
 from django.contrib import messages
 from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
-from datetime import timedelta
-# Create your views here.
 
-# Checks if a specified date is in the future or not
 def is_date_in_future(date):
     """
     Checks if a passed in `date` is in the future
 
-    ``Context``
+    **Context**
 
+    ``date``
         date passed in as a parameter to check if it is in the future
     """
     today = date.today()
@@ -40,7 +38,6 @@ def booking(request):
             booking = booking_form.save(commit=False)
             booking.user = request.user
             booking.save()
-            # Adds a success message
             messages.add_message(
                 request,
                 messages.SUCCESS,
@@ -74,15 +71,13 @@ def booking_edit(request, id):
 
     ``booking_form.html``
     """
-    
     queryset = Booking.objects.all()
     booking = get_object_or_404(queryset, id=id)
     booking_form = BookingForm(data=request.POST, instance=booking)
     is_booking_in_future = is_date_in_future(booking.booking_date)
-    if request.method == "POST"  and is_booking_in_future:
+    if request.method == "POST" and is_booking_in_future:
         if booking_form.is_valid() and booking.user == request.user:
             booking = booking_form.save()
-            # Adds a success message
             messages.add_message(request, messages.SUCCESS, "Booking updated!")
             return redirect("my_profile")
         else:
@@ -119,13 +114,10 @@ def booking_delete(request, id):
     if booking.user == request.user and is_booking_in_future:
         booking.delete()
         messages.add_message(request, messages.SUCCESS, "Booking was deleted!")
-    if is_booking_in_future:
         return redirect("my_profile")
     else: 
         messages.add_message(request, messages.ERROR, "You cannot delete a booking which is today or in the past")
         return redirect("my_profile")
-
-
 
 def trigger_login_message(request):
     """
