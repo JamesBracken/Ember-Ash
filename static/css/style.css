@@ -5,8 +5,9 @@
     --clr-secondary: #90775A;
     --clr-black: #454545;
     --clr-white: #ffffff;
-
+    /* Headings */
     --text-primary: sans serif, sans;
+    /* Body text */
     --text-secondary: "PT Serif", serif;
 
     --fs-heading-1: 3.125rem;
@@ -113,7 +114,6 @@ html {
 }
 
 /* Limit page to 1800px for XL devices*/
-
 body {
     min-height: 100%;
     max-width: 1800px !important;
@@ -134,9 +134,16 @@ body {
     margin-top: 15px;
 }
 
+.button:hover {
+    border: solid 1px rgba(128, 128, 128, 1) !important;
+    padding: 5px 35px !important;
+    border-radius: 5px !important;
+    background-color:  #a99074 !important;
+    color: var(--clr-white);
+    margin-top: 15px;
+}
+
 /* Edit and X icons styles */
-
-
 i {
     font-size: 40px !important;
     color: var(--clr-black);
@@ -145,14 +152,16 @@ i {
 /* Gives an underline to elements */
 .underline {
     border-bottom: black solid 1px;
-    /* position: relative;
-    bottom: 3px; */
+}
+
+.errorlist li {
+    color: #ff2b32;
 }
 
 /* HEADER STYLES */
 
-/* Company header styles */
-.company-header h1 {
+/* Company logo styles */
+header h1 {
     font-family: var(--text-secondary);
     padding-top: 5px;
     font-size: 35px;
@@ -169,7 +178,7 @@ header {
     z-index: 99;
 }
 
-/* Navbar styles */
+/* Nav styles */
 
 nav li {
     padding-left: 10px;
@@ -196,6 +205,8 @@ nav li {
 .nav-link:hover:after {
     width: 100%;
 }
+
+/* below CTA items start with a line under */
 
 /* Removes the line from the CTA on hover */
 .nav-link-cta,
@@ -252,24 +263,21 @@ nav li {
     height: 330px;
 }
 
-.signup-modal-img {
-    height: 360px;
-}
-
-.login-modal-img-container,
-.signup-modal-img-container {
+.login-modal-img-container {
     padding: 0;
 }
 
 .login-errors {
     height: 48px;
 }
+
 /* Success messages styles */
 .success {
     background-color: #d1e7dd;
     border: #badbcc;
 }
 
+/* Error messages styles */
 .error {
     background-color: #ffb6b9;
     border: #ff2b32;
@@ -306,12 +314,7 @@ main {
     font-family: var(--text-secondary);
 }
 
-/* Home card images */
-
-.card-home {
-    /* max-width: 216px!important;
-    height: 516px!important; */
-}
+/* Home card styles */
 
 .card-home-container {
     height: inherit !important;
@@ -324,9 +327,6 @@ main {
 
 /* Menu item cards */
 
-/* .menu-item-card {
-
-} */
 .menu-item-card-container {
     height: 700px;
     width: 300px;
@@ -348,14 +348,10 @@ main {
     margin: 6px;
 }
 
-/* ADMIN FEATURES */
-
-
 /* FOOTER STYLES */
 
 footer {
     padding-top: 2px;
-    /* position: fixed; */
     width: 100%;
     left: 0;
     bottom: 0;
@@ -386,7 +382,6 @@ footer {
     }
     .menu-item-card-img {
         height: 300px !important;
-        /* width: 336px !important; */
     }
 }
 @media screen and (min-width: 1024px) {
@@ -396,7 +391,6 @@ footer {
     }
     .menu-item-card-img {
         height: 350px !important;
-        /* width: 456px !important; */
     }
 }
 @media screen and (min-width: 1440px) {
@@ -406,6 +400,5 @@ footer {
     }
     .menu-item-card-img {
         height: 350px !important;
-        /* width: 456px !important; */
     }
 }

@@ -1,13 +1,9 @@
-from django.shortcuts import render
-from django.contrib.auth.forms import AuthenticationForm
+from django.shortcuts import render, reverse, redirect
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import login
 from django.shortcuts import render
 from django.contrib import messages
 from django.http import JsonResponse
-# View to connect the custom login modal with allauth
-
-
-
 
 def home(request):
     """
@@ -16,6 +12,9 @@ def home(request):
     return render(request, 'index.html')
 
 def login_view(request):
+    """
+    Handles the user login modal, authentication and error handling(ajax)
+    """
     form = AuthenticationForm(request, data=request.POST or None)
 
     if request.method == "POST":
@@ -23,10 +22,32 @@ def login_view(request):
             user = form.get_user()
             login(request, user)
             messages.add_message(request, messages.SUCCESS, "You have successfully logged in")
-            return JsonResponse({"success": True, "home_url": "" })
+            return JsonResponse({"success": True, "home_url": reverse("home_urls") })
         else:
             errors = form.errors.as_json()
-            print(errors)
             return JsonResponse({"success": False, "errors": errors}, status=400)
 
     return render(request, "index.html", {"login_form": form}) 
+
+def signup_view(request):
+    """
+    Displays the Allauth signup page
+
+    ``Context``
+
+    ``form``
+        instance of `allauth:UserCreationForm`
+    
+    ``Template``
+    :template:`account/signup.html`
+    """
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.add_message(request, messages.SUCCESS, "You have successfully signed up and logged in")
+            return redirect("home_urls")
+    else:
+        form = UserCreationForm()
+        return render(request, "account/signup.html", {"form": form})
+    

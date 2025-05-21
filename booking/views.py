@@ -1,18 +1,16 @@
-from django.shortcuts import render, redirect, get_object_or_404, reverse
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking
 from django.contrib import messages
 from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
-from datetime import timedelta
-# Create your views here.
 
-# Checks if a specified date is in the future or not
 def is_date_in_future(date):
     """
     Checks if a passed in `date` is in the future
 
-    ``Context``
+    **Context**
 
+    ``date``
         date passed in as a parameter to check if it is in the future
     """
     today = date.today()
@@ -40,13 +38,12 @@ def booking(request):
             booking = booking_form.save(commit=False)
             booking.user = request.user
             booking.save()
-            # Adds a success message
             messages.add_message(
                 request,
                 messages.SUCCESS,
                 "Booking successfully created, you may view this in your My Profile area",
             )
-            return redirect("home_urls")
+            return redirect("my_profile")
     else:
         booking_form = BookingForm()
     return render(
@@ -74,26 +71,21 @@ def booking_edit(request, id):
 
     ``booking_form.html``
     """
-    
     queryset = Booking.objects.all()
     booking = get_object_or_404(queryset, id=id)
     booking_form = BookingForm(data=request.POST, instance=booking)
-    booking_date = booking.booking_date
-    if request.method == "POST"  and is_date_in_future(booking_date):
+    is_booking_in_future = is_date_in_future(booking.booking_date)
+    if request.method == "POST" and is_booking_in_future:
         if booking_form.is_valid() and booking.user == request.user:
-            booking = booking_form.save(commit=False)
-            booking.user = request.user
-            booking.save()
-            # Adds a success message
+            booking = booking_form.save()
             messages.add_message(request, messages.SUCCESS, "Booking updated!")
-            return redirect("home_urls")
+            return redirect("my_profile")
         else:
             messages.add_message(request, messages.ERROR, "Error updating booking")
-            return redirect("home_urls")
+            return redirect("my_profile")
     else:
         booking_form = BookingForm(instance=booking)
-    # return render
-    if  is_date_in_future(booking_date):
+    if  is_booking_in_future:
         return render(
             request,
             "booking/booking_form.html", {
@@ -117,18 +109,15 @@ def booking_delete(request, id):
     """
     queryset = Booking.objects.all()
     booking = get_object_or_404(queryset, id=id)
-    booking_date = booking.booking_date
+    is_booking_in_future = is_date_in_future(booking.booking_date)
 
-    if booking.user == request.user and is_date_in_future(booking_date):
+    if booking.user == request.user and is_booking_in_future:
         booking.delete()
         messages.add_message(request, messages.SUCCESS, "Booking was deleted!")
-    if is_date_in_future(booking_date):
-        return redirect("home_urls")
+        return redirect("my_profile")
     else: 
         messages.add_message(request, messages.ERROR, "You cannot delete a booking which is today or in the past")
         return redirect("my_profile")
-
-
 
 def trigger_login_message(request):
     """

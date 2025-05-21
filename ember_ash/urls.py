@@ -16,20 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-# from .views import ModalLogin
 from . import views
-# from booking import views as booking_views
 from booking.views import trigger_login_message
 
 urlpatterns = [
     path('', views.home, name='home_urls'),
-    path('login/', views.login_view, name='login_url'),
-    # path('', include('home.urls'), name='home_urls'),
     path('', include('booking.urls'), name='booking_form'),
     path('', include('user.urls'), name='my_profile'),
     path('', include('menu.urls'), name='menu'),
+    # This url is for the login modal
+    path('login/', views.login_view, name='login_url'),
     path('trigger-login-message', trigger_login_message, name='trigger_login_message'),
-    # path('accounts/login/', views.ModalLogin.as_view(), name='account_login'),
+    # For allauth signup and logout pages
     path('accounts/', include('allauth.urls')),
     path('admin/', admin.site.urls),
 ]

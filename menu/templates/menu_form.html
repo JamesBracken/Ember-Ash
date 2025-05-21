@@ -2,13 +2,21 @@
 {% load crispy_forms_tags %}
 {% load static %}
 
+{% block title %}
+| Menu form 
+{% endblock %}
+
+{% block metadata %}
+<meta name="description" content="Menu form to add or edit menu items." />
+{% endblock %}
+
 {% block content %}
 {% comment %} If user is_staff then display the form to add menu items {% endcomment %}
   {% if user.is_staff %}
     <section class="container">
       <div class="row">
         <h1>Create a menu item</h1>
-        {% comment %}Action dynamically injected within JS{% endcomment %}
+        {% comment %}Action dynamically injected within views{% endcomment %}
         <form method="POST" action="" id="add-menu-item-form" enctype="multipart/form-data">
           {{ menu_form|crispy }}
           {% csrf_token %}

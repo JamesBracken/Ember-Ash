@@ -1,28 +1,18 @@
 {% load static %}
-{% load account %}
 {% load widget_tweaks %}
 
-{% comment %} {% load form_tags %} {% endcomment %}
-{% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
-
-{% comment %}DISPLAYS FORM ERRORS IF ANY{% endcomment %}
-
-{% if form.errors %}
-  <div class="alert alert-danger">{{ form.errors }}</div>
-{% endif %}
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      {% block title %}
-        Ember Ash
-      {% endblock %}
-    </title>
+    {% block metadata %}
+
+    {% endblock %}
+    
     {% comment %}Bootstrap styles{% endcomment %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
 
@@ -33,34 +23,29 @@
 
     {% comment %}CSS Stylesheet{% endcomment %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  </head>
+    <title>
+      Ember Ash
+      {% block title %}
+      {% endblock %}
+    </title></head>
   <body>
     <header>
-      <div class="container company-header">
+      <div class="container">
         <div class="row justify-content-center">
           <div class="col-8 col-md-6 col-lg-5 mt-2">
-            <a href="{% url 'home_urls' %}"><h1 class="text-center inline-block">Ember and ash</h1></a>
+            <a href="{% url 'home_urls' %}" aria-label="Go to home page"><h1 class="text-center inline-block">Ember and ash</h1></a>
           </div>
-          {% comment %}If check to add user profile if authenticated{% endcomment %}
-          {% if user.is_authenticated %}
-            {% comment %}My profile Log out{% endcomment %}
-            {% comment %} <a href="FILL IN WITH PROFILE LINK"><i class="fa-solid fa-circle-user"></i></a> {% endcomment %}
-          {% endif %}
           {% if user.is_authenticated %}
             <ul>
               <li class="nav-item">
-                <a class="nav-link nav-link-cta logout-link{% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                <a class="nav-link nav-link-cta logout-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
                 <a href="{% url 'my_profile' %}" class="profile-link"><i class="fa-solid fa-circle-user"></i></a>
               </li>
             </ul>
           {% else %}
-            {% comment %}KEEPING INCASE REGISTER NAV LINK NEEDED{% endcomment %}
-            {% comment %} <li class="nav-item">
-              <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}">Register</a>
-            </li> {% endcomment %}
             <ul>
               <li class="nav-item">
-                <a class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a>
+                <a class="nav-link nav-link-cta login-link " data-bs-toggle="modal" data-bs-target="#login-modal-toggle" aria-label="Opens login modal">Login</a>
               </li>
             </ul>
           {% endif %}
@@ -72,47 +57,43 @@
           <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0 d-flex gap-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'home_urls' %}">Home</a>
+                <a class="nav-link active" aria-current="Home" href="{% url 'home_urls' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link nav-link-cta active" aria-current="page" 
-                {% comment %} Adding in if check to see if user is logged in {% endcomment %}
+                {% comment %} If check to see if user is logged in {% endcomment %}
+                <a class="nav-link nav-link-cta active" 
                 {% if user.is_authenticated %}
                 href="{% url 'booking_form'%}"
                 {% else %}
                 href="{% url 'trigger_login_message' %}" 
-                {% comment %} data-bs-toggle="modal" data-bs-target="#login-modal-toggle" {% endcomment %}
                 {% endif %}
                 {% comment %} End of if check {% endcomment %}
                 >Make a booking</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'menu' %}">Menu</a>
+                <a class="nav-link active" href="{% url 'menu' %}">Menu</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      {% comment %} Message code taken from Code institute Codestar project {% endcomment %}
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      {% for message in messages %}
-      <div class="alert {{ message.tags }} alert-dismissible
-        fade show" id="msg" role="alert">
-        {{ message | safe }}
-        <button type="button" class="btn-close"
-          data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-{% comment %} TEST END {% endcomment %}
-
     </header>
-
     <main>
+      {% comment %} Message code taken from Code institute Codestar practice project which was done in the course  {% endcomment %}
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible
+              fade show" id="msg" role="alert">
+              {{ message | safe }}
+              <button type="button" class="btn-close"
+                data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
       {% block content %}
 
       {% endblock %}
@@ -122,9 +103,9 @@
       <div class="container">
         <div class="row">
           <div class="col-12 d-flex justify-content-evenly">
-            <a href="https://www.facebook.com/" target="_blank " rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://x.com/" target="_blank " rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.instagram.com/" target="_blank " rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/" target="_blank " rel="noopener noreferrer"aria-label="Open facebook in a new tab" ><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://x.com/" target="_blank " rel="noopener noreferrer" aria-label="Open twitter in a new tab"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank " rel="noopener noreferrer" aria-label="Open instagram in a new tab"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
       </div>
@@ -154,7 +135,7 @@
           <div class="modal-content">
             <div class="row">
               <div class="col-3 login-modal-img-container">
-                <img class="login-modal-img" src="{% static 'images/home-page/login-modal-img.jfif' %}" alt="">
+                <img class="login-modal-img" src="{% static 'images/home-page/login-modal-img.jfif' %}" alt="Multiple dishes of food">
               </div>
               <div class="col-9">
                 <div class="modal-header">
@@ -187,55 +168,8 @@
                 </div>
                 <div class="modal-footer">
                   <p>Dont have an account yet?</p>
-                  <button class="modal-nav-link" data-bs-target="#signup-modal-toggle" data-bs-toggle="modal">Signup</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% comment %}SIGNUP MODAL{% endcomment %}
-      <div class="modal fade" id="signup-modal-toggle" aria-labelledby="signup-modal-toggle-label" tabindex="-1" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="row">
-              <div class="col-3 signup-modal-img-container">
-                {% comment %}Fill in with image{% endcomment %}
-                <img class="signup-modal-img" src="{% static 'images/home-page/signup-modal-img.webp' %}" alt="">
-              </div>
-              <div class="col-9">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="signup-modal-toggle-label">Signup</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form method="POST" action="{% url 'account_signup' %}">
-                    {% with form=signup_form %}
-                      {% csrf_token %}
-                      <div>{{ form.username.label_tag }}
-                        {{ form.username|add_class:'form-input' }}
-                        {{ form.username.errors }}</div>
-                      <div>{{ form.email.label_tag }}
-                        {{ form.email|add_class:'form-input' }}
-                        {{ form.email.errors }}</div>
-                      <div>{{ form.password1.label_tag }}
-                        {{ form.password1|add_class:'form-input' }}
-                        {{ form.password1.errors }}</div>
-                      <div>{{ form.password2.label_tag }}
-                        {{ form.password2|add_class:'form-input' }}
-                        {{ form.password2.errors }}</div>
-                    {% endwith %}
-                    {% if form.non_field_errors %}
-                      <div>{{ form.non_field_errors }}</div>
-                    {% endif %}
-                    <div class="d-flex justify-content-center">
-                      <button type="submit" class="button">Sign Up</button>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <p>Already have an account?</p>
-                  <button class="modal-nav-link" data-bs-target="#login-modal-toggle" data-bs-toggle="modal">Login</button>
+                  {% comment %} <button class="modal-nav-link" data-bs-target="#signup-modal-toggle" data-bs-toggle="modal">Signup</button> {% endcomment %}
+                  <a href="{% url 'account_signup' %} ">Signup</a>
                 </div>
               </div>
             </div>
@@ -243,7 +177,6 @@
         </div>
       </div>
     </div>
-
     {% comment %}Font awesome script{% endcomment %}
     <script src="https://kit.fontawesome.com/d51c017cc6.js" crossorigin="anonymous"></script>
     {% comment %}BS Javascript{% endcomment %}

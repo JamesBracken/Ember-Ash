@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}
+| Lunch menu
+{% endblock %}
+
+{% block metadata %}
+<meta name="description" content="Lunch menu, to showoff what we have on offer for lunch." />
+{% endblock %}
+
 {% block content %}
   <section class="container">
     <div class="row">
@@ -16,10 +24,10 @@
               <div class="menu-item-buttons-container" data-id="{{ item.id }}" data-title="{{ item.title }}" data-description="{{ item.description }}" data-image="{{ item.img.url }}" data-price="{{ item.price }}" data-meal-category="{{ item.meal_category }}">
                 {% comment %}Edit btn uses anchor instead of button to open a new page{% endcomment %}
                 {% comment %}Opens a new page to edit the selected menu item{% endcomment %}
-                <a class="button menu-edit-item-button" href="{% url 'menu_edit' item.slug %}">Edit</a>
+                <a class="button menu-edit-item-button" href="{% url 'menu_edit' item.slug %}" aria-label="Edit this menu item">Edit</a>
                 {% comment %}Delete icon uses button instead of anchor as it opens a modal{% endcomment %}
                 {% comment %}Opens a delete confirmation modal{% endcomment %}
-                <button type="button" class="menu-delete-item-button" data-id="{{ item.id }}"><i class="fa-solid fa-xmark mb-4" data-id="{{ item.id }}"></i></button>
+                <button type="button" class="menu-delete-item-button" data-id="{{ item.id }}" aria-label="Open the delete item confirmation modal"><i class="fa-solid fa-xmark mb-4" data-id="{{ item.id }}"></i></button>
               </div>
               <img src="{{ item.img.url }}" class="card-img-top menu-item-card-img" alt="{{ item.description }}" />
               <div class="card-body">
@@ -58,7 +66,7 @@
         <div class="modal-body">Are you sure you want to delete this menu item? This action cannot be undone.</div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+          <a id="deleteConfirm" href="#" class="btn btn-danger" aria-label="Delete selected menu item">Delete</a>
         </div>
       </div>
     </div>

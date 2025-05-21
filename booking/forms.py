@@ -10,7 +10,6 @@ class BookingForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         today = datetime.date.today()
         self.fields["booking_date"].widget.attrs["min"] = today + timedelta(days=1)
-        # guest_qty widgets
         self.fields["guests_qty"].widget.attrs["max"] = 100
         self.fields["guests_qty"].widget.attrs["min"] = 1
     class Meta:
