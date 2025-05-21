@@ -3,6 +3,10 @@
 
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
+{% url 'home_urls' as home_url %}
+{% url 'booking_form' as booking_page %}
+{% url 'menu' as menu_page %}
+{% url 'my_profile' as my_profile_page %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +43,7 @@
             <ul>
               <li class="nav-item">
                 <a class="nav-link nav-link-cta logout-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
-                <a href="{% url 'my_profile' %}" class="profile-link"><i class="fa-solid fa-circle-user"></i></a>
+                <a href="{% url 'my_profile' %}" class="profile-link"><i class="fa-solid fa-circle-user  {% if request.path == my_profile_page %}active{% endif %}"></i></a>
               </li>
             </ul>
           {% else %}
@@ -57,11 +61,11 @@
           <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0 d-flex gap-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="Home" href="{% url 'home_urls' %}">Home</a>
+                <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="Home" href="{% url 'home_urls' %}" >Home</a>
               </li>
               <li class="nav-item">
                 {% comment %} If check to see if user is logged in {% endcomment %}
-                <a class="nav-link nav-link-cta active" 
+                <a class="nav-link nav-link-cta {% if request.path == booking_page %} active {% endif %}" 
                 {% if user.is_authenticated %}
                 href="{% url 'booking_form'%}"
                 {% else %}
@@ -71,7 +75,7 @@
                 >Make a booking</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="{% url 'menu' %}">Menu</a>
+                <a class="nav-link {% if request.path == menu_page %} active {% endif %}" href="{% url 'menu' %}">Menu</a>
               </li>
             </ul>
           </div>
@@ -158,7 +162,7 @@
                           {{ form.password.errors}}
                         </div>
                       {% if form.non_field_errors %}
-                        <div>{{ form.non_field_errors }}</div>
+                        <div>{{ form.non_field_errors |add_class:'error'}}</div>
                       {% endif %}
                       <div class="d-flex justify-content-center">
                         <button type="submit" class="button">Login</button>
@@ -169,7 +173,7 @@
                 <div class="modal-footer">
                   <p>Dont have an account yet?</p>
                   {% comment %} <button class="modal-nav-link" data-bs-target="#signup-modal-toggle" data-bs-toggle="modal">Signup</button> {% endcomment %}
-                  <a href="{% url 'account_signup' %} ">Signup</a>
+                  <a href="{% url 'account_signup' %} " class="nav-link-cta">Signup</a>
                 </div>
               </div>
             </div>

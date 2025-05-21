@@ -9,7 +9,7 @@ def menu(request):
     """
     Renders the main menu page
     """
-    return render(request, "menu.html")
+    return render(request, "menu/menu.html")
 
 # Considered refactoring code of lunch_menu and dinner_menu into one view was 
 # however this would actually result in more code so was scrapped
@@ -24,11 +24,11 @@ def lunch_menu(request):
 
     **Template**
 
-    :template:menu/`menu_lunch.html`
+    :template:`menu/menu_lunch.html`
     """
     menu_items = Menu.objects.filter(meal_category="lunch").order_by("id")
     return render(
-        request, "menu_lunch.html", {"lunch_menu": menu_items}
+        request, "menu/menu_lunch.html", {"lunch_menu": menu_items}
     )
 
 
@@ -43,11 +43,11 @@ def dinner_menu(request):
 
     **Template**
 
-    :template:menu/`menu_dinner.html`
+    :template:`menu/menu_dinner.html`
     """
     menu_items = Menu.objects.filter(meal_category="dinner").order_by("id")
     return render(
-        request, "menu_dinner.html", {"dinner_menu": menu_items}
+        request, "menu/menu_dinner.html", {"dinner_menu": menu_items}
     )
 
 
@@ -63,7 +63,7 @@ def add_menu_item(request):
 
     **Template**
 
-    :template:menu/`menu_form.html`
+    :template:`menu/menu_form.html`
     """
     if request.method == "POST":
         menu_form = MenuForm(request.POST, request.FILES)
@@ -85,7 +85,7 @@ def add_menu_item(request):
 
     return render(
         request,
-        "menu_form.html",
+        "menu/menu_form.html",
         {
             "menu_form": menu_form,
         },
@@ -106,7 +106,7 @@ def edit_menu_item(request, slug):
 
     **Template**
 
-    :template:menu/`menu_form.html`
+    :template:`menu/menu_form.html`
     """
     queryset = Menu.objects.all()
     item = get_object_or_404(queryset, slug=slug)
@@ -134,7 +134,7 @@ def edit_menu_item(request, slug):
         menu_form = MenuForm(instance=item)
     return render(
         request,
-        "menu_form.html",
+        "menu/menu_form.html",
         {
             "menu_form": menu_form,
             "item": item,
@@ -154,9 +154,9 @@ def delete_menu_item(request, id):
 
     **Template**
 
-    :template:menu/`menu_lunch.html`
+    :template:`menu/menu_lunch.html`
     OR
-    :template:menu/`menu_dinner.html`
+    :template:`menu/menu_dinner.html`
     """
     queryset = Menu.objects.all()
     item = get_object_or_404(queryset, id=id)

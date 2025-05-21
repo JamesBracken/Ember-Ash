@@ -22,7 +22,7 @@ def customer_profile(request):
 
     return render(
         request,
-        "my_profile.html",
+        "user/my_profile.html",
         {
             "page_object": page_object,
             "user": request.user,
