@@ -45,18 +45,14 @@
           {% if user.is_authenticated %}
             <ul>
               <li class="nav-item">
-                <a class="nav-link nav-link-cta logout-link{% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                <a class="nav-link nav-link-cta logout-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
                 <a href="{% url 'my_profile' %}" class="profile-link"><i class="fa-solid fa-circle-user"></i></a>
               </li>
             </ul>
           {% else %}
-            {% comment %}KEEPING INCASE REGISTER NAV LINK NEEDED{% endcomment %}
-            {% comment %} <li class="nav-item">
-              <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}">Register</a>
-            </li> {% endcomment %}
             <ul>
               <li class="nav-item">
-                <a class="nav-link nav-link-cta login-link" data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a>
+                <a class="nav-link nav-link-cta login-link " data-bs-toggle="modal" data-bs-target="#login-modal-toggle">Login</a>
               </li>
             </ul>
           {% endif %}
