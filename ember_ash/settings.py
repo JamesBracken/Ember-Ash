@@ -32,13 +32,9 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 # DEBUG = False
 
-
 ALLOWED_HOSTS = [".herokuapp.com",
                  "127.0.0.1",
                  "localhost"]
-
-
-# Application definition
 
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
@@ -88,14 +84,13 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
-        'OPTIONS': {
+        'OPTIONS': {    
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'ember_ash.context_processors.login_form',
-                'ember_ash.context_processors.signup_form'
             ],
         },
     },

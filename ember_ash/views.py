@@ -12,6 +12,9 @@ def home(request):
     return render(request, 'index.html')
 
 def login_view(request):
+    """
+    Handles the user login modal, authentication and error handling(ajax)
+    """
     form = AuthenticationForm(request, data=request.POST or None)
 
     if request.method == "POST":
@@ -22,20 +25,26 @@ def login_view(request):
             return JsonResponse({"success": True, "home_url": reverse("home_urls") })
         else:
             errors = form.errors.as_json()
-            print(errors)
             return JsonResponse({"success": False, "errors": errors}, status=400)
 
     return render(request, "index.html", {"login_form": form}) 
 
 def signup_view(request):
-    # form = UserCreationForm(request, data=request.POST or None)
+    """
+    Displays the Allauth signup page
 
+    ``Context``
+
+    ``form``
+        instance of `allauth:UserCreationForm`
+    
+    ``Template``
+    :template:`account/signup.html`
+    """
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            # user = form.get_user()
-            # login(request, user)
             messages.add_message(request, messages.SUCCESS, "You have successfully signed up and logged in")
             return redirect("home_urls")
     else:
