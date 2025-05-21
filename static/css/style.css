@@ -165,7 +165,7 @@ i {
 /* HEADER STYLES */
 
 /* Company header styles */
-.company-header h1 {
+header h1 {
     font-family: var(--text-secondary);
     padding-top: 5px;
     font-size: 35px;
