@@ -75,6 +75,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
+    'ember_ash.middleware.Page405Middleware'
 ]
 
 ROOT_URLCONF = 'ember_ash.urls'
