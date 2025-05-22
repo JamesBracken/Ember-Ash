@@ -274,17 +274,13 @@ Logout page
 |Sign out button|On click of the sign out button the user is signed out and directed to the home page||||
 |Sign out message|On user sign out the user is given a feedback message|Sign out and check if a message appears|||
 
-404 page
+403 page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
+|403 page|Nav and footer appears in the page|Invoke a 403 page error, check page|||
+|403 page|403 error displays|Invoke a 403 page error, check page|||
+|Home button|Home button appears in the page|Invoke a 403 page error, check page|||
+|Home button redirection|On click the button redirects the user to the home page|Invoke a 403 page error, click the home button|||
 
 500 page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
