@@ -268,18 +268,11 @@ Signup page
 Logout page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
-||||||
-||||||
-||||||
-||||||
-Django messages
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
-|---------|-------------------|-------------------|--------|-----------|
-||||||
-||||||
-||||||
-||||||
+|Nav link|Logout nav link gets the active class and becomes bold|Go to logout page and check|||
+|Sign out message|Sign out confirmation displays on the logout page|Go to logout page and visually check|||
+|Sign out button|Sign out button displays on the logout page|Go to the logout page and visually check|||
+|Sign out button|On click of the sign out button the user is signed out and directed to the home page||||
+|Sign out message|On user sign out the user is given a feedback message|Sign out and check if a message appears|||
 
 404 page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
