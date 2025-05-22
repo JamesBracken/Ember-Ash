@@ -298,14 +298,11 @@ Logout page
 |Home button|Home button appears in the page|Invoke a 405 page error, check page|||
 |Home button redirection|On click the button redirects the user to the home page|Invoke a 405 page error, click the home button|||
 
-403 page
+
+500 page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
+|500 page|Nav and footer appears in the page|Invoke a 500 page error, check page|||
+|500 page|500 error displays|Invoke a 500 page error, check page|||
+|Home button|Home button appears in the page|Invoke a 500 page error, check page|||
+|Home button redirection|On click the button redirects the user to the home page|Invoke a 500 page error, click the home button|||
