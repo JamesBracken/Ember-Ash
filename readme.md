@@ -1,6 +1,7 @@
 
 # Ember & ash
 
+## [ --> View the deployed project here <--](https://ember-and-ash-58ab64713078.herokuapp.com/)
 ## UX
 ### Strategy
 #### Project overview
@@ -74,43 +75,51 @@ My project goals are also displayed below
 #### Consistent features implemented
 
 **Navbar**
-![Navbar image when a user is logged out]()
+![Navbar image when a user is logged out, smaller devices](./static/images/readme/navbar-consolidated.PNG)
+
+![Navbar image when a user is logged out, larger devices](./static/images/readme/navbar-large.PNG)
 
 For navigating around the website I used a bootstrap navbar and implemented this within the base.html to follow DRY(Dont repeat yourself). I added our company logo to further the mission of spreading awareness of our company and help drive footfall. All navigation across the website, any page which we can direct to is found in the navigation. The navigation is visible no matter which page you are on and no matter where you are on the page. The nav is always visible to help improve UX and to ease navigation around different pages of the site. The navigation follows the simplistic elegant look that the page has.
 
-![Nav items on hover]()
+![Nav items](./static/images/readme/nav-link.PNG)
 
 To improve UX, nav items are underlined on hover.
 
-![CTA on hover]()
+![Nav items on hover](./static/images/readme/navbar-link-hovered.PNG)
+
+CTA links
+
+![CTA link](./static/images/readme/cta-link.PNG)
 
 To improve UX, nav items underlines are removed on hover.
 
-![Navbar image when a user is logged in]()
+![CTA link on hover](./static/images/readme/cta-link-hovered.PNG)
+
+![Navbar image when a user is logged in](./static/images/readme/navbar-logged-in.PNG)
 When a user logs in the navbar updates to include user logged-in features. After login the user can now create bookings for our restaurant to ensure they have their own space. They can also access these bookings within the my profile section which also appears on login. The my profile section enables the display of already created user bookings and the updating and deleting of each of these. 
 
-![CTA Booking]()
-![CTA Login]()
+![CTA Booking](./static/images/readme/cta-link.PNG)
+![CTA Login](./static/images/readme/cta-login-link.PNG)
 Our Call to action buttons are also located within the navbar. These further our company's interests by helping to drive customers to the company goals of translating website visitors into account holding users and increasing bookings. The CTA navigation items are also underlined to attract focus to these buttons.
 
 **Buttons**
 
-![Buttons]()
+![Buttons](./static/images/readme/button.PNG)
 Buttons across our website use the same design to keep a consistent feel to the website. They have a nice light brown color.
 
-
 **Social media section**
-![Social media section]()
+![Social media section](./static/images/readme/social-media-section.PNG)
 
 A section which is a component of our footer, which is also found just above the footer on every page. Social media is a crucial component of every company nowadays, making sure your company has social media exposure can make or break a company. Social media is especially influential in the hospitality industry. Using the social media icons, users can be redirected to our social media pages where users can find more information about us  and help drive user interest in our company.
 
 **Footer**
-![Footer]()
+![Footer](./static/images/readme/footer.PNG)
 
 Our footer is found at the bottom of every page. Here we help ensure our customers are aware of our opening times and how they can get into contact with us.
 
 **Login(maybe modal)**
-![Login image]()
+![Login image](./static/images/readme)
+
 
 **Signup(maybe modal)**
 ![Signup image]()
