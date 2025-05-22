@@ -1,7 +1,6 @@
 // GLOBAL VARIABLES
 // CONSTANTS
 const deleteButtons = document.getElementsByClassName("menu-delete-item-button")
-const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"))
 const deleteConfirm = document.getElementById("deleteConfirm")
 
 // EVENT LISTENERS
@@ -22,6 +21,7 @@ cannot be undone
 
 */
 function deleteMenuItem(e) {
+    const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"))
     let itemId = e.target.getAttribute("data-id")
     deleteConfirm.href = `delete_booking/${itemId}`;
     deleteModal.show();
