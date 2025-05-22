@@ -286,7 +286,12 @@ All models within the ERD are inter-connected except for the Menu model which do
 ![Entity relationship diagram](./static/images/readme/erd-diagram.PNG)
 
 #### Applications
-The flow of information layout of your project, talk about how you place things to attract people to certain items like cta and the organisation of the nav, footer and page info
+
+Within this project, 3 apps have been created these would be:
+- booking - This contains all the bookings functionality, full CRUD but the read component is displayed within the customer model
+- menu - This model is for admins to manage which menu items are available on the website for users to see. This contains full CRUD
+- customer(incomplete) - This model displays information about the user and is where users can see all the bookings which they have made. 
+
 ### Skeleton
 **Wireframes**
 - [Home page]()
