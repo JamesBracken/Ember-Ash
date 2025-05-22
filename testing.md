@@ -251,72 +251,58 @@ Login modal
 Signup page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
-||||||
-||||||
-||||||
-||||||
+|Signup form|Signup form displays with username, email, password, confirm password inputs||||
+||||| 
+|Signup form error handling|Username required HTML validation works|Submit without filling in username|||
+|Signup form error handling|Email required HTML validation works|Submit without filling in Email|||
+|Signup form error handling|Email HTML validation works|Submit without Adding an @ sign|||
+|Signup form error handling|Password required HTML validation works|Submit without filling in Password|||
+|Signup form error handling|Password(again) required HTML validation works|Submit without filling in Password(again)|||
+|Signup form error handling|If password and password(again) are different the form does not submit|Add different passwords and submit|||
+|Signup form error handling|If password and password(again) are the same the form submits|Add the same passwords and submit|||
+|Signup submit|If the form is filled out correctly the form is submitted|Fill out correctly and submit|||
+|Signup submit|If the form is filled out incorrectly the form is not submitted|Fill out incorrectly and submit|||
+|Form submission|If the form is filled out correctly and submitted, the user is automatically logged in and directed to the home page|Fill out the form and submit|||
+
 
 Logout page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
-||||||
-||||||
-||||||
-||||||
-Django messages
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
-|---------|-------------------|-------------------|--------|-----------|
-||||||
-||||||
-||||||
-||||||
-
-404 page
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
-|---------|-------------------|-------------------|--------|-----------|
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-
-500 page
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
-|---------|-------------------|-------------------|--------|-----------|
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-
-405 page
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
-|---------|-------------------|-------------------|--------|-----------|
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
+|Nav link|Logout nav link gets the active class and becomes bold|Go to logout page and check|||
+|Sign out message|Sign out confirmation displays on the logout page|Go to logout page and visually check|||
+|Sign out button|Sign out button displays on the logout page|Go to the logout page and visually check|||
+|Sign out button|On click of the sign out button the user is signed out and directed to the home page||||
+|Sign out message|On user sign out the user is given a feedback message|Sign out and check if a message appears|||
 
 403 page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
+|403 page|Nav and footer appears in the page|Invoke a 403 page error, check page|||
+|403 page|403 error displays|Invoke a 403 page error, check page|||
+|Home button|Home button appears in the page|Invoke a 403 page error, check page|||
+|Home button redirection|On click the button redirects the user to the home page|Invoke a 403 page error, click the home button|||
+
+404 page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
+|---------|-------------------|-------------------|--------|-----------|
+|404 page|Nav and footer appears in the page|Invoke a 404 page error, check page|||
+|404 page|404 error displays|Invoke a 404 page error, check page|||
+|Home button|Home button appears in the page|Invoke a 404 page error, check page|||
+|Home button redirection|On click the button redirects the user to the home page|Invoke a 404 page error, click the home button|||
+
+405 page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
+|---------|-------------------|-------------------|--------|-----------|
+|405 page|Nav and footer appears in the page|Invoke a 405 page error, check page|||
+|405 page|405 error displays|Invoke a 405 page error, check page|||
+|Home button|Home button appears in the page|Invoke a 405 page error, check page|||
+|Home button redirection|On click the button redirects the user to the home page|Invoke a 405 page error, click the home button|||
+
+
+500 page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
+|---------|-------------------|-------------------|--------|-----------|
+|500 page|Nav and footer appears in the page|Invoke a 500 page error, check page|||
+|500 page|500 error displays|Invoke a 500 page error, check page|||
+|Home button|Home button appears in the page|Invoke a 500 page error, check page|||
+|Home button redirection|On click the button redirects the user to the home page|Invoke a 500 page error, click the home button|||
