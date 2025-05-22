@@ -149,6 +149,10 @@ i {
     color: var(--clr-black);
 }
 
+i:hover {
+    color: black;
+}
+
 /* Gives an underline to elements */
 .underline {
     border-bottom: black solid 1px;
@@ -340,7 +344,7 @@ main {
 /* Menu item cards */
 
 .menu-item-card-container {
-    height: 700px;
+    height: 760px;
     width: 300px;
 }
 
@@ -406,8 +410,9 @@ footer {
 
 @media screen and (min-width: 768px) {
     .menu-item-card-container {
-        min-height: 762px !important;
+        min-height: 682px !important;
         min-width: 336px !important;
+        max-height: 682px !important;
     }
 
     .menu-item-card-img {
@@ -417,8 +422,9 @@ footer {
 
 @media screen and (min-width: 1024px) {
     .menu-item-card-container {
-        min-height: 692px !important;
+        min-height: 682px !important;
         min-width: 456px !important;
+        max-height: 682px !important;
     }
 
     .menu-item-card-img {
@@ -430,6 +436,7 @@ footer {
     .menu-item-card-container {
         min-height: 632px !important;
         min-width: 636px !important;
+        max-height: 632px !important;
     }
 
     .menu-item-card-img {
