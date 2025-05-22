@@ -251,11 +251,19 @@ Login modal
 Signup page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-||||||
-||||||
-||||||
-||||||
-||||||
+|Signup form|Signup form displays with username, email, password, confirm password inputs||||
+||||| 
+|Signup form error handling|Username required HTML validation works|Submit without filling in username|||
+|Signup form error handling|Email required HTML validation works|Submit without filling in Email|||
+|Signup form error handling|Email HTML validation works|Submit without Adding an @ sign|||
+|Signup form error handling|Password required HTML validation works|Submit without filling in Password|||
+|Signup form error handling|Password(again) required HTML validation works|Submit without filling in Password(again)|||
+|Signup form error handling|If password and password(again) are different the form does not submit|Add different passwords and submit|||
+|Signup form error handling|If password and password(again) are the same the form submits|Add the same passwords and submit|||
+|Signup submit|If the form is filled out correctly the form is submitted|Fill out correctly and submit|||
+|Signup submit|If the form is filled out incorrectly the form is not submitted|Fill out incorrectly and submit|||
+|Form submission|If the form is filled out correctly and submitted, the user is automatically logged in and directed to the home page|Fill out the form and submit|||
+
 
 Logout page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
