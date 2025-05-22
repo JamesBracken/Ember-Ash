@@ -274,7 +274,17 @@ On click of the delete icon a user is prompted by a confirm deletion modal. This
 To help improve UX, bookings are spread across multiple pages if there has been more than 5 bookings placed on a profile. Bookings are organised with future bookings at the start and older bookings at the end.
 
 ### Structure
+
 #### Database model
+
+Before creating my database models I planned them out and made an [ERD(check here)](https://lucid.app/lucidchart/901dc3b0-5579-4334-a7fe-ccec98e905c7/edit?viewport_loc=-1103%2C-2521%2C2707%2C1327%2C0_0&invitationId=inv_bceffa0a-ecee-469b-9cc4-b49cac5be1cd). Using the ERD made I was able to better organise and structure my database models. 
+
+My ERD model contains 5 models in total, however we will discount the django allauth model and the Pre ordered alcohol model as this was not made (out of scope). The models that were created within my project are the *Bookings*, *Menu* and *Customer(incomplete, out of scope of project)*. The ERD displays each model containing attributes. Each attribute is characterised by its field type, this dictates the data which can be accepted for example the Booking model's comment attribute which is a CharField, this can store characters in general.
+
+All models within the ERD are inter-connected except for the Menu model which does not connect with any other tables. All fields within each model are required fields excluding the comments field within the booking model and the images which have default placeholders set. The Customer - Bookings models relationship is one to many, each user can have many bookings but each booking can only be tied to one user. The Customer model extracts data from django allauth which is the authentication system we use within this project.
+
+![Entity relationship diagram](./static/images/readme/erd-diagram.PNG)
+
 #### Applications
 The flow of information layout of your project, talk about how you place things to attract people to certain items like cta and the organisation of the nav, footer and page info
 ### Skeleton
