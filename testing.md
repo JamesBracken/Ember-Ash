@@ -114,6 +114,34 @@ ember_ash/wsgi.py
 
 ![Pep8 validation for ember ash wsgi.py](./static/images/testing/pep8-ember-ash-wsgi.PNG)
 
+menu/admin.py
+
+![Pep8 validation for menu admin.py](./static/images/testing/pep8-menu-admin.PNG)
+
+menu/apps.py
+
+![Pep8 validation for menu apps.py](./static/images/testing/pep8-menu-apps.PNG)
+
+menu/forms.py
+
+![Pep8 validation for menu forms.py](./static/images/testing/pep8-menu-forms.PNG)
+
+menu/models.py
+
+![Pep8 validation for menu models.py](./static/images/testing/pep8-menu-models.PNG)
+
+menu/tests.py
+
+![Pep8 validation for menu tests.py](./static/images/testing/pep8-menu-tests.PNG)
+
+menu/urls.py
+
+![Pep8 validation for menu urls.py](./static/images/testing/pep8-menu-urls.PNG)
+
+menu/views.py
+
+![Pep8 validation for menu views.py](./static/images/testing/pep8-menu-views.PNG)
+
 []()
 []()
 []()
