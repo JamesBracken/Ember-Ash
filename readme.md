@@ -293,21 +293,15 @@ Within this project, 3 apps have been created these would be:
 - customer(incomplete) - This model displays information about the user and is where users can see all the bookings which they have made. 
 
 ### Skeleton
+
 **Wireframes**
-- [Home page]()
-- [Menu page]()
-- [Login]()
-- [Signup]()
-- [My profile]()
-- [Booking form page]()
-- [Add menu item form page]()
 
-ADD ANY OTHER PAGE IE IF WE MAKE A CONFIRM SIGNOUT PAGE ETC.
-- []()
-- []()
+My wireframes were constructed early on in the research phase of the project. Adjusting with scope and the needs of the project some components within the wireframes changed and may look slightly different on the finished product. Some future improvements and iterations of the project are included in the wireframe however are not on the current website. If anything on the website was too different however I did make sure to make this reflect on the wireframes.
 
-Here is your wireframe and your ERD, a low fidelity guide for your project
+- [All pages](https://www.figma.com/design/tnBvzkh8foONfZI9U8Cm8h/Milestone-project-3?node-id=3314-2&t=is3oYhE3KEk57FqV-1)
+
 ### Surface
+
 #### Colour scheme
 
 ![Colour palette](./static/images/readme/color-palette.PNG)
