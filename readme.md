@@ -600,7 +600,9 @@ Any larger pieces of code should be added here in any future iterations and any 
 ### Code used
 ### Acknowledgements
 
+A big thank you to my mentor Brian Macharia who gave me high level guidance for the project and to my teacher Andre Beckley who supported me and guided me through the website build.
 
+A thanks as well to all the help and support from stackoverflow and the coding community. The helpfulness and support we all provide eachother was instrumental to making this project possible.
 
 * For my modal I copied code from the Bootstrap docs and tweaked it
 [Bootstrap Modals](https://getbootstrap.com/docs/4.0/components/modal/)
