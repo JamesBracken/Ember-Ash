@@ -48,8 +48,8 @@
               </div>
               {% if user.is_authenticated and booking.user == user %}
                 <div class="col-1 col-md-2 justify-content-right booking-buttons-container" data-booking_id="{{ booking.id }}">
-                  <button class="delete-btn" aria-label="Delete button(opens a modal)"><i class="fa-solid fa-xmark mb-4" aria-label="Delete button icon(opens a modal)"></i></button>
-                  <a class="edit-btn" href="{% url 'booking_form_edit' booking.id %}" aria-label="Edit button(redirects page)"><i class="fa-solid fa-pencil" aria-label="Edit button icon(opens a modal)" data-booking_id="{{ booking.id }}" data-booking_date="{{ booking.booking_date|date:'Y-m-d' }}" data-booking_time="{{ booking.booking_time|time:'H:i' }}" data-guests_qty="{{ booking.guests_qty }}" data-booking_comment="{{ booking.comment }}"></i></a>
+                  <button class="delete-btn" aria-label="Delete button(opens a modal)"><i class="fa-solid fa-xmark mb-4"></i></button>
+                  <a class="edit-btn" href="{% url 'booking_form_edit' booking.id %}" aria-label="Edit button(redirects page)"><i class="fa-solid fa-pencil" data-booking_id="{{ booking.id }}" data-booking_date="{{ booking.booking_date|date:'Y-m-d' }}" data-booking_time="{{ booking.booking_time|time:'H:i' }}" data-guests_qty="{{ booking.guests_qty }}" data-booking_comment="{{ booking.comment }}"></i></a>
                 </div>
               {% endif %}
             </div>
