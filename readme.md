@@ -597,10 +597,33 @@ Any larger pieces of code should be added here in any future iterations and any 
 
 24.[Lucidchart](https://www.lucidchart.com/pages/examples/er-diagram-tool) - Used to create entity relationship diagrams 
 
-### Code used
+### Code and Resources used
+
+1.[Stackoverflow](https://stackoverflow.com/questions) - Platform and community where developers can ask questions and get assistance from eachother
+
+2.[W3schools docs](https://www.w3schools.com/) - Lots of useful resources and guides for all programming languages in this project
+
+3.[Mdn docs](https://developer.mozilla.org/en-US/) - Lots of useful resources and guides for all programming languages in this project
+
+4.[Bootstrap docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - Documentation for the bootstrap web library 
+
+5.[Django project docs](https://www.djangoproject.com/start/) - Lots of useful documentation and guidance, especially for me to grasp and learn new concepts in the django framework
+
+6.[Kevin powell how to make a color scheme fast](https://www.youtube.com/watch?v=mq8LYj6kRyE&list=PLpAzc76TtoBzvtYIZAhfJzDxvas0GmI7O) - Great guide on how to create your color scheme
+
+7.[Guide to relational databases](https://www.youtube.com/watch?v=fXndSzAL1Nc&list=PLpAzc76TtoBzvtYIZAhfJzDxvas0GmI7O&index=2) - Crucial guide I used to help grasp the concepts of relational databases
+
+8.[Fantastic video about normalizing your database](https://www.youtube.com/watch?v=UrYLYV7WSHM&list=PLpAzc76TtoBzvtYIZAhfJzDxvas0GmI7O&index=5) - A guide to normalise your database, with this I was able to create an optimal schema for my database and separate data into different tables to maximise performance and follow best practices. Best guide I have seen by far on databases. Simple and informative.
+
+9.[Creating a Django restaurant booking site](https://www.youtube.com/watch?v=EI02wQ51GjA&list=PLBTOBXTz1YFZK0moSgoZq93V_AdvrUGSj) - Great guide which I watched to cement my understanding of django and give me inspiration and ideas on how to build my website, simple and straightforward explanations
+
+10..[Guide to how ajax login works with django](https://www.youtube.com/watch?v=DvzE9tVFkSA&list=PLpAzc76TtoBzvtYIZAhfJzDxvas0GmI7O&index=15) - Slightly outdated video, but helped me grasp the concepts of how to use AJAX for error handling in my login modal.
+
+11.Brian macharia - No link provided as these were privately shared resources for his students. Big shoutout to my mentor who provided tons of useful links to useful resources, guides and tutorials for this project. 
+
 ### Acknowledgements
 
-A big thank you to my mentor Brian Macharia who gave me high level guidance for the project and to my teacher Andre Beckley who supported me and guided me through the website build.
+Again, a big thank you to my mentor Brian Macharia who gave me high level guidance for the project and to my teacher Andre Beckley who supported me and guided me through the website build.
 
 A thanks as well to all the help and support from stackoverflow and the coding community. The helpfulness and support we all provide eachother was instrumental to making this project possible.
 
