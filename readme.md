@@ -542,6 +542,11 @@ Value: cloudinary://<CLOUDINARY_API_KEY>:<CLOUDINARY_API_SECRET>@<CLOUDINARY_CLO
 
 ## Credits
 ### Content
+
+Small pieces of other code has been added into the project, all of this has been acknowledged within the project itself. All links to where the code has been sourced are in comments above the code.
+
+Any larger pieces of code should be added here in any future iterations and any changed within the project.
+
 ### Technologies used
 ### Media
 ### Code used
