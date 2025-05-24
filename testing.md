@@ -29,6 +29,33 @@ I fixed this problem by taking the modal code out of the header and placing it a
 []()
 
 ### CSS validator
+### JSHint validator
+
+I validated my JS filed with [JSHint](https://jshint.com/)
+
+All javascript files **passed** with no issues!
+
+[booking.js]() - Passed
+
+- All warning were just to inform that the features are for ES6+
+
+- The undefined bootstrap in this js file is obviously bootstrap, this is the modal which is declared on line 5
+
+![JShint containing the booking.js code](./static/images/testing/jshint-booking.PNG)
+
+[login.js]() - Passed
+
+- All warning were just to inform that the features are for ES6+
+
+- One warning states the body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype. This in fact is wrapped within the *else* block of an if statement to filter what is needed and not needed.
+
+![JShint containing the login.js code](./static/images/testing/jshint-login.PNG)
+
+[menu.js]() - Passed
+
+- All warning were just to inform that the features are for ES6+
+
+![JShint containing the menu.js code](./static/images/testing/jshint-menu.PNG)
 []()
 []()
 []()
