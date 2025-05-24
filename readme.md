@@ -1,6 +1,7 @@
 
 # Ember & ash
 
+## [ --> View the deployed project here <--](https://ember-and-ash-58ab64713078.herokuapp.com/)
 ## UX
 ### Strategy
 #### Project overview
@@ -74,183 +75,223 @@ My project goals are also displayed below
 #### Consistent features implemented
 
 **Navbar**
-![Navbar image when a user is logged out]()
+![Navbar image when a user is logged out, smaller devices](./static/images/readme/navbar-consolidated.PNG)
+
+![Navbar image when a user is logged out, larger devices](./static/images/readme/navbar-large.PNG)
 
 For navigating around the website I used a bootstrap navbar and implemented this within the base.html to follow DRY(Dont repeat yourself). I added our company logo to further the mission of spreading awareness of our company and help drive footfall. All navigation across the website, any page which we can direct to is found in the navigation. The navigation is visible no matter which page you are on and no matter where you are on the page. The nav is always visible to help improve UX and to ease navigation around different pages of the site. The navigation follows the simplistic elegant look that the page has.
 
-![Nav items on hover]()
+![Nav items](./static/images/readme/nav-link.PNG)
 
 To improve UX, nav items are underlined on hover.
 
-![CTA on hover]()
+![Nav items on hover](./static/images/readme/navbar-link-hovered.PNG)
+
+CTA links
+
+![CTA link](./static/images/readme/cta-link.PNG)
 
 To improve UX, nav items underlines are removed on hover.
 
-![Navbar image when a user is logged in]()
+![CTA link on hover](./static/images/readme/cta-link-hovered.PNG)
+
+![Navbar image when a user is logged in](./static/images/readme/navbar-logged-in.PNG)
 When a user logs in the navbar updates to include user logged-in features. After login the user can now create bookings for our restaurant to ensure they have their own space. They can also access these bookings within the my profile section which also appears on login. The my profile section enables the display of already created user bookings and the updating and deleting of each of these. 
 
-![CTA Booking]()
-![CTA Login]()
+![CTA Booking](./static/images/readme/cta-link.PNG)
+![CTA Login](./static/images/readme/cta-login-link.PNG)
 Our Call to action buttons are also located within the navbar. These further our company's interests by helping to drive customers to the company goals of translating website visitors into account holding users and increasing bookings. The CTA navigation items are also underlined to attract focus to these buttons.
 
 **Buttons**
 
-![Buttons]()
+![Buttons](./static/images/readme/button.PNG)
 Buttons across our website use the same design to keep a consistent feel to the website. They have a nice light brown color.
 
-
 **Social media section**
-![Social media section]()
+![Social media section](./static/images/readme/social-media-section.PNG)
 
 A section which is a component of our footer, which is also found just above the footer on every page. Social media is a crucial component of every company nowadays, making sure your company has social media exposure can make or break a company. Social media is especially influential in the hospitality industry. Using the social media icons, users can be redirected to our social media pages where users can find more information about us  and help drive user interest in our company.
 
 **Footer**
-![Footer]()
+![Footer](./static/images/readme/footer.PNG)
 
 Our footer is found at the bottom of every page. Here we help ensure our customers are aware of our opening times and how they can get into contact with us.
 
-**Login(maybe modal)**
-![Login image]()
+**Login modal**
+![Login image](./static/images/readme/login-modal.PNG)
 
-**Signup(maybe modal)**
-![Signup image]()
+The login modal is found on every page on the navbar. A user can easily find the login link and login to their account. The login modal was made with ajax incorporated for error handling.
 
-**Messages(user feedback)**
+**Signup page**
+![Signup image](./static/images/readme/signup-page.PNG)
 
-![]()
+The signup page, anyone can create an account for our website here. The page was made with django allauth.
+
+
+
+**Django messages(user feedback)**
+
+![Django messages](./static/images/readme/django-messages.PNG)
 
 To improve UX we display feedback messages for our users at the top of our page. These feedback messages stand out so our users are able to immediately see the feedback and can understand what is happening. Users are able to understand if something worked or didnt and we can reduce user frustration by keeping them updated.
+
+
 #### Unique features implemented 
 
 **Home page** 
 
-![Home page]()
+![Home page](./static/images/readme/home-page.PNG)
 
 The landing page of our website, absolutely pivotal to a great first impression of a user visiting our website. The user can immediately understand the websites purpose through images and website content.
 
 
 **Navigation cards(Home page)**
 
-![Navigation cards]()
+![Navigation cards](./static/images/readme/navigation-cards.PNG)
 
 To help increase user interest upon visiting the site we have our navigation cards which are located on the home page. These help intrigue users into looking further into our website, linking to the menu, booking page and to also leave a review for us on google after a satisfied visit.
 
 
 **Menu page(Main menu page)**
 
-![Menu page]()
+
+![Menu page](./static/images/readme/admin-menu.PNG)
+
+*Admin* menu page
+![Menu page](./static/images/readme/menu-page.PNG)
 
 The main navigation for our menu's, here you can navigate to either the lunch or the dinner page.
 
-**Add menu item(Main menu page)**)
+**Add menu item(Main menu page)**
 
-![Add menu button]()
+![Add menu button](./static/images/readme/add-menu-icon.PNG)
 
 Using this add button, admins are easily able to add menu items. The add icon is only visible to admins so regular users are unable to add menu items. Admin only need to fill out the following form and items are instantly added to the lunch or dinner menu.
 
 **Add menu item page**
 
-![Add menu item page]()
+![Add menu item page](./static/images/readme/add-menu-item-page.PNG)
 
 This is the form to add items to either the lunch or the dinner menu. Admins can use this page to easily create dinner and lunch menu items. For each the admin is able to add descriptive text to grab customer interest and add beautiful imagery of each food item.
 
 **Menu items**
 
-![]()
+![Menu item card](./static/images/readme/menu-item.PNG)
+
+*Admin* menu item
+![Menu item card](./static/images/readme/admin-menu-item.PNG)
 
 Each menu item is created in a the same style each time. The user can get a consistent feel to the website across both menu's.
 
 **Lunch menu page**
 
-![Lunch menu page]()
+![Lunch menu page](./static/images/readme)
 
 Any lunch menu item added by admins appear here. Each item gives descriptive text and beautiful imagery to further interest potential clients.
 
 
 **Dinner menu page**
 
-![Dinner menu page]()
+![Dinner menu page](./static/images/readme/dinner-menu-page.PNG)
+
+*Admin*
+![Dinner menu page](./static/images/readme/admin-dinner-menu-page.PNG)
 
 Any dinner menu item added by admins appear here. Each item gives descriptive text and beautiful imagery to further insterest potential clients.
 
 **Edit menu item icon**
 
-![Edit menu item icon]()
+![Edit menu item icon](./static/images/readme/edit-menu-item-button.PNG)
 
 On each menu item in both the lunch and dinner pages, there is an edit icon which is accessible to site admins. Admins are able to update any information they want about the menu with a simple click of a button. They can add new images, change out text etc.
 
-![Edit menu item form]()
+![Edit menu item form](./static/images/readme/edit-menu-item-form.PNG)
 
 On click of the edit menu item icon, the user is directed to the form page where these items are also created. The data from the item is automatically added to the form to ease updating of each item.
 
 **Delete menu item icon**
 
-![Delete menu item icon]()
+![Delete menu item icon](./static/images/readme/delete-menu-item-icon.PNG)
 
 On each menu item in both the lunch and dinner pages, there is a delete icon which is accessible to site admins. Admins are able to delete outdated and no longer wanted items from the menu with ease.
 
-![Confirm delete modal]()
+![Confirm delete modal](./static/images/readme/delete-menu-item-confirmation-modal.PNG)
 To ensure there is no accidental deletion users are also prompted one extra time to confirm deletion of any menu item.
 
 **Make a booking page**
 
-![Booking page]()
+![Booking page](./static/images/readme/create-booking-page.PNG)
 
 The making a booking page is a crucial component of our website. This is where we can translate a website visitor into a paying customer by getting them into our restaurant.
 The user can set a time, date and amount of guests for each booking.
 
-![Comments]()
+![Comments](./static/images/readme/create-booking-page-comments.PNG)
 The user can additionally put any extra comments, normally guest allergens. This is crucial to ensure customer health and safety is maintained. Also any special requests can be added.
 
 **My profile page**
 
-![My profile page]()
+![My profile page](./static/images/readme/my-profile-page.PNG)
 
 On the my profile page users can find their details, previous and future bookings
 
 **My details section**
-![My details section]()
+![My details section](./static/images/readme/my-profile-section.PNG)
 
 The users can see their input details, in future iterations of the project we will look to broaden this and add items like if a user wants newsletters and etc.
 
 **My bookings section**
-![My bookings section]()
+![My bookings section](./static/images/readme/my-bookings-section.PNG)
 
 In the my booking section users are able to see any information about previous and future bookings.
 
 
 **Edit bookings**
 
-![Edit bookings icon]()
+![Edit bookings icon](./static/images/readme/edit-booking-icon.PNG)
 
 If a user wants to make some changes to a booking they are able to do that here. They can update any information about the booking up to a day before the booking. Once the day of the booking arrives users are no longer able to change booking times.
 
-![Edit bookings page ]()
+![Edit bookings page ](./static/images/readme/edit-bookings-page.PNG)
 
 After clicking the edit icon the page loads the booking form and passes in the booking information to ease UX and updating bookings.
 
 **Delete bookings**
 
-![Delete bookings icon]()
+![Delete bookings icon](./static/images/readme/delete-booking-icon.PNG)
 
 If the worst case scenario happens and a user must delete their booking they can do that up until the day before the booking. Once the day of the booking arrives, users are no longer able to delete bookings. Users are also not allowed to delete any previous bookings.
 
-![Confirm delete modal]()
+![Confirm delete modal](./static/images/readme/delete-booking-confirmation-modal.PNG)
 
 On click of the delete icon a user is prompted by a confirm deletion modal. This is to prevent any accidental deletions, after clicking the confirm delete on the modal bookings are deleted.
 
 **Bookings page control**
 
-![Booking page control]()
+![Booking page control](./static/images/readme/booking-page-control.PNG)
+
+![Booking page control](./static/images/readme/booking-page-control-2.PNG)
 
 To help improve UX, bookings are spread across multiple pages if there has been more than 5 bookings placed on a profile. Bookings are organised with future bookings at the start and older bookings at the end.
 
-#### Features left to implement
-
 ### Structure
+
 #### Database model
+
+Before creating my database models I planned them out and made an [ERD(check here)](https://lucid.app/lucidchart/901dc3b0-5579-4334-a7fe-ccec98e905c7/edit?viewport_loc=-1103%2C-2521%2C2707%2C1327%2C0_0&invitationId=inv_bceffa0a-ecee-469b-9cc4-b49cac5be1cd). Using the ERD made I was able to better organise and structure my database models. 
+
+My ERD model contains 5 models in total, however we will discount the django allauth model and the Pre ordered alcohol model as this was not made (out of scope). The models that were created within my project are the *Bookings*, *Menu* and *Customer(incomplete, out of scope of project)*. The ERD displays each model containing attributes. Each attribute is characterised by its field type, this dictates the data which can be accepted for example the Booking model's comment attribute which is a CharField, this can store characters in general.
+
+All models within the ERD are inter-connected except for the Menu model which does not connect with any other tables. All fields within each model are required fields excluding the comments field within the booking model and the images which have default placeholders set. The Customer - Bookings models relationship is one to many, each user can have many bookings but each booking can only be tied to one user. The Customer model extracts data from django allauth which is the authentication system we use within this project.
+
+![Entity relationship diagram](./static/images/readme/erd-diagram.PNG)
+
 #### Applications
-The flow of information layout of your project, talk about how you place things to attract people to certain items like cta and the organisation of the nav, footer and page info
+
+Within this project, 3 apps have been created these would be:
+- booking - This contains all the bookings functionality, full CRUD but the read component is displayed within the customer model
+- menu - This model is for admins to manage which menu items are available on the website for users to see. This contains full CRUD
+- customer(incomplete) - This model displays information about the user and is where users can see all the bookings which they have made. 
+
 ### Skeleton
 **Wireframes**
 - [Home page]()
