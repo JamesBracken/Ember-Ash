@@ -86,6 +86,34 @@ booking/views.py
 
 ![Pep8 validation for booking views.py](./static/images/testing/pep8-booking-views.PNG)
 
+ember_ash/asgi.py
+
+![Pep8 validation for ember ash .py](./static/images/testing/pep8-ember-ash-asgi.PNG)
+
+ember_ash/context_processors.py
+
+![Pep8 validation for ember ash context_processors.py](./static/images/testing/pep8-ember-ash-context-processors.PNG)
+
+ember_ash/middleware.py
+
+![Pep8 validation for ember ash middleware.py](./static/images/testing/pep8-ember-ash-middleware.py)
+
+ember_ash/settings.py
+
+![Pep8 validation for ember ash settings.py](./static/images/testing/pep8-ember-ash-settings.PNG)
+
+ember_ash/urls.py
+
+![Pep8 validation for ember ash urls.py](./static/images/testing/pep8-ember-ash-urls.py)
+
+ember_ash/views.py
+
+![Pep8 validation for ember ash views.py](./static/images/testing/pep8-ember-ash-views.PNG)
+
+ember_ash/wsgi.py
+
+![Pep8 validation for ember ash wsgi.py](./static/images/testing/pep8-ember-ash-wsgi.PNG)
+
 []()
 []()
 []()
