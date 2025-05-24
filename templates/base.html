@@ -47,13 +47,13 @@
             <ul>
               <li class="nav-item">
                 <a class="nav-link nav-link-cta logout-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
-                <a href="{% url 'my_profile' %}" class="profile-link"><i class="fa-solid fa-circle-user  {% if request.path == my_profile_page %}active{% endif %}"></i></a>
+                <a href="{% url 'my_profile' %}" class="profile-link" aria-label="My profile"><i class="fa-solid fa-circle-user  {% if request.path == my_profile_page %}active{% endif %}"></i></a>
               </li>
             </ul>
           {% else %}
             <ul>
               <li class="nav-item">
-                <a class="nav-link nav-link-cta login-link " data-bs-toggle="modal" data-bs-target="#login-modal-toggle" aria-label="Opens login modal">Login</a>
+                <button class="nav-link nav-link-cta login-link " data-bs-toggle="modal" data-bs-target="#login-modal-toggle" aria-label="Opens login modal">Login</button>
               </li>
             </ul>
           {% endif %}

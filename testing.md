@@ -29,6 +29,153 @@ I fixed this problem by taking the modal code out of the header and placing it a
 []()
 
 ### CSS validator
+### JSHint validator
+
+I validated my JS filed with [JSHint](https://jshint.com/)
+
+All javascript files **passed** with no issues!
+
+[booking.js]() - Passed
+
+- All warning were just to inform that the features are for ES6+
+
+- The undefined bootstrap in this js file is obviously bootstrap, this is the modal which is declared on line 5
+
+![JShint containing the booking.js code](./static/images/testing/jshint-booking.PNG)
+
+[login.js]() - Passed
+
+- All warning were just to inform that the features are for ES6+
+
+- One warning states the body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype. This in fact is wrapped within the *else* block of an if statement to filter what is needed and not needed.
+
+![JShint containing the login.js code](./static/images/testing/jshint-login.PNG)
+
+[menu.js]() - Passed
+
+- All warning were just to inform that the features are for ES6+
+
+![JShint containing the menu.js code](./static/images/testing/jshint-menu.PNG)
+
+### Python validation
+
+booking/admin.py
+![Pep8 validation for booking admin.py](./static/images/testing/pep8-booking-admin.PNG)
+
+booking/apps.py
+
+![Pep8 validation for booking apps.py](./static/images/testing/pep8-booking-apps.PNG)
+
+booking/forms.py
+
+![Pep8 validation for booking forms.py](./static/images/testing/pep8-booking-forms.PNG)
+
+booking/models.py
+
+![Pep8 validation for booking models.py](./static/images/testing/pep8-booking-models.PNG)
+
+booking/tests.py
+
+![Pep8 validation for booking tests.py](./static/images/testing/pep8-booking-tests.PNG)
+
+booking/urls.py
+
+![Pep8 validation for booking urls.py](./static/images/testing/pep8-booking-urls.PNG)
+
+booking/views.py
+
+![Pep8 validation for booking views.py](./static/images/testing/pep8-booking-views.PNG)
+
+ember_ash/asgi.py
+
+![Pep8 validation for ember ash .py](./static/images/testing/pep8-ember-ash-asgi.PNG)
+
+ember_ash/context_processors.py
+
+![Pep8 validation for ember ash context_processors.py](./static/images/testing/pep8-ember-ash-context-processors.PNG)
+
+ember_ash/middleware.py
+
+![Pep8 validation for ember ash middleware.py](./static/images/testing/pep8-ember-ash-middleware.py)
+
+ember_ash/settings.py
+
+![Pep8 validation for ember ash settings.py](./static/images/testing/pep8-ember-ash-settings.PNG)
+
+ember_ash/urls.py
+
+![Pep8 validation for ember ash urls.py](./static/images/testing/pep8-ember-ash-urls.py)
+
+ember_ash/views.py
+
+![Pep8 validation for ember ash views.py](./static/images/testing/pep8-ember-ash-views.PNG)
+
+ember_ash/wsgi.py
+
+![Pep8 validation for ember ash wsgi.py](./static/images/testing/pep8-ember-ash-wsgi.PNG)
+
+menu/admin.py
+
+![Pep8 validation for menu admin.py](./static/images/testing/pep8-menu-admin.PNG)
+
+menu/apps.py
+
+![Pep8 validation for menu apps.py](./static/images/testing/pep8-menu-apps.PNG)
+
+menu/forms.py
+
+![Pep8 validation for menu forms.py](./static/images/testing/pep8-menu-forms.PNG)
+
+menu/models.py
+
+![Pep8 validation for menu models.py](./static/images/testing/pep8-menu-models.PNG)
+
+menu/tests.py
+
+![Pep8 validation for menu tests.py](./static/images/testing/pep8-menu-tests.PNG)
+
+menu/urls.py
+
+![Pep8 validation for menu urls.py](./static/images/testing/pep8-menu-urls.PNG)
+
+menu/views.py
+
+![Pep8 validation for menu views.py](./static/images/testing/pep8-menu-views.PNG)
+
+user/admin.py
+
+![Pep8 validation for user admin.py](./static/images/testing/pep8-user-admin.PNG)
+
+user/apps.py
+
+![Pep8 validation for user apps.py](./static/images/testing/pep8-user-apps.PNG)
+
+user/models.py
+
+![Pep8 validation for user models.py](./static/images/testing/pep8-user-models.PNG)
+
+user/tests.py
+
+![Pep8 validation for user tests.py](./static/images/testing/pep8-user-tests.PNG)
+
+user/urls.py
+
+![Pep8 validation for user urls.py](./static/images/testing/pep8-user-urls.PNG)
+
+user/views.py
+
+![Pep8 validation for user views.py](./static/images/testing/pep8-user-views.PNG)
+
+
+### WAVE(Optional)
+
+
+
+###
+###
+
+
+## Lighthouse testing
 []()
 []()
 []()
