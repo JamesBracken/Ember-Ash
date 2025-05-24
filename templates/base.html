@@ -142,10 +142,10 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="row">
-              <div class="col-3 login-modal-img-container">
+              <div class="col-12 col-sm-3 login-modal-img-container">
                 <img class="login-modal-img" src="{% static 'images/home-page/login-modal-img.jfif' %}" alt="Multiple dishes of food">
               </div>
-              <div class="col-9">
+              <div class="col-12 col-sm-9 login-form-container">
                 <div class="modal-header">
                   <h1 class="modal-title fs-5" id="login-modal-toggle-label">Login</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -176,7 +176,6 @@
                 </div>
                 <div class="modal-footer">
                   <p>Dont have an account yet?</p>
-                  {% comment %} <button class="modal-nav-link" data-bs-target="#signup-modal-toggle" data-bs-toggle="modal">Signup</button> {% endcomment %}
                   <a href="{% url 'account_signup' %} " class="nav-link-cta">Signup</a>
                 </div>
               </div>

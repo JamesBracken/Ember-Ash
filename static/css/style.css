@@ -243,7 +243,7 @@ nav li {
     top: 105px;
     right: 30px;
     max-width: fit-content;
-    z-index: 1060!important
+    z-index: 1060 !important
 }
 
 .profile-link {
@@ -251,7 +251,7 @@ nav li {
     top: 100px;
     left: 20px;
     max-width: fit-content;
-    z-index: 1060!important
+    z-index: 1060 !important
 }
 
 /* Login & signup modal */
@@ -267,6 +267,8 @@ nav li {
 
 .login-modal-img {
     height: 330px;
+    margin-left: 12px;
+    padding-right: 25px;
 }
 
 .login-modal-img-container {
@@ -389,7 +391,7 @@ footer {
         top: 160px;
         left: 20px;
         max-width: fit-content;
-        z-index: 1060!important
+        z-index: 1060 !important
     }
 
     .login-link,
@@ -398,8 +400,17 @@ footer {
         top: 165px;
         right: 30px;
         max-width: fit-content;
-        z-index: 1060!important;
+        z-index: 1060 !important;
     }
+}
+
+@media screen and (min-width:576px) {
+    .login-modal-img {
+        height: 330px;
+        margin-left: 0;
+        padding-right: 0;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
