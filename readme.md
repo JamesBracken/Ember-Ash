@@ -452,7 +452,21 @@ DATABASES = {
 
 11.Migrate your changes with python manage.py migrate
 
-12.You have now successfully connected your database withthe project and can not add data.
+12.You have now successfully connected your database withthe project and can now add data in your local development. To connect your deployed version on heroku with the database continue with the next steps.
+
+13.If you haven't already, deploy your project to heroku(steps for this are found after database guide)
+
+14.Navigate to the settings tab of your project and press reveal config vars
+
+15.If there is a database added by default by heroku delete this as we will replace it with our own(If heroku has not added one skip to step 18)
+
+16.To remove the heroku database navigate to Resources, go to the drop-down on the top right of the Postgres add-on and click Delete Add-on. Confirm this by typing your app's name into the popuo
+
+17.Navigate back to the settings tab and to config vars
+
+18.Add a new config var with a key of DATABASE_URL and a value of the PostgreSQL link that we copied from the email in step 3
+
+19.You have successfully added your database to the deployed version of your website
 
 **Heroku Deployment**
 1.Ensure the project repository has been uploaded to Github.
