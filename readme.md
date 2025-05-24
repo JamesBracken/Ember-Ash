@@ -418,7 +418,7 @@ If you want to install your own packages here is some extra step-by-step instruc
     python manage.py runserver
 11.If you want to open a deployed version of your app see the steps below in Heroku deployment
 
-**Creating your database**
+**Adding your database**
 1.Navigate to [PostgreSQL from code institute](https://dbs.ci-dbs.net/)
 2.Enter your student email address and then submit
 3.You will be sent an email with a link, copy the link
@@ -433,6 +433,7 @@ os.environ.setdefault(
 
 7.If you haven't already do 
 pip3 install dj-database-url~=0.5 psycopg2~=2.9
+
 pip3 freeze --local > requirements.txt
 
 8.In your settings.py import the packages like below
@@ -467,6 +468,34 @@ DATABASES = {
 18.Add a new config var with a key of DATABASE_URL and a value of the PostgreSQL link that we copied from the email in step 3
 
 19.You have successfully added your database to the deployed version of your website
+
+**Adding Cloudinary to your project**
+
+1.Install the nevessary packages with the commands below and add them to your requirements.txt file
+
+pip3 install cloudinary~=1.36.0 dj3-cloudinary-storage~=0.0.6 urllib3~=1.26.15
+
+pip3 freeze --local > requirements.txt
+
+2.Go to [this link](https://cloudinary.com/users/register_free) to create a cloudinary account
+
+3.In the Cloudinary dashboard, copy the CLOUDINARY_URL
+
+4.In your env.py file add the code below and paste in the copied url from step 3 
+
+os.environ.setdefault(
+    "CLOUDINARY_URL", "<URL copied from Cloudinary in last step>")
+
+5.Delete the CLOUDINARY_URL= from the start of the URL string as we are using the setdefault() method rather than assigin the value.
+
+6.Navigate to your settings.py and inside the INSTALLED_APPS add the below items
+
+Important! cloudinary_storage must be added immediately after django.contrib.staticfiles
+'cloudinary_storage',
+
+'cloudinary',
+
+7.You can now use Cloudinary in any app in your project
 
 **Heroku Deployment**
 1.Ensure the project repository has been uploaded to Github.
