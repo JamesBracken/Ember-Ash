@@ -1,11 +1,12 @@
 
 # Ember & ash
 
-## [ --> View the deployed project here <--](https://ember-and-ash-58ab64713078.herokuapp.com/)
+## [ --> View the live deployed project here <--](https://ember-and-ash-58ab64713078.herokuapp.com/)
+
 ## UX
 ### Strategy
 #### Project overview
-Welcome to Ember & Ash, want a fine dining, elegant and fantastic customer experience? Look no further! With our website you can see the amazing offers we have. All or our fantastic cuisine is all up to date on our online menu's. Want to give us a visit? You can book online, any time for whenever you want.
+Welcome to Ember & Ash, want a fine dining, elegant and fantastic customer experience? Look no further! With our website you can see the amazing offers we have. All of our fantastic cuisine is all up to date on our online menus. Want to give us a visit? You can book online, any time for whenever you want.
 
 The main components of the website is the home page, the menu, my profile and the booking pages. The project was made with a simplistic and yet an elegant feel and a posh look in mind. Eating out and finding instagramable food and experiences is the wants of the many nowadays. A fine dining experience would entail higher costs than the normal day out hence what I found with my extensive research is that our general customer base and targets would be young adults and mature adults. Simple and elegant is the focus of the website.
 
@@ -91,38 +92,45 @@ CTA links
 
 ![CTA link](./static/images/readme/cta-link.PNG)
 
-To improve UX, nav items underlines are removed on hover.
+To improve UX, CTA link items underlines are removed on hover.
 
 ![CTA link on hover](./static/images/readme/cta-link-hovered.PNG)
 
 ![Navbar image when a user is logged in](./static/images/readme/navbar-logged-in.PNG)
+
 When a user logs in the navbar updates to include user logged-in features. After login the user can now create bookings for our restaurant to ensure they have their own space. They can also access these bookings within the my profile section which also appears on login. The my profile section enables the display of already created user bookings and the updating and deleting of each of these. 
 
 ![CTA Booking](./static/images/readme/cta-link.PNG)
 ![CTA Login](./static/images/readme/cta-login-link.PNG)
+
 Our Call to action buttons are also located within the navbar. These further our company's interests by helping to drive customers to the company goals of translating website visitors into account holding users and increasing bookings. The CTA navigation items are also underlined to attract focus to these buttons.
 
 **Buttons**
 
 ![Buttons](./static/images/readme/button.PNG)
+
 Buttons across our website use the same design to keep a consistent feel to the website. They have a nice light brown color.
 
 **Social media section**
+
 ![Social media section](./static/images/readme/social-media-section.PNG)
 
 A section which is a component of our footer, which is also found just above the footer on every page. Social media is a crucial component of every company nowadays, making sure your company has social media exposure can make or break a company. Social media is especially influential in the hospitality industry. Using the social media icons, users can be redirected to our social media pages where users can find more information about us  and help drive user interest in our company.
 
 **Footer**
+
 ![Footer](./static/images/readme/footer.PNG)
 
 Our footer is found at the bottom of every page. Here we help ensure our customers are aware of our opening times and how they can get into contact with us.
 
 **Login modal**
+
 ![Login image](./static/images/readme/login-modal.PNG)
 
 The login modal is found on every page on the navbar. A user can easily find the login link and login to their account. The login modal was made with ajax incorporated for error handling.
 
 **Signup page**
+
 ![Signup image](./static/images/readme/signup-page.PNG)
 
 The signup page, anyone can create an account for our website here. The page was made with django allauth.
@@ -149,16 +157,17 @@ The landing page of our website, absolutely pivotal to a great first impression 
 
 ![Navigation cards](./static/images/readme/navigation-cards.PNG)
 
-To help increase user interest upon visiting the site we have our navigation cards which are located on the home page. These help intrigue users into looking further into our website, linking to the menu, booking page and to also leave a review for us on google after a satisfied visit.
+To help increase user interest upon visiting the site we have our navigation cards which are located on the home page. These help intrigue users into looking further into our website, linking to the menu, booking page and to also leave a review for us on Tripadvisor after a satisfied visit.
 
 
 **Menu page(Main menu page)**
 
+![Menu page](./static/images/readme/menu-page.PNG)
+
+
+**Admin** menu page
 
 ![Menu page](./static/images/readme/admin-menu.PNG)
-
-*Admin* menu page
-![Menu page](./static/images/readme/menu-page.PNG)
 
 The main navigation for our menu's, here you can navigate to either the lunch or the dinner page.
 
@@ -166,7 +175,7 @@ The main navigation for our menu's, here you can navigate to either the lunch or
 
 ![Add menu button](./static/images/readme/add-menu-icon.PNG)
 
-Using this add button, admins are easily able to add menu items. The add icon is only visible to admins so regular users are unable to add menu items. Admin only need to fill out the following form and items are instantly added to the lunch or dinner menu.
+Using this add button, admins are easily able to add menu items. The add icon is only visible to admins so regular users are unable to add menu items. Admins only need to fill out the following form and items are instantly added to the lunch or dinner menu.
 
 **Add menu item page**
 
@@ -194,7 +203,8 @@ Any lunch menu item added by admins appear here. Each item gives descriptive tex
 
 ![Dinner menu page](./static/images/readme/dinner-menu-page.PNG)
 
-*Admin*
+**Admin** version of the page
+
 ![Dinner menu page](./static/images/readme/admin-dinner-menu-page.PNG)
 
 Any dinner menu item added by admins appear here. Each item gives descriptive text and beautiful imagery to further insterest potential clients.
@@ -216,6 +226,7 @@ On click of the edit menu item icon, the user is directed to the form page where
 On each menu item in both the lunch and dinner pages, there is a delete icon which is accessible to site admins. Admins are able to delete outdated and no longer wanted items from the menu with ease.
 
 ![Confirm delete modal](./static/images/readme/delete-menu-item-confirmation-modal.PNG)
+
 To ensure there is no accidental deletion users are also prompted one extra time to confirm deletion of any menu item.
 
 **Make a booking page**
@@ -226,6 +237,7 @@ The making a booking page is a crucial component of our website. This is where w
 The user can set a time, date and amount of guests for each booking.
 
 ![Comments](./static/images/readme/create-booking-page-comments.PNG)
+
 The user can additionally put any extra comments, normally guest allergens. This is crucial to ensure customer health and safety is maintained. Also any special requests can be added.
 
 **My profile page**
@@ -235,11 +247,13 @@ The user can additionally put any extra comments, normally guest allergens. This
 On the my profile page users can find their details, previous and future bookings
 
 **My details section**
+
 ![My details section](./static/images/readme/my-profile-section.PNG)
 
 The users can see their input details, in future iterations of the project we will look to broaden this and add items like if a user wants newsletters and etc.
 
 **My bookings section**
+
 ![My bookings section](./static/images/readme/my-bookings-section.PNG)
 
 In the my booking section users are able to see any information about previous and future bookings.
@@ -290,7 +304,7 @@ All models within the ERD are inter-connected except for the Menu model which do
 Within this project, 3 apps have been created these would be:
 - booking - This contains all the bookings functionality, full CRUD but the read component is displayed within the customer model
 - menu - This model is for admins to manage which menu items are available on the website for users to see. This contains full CRUD
-- customer(incomplete) - This model displays information about the user and is where users can see all the bookings which they have made. 
+- customer(incomplete) - This model displays information about the user and is where users can see all the bookings which they have made. In future iterations users might be able to updated their details.
 
 ### Skeleton
 
@@ -320,14 +334,15 @@ Black: #454545
 
 #### Typography
 
-When I was thinking which fonts to go with for my website as I wanted elegant and simplistic I went with a very classic Sans serif for the body content. For headings to stand out I went with a nice PT serif, fonts were sourced from [Google fonts](https://fonts.google.com/)
+When I was thinking which fonts to go with for my website as I wanted elegant and simplistic. For headings to stand out I went with a nice PT serif, fonts were sourced from [Google fonts](https://fonts.google.com/)
 
 Headings : PT Serif
 
 ![PT serif](./static/images/readme/pt-serif-font.PNG)
 
-Text/body : sans serif
+For the general text within the body I went with a simple and yet classic sans serif so that the general texts would complement the headings and not take attention away from them. This text comprises of majority of the text within the website.
 
+Text/body : sans serif
 
 #### Imagery
 
@@ -348,58 +363,73 @@ All testing has been performed in a separate Testing.md file within the project,
 **Cloning**
 To clone a repository follow these steps
 
-1.Login in to Github or create an account if you haven't already
+1. Login in to Github or create an account if you haven't already
 
-2.Go to this project repository [Ember & Ash](https://github.com/JamesBracken/Ember-Ash)
+2. Go to this project repository [Ember & Ash](https://github.com/JamesBracken/Ember-Ash)
 
-3.Click on the *Code* button and select whether you would like to cline with HTTPS, SSH or the Github CLI and then copy the link shown
+3. Click on the *Code* button and select whether you would like to cline with HTTPS, SSH or the Github CLI and then copy the link shown
 
-4.Open your terminal in your IDE/code editor of choice then change the current working directory to the location you would like to use for the cloned directory
+4. Open your terminal in your IDE/code editor of choice then change the current working directory to the location you would like to use for the cloned directory
 
-5.Type "git clone" into the terminal and paste the link you copied in the third step then press Enter
+5. Type "git clone" into the terminal and paste the link you copied in the third step then press Enter
 
-6.To install the dependencies you can run **npm install** in your IDE(integrated development environment) terminal, the dependencies you need are listed in the package.json and package-lock.json files
+6. To install the dependencies you can run **npm install** in your IDE(integrated development environment) terminal, the dependencies you need are listed in the package.json and package-lock.json files
 
 **Commiting and Pushing Changes**
 
-1.Open the termin in the directory of your cloned repository
+1. Open the termin in the directory of your cloned repository
 
-2.Using "git status" check to see your changes are correct
+2. Using "git status" check to see your changes are correct
 
-3.If you are ready to commit  type "git add ." to stage all saved changes to be commited, you can alternatively use "git add YOUR_FILENAME" to stage specific files for commit
+3. If you are ready to commit  type "git add ." to stage all saved changes to be commited, you can alternatively use "git add YOUR_FILENAME" to stage specific files for commit
 
-4.Using "git commit -m "Write your commit message here" commit your changes with a descriptive message, give a good amount of detail but try not to go over 50 characters
+4. Using "git commit -m "Write your commit message here" commit your changes with a descriptive message, give a good amount of detail but try not to go over 50 characters
 
-5.Finally use "git push origin main" to push your changes to the main branch of your github repository
+5. Finally use "git push origin main" to push your changes to the main branch of your github repository
 
 
 **Forking**
 
 To fork this repository follow these steps
 
-1.Setup Git and make sure your git has github authentication
-2.Go to the web page repository [Ember & Ash](https://github.com/JamesBracken/Ember-Ash) 
-3.Click on *fork* on the upper right portion of the page.
-4.This has now forked the repository to your own profile. 
-5.Go to your profile and navigate to the forked repository.
-6.Click on *Code* above the list of forked files
-7.Choose the option you need from the dropdown menu. 
+1. Setup Git and make sure your git has github authentication
+
+2. Go to the web page repository [Ember & Ash](https://github.com/JamesBracken/Ember-Ash) 
+
+3. Click on *fork* on the upper right portion of the page.
+
+4. This has now forked the repository to your own profile. 
+
+5. Go to your profile and navigate to the forked repository.
+
+6. Click on *Code* above the list of forked files
+
+7. Choose the option you need from the dropdown menu. 
 
 Further assistance can be found [HERE](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) on the github Fork a Repo page
 
 **Local development**
-1.Clone your repository from Github, you can find the "Code" button where you can copy the url from
-2.Open your IDE and open a terminal, make sure you are in the correct directory where you want to clone the repository to.
-3.Type git clone URL, replace URL with the one you just copied in the first step
-4.Setup your virtual environment, type the below commands
-    python3 -m venv [virtual_environment name]
-5.Activate your virtual environment, type the below commands
-Windows: myvenv\Scripts\activate
-Linux/Mac: source myvenv/bin/activate
-6.Type the below items into your IDE terminal, this will install all packages
+
+1. Clone your repository from Github, you can find the "Code" button where you can copy the url from
+
+2. Open your IDE and open a terminal, make sure you are in the correct directory where you want to clone the repository to.
+
+3. Type git clone URL, replace URL with the one you just copied in the first step
+
+4. Setup your virtual environment, type the below commands
+
+- python3 -m venv [virtual_environment name]
+
+5. Activate your virtual environment, type the below commands
+
+- Windows: myvenv\Scripts\activate
+
+- Linux/Mac: source myvenv/bin/activate
+
+6. Type the below items into your IDE terminal, this will install all packages
     pip install -r requirements.txt
 
-If you want to install your own packages here is some extra step-by-step instructions and examples:
+**If you want to install your own packages** here is some extra step-by-step instructions and examples:
 
 - Type the below items into your IDE terminal
     pip install Django~=3.2 gunicorn (NOTE: try to use pip3 instead if this does not work)
@@ -409,104 +439,123 @@ If you want to install your own packages here is some extra step-by-step instruc
 - Create your requirements.txt file, this is a list of your installed packages so everytime you install a new package you will need to update it like this
     pip freeze --local > requirements.txt
 
-7.Setup environmental variables, scroll down to Environmental Variables section
-8.Connect your database by typing this in the terminal(This runs your migrations):
-    python manage.py migrate
-9.Create a superuser account by typing into the terminal:
-    python manage.py createsuperuser
-10.You can run the app in a local environment by typing:
-    python manage.py runserver
-11.If you want to open a deployed version of your app see the steps below in Heroku deployment
+7. Setup environmental variables, scroll down to Environmental Variables section
+
+8. Connect your database by typing this in the terminal(This runs your migrations):
+
+- python manage.py migrate
+
+9. Create a superuser account by typing into the terminal:
+
+- python manage.py createsuperuser
+
+10. You can run the app in a local environment by typing:
+
+- python manage.py runserver
+
+11. If you want to open a deployed version of your app see the steps below in **Heroku deployment**
 
 **Adding your database**
-1.Navigate to [PostgreSQL from code institute](https://dbs.ci-dbs.net/)
-2.Enter your student email address and then submit
-3.You will be sent an email with a link, copy the link
-4.Back in your workspace, ensure Debug is set to True
-5.Create you env.py file if you dont have one already and add this to .gitignore
-6.Inside your env.py add the below code and replace "<your-database-URL>" with the link you copied from the email in step 3
 
-import os
+1. Navigate to [PostgreSQL from code institute](https://dbs.ci-dbs.net/)
 
-os.environ.setdefault(
-    "DATABASE_URL", "<your-database-URL>")
+2. Enter your student email address and then submit
 
-7.If you haven't already do 
-pip3 install dj-database-url~=0.5 psycopg2~=2.9
+3. You will be sent an email with a link, copy the link
 
-pip3 freeze --local > requirements.txt
+4. Back in your workspace, ensure Debug is set to True
 
-8.In your settings.py import the packages like below
+5. Create you env.py file if you dont have one already and add this to .gitignore
 
-import os
-import dj_databse_url
-if os.path.isfile('env.py'):
+6. Inside your env.py add the below code and replace "your-database-URL" with the link you copied from the email in step 3
+
+- import os
+
+- os.environ.setdefault(
+    "DATABASE_URL", "your-database-URL")
+
+7. If you haven't already do 
+- pip3 install dj-database-url~=0.5 psycopg2~=2.9
+
+- pip3 freeze --local > requirements.txt
+
+8. In your settings.py import the packages like below
+
+- import os
+- import dj_databse_url
+- if os.path.isfile('env.py'):
     import env
 
-9.Still in your settings.py comment out the default django sqlite3 database
+9. Still in your settings.py comment out the default django sqlite3 database
 
-10.Add in you own database with the below syntax
+10. Add in you own database with the below syntax
 
-DATABASES = {
+- DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
-11.Migrate your changes with python manage.py migrate
+11. Migrate your changes with python manage.py migrate
 
-12.You have now successfully connected your database withthe project and can now add data in your local development. To connect your deployed version on heroku with the database continue with the next steps.
+12. You have now successfully connected your database withthe project and can now add data in your local development. To connect your deployed version on heroku with the database continue with the next steps.
 
-13.If you haven't already, deploy your project to heroku(steps for this are found after database guide)
+13. If you haven't already, deploy your project to heroku(steps for this are found after database guide)
 
-14.Navigate to the settings tab of your project and press reveal config vars
+14. Navigate to the settings tab of your project and press reveal config vars
 
-15.If there is a database added by default by heroku delete this as we will replace it with our own(If heroku has not added one skip to step 18)
+15. If there is a database added by default by heroku delete this as we will replace it with our own(If heroku has not added one skip to step 18)
 
-16.To remove the heroku database navigate to Resources, go to the drop-down on the top right of the Postgres add-on and click Delete Add-on. Confirm this by typing your app's name into the popuo
+16. To remove the heroku database navigate to Resources, go to the drop-down on the top right of the Postgres add-on and click Delete Add-on. Confirm this by typing your app's name into the popuo
 
-17.Navigate back to the settings tab and to config vars
+17. Navigate back to the settings tab and to config vars
 
-18.Add a new config var with a key of DATABASE_URL and a value of the PostgreSQL link that we copied from the email in step 3
+18. Add a new config var with a key of DATABASE_URL and a value of the PostgreSQL link that we copied from the email in step 3
 
-19.You have successfully added your database to the deployed version of your website
+19. You have successfully added your database to the deployed version of your website
 
 **Adding Cloudinary to your project**
 
-1.Install the nevessary packages with the commands below and add them to your requirements.txt file
+1. Install the nevessary packages with the commands below and add them to your requirements.txt file
 
-pip3 install cloudinary~=1.36.0 dj3-cloudinary-storage~=0.0.6 urllib3~=1.26.15
+- pip3 install cloudinary~=1.36.0 dj3-cloudinary-storage~=0.0.6 urllib3~=1.26.15
 
-pip3 freeze --local > requirements.txt
+- pip3 freeze --local > requirements.txt
 
-2.Go to [this link](https://cloudinary.com/users/register_free) to create a cloudinary account
+2. Go to [this link](https://cloudinary.com/users/register_free) to create a cloudinary account
 
-3.In the Cloudinary dashboard, copy the CLOUDINARY_URL
+3. In the Cloudinary dashboard, copy the CLOUDINARY_URL
 
-4.In your env.py file add the code below and paste in the copied url from step 3 
+4. In your env.py file add the code below and paste in the copied url from step 3 
 
-os.environ.setdefault(
-    "CLOUDINARY_URL", "<URL copied from Cloudinary in last step>")
+- os.environ.setdefault(
+    "CLOUDINARY_URL", "URL copied from Cloudinary in last step")
 
-5.Delete the CLOUDINARY_URL= from the start of the URL string as we are using the setdefault() method rather than assigin the value.
+5. Delete the CLOUDINARY_URL= from the start of the URL string as we are using the setdefault() method rather than assigin the value.
 
-6.Navigate to your settings.py and inside the INSTALLED_APPS add the below items
+6. Navigate to your settings.py and inside the INSTALLED_APPS add the below items
 
-Important! cloudinary_storage must be added immediately after django.contrib.staticfiles
-'cloudinary_storage',
+**Important!** cloudinary_storage must be added immediately after django.contrib.staticfiles
+- 'cloudinary_storage',
 
-'cloudinary',
+- 'cloudinary',
 
-7.You can now use Cloudinary in any app in your project
+7. You can now use Cloudinary in any app in your project
 
 **Heroku Deployment**
-1.Ensure the project repository has been uploaded to Github.
-2.Login to the Heroku dashboard and create a new app.
-3.Connect your GitHub repository to your Heroku app.
-4.In the Settings tab, ensure that the Python Buildpack is added.
-5.Set environment variables in the Config Vars section of the Settings tab.
-6.In the Deploy tab, enable automatic deploys from your GitHub repository.
-7.Click the "Deploy Branch" button to deploy the app.
-8.Once the app has been deployed, click the "Open App" button to view the app.
+1. Ensure the project repository has been uploaded to Github.
 
+2. Login to the Heroku dashboard and create a new app.
+
+3. Connect your GitHub repository to your Heroku app.
+
+4. In the Settings tab, ensure that the Python Buildpack is added.
+
+5. Set environment variables in the Config Vars section of the Settings tab.
+
+6. In the Deploy tab, enable automatic deploys from your GitHub repository.
+
+7. Click the "Deploy Branch" button to deploy the app.
+
+8. Once the app has been deployed, click the "Open App" button to view the app.
 
 **Environmental variables**
 
@@ -549,80 +598,80 @@ Any larger pieces of code should be added here in any future iterations and any 
 
 ### Technologies used
 
-1.[Django](https://www.djangoproject.com/) - Django is a high level framework used to rapidly take python projects from start to finish. Using django a developer can use existing codebases and shortcuts to ease and speed up the development process.
+1. [Django](https://www.djangoproject.com/) - Django is a high level framework used to rapidly take python projects from start to finish. Using django a developer can use existing codebases and shortcuts to ease and speed up the development process.
 
-2.[PostgreSQL](https://www.postgresql.org/) - PosgreSQL is a powerful, open source object-relational database system.
+2. [PostgreSQL](https://www.postgresql.org/) - PosgreSQL is a powerful, open source object-relational database system.
 
-3.[Code institute provided database generator](https://dbs.ci-dbs.net/) - A database generator provided by Code Institute to store data across projects.
+3. [Code institute provided database generator](https://dbs.ci-dbs.net/) - A database generator provided by Code Institute to store data across projects.
 
-4.[VS code](https://code.visualstudio.com/) - The most widely used IDE across the planet, we use vs code as our integrated development environment.
+4. [VS code](https://code.visualstudio.com/) - The most widely used IDE across the planet, we use vs code as our integrated development environment.
 
-5.[Cloudinary](https://cloudinary.com/) - An fast scalable online media management platform
+5. [Cloudinary](https://cloudinary.com/) - An fast scalable online media management platform
 
-6.[Git](https://git-scm.com/) - A version control system designed to handle everything from small to large projects  
+6. [Git](https://git-scm.com/) - A version control system designed to handle everything from small to large projects  
 
-7.[GitHub](https://github.com/) - A platform for displaying code project version, deployments and developer profiles
+7. [GitHub](https://github.com/) - A platform for displaying code project version, deployments and developer profiles
 
-8.[Github desktop](https://desktop.github.com/download/) - An app used to ease version control. 
+8. [Github desktop](https://desktop.github.com/download/) - An app used to ease version control. 
 
-9.[Figma](https://www.figma.com/) - An application used to make wireframe drawings
+9. [Figma](https://www.figma.com/) - An application used to make wireframe drawings
 
-10.[TinyPNG](https://tinyjpg.com/) - Converts images into JPG format and compresses files to improve performance
+10. [TinyPNG](https://tinyjpg.com/) - Converts images into JPG format and compresses files to improve performance
 
-11.[TinyJPG](https://tinypng.com/) - Converts images into PNG format and compresses files to improve performance
+11. [TinyJPG](https://tinypng.com/) - Converts images into PNG format and compresses files to improve performance
 
-12.[Pixabay](https://pixabay.com/) - A media website including free and open source images
+12. [Pixabay](https://pixabay.com/) - A media website including free and open source images
 
-13.[Pexels](https://www.pexels.com/) - A media website including free and open source images
+13. [Pexels](https://www.pexels.com/) - A media website including free and open source images
 
-14.[Django widget tweaks](https://pypi.org/project/django-widget-tweaks/) - Used to tweak form fields within the project
+14. [Django widget tweaks](https://pypi.org/project/django-widget-tweaks/) - Used to tweak form fields within the project
 
-15.[Gunicorn](https://gunicorn.org/) - A python WSGI HTTP server 
+15. [Gunicorn](https://gunicorn.org/) - A python WSGI HTTP server 
 
-16.[Whitenoise](https://whitenoise.readthedocs.io/en/latest/) - Serves static files for projects in production
+16. [Whitenoise](https://whitenoise.readthedocs.io/en/latest/) - Serves static files for projects in production
 
-17.[Dj Database URL](https://pypi.org/project/dj-database-url/) - Connects our website with the database
+17. [Dj Database URL](https://pypi.org/project/dj-database-url/) - Connects our website with the database
 
-18.[Psycopg2](https://www.psycopg.org/docs/) - PostgreSQL database adapter for python
+18. [Psycopg2](https://www.psycopg.org/docs/) - PostgreSQL database adapter for python
 
-19.[Chatgpt](https://chatgpt.com/) - Used to populate data in the project such as add menu items
+19. [Chatgpt](https://chatgpt.com/) - Used to populate data in the project such as add menu items
 
-20.[Favicon](https://favicon.io/favicon-generator/) - Generates a favicon for websites
+20. [Favicon](https://favicon.io/favicon-generator/) - Generates a favicon for websites
 
-21.[Bootstrap](https://getbootstrap.com/) - Used to create the Navigation bar, page structure, styles and responsiveness
+21. [Bootstrap](https://getbootstrap.com/) - Used to create the Navigation bar, page structure, styles and responsiveness
 
-22.[Google fonts](https://fonts.google.com/) - Generates fonts for the project
+22. [Google fonts](https://fonts.google.com/) - Generates fonts for the project
 
-23.[Heroku](https://www.heroku.com/) - Used to deploy and manage a production ready version of the website
+23. [Heroku](https://www.heroku.com/) - Used to deploy and manage a production ready version of the website
 
-24.[Lucidchart](https://www.lucidchart.com/pages/examples/er-diagram-tool) - Used to create entity relationship diagrams 
+24. [Lucidchart](https://www.lucidchart.com/pages/examples/er-diagram-tool) - Used to create entity relationship diagrams 
 
 ### Code and Resources used
 
-1.[Stackoverflow](https://stackoverflow.com/questions) - Platform and community where developers can ask questions and get assistance from eachother
+1. [Stackoverflow](https://stackoverflow.com/questions) - Platform and community where developers can ask questions and get assistance from eachother
 
-2.[W3schools docs](https://www.w3schools.com/) - Lots of useful resources and guides for all programming languages in this project
+2. [W3schools docs](https://www.w3schools.com/) - Lots of useful resources and guides for all programming languages in this project
 
-3.[Mdn docs](https://developer.mozilla.org/en-US/) - Lots of useful resources and guides for all programming languages in this project
+3. [Mdn docs](https://developer.mozilla.org/en-US/) - Lots of useful resources and guides for all programming languages in this project
 
-4.[Bootstrap docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - Documentation for the bootstrap web library 
+4. [Bootstrap docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - Documentation for the bootstrap web library 
 
-5.[Django project docs](https://www.djangoproject.com/start/) - Lots of useful documentation and guidance, especially for me to grasp and learn new concepts in the django framework
+5. [Django project docs](https://www.djangoproject.com/start/) - Lots of useful documentation and guidance, especially for me to grasp and learn new concepts in the django framework
 
-6.[Kevin powell how to make a color scheme fast](https://www.youtube.com/watch?v=mq8LYj6kRyE&list=PLpAzc76TtoBzvtYIZAhfJzDxvas0GmI7O) - Great guide on how to create your color scheme
+6. [Kevin powell how to make a color scheme fast](https://www.youtube.com/watch?v=mq8LYj6kRyE&list=PLpAzc76TtoBzvtYIZAhfJzDxvas0GmI7O) - Great guide on how to create your color scheme
 
 7.[Guide to relational databases](https://www.youtube.com/watch?v=fXndSzAL1Nc&list=PLpAzc76TtoBzvtYIZAhfJzDxvas0GmI7O&index=2) - Crucial guide I used to help grasp the concepts of relational databases
 
-8.[Fantastic video about normalizing your database](https://www.youtube.com/watch?v=UrYLYV7WSHM&list=PLpAzc76TtoBzvtYIZAhfJzDxvas0GmI7O&index=5) - A guide to normalise your database, with this I was able to create an optimal schema for my database and separate data into different tables to maximise performance and follow best practices. Best guide I have seen by far on databases. Simple and informative.
+8. [Fantastic video about normalizing your database](https://www.youtube.com/watch?v=UrYLYV7WSHM&list=PLpAzc76TtoBzvtYIZAhfJzDxvas0GmI7O&index=5) - A guide to normalise your database, with this I was able to create an optimal schema for my database and separate data into different tables to maximise performance and follow best practices. Best guide I have seen by far on databases. Simple and informative.
 
-9.[Creating a Django restaurant booking site](https://www.youtube.com/watch?v=EI02wQ51GjA&list=PLBTOBXTz1YFZK0moSgoZq93V_AdvrUGSj) - Great guide which I watched to cement my understanding of django and give me inspiration and ideas on how to build my website, simple and straightforward explanations
+9. [Creating a Django restaurant booking site](https://www.youtube.com/watch?v=EI02wQ51GjA&list=PLBTOBXTz1YFZK0moSgoZq93V_AdvrUGSj) - Great guide which I watched to cement my understanding of django and give me inspiration and ideas on how to build my website, simple and straightforward explanations
 
-10..[Guide to how ajax login works with django](https://www.youtube.com/watch?v=DvzE9tVFkSA&list=PLpAzc76TtoBzvtYIZAhfJzDxvas0GmI7O&index=15) - Slightly outdated video, but helped me grasp the concepts of how to use AJAX for error handling in my login modal.
+10. [Guide to how ajax login works with django](https://www.youtube.com/watch?v=DvzE9tVFkSA&list=PLpAzc76TtoBzvtYIZAhfJzDxvas0GmI7O&index=15) - Slightly outdated video, but helped me grasp the concepts of how to use AJAX for error handling in my login modal.
 
-11.Brian macharia - No link provided as these were privately shared resources for his students. Big shoutout to my mentor who provided tons of useful links to useful resources, guides and tutorials for this project. 
+11. Brian macharia(My mentor) - No link provided as these were privately shared resources for his students. Big shoutout to my mentor who provided tons of useful links to useful resources, guides and tutorials for this project. 
 
 ### Acknowledgements
 
-Again, a big thank you to my mentor Brian Macharia who gave me high level guidance for the project and to my teacher Andre Beckley who supported me and guided me through the website build.
+Again, a big thank you to my mentor **Brian Macharia** who gave me high level guidance for the project and to my teacher **Andre Beckley** who supported me and guided me through the website build.
 
 A thanks as well to all the help and support from stackoverflow and the coding community. The helpfulness and support we all provide eachother was instrumental to making this project possible.
