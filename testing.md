@@ -142,6 +142,40 @@ menu/views.py
 
 ![Pep8 validation for menu views.py](./static/images/testing/pep8-menu-views.PNG)
 
+user/admin.py
+
+![Pep8 validation for user admin.py](./static/images/testing/pep8-user-admin.PNG)
+
+user/apps.py
+
+![Pep8 validation for user apps.py](./static/images/testing/pep8-user-apps.PNG)
+
+user/models.py
+
+![Pep8 validation for user models.py](./static/images/testing/pep8-user-models.PNG)
+
+user/tests.py
+
+![Pep8 validation for user tests.py](./static/images/testing/pep8-user-tests.PNG)
+
+user/urls.py
+
+![Pep8 validation for user urls.py](./static/images/testing/pep8-user-urls.PNG)
+
+user/views.py
+
+![Pep8 validation for user views.py](./static/images/testing/pep8-user-views.PNG)
+
+
+### WAVE(Optional)
+
+
+
+###
+###
+
+
+## Lighthouse testing
 []()
 []()
 []()
