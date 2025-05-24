@@ -3,30 +3,43 @@
 ## Difficult to solve bugs
 
 When implementing my login modal I experienced problems with my modal. It was appearing behind the modal backdrop. In the documentation Bootstrap stipulates modals tend to act differently when placed into fixed components hence the issues.
+
 ![alt text](./static/images/testing/modal_z_index.PNG)
 
 I fixed this problem by taking the modal code out of the header and placing it at the bottom of the body. I also set a z-index for both the modal and modal backdrop as an extra defensive measure.
+
 ![alt text](./static/images/testing/modal_z_index_solved.PNG)
 
 
-## Validators
 
-### Lighthouse
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
+## Validator testing
+
+
 ### HTML validator
-[]()
-[]()
-[]()
-[]()
+
+Testing tool - [W3C HTML Validation website]
+
+I validated all pages across my website, everything was successful and **passed**! 
+
+[Home page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2F) - Passed
+[Signup page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Faccounts%2Fsignup%2F) - 1 error displays which is a Duplicate ID error. This can be ignored as there is no conflict here. 1 of the ID's is the signup form, the other is from the login modal which is in the base.html therefore available to every page. The ID attributes of these elements are injected in with Django and allauth and CANNOT be changed
+[Booking page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Fbooking%2F) - Passed
+[Main menu page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Fmenu%2F) - Passed
+[Lunch page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Fmenu%2Flunch_menu%2F) - Passed
+[Dinner page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Fmenu%2Fdinner_menu%2F) - Passed
+[My profile page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Fmy_profile%2F) - Passed
+[Logout page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Faccounts%2Flogout%2F) - Passed
+[403 page]() - 
+404 page - Passed
+
+![Error 404 page](./static/images/testing/html-validator-404-error-page.PNG)
+
+[405 page]() - 
+
+
+500 page - Passed
+
+![Error 500 page](./static/images/testing/html-validator-500-error-page.PNG)
 
 ### CSS validator
 ### JSHint validator
@@ -201,20 +214,22 @@ user/views.py
 
 ## Manual testing
 
-Responsiveness
+### Responsiveness
 |Screen Size|Device Type|Viewport Width|Pass/Fail|
 |-----------|-----------|--------------|---------|
 |Mobile|Smartphone|375px||
 |Tablet|Tablet |768px||
 |Laptop|Small Laptop/Desktop|1024px||
 
-Browser testing
+### Browser testing
 |Browser|Not Functioning|Partial Functioning|Full Functioning|
 |-------|---------------|-------------------|----------------|
 |<i class="fab fa-chrome"></i>Google Chrome| | ||
 |<i class="fab fa-firefox-browser"></i>Mozilla Firefox| | ||
 |<i class="fab fa-edge"></i>Microsoft Edge| | ||
 |<i class="fab fa-opera"></i>Opera| | ||
+
+### Website testing
 
 Header & Navbar
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
