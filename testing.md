@@ -56,6 +56,36 @@ All javascript files **passed** with no issues!
 - All warning were just to inform that the features are for ES6+
 
 ![JShint containing the menu.js code](./static/images/testing/jshint-menu.PNG)
+
+### Python validation
+
+booking/admin.py
+![Pep8 validation for booking admin.py](./static/images/testing/pep8-booking-admin.PNG)
+
+booking/apps.py
+
+![Pep8 validation for booking apps.py](./static/images/testing/pep8-booking-apps.PNG)
+
+booking/forms.py
+
+![Pep8 validation for booking forms.py](./static/images/testing/pep8-booking-forms.PNG)
+
+booking/models.py
+
+![Pep8 validation for booking models.py](./static/images/testing/pep8-booking-models.PNG)
+
+booking/tests.py
+
+![Pep8 validation for booking tests.py](./static/images/testing/pep8-booking-tests.PNG)
+
+booking/urls.py
+
+![Pep8 validation for booking urls.py](./static/images/testing/pep8-booking-urls.PNG)
+
+booking/views.py
+
+![Pep8 validation for booking views.py](./static/images/testing/pep8-booking-views.PNG)
+
 []()
 []()
 []()

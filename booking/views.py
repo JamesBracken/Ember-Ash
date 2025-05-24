@@ -4,6 +4,7 @@ from django.contrib import messages
 from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
 
+
 def is_date_in_future(date):
     """
     Checks if a passed in `date` is in the future
@@ -17,7 +18,6 @@ def is_date_in_future(date):
     return date > today
 
 
-
 @login_required
 def booking(request):
     """
@@ -27,7 +27,7 @@ def booking(request):
 
     ``booking_form``
         An instance of :forms:`booking.BookingForm`
-    
+
     **Template**
 
     ``booking_form.html``
@@ -41,7 +41,8 @@ def booking(request):
             messages.add_message(
                 request,
                 messages.SUCCESS,
-                "Booking successfully created, you may view this in your My Profile area",
+                ("Booking successfully created, you may"
+                "view this in your My Profile area")
             )
             return redirect("my_profile")
     else:
@@ -66,7 +67,7 @@ def booking_edit(request, id):
         An instance of :forms:`booking.BookingForm`
     ``booking``
         An instance of :model:`booking.Booking`
-        
+
     **Template**
 
     ``booking_form.html``
@@ -78,14 +79,16 @@ def booking_edit(request, id):
     if request.method == "POST" and is_booking_in_future:
         if booking_form.is_valid() and booking.user == request.user:
             booking = booking_form.save()
-            messages.add_message(request, messages.SUCCESS, "Booking updated!")
+            messages.add_message(request, messages.SUCCESS,
+                                 "Booking updated!")
             return redirect("my_profile")
         else:
-            messages.add_message(request, messages.ERROR, "Error updating booking")
+            messages.add_message(request, messages.ERROR,
+                                 "Error updating booking")
             return redirect("my_profile")
     else:
         booking_form = BookingForm(instance=booking)
-    if  is_booking_in_future:
+    if is_booking_in_future:
         return render(
             request,
             "booking/booking_form.html", {
@@ -93,9 +96,12 @@ def booking_edit(request, id):
                 "booking_item": booking,
             }
         )
-    else: 
-        messages.add_message(request, messages.ERROR, "You cannot edit a booking which is today or in the past")
+    else:
+        messages.add_message(request, messages.ERROR,
+                             ("You cannot edit a booking which is today or in "
+                              "the past"))
         return redirect("my_profile")
+
 
 @login_required
 def booking_delete(request, id):
@@ -115,15 +121,20 @@ def booking_delete(request, id):
         booking.delete()
         messages.add_message(request, messages.SUCCESS, "Booking was deleted!")
         return redirect("my_profile")
-    else: 
-        messages.add_message(request, messages.ERROR, "You cannot delete a booking which is today or in the past")
+    else:
+        messages.add_message(request, messages.ERROR,
+                             ("You cannot delete a booking which is today or"
+                              "in the past"))
         return redirect("my_profile")
+
 
 def trigger_login_message(request):
     """
-    Displays a message if a user is not authenticated and attempts to make a booking
+    Displays a message if a user is not authenticated and attempts to make
+    a booking
     """
     messages.add_message(
-        request, messages.SUCCESS, "You must login first before making a booking"
+        request, messages.SUCCESS,
+        "You must login first before making a booking"
     )
     return redirect("home_urls")
