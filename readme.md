@@ -68,7 +68,7 @@ My project goals are also displayed below
 **User story 16: About page(Could have)**
 - As a user, I would like to view more information about the website on an about page
 
-**User story 17: Gallery()**
+**User story 17: Gallery(Could have)**
 - As a user I can see images of the food so that I can get a better understanding each menu item and get enticed
 
 ### Scope
@@ -335,11 +335,12 @@ As they say "We eat with our eyes". In our digital, everything needs to be insta
 
 I used [Pixabay](https://pixabay.com/) and [Pexels](https://www.pexels.com/) for uncopyrighted images.
 
-Additionally I improved website performance and load time by compressing images with [Tiny png](https://tinypng.com/) and [Tiny jpg](https://tinyjpg.com/)
+Additionally I improved website performance and load times by compressing images with [Tiny png](https://tinypng.com/) and [Tiny jpg](https://tinyjpg.com/)
 
 ## Testing
 
-All testing has been performed in a separate Testing.md file which can be found in this project 
+All testing has been performed in a separate Testing.md file within the project, or you can click this [link](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md) to be brought to the testing md file.
+
 ## Deployment
 
 ### Github guide
@@ -387,7 +388,7 @@ To fork this repository follow these steps
 Further assistance can be found [HERE](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) on the github Fork a Repo page
 
 **Local development**
-1.Clone your repository from Github by, you can find the "Code" button where you can copy the url from
+1.Clone your repository from Github, you can find the "Code" button where you can copy the url from
 2.Open your IDE and open a terminal, make sure you are in the correct directory where you want to clone the repository to.
 3.Type git clone URL, replace URL with the one you just copied in the first step
 4.Setup your virtual environment, type the below commands
@@ -398,7 +399,7 @@ Linux/Mac: source myvenv/bin/activate
 6.Type the below items into your IDE terminal, this will install all packages
     pip install -r requirements.txt
 
-If you want to install your own packages here is some extra step-by-step instructions:
+If you want to install your own packages here is some extra step-by-step instructions and examples:
 
 - Type the below items into your IDE terminal
     pip install Django~=3.2 gunicorn (NOTE: try to use pip3 instead if this does not work)
@@ -416,6 +417,42 @@ If you want to install your own packages here is some extra step-by-step instruc
 10.You can run the app in a local environment by typing:
     python manage.py runserver
 11.If you want to open a deployed version of your app see the steps below in Heroku deployment
+
+**Creating your database**
+1.Navigate to [PostgreSQL from code institute](https://dbs.ci-dbs.net/)
+2.Enter your student email address and then submit
+3.You will be sent an email with a link, copy the link
+4.Back in your workspace, ensure Debug is set to True
+5.Create you env.py file if you dont have one already and add this to .gitignore
+6.Inside your env.py add the below code and replace "<your-database-URL>" with the link you copied from the email in step 3
+
+import os
+
+os.environ.setdefault(
+    "DATABASE_URL", "<your-database-URL>")
+
+7.If you haven't already do 
+pip3 install dj-database-url~=0.5 psycopg2~=2.9
+pip3 freeze --local > requirements.txt
+
+8.In your settings.py import the packages like below
+
+import os
+import dj_databse_url
+if os.path.isfile('env.py'):
+    import env
+
+9.Still in your settings.py comment out the default django sqlite3 database
+
+10.Add in you own database with the below syntax
+
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+
+11.Migrate your changes with python manage.py migrate
+
+12.You have now successfully connected your database withthe project and can not add data.
 
 **Heroku Deployment**
 1.Ensure the project repository has been uploaded to Github.
