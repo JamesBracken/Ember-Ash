@@ -196,27 +196,54 @@ user/views.py
 
 
 ## Lighthouse testing
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-### ESLint validator
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-### WAVE(Optional)
-###
-###
 
+Home page  - Passed
 
+[Home page]()
+
+Signup page -
+
+[Signup page lighthouse scores](./static/images/testing)
+
+Booking page -
+
+[Booking page lighthouse scores](./static/images/testing)
+
+Main menu page -
+
+[Main menu page lighthouse scores](./static/images/testing)
+
+Lunch page
+
+[Lunch page lighthouse scores](./static/images/testing)
+
+Dinner page
+
+[Dinner page lighthouse scores](./static/images/testing)
+
+My profile
+
+[My profile page lighthouse scores](./static/images/testing)
+
+Logout page
+
+[Logout page lighthouse scores](./static/images/testing)
+
+403 page
+
+[403 page lighthouse scores](./static/images/testing) 
+
+404 page
+
+[404 page lighthouse scores](./static/images/testing) 
+
+405 page
+
+[405 page lighthouse scores](./static/images/testing) 
+
+500 page
+
+[500 page lighthouse scores](./static/images/testing) 
 
 
 ## Manual testing
