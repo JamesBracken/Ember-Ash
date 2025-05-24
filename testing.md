@@ -42,6 +42,13 @@ I validated all pages across my website, everything was successful and **passed*
 ![Error 500 page](./static/images/testing/html-validator-500-error-page.PNG)
 
 ### CSS validator
+
+I ran my CSS validation using [Jigsaw W3](https://jigsaw.w3.org/css-validator/)
+
+Since I am not embedding any styles and I am using bootstrap classes for any inline styles (All bootstrap styles are standardized and tested already), there is no need to do multiple tests. The only necessary test here is directly testing the stylesheet. **Passed**
+
+[CSS file](https://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Fstatic%2Fcss%2Fstyle.css&usermedium=all&vextwarning=&warning=1) - Passed
+
 ### JSHint validator
 
 I validated my JS filed with [JSHint](https://jshint.com/)
