@@ -473,10 +473,10 @@ Logout page
 403 page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-|403 page|Nav and footer appears in the page|Invoke a 403 page error, check page|||
-|403 page|403 error displays|Invoke a 403 page error, check page|||
-|Home button|Home button appears in the page|Invoke a 403 page error, check page|||
-|Home button redirection|On click the button redirects the user to the home page|Invoke a 403 page error, click the home button|||
+|403 page|Nav and footer appears in the page|Invoke a 403 page error, check page||🟧Unable to open page, will revisit this in the future|
+|403 page|403 error displays|Invoke a 403 page error, check page||🟧Unable to open page, will revisit this in the future|
+|Home button|Home button appears in the page|Invoke a 403 page error, check page||🟧Unable to open page, will revisit this in the future|
+|Home button redirection|On click the button redirects the user to the home page|Invoke a 403 page error, click the home button||🟧Unable to open page, will revisit this in the future|
 
 404 page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
@@ -489,16 +489,16 @@ Logout page
 405 page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-|405 page|Nav and footer appears in the page|Invoke a 405 page error, check page|||
-|405 page|405 error displays|Invoke a 405 page error, check page|||
-|Home button|Home button appears in the page|Invoke a 405 page error, check page|||
-|Home button redirection|On click the button redirects the user to the home page|Invoke a 405 page error, click the home button|||
+|405 page|Nav and footer appears in the page|Invoke a 405 page error, check page||🟧Unable to open page, will revisit this in the future|
+|405 page|405 error displays|Invoke a 405 page error, check page||🟧Unable to open page, will revisit this in the future|
+|Home button|Home button appears in the page|Invoke a 405 page error, check page||🟧Unable to open page, will revisit this in the future|
+|Home button redirection|On click the button redirects the user to the home page|Invoke a 405 page error, click the home button||🟧Unable to open page, will revisit this in the future|
 
 
 500 page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-|500 page|Nav and footer appears in the page|Invoke a 500 page error, check page|||
-|500 page|500 error displays|Invoke a 500 page error, check page|||
-|Home button|Home button appears in the page|Invoke a 500 page error, check page|||
-|Home button redirection|On click the button redirects the user to the home page|Invoke a 500 page error, click the home button|||
+|500 page|Nav and footer appears in the page|Invoke a 500 page error, check page||🟧Unable to open page, will revisit this in the future|
+|500 page|500 error displays|Invoke a 500 page error, check page||🟧Unable to open page, will revisit this in the future|
+|Home button|Home button appears in the page|Invoke a 500 page error, check page||🟧Unable to open page, will revisit this in the future|
+|Home button redirection|On click the button redirects the user to the home page|Invoke a 500 page error, click the home button||🟧Unable to open page, will revisit this in the future|
