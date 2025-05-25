@@ -39,31 +39,3 @@ def login_view(request):
             }, status=400)
 
     return render(request, "index.html", {"login_form": form})
-
-
-def signup_view(request):
-    """
-    Displays the Allauth signup page
-
-    Context
-    -------
-    form : instance of `allauth:UserCreationForm`
-
-    Template
-    --------
-    account/signup.html
-    """
-    if request.method == "POST":
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.add_message(
-                request,
-                messages.SUCCESS,
-                "You have successfully signed up and logged in"
-            )
-            return redirect("home_urls")
-    else:
-        form = UserCreationForm()
-
-    return render(request, "account/signup.html", {"form": form})
