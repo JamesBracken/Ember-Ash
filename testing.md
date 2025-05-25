@@ -327,37 +327,37 @@ Home page
 My profile page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-|Profile icon|Users who are not logged in cannot see this icon leading to the my profile page|Log out and check nav|||
-|Profile icon|Users who are logged in can see the my profile icon|Login and check nav|||
-|My profile page|My profile page opens on click of profile icon|Click profile icon|||
-|My Bookings|Any bookings I previously made and have not deleted are displayed|Check bookings|||
-|My bookings|Any bookings I will make will display in my bookings|Make a booking and check my bookings|||
-|My bookings|Any bookings I make will immediately reflect in my bookings|Open 1 tab of my profile, open 1 tab and make a booking, then refresh the my profile tab |||
-|My bookings data|Each booking displays the booking date, time, guests and comments|Check each booking|||
-|My bookings data|Bookings are displayed in order of farthest in the future first and farthest in the past last|Check booking dates order|||
-|Booking edit|Each booking has an edit icon present|Check bookings|||
-|Booking edit|Each booking edit icon can be clicked to redirect to edit booking page|Click edit icon|||
-|Edit booking page|After redirection to edit page, information that was present on the booking is pre-filled on the edit form|Click edit icon, check inputs|||
-|Edit booking page|After editing a booking and submitting the data is immediately reflected in the booking in the my bookings|Edit a booking then check my bookings|||
-|Edit booking message|After editing a booking and submitting a success message is displayed|Edit a form and submit then Check if message displays|||
-|Edit booking redirect|After editing a booking and submitting user is redirected to the home page|Edit a booking and submit|||
-|Edit booking|On click of a booking on the day or before the user is not directed to the edit page|Click edit on a booking in the past or current day|||
-|Edit booking|On click of a booking on the day or before the user is displayed an error message|Click edit on a booking in the past or current day|||
-|Delete booking Icon|On each booking item a delete booking icon is present|Check bookings|||
-|Delete booking|On click of the delete booking icon a confirmation modal opens|Click delete icon|||
-|Delete booking confirmation modal|On click of close the modal closes|Click Close|||
-|Delete booking confirmation modal|On click of x the modal closes|Click x|||
-|Delete booking confirmation modal|On click of Delete the modal closes|Click delete|||
-|Delete booking confirmation modal|On click of Delete the booking is deleted|Click delete|||
-|Delete booking confirmation modal|On click outside of the modal the modal closes|Click outside of modal|||
-|Delete booking confirmation modal|On click of delete and open of modal background greys out|Click delete icon|||
-|Delete booking modal|If a user attempts to delete a booking from the past or on the same day as the booking the page just refreshes and does delete the modal|Click the delete button|||
-|Delete booking modal|If a user attempts to delete a booking from the past or on the same day as the booking an error message is displayed|Click the delete button|||
-|Pagination|If there is more than 5 bookings pagination activates and displays 2 pages at the bottom|Create more than 5 bookings and check my profile page|||
-|Pagination|If there is more than 5 bookings pagination activates and displays a next page if there is a next page|Check if next page is present|||
-|Pagination|If there is more than 5 bookings pagination activates, on click of next page the user is redirected to the next page|Click next page|||
-|Pagination|If there is more than 5 bookings pagination activates, on click of previous page the user is redirected to the previous page|Click previous page|||
-|Pagination|If there is more than 1 page pagination displays a counter of pages and shows which page you are on|Check bottom of page|||
+|Profile icon|Users who are not logged in cannot see this icon leading to the my profile page|Log out and check nav|Icon is not visible|✅ Passed|
+|Profile icon|Users who are logged in can see the my profile icon|Login and check nav|Icon is present|✅ Passed|
+|My profile page|My profile page opens on click of profile icon|Click profile icon|Page opens|✅ Passed|
+|My Bookings|Any bookings I previously made and have not deleted are displayed|Check bookings|Bookings display|✅ Passed|
+|My bookings|Any bookings I will make will display in my bookings|Make a booking and check my bookings|Bookings made appear|✅ Passed|
+|My bookings|Any bookings I make will immediately reflect in my bookings|Open 1 tab of my profile, open 1 tab and make a booking, then refresh the my profile tab |Bookings immediately appear|✅ Passed|
+|My bookings data|Each booking displays the booking date, time, guests and comments|Check each booking|Correct information displays|✅ Passed|
+|My bookings data|Bookings are displayed in order of farthest in the future first and farthest in the past last|Check booking dates order|Bookings are ordered correctly||✅ Passed
+|Booking edit|Each booking has an edit icon present|Check bookings|Icons are present on each booking|✅ Passed|
+|Booking edit|Each booking edit icon can be clicked to redirect to edit booking page|Click edit icon|Icons work|✅ Passed|
+|Edit booking page|After redirection to edit page, information that was present on the booking is pre-filled on the edit form|Click edit icon, check inputs|Information is present|✅ Passed|
+|Edit booking page|After editing a booking and submitting the data is immediately reflected in the booking in the my bookings|Edit a booking then check my bookings|Data immediately reflects|✅ Passed|
+|Edit booking message|After editing a booking and submitting a success message is displayed|Edit a form and submit then Check if message displays|Success message displays|✅ Passed|
+|Edit booking redirect|After editing a booking and submitting, user is redirected to the home page|Edit a booking and submit|Page redirects|✅ Passed|
+|Edit booking|On click of a booking on the day or before the user is not directed to the edit page|Click edit on a booking in the past or current day|Page does not redirect|✅ Passed|
+|Edit booking|On click of a booking on the day or before the user is displayed an error message|Click edit on a booking in the past or current day|Error message displays|✅ Passed|
+|Delete booking Icon|On each booking item a delete booking icon is present|Check bookings|Icon is present on each booking|✅ Passed|
+|Delete booking|On click of the delete booking icon a confirmation modal opens|Click delete icon|Modal opens|✅ Passed|
+|Delete booking confirmation modal|On click of close the modal closes|Click Close|Modal closes|✅ Passed|
+|Delete booking confirmation modal|On click of x the modal closes|Click x|Modal closes|✅ Passed|
+|Delete booking confirmation modal|On click of Delete the modal closes(because of page refresh)|Click delete|Modal closes|✅ Passed|
+|Delete booking confirmation modal|On click of Delete the booking is deleted, if dates are far enough in the future|Click delete|Booking is deleted|✅ Passed|
+|Delete booking confirmation modal|On click outside of the modal the modal closes|Click outside of modal|Modal closes|✅ Passed|
+|Delete booking confirmation modal|On open of modal, the background greys out|Click delete icon|Background greys out|✅ Passed|
+|Delete booking modal|If a user attempts to delete a booking from the past or on the same day as the booking the page just refreshes and does not delete the modal|Click the delete button|Booking is not deleted|✅ Passed|
+|Delete booking modal|If a user attempts to delete a booking from the past or on the same day as the booking an error message is displayed|Click the delete button|Message displays|✅ Passed|
+|Pagination|If there is more than 5 bookings pagination activates and displays 2 pages at the bottom|Create more than 5 bookings and check my profile page|Pagination works|✅ Passed|
+|Pagination|If there is more than 5 bookings pagination activates and displays a next page if there is a next page|Check if next page is present|Next page is present|✅ Passed|
+|Pagination|If there is more than 5 bookings pagination activates, on click of next page the user is redirected to the next page|Click next page|Next page link works|✅ Passed|
+|Pagination|If there is more than 5 bookings pagination activates, on click of previous page the user is redirected to the previous page|Click previous page|Previous page redirection works|✅ Passed|
+|Pagination|If there is more than 1 page pagination displays a counter of pages and shows which page you are on|Check bottom of page|Page counter works |✅ Passed|
 
 Menu page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
