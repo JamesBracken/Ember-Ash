@@ -40,7 +40,7 @@ My project goals are also displayed below
 **User story 7: Navigation and footer(Must have)**
 - As a user I can access a navigation bar and footer so that I can navigate around the website and find the information I need
 
-#### Uncompleted project goals
+#### Uncompleted/Undone project goals
 
 **User story 8: View client booking details(Could have)**
 - As a manager, I would like to be able to see individual client details on each booking so I can cater the customer experience to the client
@@ -457,6 +457,7 @@ Further assistance can be found [HERE](https://docs.github.com/en/pull-requests/
 
 11. If you want to open a deployed version of your app see the steps below in **Heroku deployment**
 
+### Additional setup DB, CLoudinary, Heroku, env.py
 **Adding your database**
 
 1. Navigate to [PostgreSQL from code institute](https://dbs.ci-dbs.net/)
