@@ -362,12 +362,12 @@ My profile page
 Menu page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-|Meal cards|Meal cards are displayed|Visual check|||
-|Meal cards|When clicking anywhere on the card, navigate to their respective page|Click cards|||
-|Meal cards responsiveness|Each card remains the same size on multiple screen sizes|Screen resize|||
-|Add menu icon|Clicking the add menu icon navigates the user to the add menu item form|Click the + icon|||
-|Add menu icon|Admins can see an add menu icon|Login to an admin account and check|||
-|Add menu icon|Regular users cannot see an add menu icon|Login to a normal user account and check|||
+|Meal cards|Meal cards are displayed|Visual check|Meal cards are displayed correctly|✅ Passed|
+|Meal cards|When clicking anywhere on the card, navigate to their respective page|Click cards|Navigation works wherever you click|✅ Passed|
+|Meal cards responsiveness|Each card remains the same size on multiple screen sizes|Screen resize|Both cards are the same size across multiple devices|✅ Passed|
+|Add menu icon|Clicking the add menu item icon, navigates the user to the add menu item form|Click the + icon|User is redirected to the add menu item form page|✅ Passed|
+|Add menu icon|Admins can see an add menu icon|Login to an admin account and check|Icon is visible to admins |✅ Passed|
+|Add menu icon|Regular users cannot see an add menu icon|Login to a normal user account and check|Icon is not visible to regular users|✅ Passed|
 
 Add item page 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
