@@ -2,16 +2,16 @@
 
 ## Table of contents
 
-- [Difficult to solve bugs]()
-- [Validator testing]()
-    - [HTML validator]()
-    - [CSS Validator]()
-    - [JSHint validator]()
-    - [Python validator]()
+- [Difficult to solve bugs](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#difficult-to-solve-bugs)
+- [Validator testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#validator-testing)
+    - [HTML validation]()
+    - [CSS validation]()
+    - [JSHint validation]()
+    - [Python validation]()
 - [Lighthouse testing]()
 - [Manual testing]()
     - [Responsiveness]()
-    - [Browser teting]()
+    - [Browser testing]()
     - [Manual website testing]()
 
 ## Difficult to solve bugs
@@ -26,7 +26,7 @@ I fixed this problem by taking the modal code out of the header and placing it a
 
 ## Validator testing
 
-### HTML validator
+### HTML validation
 
 Testing tool - [W3C HTML Validation website]
 
@@ -62,7 +62,7 @@ I validated all pages across my website, everything was successful and **passed*
 
 ![Error 500 page](./static/images/testing/html-validator-500-error-page.PNG)
 
-### CSS validator
+### CSS validation
 
 I ran my CSS validation using [Jigsaw W3](https://jigsaw.w3.org/css-validator/)
 
@@ -70,7 +70,7 @@ Since I am not embedding any styles and I am using bootstrap classes for any inl
 
 [CSS file](https://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Fstatic%2Fcss%2Fstyle.css&usermedium=all&vextwarning=&warning=1) - Passed
 
-### JSHint validator
+### JSHint validation
 
 I validated my JS filed with [JSHint](https://jshint.com/)
 
