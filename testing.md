@@ -268,43 +268,43 @@ I tested my deployed app on these browsers.
 Header & Navbar
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-|Navigation links|On initial open of the page the navbar is immediately visible to the user|Open webpage on incognito|||
-|Navbar|The navbar is visible regardless of which page and where you are on these pages|Load different pages and scroll down|||
-|Company logo|The company logo stands out|Visual check|||
-|Company logo|The logo leads to the homepage on click|Clicked the logo on a page other than home|||
-|Nav links|There is a home link which leads to the home page on click|Home button clicked from another page|||
-|Nav links|There is a menu link which leads to the main menu page|Click the menu link from another page|||
-|Nav links|There is a Make a Booking CTA that leads to the Booking page on click from another page IF the user is logged in|Click the Make a Booking CTA|||
-|Nav links|There is a Make a Booking CTA that doesn't link to the Booking page if the user is not logged in|Make sure we are logged out and click|||
-|Nav links|If the user is not logged in and clicks the make a booking they get a feedback error message that they must first login|Make sure we are not logged in and click the Booking CTA|||
-|Nav links|The Booking CTA stands out and is eyecatching|Visual check of the Booking CTA and check it is underlined to make it stand out from the other buttons|||
-|Nav links|The CTA underline transition disappears on hover|Hover mouse over Booking CTA|||
-|Nav links|The Booking CTA gets transitions an underline again after mouse exits hover|Hover over Booking CTA and then remove the mouse from hovering|||
-|Nav links|On smaller devices the navigation collapses into an expandable navigation|Window resize|||
-|Hamburger icon|On click the navigation items display|Click icon|||
-|Hamburger icon|If opened, on click the navigation items disappear|Click the icon after opening|||
-|Login and Logout button|There is a login button on the right of the nav|Visual check|||
-|Login and Logout button|The login button is underlined to stand out|Visual check|||
-|Login and Logout button|The login button underline transition removes on hover|Hover mouse over|||
-|Login and Logout button|The login button underline transitions back on mouse exit after hover||||
-|Login and Logout button|On click of the login button the login modal is opened|Click button|||
-|Login and Logout button|On login of the user the login button changes to a logout button|Login and see if the button changes|||
-|Login and Logout button|On logout of the user the logout button changes back to the login button|Logout and check|||
-|Login and Logout button|The logout button has an underline to attract attention|Visual check|||
-|Login and Logout button|The logout button on hover transition removes the underline|Hover mouse over|||
-|Login and Logout button|The logout button on mouse exit after hover regains the underline|Hover mouse over then mouse exit|||
-|Login and logout button|One link or the other is always present even on smaller devices|Visual check|||
-|Regular nav links|Have no underline |Visual check|||
-|Regular nav links|Transition underline on hover|Hover mouse over|||
-|Regular nav links|Transition remove underline on mouse exit|Hover mouse over then mouse exit|||
-|My profile icon|On login the my profile icon is found on the left of the navbar|Visual check|||
-|My profile icon|If not logged in the my profile icon is not present|Log out and check if the my profile icon is present|||
-|My profile icon|If logged in clicking the my profile icon leads the user to the my profile page|Login and click the my profile icon|||
-|My profile icon|If logged in the icon is always present even on smaller devices|Visual check|||
-|Button, anchor links, logo and my profile icon|On hover over any of these links the mouse become a pointer|Hover over links, buttons and icon|||
-|Responsive|The navbar looks good and functions on many screen sizes|Window resize|||
-|Spelling check|There are no spelling errors in any of the links or the company logo within the nav|Read through links and company logo|||
-|Active|If a user is on a page an active class is added and the text or icon changes thickness or color|Go to pages and check icon or link|||
+|Navigation links|On initial open of the page the navbar is immediately visible to the user|Open webpage on incognito|Navbar is visible|✅ Passed|
+|Navbar|The navbar is visible regardless of which page and where you are on these pages|Load different pages and scroll down|Navbar is visible|✅ Passed|
+|Company logo|The company logo stands out|Visual check|Company logo stands out|✅ Passed|
+|Company logo|The logo leads to the homepage on click|Clicked the logo on a page other than home|Company logo link works|✅ Passed|
+|Nav links|There is a home link which leads to the home page on click|Home button clicked from another page|Link works|✅ Passed|
+|Nav links|There is a menu link which leads to the main menu page|Click the menu link from another page|Link works|✅ Passed|
+|Nav links|There is a Make a Booking CTA that leads to the Booking page on click from another page IF the user is logged in|Click the Make a Booking CTA|User redirected|✅ Passed|
+|Nav links|There is a Make a Booking CTA that doesn't link to the Booking page if the user is not logged in|Make sure we are logged out and click|Link didnt work|✅ Passed|
+|Nav links|If the user is not logged in and clicks the make a booking they get a feedback error message that they must first login|Make sure we are not logged in and click the Booking CTA|Message appeared|✅ Passed|
+|Nav links|The Booking CTA stands out and is eyecatching|Visual check of the Booking CTA and check it is underlined to make it stand out from the other buttons|Booking CTA stood out|✅ Passed|
+|Nav links|The CTA underline transition disappears on hover|Hover mouse over Booking CTA|Underline disappeared|✅ Passed|
+|Nav links|The Booking CTA gets transitions an underline again after mouse exits hover|Hover over Booking CTA and then remove the mouse from hovering|Underline reappeared|✅ Passed|
+|Nav links|On smaller devices the navigation collapses into an expandable navigation|Window resize|Navigation links replaced with hamburger icon|✅ Passed|
+|Hamburger icon|On click the navigation items display|Click icon|Nav links appears|✅ Passed|
+|Hamburger icon|If opened, on click the navigation items disappear|Click the icon after opening|Nav links disappeared|✅ Passed|
+|Login and Logout button|There is a login button on the right of the nav if the user is not logged in|Visual check|Login link present|✅ Passed|
+|Login and Logout button|The login button is underlined to stand out|Visual check|Login button underlined|✅ Passed|
+|Login and Logout button|The login button underline transition removes on hover|Hover mouse over|Underline disappears|✅ Passed|
+|Login and Logout button|The login button underline transitions back on mouse exit after hover|Hover mouse over|Underline reappears|✅ Passed|
+|Login and Logout button|On click of the login button the login modal is opened|Click button|Login modal appears|✅ Passed|
+|Login and Logout button|On login of the user the login button changes to a logout button|Login and see if the button changes|Login link is replaced with logout link|✅ Passed|
+|Login and Logout button|On logout of the user the logout button changes back to the login button|Logout and check|Logout link replaced with login link|✅ Passed|
+|Login and Logout button|The logout button has an underline to attract attention|Visual check|Underline is present|✅ Passed|
+|Login and Logout button|The logout button on hover transition removes the underline|Hover mouse over|Underline removed|✅ Passed|
+|Login and Logout button|The logout button on mouse exit after hover regains the underline|Hover mouse over then mouse exit|Underline reappears|✅ Passed|
+|Login and logout button|One link or the other is always present even on smaller devices|Visual check|Links are present on all screen sizes|✅ Passed|
+|Regular nav links|Have no underline |Visual check|Regular links are not underlined|✅ Passed|
+|Regular nav links|Transition underline on hover|Hover mouse over|Link underlines appear|✅ Passed|
+|Regular nav links|Transition remove underline on mouse exit|Hover mouse over then mouse exit|Underlines disappeared|✅ Passed|
+|My profile icon|On login the my profile icon is found on the left of the navbar|Visual check|Icon is present|✅ Passed|
+|My profile icon|If not logged in the my profile icon is not present|Log out and check if the my profile icon is present|Icon is not present|✅ Passed|
+|My profile icon|If logged in clicking the my profile icon leads the user to the my profile page|Login and click the my profile icon|User is redirected to the my profile page|✅ Passed|
+|My profile icon|If logged in the icon is always present even on smaller devices|Visual check|Icon is present|✅ Passed|
+|Button, anchor links, logo and my profile icon|On hover over any of these links the mouse become a pointer|Hover over links, buttons and icon|Mouse becomes pointer on hover|✅ Passed|
+|Responsive|The navbar looks good and functions on many screen sizes|Window resize|Looks good|✅ Passed|
+|Spelling check|There are no spelling errors in any of the links or the company logo within the nav|Read through links and company logo|No spelling errors, all capitalised correctly|✅ Passed|
+|Active|If a user is on a page an active class is added and the text or icon changes thickness or color|Go to pages and check icon or link|Active classes work as intended|✅ Passed|
 
 Footer
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
