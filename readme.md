@@ -297,6 +297,8 @@ My ERD model contains 5 models in total, however we will discount the django all
 
 All models within the ERD are inter-connected except for the Menu model which does not connect with any other tables. All fields within each model are required fields excluding the comments field within the booking model and the images which have default placeholders set. The Customer - Bookings models relationship is one to many, each user can have many bookings but each booking can only be tied to one user. The Customer model extracts data from django allauth which is the authentication system we use within this project.
 
+A future iteration I would like to consider is adding in a limit on the amount of bookings per timeslot, as ofcourse a restaurant will have a limit on capacity and should not take more bookings than it is capable of taking.
+
 ![Entity relationship diagram](./static/images/readme/erd-diagram.PNG)
 
 #### Applications
