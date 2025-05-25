@@ -242,6 +242,11 @@ Signout page - Passed
 ## Manual testing
 
 ### Responsiveness
+
+For my responsiveness testing I used the app [Responsively app](https://responsively.app/)
+
+Initially I had a problem with the my profile page on mobile but that was an easy fix and no further problems
+
 |Screen Size|Device Type|Viewport Width|Pass/Fail|
 |-----------|-----------|--------------|---------|
 |Mobile|Smartphone|375px||
