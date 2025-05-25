@@ -1,5 +1,19 @@
 # Testing
 
+## Table of contents
+
+- [Difficult to solve bugs]()
+- [Validator testing]()
+    - [HTML validator]()
+    - [CSS Validator]()
+    - [JSHint validator]()
+    - [Python validator]()
+- [Lighthouse testing]()
+- [Manual testing]()
+    - [Responsiveness]()
+    - [Browser teting]()
+    - [Manual website testing]()
+
 ## Difficult to solve bugs
 
 When implementing my login modal I experienced problems with my modal. It was appearing behind the modal backdrop. In the documentation Bootstrap stipulates modals tend to act differently when placed into fixed components hence the issues.
@@ -263,7 +277,7 @@ I tested my deployed app on these browsers.
 |<i class="fab fa-firefox-browser"></i>Mozilla Firefox| | |✅ Passed|
 |<i class="fab fa-edge"></i>Microsoft Edge| | |✅ Passed|
 
-### Website testing
+### Manual website testing
 
 Header & Navbar
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
