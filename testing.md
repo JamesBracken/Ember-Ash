@@ -10,10 +10,7 @@ I fixed this problem by taking the modal code out of the header and placing it a
 
 ![alt text](./static/images/testing/modal_z_index_solved.PNG)
 
-
-
 ## Validator testing
-
 
 ### HTML validator
 
@@ -22,19 +19,29 @@ Testing tool - [W3C HTML Validation website]
 I validated all pages across my website, everything was successful and **passed**! 
 
 [Home page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2F) - Passed
-[Signup page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Faccounts%2Fsignup%2F) - 1 error displays which is a Duplicate ID error. This can be ignored as there is no conflict here. 1 of the ID's is the signup form, the other is from the login modal which is in the base.html therefore available to every page. The ID attributes of these elements are injected in with Django and allauth and CANNOT be changed
+
+[Signup page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Faccounts%2Fsignup%2F) 
+- 1 error displays which is a Duplicate ID error. This can be ignored as there is no conflict here. 1 of the ID's is the signup form, the other is from the login modal which is in the base.html therefore available to every page. The ID attributes of these elements are injected in with Django and allauth and CANNOT be changed
+
 [Booking page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Fbooking%2F) - Passed
+
 [Main menu page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Fmenu%2F) - Passed
+
 [Lunch page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Fmenu%2Flunch_menu%2F) - Passed
+
 [Dinner page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Fmenu%2Fdinner_menu%2F) - Passed
+
 [My profile page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Fmy_profile%2F) - Passed
+
 [Logout page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fember-and-ash-58ab64713078.herokuapp.com%2Faccounts%2Flogout%2F) - Passed
-[403 page]() - 
+
+403 page - Did not check, main 404 error page was checked however I left the other error pages out. Attempting to check these was taking way too much time which would take me out of the scope of this project and django security made it very hard to invoke these error pages.
+
 404 page - Passed
 
 ![Error 404 page](./static/images/testing/html-validator-404-error-page.PNG)
 
-[405 page]() - 
+405 page - Did not check, main 404 error page was checked however I left the other error pages out. Attempting to check these was taking way too much time which would take me out of the scope of this project and django security made it very hard to invoke these error pages.
 
 
 500 page - Passed
@@ -188,7 +195,7 @@ user/views.py
 
 ## Lighthouse testing
 
-I used [Chrome lighthouse](https://developer.chrome.com/docs/lighthouse/overview) to lighthouse my project. All across the board very high scores, near perfect. Only area where I really lost points was lack of contrast ratio between the content of my page and the background. I left this as is as I dont want to disrupt the styling of the page by adding extra font weight, this would change the look and feel of the page quite a lot and take attention away from where we want the users to actually be looking.
+I used [Chrome lighthouse](https://developer.chrome.com/docs/lighthouse/overview) to lighthouse my project. Initially I had some problems with security of cloudinary sending http instead of https and duplicate id's from the signup page. After fixing these issues I had very high scores all across the board, near perfect. Only area where I really lost points was lack of contrast ratio between the foreground content of my page and the background. I left this as is as I dont want to disrupt the styling of the page by adding extra font weight, this would change the look and feel of the page quite a lot and take attention away from where we want the users to actually be looking.
 
 Home page  - Passed
 
