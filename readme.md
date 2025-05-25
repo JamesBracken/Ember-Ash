@@ -3,6 +3,33 @@
 
 ## [ --> View the live deployed project here <--](https://ember-and-ash-58ab64713078.herokuapp.com/)
 
+## Table of contents
+
+- [UX](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#ux)
+    - [Strategy](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#strategy)
+        - [Project Overview](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#project-overview)
+        - [Completed project goals](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#completed-project-goals)
+        - [Uncompleted/Undone project goals]()
+    - [Scope](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#scope)
+        - [Consistent features implemented](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#consistent-features-implemented)
+        - [Unique features implemented](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#unique-features-implemented)
+    - [Structure](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#structure)
+        - [Database model](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#database-model)
+        - [Applications](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#applications)
+    - [Skeleton](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#skeleton)
+    - [Surface](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#surface)
+        - [Colour scheme](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#colour-scheme)
+        - [Typography](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#typography)
+        - [Imagery](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#imagery)
+- [Testing](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#testing)
+- [Deployment](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#deployment)
+    - [Github guide](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#github-guide)
+    - [Additional setup DB, Cloudinary, Heroku, env.py]()
+- [Credits](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#credits)
+    - [Content](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#content)
+    - [Technologies used](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#technologies-used)
+    - [Code and resources used](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#code-and-resources-used)
+    - [Acknowledgements](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#acknowledgements)
 ## UX
 ### Strategy
 #### Project overview
@@ -40,7 +67,7 @@ My project goals are also displayed below
 **User story 7: Navigation and footer(Must have)**
 - As a user I can access a navigation bar and footer so that I can navigate around the website and find the information I need
 
-#### Uncompleted project goals
+#### Uncompleted/Undone project goals
 
 **User story 8: View client booking details(Could have)**
 - As a manager, I would like to be able to see individual client details on each booking so I can cater the customer experience to the client
@@ -457,6 +484,7 @@ Further assistance can be found [HERE](https://docs.github.com/en/pull-requests/
 
 11. If you want to open a deployed version of your app see the steps below in **Heroku deployment**
 
+### Additional setup DB, CLoudinary, Heroku, env.py
 **Adding your database**
 
 1. Navigate to [PostgreSQL from code institute](https://dbs.ci-dbs.net/)
