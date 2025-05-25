@@ -15,7 +15,7 @@
         - [Unique features implemented](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#unique-features-implemented)
     - [Structure](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#structure)
         - [Database model](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#database-model)
-        - [Security]()
+        - [Security](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#security)
         - [Applications](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#applications)
     - [Skeleton](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#skeleton)
     - [Surface](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#surface)
