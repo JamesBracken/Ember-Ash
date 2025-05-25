@@ -249,17 +249,19 @@ Initially I had a problem with the my profile page on mobile but that was an eas
 
 |Screen Size|Device Type|Viewport Width|Pass/Fail|
 |-----------|-----------|--------------|---------|
-|Mobile|Smartphone|375px||
-|Tablet|Tablet |768px||
-|Laptop|Small Laptop/Desktop|1024px||
+|Mobile|Smartphone|375px| ✅ Passed |
+|Tablet|Tablet |768px| ✅ Passed |
+|Laptop|Small Laptop/Desktop|1024px| ✅ Passed |
 
 ### Browser testing
+
+I tested my deployed app on these browsers.
+
 |Browser|Not Functioning|Partial Functioning|Full Functioning|
 |-------|---------------|-------------------|----------------|
-|<i class="fab fa-chrome"></i>Google Chrome| | ||
-|<i class="fab fa-firefox-browser"></i>Mozilla Firefox| | ||
-|<i class="fab fa-edge"></i>Microsoft Edge| | ||
-|<i class="fab fa-opera"></i>Opera| | ||
+|<i class="fab fa-chrome"></i>Google Chrome| | |✅ Passed|
+|<i class="fab fa-firefox-browser"></i>Mozilla Firefox| | |✅ Passed|
+|<i class="fab fa-edge"></i>Microsoft Edge| | |✅ Passed|
 
 ### Website testing
 

@@ -6,6 +6,8 @@
 {% url 'home_urls' as home_url %}
 {% url 'booking_form' as booking_page %}
 {% url 'menu' as menu_page %}
+{% url 'lunch_menu' as lunch_menu_page %}
+{% url 'dinner_menu' as dinner_menu_page %}
 {% url 'my_profile' as my_profile_page %}
 
 <!DOCTYPE html>
@@ -79,7 +81,7 @@
                 >Make a booking</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% if request.path == menu_page %} active {% endif %}" href="{% url 'menu' %}">Menu</a>
+                <a class="nav-link {% if request.path == menu_page or request.path == lunch_menu_page or request.path == dinner_menu_page %} active {% endif %}" href="{% url 'menu' %}">Menu</a>
               </li>
             </ul>
           </div>
