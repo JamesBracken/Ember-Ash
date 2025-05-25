@@ -464,11 +464,11 @@ Signup page
 Logout page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-|Nav link|Logout nav link gets the active class and becomes bold|Go to logout page and check|||
-|Sign out message|Sign out confirmation displays on the logout page|Go to logout page and visually check|||
-|Sign out button|Sign out button displays on the logout page|Go to the logout page and visually check|||
-|Sign out button|On click of the sign out button the user is signed out and directed to the home page||||
-|Sign out message|On user sign out the user is given a feedback message|Sign out and check if a message appears|||
+|Nav link|Logout nav link gets the active class and becomes bold|Go to logout page and check|Active class is present|✅ Passed|
+|Sign out message|Sign out confirmation displays on the logout page|Go to logout page and visually check|Confirmation page displays|✅ Passed|
+|Sign out button|Sign out button displays on the logout page|Go to the logout page and visually check|Button is present|✅ Passed|
+|Sign out button|On click of the sign out button the user is signed out and directed to the home page|Press button and check|User is redirected correctly|✅ Passed|
+|Sign out message|On user sign out the user is given a feedback message|Sign out and check if a message appears|Message is displayed|✅ Passed|
 
 403 page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
