@@ -434,16 +434,16 @@ Dinner menu page
 Login modal
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-|Login link|On click it opens the login modal|Click link|||
-|Login modal|Username and password inputs are present|Visual check|||
-|Login modal|Image loads normally on left side |Visual check|||
-|Login modal |If user fills out form incorrectly the page does not refresh|Fill out incorrectly and press login|||
-|Login modal|If username is not filled out an HTML validation warning appears|Dont fill in and submit|||
-|Login modal|If password is not filled out an HTML validation warning appears|Dont fill in and submit|||
-|Signup link|There is a signup link present which stands out |Visual check|||
-|Login modal error handling|Errors are not present on open of the modal|Open modal|||
-|Login modal error handling|If form is filled out incorrectly errors display||||
-|Signup link|Link opens the signup page |Click link|||
+|Login link|On click it opens the login modal|Click link|Login modal opens|✅ Passed|
+|Login modal|Username and password inputs are present|Visual check|Inputs are present|✅ Passed|
+|Login modal|Image loads normally on left side on larger devices and on top on smaller devices |Visual check|Image loads correctly|✅ Passed|
+|Login modal |If user fills out form incorrectly the page does not refresh|Fill out incorrectly and press login|Page does not refresh|✅ Passed|
+|Login modal|If username is not filled out, an HTML validation warning appears|Dont fill in and submit|Warning displays|✅ Passed|
+|Login modal|If password is not filled out an HTML validation warning appears|Dont fill in and submit|Warning displays|✅ Passed|
+|Signup link|There is a signup link present which stands out |Visual check|Signup links is present|✅ Passed|
+|Login modal error handling|Errors are not present on open of the modal|Open modal|Errors are not present|✅ Passed|
+|Login modal error handling|If form is filled out incorrectly errors display|Fil out incorrectly and check errors|Error displays|🟧✔️ Partially Passed, error handling is working however the displayed error from Django isnt very specific. A future iteration should adjust this and give more specific error handling|
+|Signup link|Link opens the signup page |Click link|Signup page opens|✅ Passed|
 
 Signup page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
