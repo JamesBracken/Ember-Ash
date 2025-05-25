@@ -414,22 +414,22 @@ Image alt|Alt attribute is added automatically and is equal to the description|C
 Dinner menu page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-|Dinner menu items|Items on the page or only data-meal_category = Dinner|Check if items are data-meal_category = Dinner|||
-|Dinner menu items|All data displays properly|Check image, title, description, price|||
-|Dinner menu item image|If an image is not selected the default img appears instead|Check image|||
-|Menu item card responsiveness|Displays well on across screen sizes|Window resize|||
-|Menu item card responsiveness|Items are 2 per row on medium |Check items|||
-|Menu item card responsiveness|Items are 1 per row on small devices|Check items|||
-|Nav and footer|Nav and footer render correctly||||
-|Edit icon|Displays for admins|Visual check|||
-|Edit icon|Does not display for normal users|Visual check|||
-|Edit icon|On click of the edit icon the user is redirected to the edit form page|Click the edit icon|||
-|Delete icon|Displays for admins|Visual check|||
-|Delete icon|Does not display for regular users|Visual check|||
-|Delete item confirmation modal|On click of the delete icon the delete confirmation modal appears |Click delete icon|||
-|Delete item confirmation modal|On click of delete in the modal the item is deleted|Click the button and check|||
-|Delete item confirmation modal|On click of delete in the modal the user stays on the dinner page|Click the button and check|||
-|Image alt|Alt attribute is added automatically and is equal to the description||||
+|Dinner menu items|Items on the page or only data-meal_category = Dinner|Check if items are data-meal_category = Dinner|Only dinner menu items are present|✅ Passed|
+|Dinner menu items|All data displays properly|Check image, title, description, price|Data displays properly|✅ Passed|
+|Dinner menu item image|If an image is not selected the default img appears instead|Check image|Default appears|✅ Passed|
+|Menu item card responsiveness|Displays well on across screen sizes|Window resize|Item cards are responsive|✅ Passed|
+|Menu item card responsiveness|Items are 2 per row on medium |Check items|2 appear per row|✅ Passed|
+|Menu item card responsiveness|Items are 1 per row on small devices|Check items|1 appears per row|✅ Passed|
+|Nav and footer|Nav and footer render correctly|Visual check|They appear correclty|✅ Passed|
+|Edit icon|Displays for admins|Visual check|Edit icon is present for each item|✅ Passed|
+|Edit icon|Does not display for normal users|Visual check|Icon is not present for regular users|✅ Passed|
+|Edit icon|On click of the edit icon the user is redirected to the edit form page|Click the edit icon|User is correctly redirected|✅ Passed|
+|Delete icon|Displays for admins|Visual check|Icon is displayed for admins|✅ Passed|
+|Delete icon|Does not display for regular users|Visual check|Icon is not available to regular users|✅ Passed|
+|Delete item confirmation modal|On click of the delete icon the delete confirmation modal appears |Click delete icon|Modal appears|✅ Passed|
+|Delete item confirmation modal|On click of delete in the modal the item is deleted|Click the button and check|Item is deleted|✅ Passed|
+|Delete item confirmation modal|On click of delete in the modal the user stays on the dinner page|Click the button and check|User stays on the dinner page|✅ Passed|
+|Image alt|Alt attribute is added automatically and is equal to the description|Check alt attributes in the dev tools |Alt attributes are added correctly|✅ Passed|
 
 Login modal
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
