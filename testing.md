@@ -317,12 +317,12 @@ Footer
 Home page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-|Hero img responsiveness|The hero image looks good on multiple screen sizes|Window resize|||
-|Images alt|Images contain alt tags|Check alt tags in console|||
-|Navigation cards|Cards are responsive and display well on multiple screen sizes|Window resize|||
-|Navigation cards links|On click of the navigation cards these link to the correct website page|Click navigation cards|||
-|Review Navigation card |Opens googleon another tab|Click review navigation card|||
-|Navigation cards(Menu and booking)|Redirect the current page|Click navigation cards|||
+|Hero img responsiveness|The hero image looks good on multiple screen sizes|Window resize|Image expands and constricts|✅ Passed|
+|Images alt|Images contain alt tags|Check alt tags in console|Alt tags are present|✅ Passed|
+|Navigation cards|Cards are responsive and display well on multiple screen sizes|Window resize|Cards adjust and fit well on different screen sizes|✅ Passed|
+|Navigation cards links|On click of the navigation cards these link to the correct website page|Click navigation cards|All cards link to the appropriate page|✅ Passed|
+|Review Navigation card |Opens tripadvisor on another tab|Click review navigation card|Tripadvisor opens on a new tab|✅ Passed|
+|Navigation cards(Menu and booking)|Redirect to the appropriate page|Click navigation cards|Current page redirects to the appropriate page|✅ Passed|
 
 My profile page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
