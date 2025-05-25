@@ -309,10 +309,10 @@ Header & Navbar
 Footer
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-|Responsive|Information displays well on multiple devices|Window resize|||
-|Social media links |Each link opens the right page|Click links|||
-|Social media links|Each links open the page on a new tab|Click links|||
-|Footer availability|Footer is displayed on every page|Check the bottom of each page|||
+|Responsive|Information displays well on multiple devices|Window resize|Footer resizes where appropriate|✅ Passed|
+|Social media links |Each link opens the right page|Click links|Links open correct page|✅ Passed|
+|Social media links|Each links open the page on a new tab|Click links|Links open on a new tab|✅ Passed|
+|Footer availability|Footer is displayed on every page|Check the bottom of each page|Footer is available on each page|✅ Passed|
 
 Home page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
