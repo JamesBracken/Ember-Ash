@@ -186,65 +186,51 @@ user/views.py
 
 ![Pep8 validation for user views.py](./static/images/testing/pep8-user-views.PNG)
 
-
-### WAVE(Optional)
-
-
-
-###
-###
-
-
 ## Lighthouse testing
+
+I used [Chrome lighthouse](https://developer.chrome.com/docs/lighthouse/overview) to lighthouse my project. All across the board very high scores, near perfect. Only area where I really lost points was lack of contrast ratio between the content of my page and the background. I left this as is as I dont want to disrupt the styling of the page by adding extra font weight, this would change the look and feel of the page quite a lot and take attention away from where we want the users to actually be looking.
 
 Home page  - Passed
 
-[Home page]()
+![Home page](./static/images/testing/lighthouse-home.PNG)
 
-Signup page -
+Signup page - Passed
 
-[Signup page lighthouse scores](./static/images/testing)
+![Signup page lighthouse scores](./static/images/testing/lighthouse-signup.PNG)
 
-Booking page -
+Booking page - Passed
 
-[Booking page lighthouse scores](./static/images/testing)
+![Booking page lighthouse scores](./static/images/testing/lighthouse-booking.PNG)
 
-Main menu page -
+Main menu page - Passed
 
-[Main menu page lighthouse scores](./static/images/testing)
+![Main menu page lighthouse scores](./static/images/testing/lighthouse-menu.PNG)
 
-Lunch page
+Lunch page - Passed
 
-[Lunch page lighthouse scores](./static/images/testing)
+![Lunch page lighthouse scores](./static/images/testing/lighthouse-lunch-menu.PNG)
 
-Dinner page
+Dinner page - Passed
 
-[Dinner page lighthouse scores](./static/images/testing)
+![Dinner page lighthouse scores](./static/images/testing/lighthouse-dinner-menu.PNG)
 
-My profile
+My profile - Passed
 
-[My profile page lighthouse scores](./static/images/testing)
+![My profile page lighthouse scores](./static/images/testing/lighthouse-my-profile.PNG)
 
-Logout page
+Signout page - Passed
 
-[Logout page lighthouse scores](./static/images/testing)
+![Signout page lighthouse scores](./static/images/testing/lighthouse-signout.PNG)
 
-403 page
+403 page - Did not check, main 404 error page was checked however I left the other error pages out. Attempting to check these was taking way too much time which would take me out of the scope of this project and django security made it very hard to invoke these error pages.
 
-[403 page lighthouse scores](./static/images/testing) 
+404 page - Passed
 
-404 page
+![404 page lighthouse scores](./static/images/testing/lighthouse-404.PNG) 
 
-[404 page lighthouse scores](./static/images/testing) 
+405 page - Did not check, main 404 error page was checked however I left the other error pages out. Attempting to check these was taking way too much time which would take me out of the scope of this project and django security made it very hard to invoke these error pages.
 
-405 page
-
-[405 page lighthouse scores](./static/images/testing) 
-
-500 page
-
-[500 page lighthouse scores](./static/images/testing) 
-
+500 page -  Did not check, main 404 error page was checked however I left the other error pages out. Attempting to check these was taking way too much time which would take me out of the scope of this project and django security made it very hard to invoke these error pages.
 
 ## Manual testing
 
