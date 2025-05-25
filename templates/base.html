@@ -156,10 +156,10 @@
                       {% csrf_token %}
                       <div>
                         {{ form.username.label_tag }}
-                        {{ form.username|add_class:"form-input" }}
+                        {{ form.username|add_class:"form-input"|attr:"id:login_id_username" }}
                       </div>
                       <div>{{ form.password.label_tag }}
-                        {{ form.password|add_class:'form-input' }}
+                        {{ form.password|add_class:'form-input'}}
                         {{ form.password.errors }}</div>
                         <div class="login-errors">
                           {{ form.username.errors}}

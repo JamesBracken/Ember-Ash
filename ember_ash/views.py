@@ -53,8 +53,17 @@ def signup_view(request):
     --------
     account/signup.html
     """
+    print("VIEW CALLED----------------------")
+
+    form = UserCreationForm(request.POST)
+    form.fields["username"].widgets.attrs.update({"id":"signup_id_username"})
+    print("PRINT STATEMENT HERE -------------------------")
+    print(form)
+
     if request.method == "POST":
         form = UserCreationForm(request.POST)
+        print("PRINT STATEMENT HERE -------------------------")
+        print(form)
         if form.is_valid():
             form.save()
             messages.add_message(
@@ -62,8 +71,12 @@ def signup_view(request):
                 messages.SUCCESS,
                 "You have successfully signed up and logged in"
             )
+            print("PRINT STATEMENT HERE -------------------------")
+            print(form)
             return redirect("home_urls")
     else:
         form = UserCreationForm()
-
+    form.fields["username"].widgets.attrs.update({"id":"signup_id_username"})
+    print("PRINT STATEMENT HERE -------------------------")
+    print(form)
     return render(request, "account/signup.html", {"form": form})
