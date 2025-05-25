@@ -4,14 +4,14 @@
 
 - [Difficult to solve bugs](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#difficult-to-solve-bugs)
 - [Validator testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#validator-testing)
-    - [HTML validation]()
-    - [CSS validation]()
-    - [JSHint validation]()
-    - [Python validation]()
-- [Lighthouse testing]()
-- [Manual testing]()
-    - [Responsiveness]()
-    - [Browser testing]()
+    - [HTML validation](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#html-validation)
+    - [CSS validation](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#css-validation)
+    - [JSHint validation](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#jshint-validation)
+    - [Python validation](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#python-validation)
+- [Lighthouse testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#lighthouse-testing)
+- [Manual testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#manual-testing)
+    - [Responsiveness](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#responsiveness)
+    - [Browser testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#browser-testing)
     - [Manual website testing]()
 
 ## Difficult to solve bugs
