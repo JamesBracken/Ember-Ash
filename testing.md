@@ -481,10 +481,10 @@ Logout page
 404 page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
 |---------|-------------------|-------------------|--------|-----------|
-|404 page|Nav and footer appears in the page|Invoke a 404 page error, check page|||
-|404 page|404 error displays|Invoke a 404 page error, check page|||
-|Home button|Home button appears in the page|Invoke a 404 page error, check page|||
-|Home button redirection|On click the button redirects the user to the home page|Invoke a 404 page error, click the home button|||
+|404 page|Nav and footer appears in the page|Invoke a 404 page error, check page|Page displays|✅ Passed|
+|404 page|404 error displays|Invoke a 404 page error, check page|Error heading displays|✅ Passed|
+|Home button|Home button appears in the page|Invoke a 404 page error, check page|Button displays|✅ Passed|
+|Home button redirection|On click the button redirects the user to the home page|Invoke a 404 page error, click the home button|Redirection works|✅ Passed|
 
 405 page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail/Potential improvements |
