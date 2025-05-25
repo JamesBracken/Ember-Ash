@@ -3,6 +3,33 @@
 
 ## [ --> View the live deployed project here <--](https://ember-and-ash-58ab64713078.herokuapp.com/)
 
+## Table of contents
+
+- [UX](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#ux)
+    - [Strategy](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#strategy)
+        - [Project Overview](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#project-overview)
+        - [Completed project goals](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#completed-project-goals)
+        - [Uncompleted/Undone project goals]()
+    - [Scope](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#scope)
+        - [Consistent features implemented](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#consistent-features-implemented)
+        - [Unique features implemented](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#unique-features-implemented)
+    - [Structure](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#structure)
+        - [Database model](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#database-model)
+        - [Applications](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#applications)
+    - [Skeleton](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#skeleton)
+    - [Surface](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#surface)
+        - [Colour scheme](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#colour-scheme)
+        - [Typography](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#typography)
+        - [Imagery](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#imagery)
+- [Testing](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#testing)
+- [Deployment](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#deployment)
+    - [Github guide](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#github-guide)
+    - [Additional setup DB, Cloudinary, Heroku, env.py]()
+- [Credits](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#credits)
+    - [Content](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#content)
+    - [Technologies used](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#technologies-used)
+    - [Code and resources used](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#code-and-resources-used)
+    - [Acknowledgements](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#acknowledgements)
 ## UX
 ### Strategy
 #### Project overview
