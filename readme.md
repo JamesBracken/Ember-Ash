@@ -315,6 +315,13 @@ On click of the delete icon a user is prompted by a confirm deletion modal. This
 
 To help improve UX, bookings are spread across multiple pages if there has been more than 5 bookings placed on a profile. Bookings are organised with future bookings at the start and older bookings at the end.
 
+#### Development life cycle
+
+In addition to the being able to visibly see the development life cycle in github through commit messages, I also have created a gantt chart which briefly displays the project life cycle over a few weeks.
+
+**Gantt chart**
+
+![Gantt chart of the development life cycle of the project](./static/images/readme/Gantt%20chart.PNG)
 ### Structure
 
 #### Database model
@@ -715,3 +722,4 @@ Any larger pieces of code should be added here in any future iterations and any 
 Again, a big thank you to my mentor **Brian Macharia** who gave me high level guidance for the project and to my teacher **Andre Beckley** who supported me and guided me through the website build.
 
 A thanks as well to all the help and support from stackoverflow and the coding community. The helpfulness and support we all provide eachother was instrumental to making this project possible.
+
