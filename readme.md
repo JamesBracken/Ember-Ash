@@ -13,6 +13,7 @@
     - [Scope](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#scope)
         - [Consistent features implemented](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#consistent-features-implemented)
         - [Unique features implemented](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#unique-features-implemented)
+        - [Development life cycle](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#development-life-cycle)
     - [Structure](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#structure)
         - [Database model](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#database-model)
         - [Security](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#security)
