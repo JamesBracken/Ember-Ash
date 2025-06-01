@@ -718,6 +718,8 @@ Any larger pieces of code should be added here in any future iterations and any 
 
 11. Brian macharia(My mentor) - No link provided as these were privately shared resources for his students. Big shoutout to my mentor who provided tons of useful links to useful resources, guides and tutorials for this project. 
 
+12. Code institute codestart project - Through this practice project I was able to cement hte fundamentals of the django framework and get a basis of how to go about implementing some of the functionality in my project.
+
 ### Acknowledgements
 
 Again, a big thank you to my mentor **Brian Macharia** who gave me high level guidance for the project and to my teacher **Andre Beckley** who supported me and guided me through the website build.
