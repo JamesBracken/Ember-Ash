@@ -10,6 +10,7 @@
     - [Python validation](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#python-validation)
 - [Lighthouse testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#lighthouse-testing)
 - [Manual testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#manual-testing)
+- [FILLE ME OUT](FILL OUT)
     - [Responsiveness](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#responsiveness)
     - [Browser testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#browser-testing)
     - [Manual website testing]()
@@ -252,6 +253,30 @@ Signout page - Passed
 405 page - Did not check, main 404 error page was checked however I left the other error pages out. Attempting to check these was taking way too much time which would take me out of the scope of this project and django security made it very hard to invoke these error pages.
 
 500 page -  Did not check, main 404 error page was checked however I left the other error pages out. Attempting to check these was taking way too much time which would take me out of the scope of this project and django security made it very hard to invoke these error pages.
+
+
+## User story testing
+
+Header & Navbar
+| Feature | Expected functionality | Result | Pass/Fail | Potential improvements |
+|---------|-------------------|-------------------|--------|-----------|
+|User story 1 Home page(Must have)|As a user I first see a home page so that I can immediately understand the purpose of the website|On inital load of the website the user sees the home page and can understand immediately the purpose through images and navigation links|✅ Passed| Can potentially move the leave us a review card into the footer and a user feedback form for users to directly give us feedback|
+|User story 2 User login and signup(Must have)|As a potential user, I would like to have the ability to make my own account and login|Users can login and signup easily through the navbar, login and signup has error handling which gives user feedback through django/allauth, all user login and signup is handled correclty |✅ Passed|Change signup page into a signup modal to create uniformity between the two and improve UX and website design|
+|User story 3 Full CRUD for menu items(Must have)|As an Admin I can Create, read, update and delete menu items so that I can keep the menu updated|Admin enabled users can Create, Updated and Delete all menu items. These items are immediately reflected in the website and can be read by users and admins|✅ Passed|Add more categories like deserts etc.|
+|User story 4 Full CRUD for bookings(Must have)|As a user I can create, read update and delete bookings so that I can have a reserved table when I need|All users have full Create, Read, Update and Delete functionality on their accounts for bookings. Users can only update and delete their own bookings.|✅ Passed|Admins can edit user bookings from within the page to better assist clients|
+|User story 5 Restaurant menu(Must have)|As a potential client, I would like to be able to view the menu so that I can see if the menu is to my liking|There is 3 separate menu pages, the main menu, the lunch menu and the dinner menu. Any updates made to the menu by admins can immediately be seen by any user.|✅ Passed|Add more menu pages, add favourite or likes for menu items to get user feedback and the business can better understand the most liked menu items|
+|User story 6 Responsive website(Must have)|As a user, I would like the website to be responsive so I can use it on different devices|The website is fully responsive across multiple device sizes|✅ Passed|There is a bit of room for improvement on the extremes of large and small|
+|User story 7 Navigation and footer(Must have)|As a user I can access a navigation bar and footer so that I can navigate around the website and find the information I need|The nav bar and footer is available across every single page |✅ Passed||
+|User story 8 View client booking details(Could have)|As a manager, I would like to be able to see individual client details on each booking so I can cater the customer experience to the client|||OUT OF SCOPE OF PROJECT|
+|User story 9 Admins CRUD for user bookings(Should have)|As a manager, I would like to be able to read, delete and create bookings so I can correct any errors or cancel bookings|This user story was not undertaken due to the minimal scope of this project|This user story was not undertaken due to the minimal scope of this project|OUT OF SCOPE OF PROJECT|
+|User story 10 Improved display of available bookings(Should have)|As a signed-in user, after selecting a date there is a consolidated view of available times displayed so I can better understand the restaurant availability|This user story was not undertaken due to the minimal scope of this project|This user story was not undertaken due to the minimal scope of this project|OUT OF SCOPE OF PROJECT|
+|User story 11 View daily bookings(Should have)|As a manager, I would like to have a consolidated view of daily bookings details so I can organise seating|This user story was not undertaken due to the minimal scope of this project|This user story was not undertaken due to the minimal scope of this project|OUT OF SCOPE OF PROJECT|
+|User story 12 Newsletter(Should have)|As a owner, I would like to offer a newsletter so that I can keep our clients interested and help drive footfall and increase customer retention|This user story was not undertaken due to the minimal scope of this project|This user story was not undertaken due to the minimal scope of this project|OUT OF SCOPE OF PROJECT|
+|User story 13 Advanced alcohol orders(Could have)|As a signed-in user, I would like to be able to order wines and other alcohols ahead of my booking so I can have it served on arrival|This user story was not undertaken due to the minimal scope of this project|This user story was not undertaken due to the minimal scope of this project|OUT OF SCOPE OF PROJECT|
+|User story 14 Updated profile details(Could have)|As a user, I can edit my personal information so that I can keep it up to date|This user story was not undertaken due to the minimal scope of this project|This user story was not undertaken due to the minimal scope of this project|OUT OF SCOPE OF PROJECT|
+|User story 15 Table management system(Could have)|As a manager, I can view the tables which are booked and not booked from a table management system so I can organise my service|This user story was not undertaken due to the minimal scope of this project|This user story was not undertaken due to the minimal scope of this project|OUT OF SCOPE OF PROJECT|
+|User story 16 About page(Could have)|As a user, I would like to view more information about the website on an about page|This user story was not undertaken due to the minimal scope of this project|This user story was not undertaken due to the minimal scope of this project|OUT OF SCOPE OF PROJECT|
+|User story 17 Gallery(Could have)|As a user I can see images of the food so that I can get a better understanding each menu item and get enticed|This user story was not undertaken due to the minimal scope of this project|This user story was not undertaken due to the minimal scope of this project|OUT OF SCOPE OF PROJECT|
 
 ## Manual testing
 
