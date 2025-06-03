@@ -47,5 +47,4 @@ function handleLogin(e) {
                 }
             }
         })
-        .catch(error => console.error("Error:", error));
 }
