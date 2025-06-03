@@ -52,7 +52,7 @@ My project goals are also displayed below
 - As a user I first see a home page so that I can immediately understand the purpose of the website
 
 **User story 2: User login and signup(Must have)**
-- As a potential user, I would liek to have the ability to make my own account and login
+- As a potential user, I would like to have the ability to make my own account and login
 
 **User story 3: Full CRUD for menu items (Must have)**
 - As an Admin I can Create, read, update and delete menu items so that I can keep the menu updated
@@ -718,7 +718,7 @@ Any larger pieces of code should be added here in any future iterations and any 
 
 11. Brian macharia(My mentor) - No link provided as these were privately shared resources for his students. Big shoutout to my mentor who provided tons of useful links to useful resources, guides and tutorials for this project. 
 
-12. Code institute codestart project - Through this practice project I was able to cement hte fundamentals of the django framework and get a basis of how to go about implementing some of the functionality in my project.
+12. Code institute codestar project - Through this practice project I was able to cement hte fundamentals of the django framework and get a basis of how to go about implementing some of the functionality in my project.
 
 ### Acknowledgements
 
