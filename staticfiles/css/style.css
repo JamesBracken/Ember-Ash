@@ -246,6 +246,14 @@ nav li {
     z-index: 1060 !important
 }
 
+.signup-link {
+    position: fixed !important;
+    top: 105px;
+    right: 90px;
+    max-width: fit-content;
+    z-index: 1060 !important
+}
+
 .profile-link {
     position: fixed !important;
     top: 100px;
@@ -380,6 +388,17 @@ footer {
 
 
 /* Media query to push main content below header  */
+
+@media screen and (max-width: 425px) {
+    .signup-link {
+        position: fixed !important;
+        top: 160px;
+        left: 20px;
+        max-width: fit-content;
+        z-index: 1060 !important
+    }
+}
+
 @media screen and (max-width: 524px) {
     main {
         padding-top: 250px !important;
@@ -402,6 +421,14 @@ footer {
         max-width: fit-content;
         z-index: 1060 !important;
     }
+
+    .signup-link {
+    position: fixed !important;
+    top: 165px;
+    right: 90px;
+    max-width: fit-content;
+    z-index: 1060 !important
+}
 }
 
 @media screen and (min-width:576px) {
