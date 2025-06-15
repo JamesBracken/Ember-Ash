@@ -13,7 +13,7 @@
 - [Manual testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#manual-testing)
     - [Responsiveness](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#responsiveness)
     - [Browser testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#browser-testing)
-    - [Manual website testing]()
+    - [Manual website testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#manual-website-testing)
 
 ## Difficult to solve bugs
 
