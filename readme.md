@@ -323,6 +323,9 @@ In addition to the being able to visibly see the development life cycle in githu
 **Gantt chart**
 
 ![Gantt chart of the development life cycle of the project](./static/images/readme/Gantt%20chart.PNG)
+
+**Agile methodology**
+This project followed the Agile methodology due to its much higher success rate and tendency to have better results over other approaches to programming like the waterfall approach. We created User stories at the planning and researching stage of the project which would each help to meet the goals and needs of the business. Each story was prioritised using the moscow method to ensure a MVP for the client in good time(More on the moscow method below). While following each user story for guidance we added features in an iterative manner, adding and improving the site iteratively(little by little) and adjusting the scope rather than adjusting the quality and deadlines of the end product. With this in mind we were able to finish the site within scope, on target deadline and without sacrificing any quality of the end product.  
 ### Structure
 
 #### Database model
