@@ -9,7 +9,7 @@
     - [JSHint validation](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#jshint-validation)
     - [Python validation](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#python-validation)
 - [Lighthouse testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#lighthouse-testing)
-- [User story testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#manual-testing)
+- [User story testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#user-story-testing)
 - [Manual testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#manual-testing)
     - [Responsiveness](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#responsiveness)
     - [Browser testing](https://github.com/JamesBracken/Ember-Ash/blob/main/testing.md#browser-testing)
