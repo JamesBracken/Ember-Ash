@@ -40,7 +40,7 @@ Welcome to Ember & Ash, want a fine dining, elegant and fantastic customer exper
 The main components of the website is the home page, the menu, my profile and the booking pages. The project was made with a simplistic and yet an elegant feel and a posh look in mind. Eating out and finding instagramable food and experiences is the wants of the many nowadays. A fine dining experience would entail higher costs than the normal day out hence what I found with my extensive research is that our general customer base and targets would be young adults and mature adults. Simple and elegant is the focus of the website.
 
 #### Project goals
-For the goals of this project I have implemented a kanban board for organisation found [Here!](https://github.com/users/JamesBracken/projects/13/views/1). My project has also been organised with the moscow method separating each user story into must have, should have, could have and wont have. By organising my content with importance I can focus my attention on the most important components at any given time and stay on target.
+For the goals of this project I have implemented a kanban board for organisation found [Here!](https://github.com/users/JamesBracken/projects/13/views/1). My project has also been organised with the moscow method separating each user story into must have, should have, could have and wont have. By organising my content with importance I can focus my attention on the most important components at any given time and stay on target([More on the moscow method here](https://github.com/JamesBracken/Ember-Ash?tab=readme-ov-file#development-life-cycle)).
 
 My project goals are also displayed below
 
@@ -326,6 +326,10 @@ In addition to the being able to visibly see the development life cycle in githu
 
 **Agile methodology**
 This project followed the Agile methodology due to its much higher success rate and tendency to have better results over other approaches to programming like the waterfall approach. We created User stories at the planning and researching stage of the project which would each help to meet the goals and needs of the business. Each story was prioritised using the moscow method to ensure a MVP for the client in good time(More on the moscow method below). While following each user story for guidance we added features in an iterative manner, adding and improving the site iteratively(little by little) and adjusting the scope rather than adjusting the quality and deadlines of the end product. With this in mind we were able to finish the site within scope, on target deadline and without sacrificing any quality of the end product.  
+
+**Moscow method**
+
+To ensure that we are able to get a MVP(minimum viable product ) we used the moscow method during development to prioritize the most important components of the program first. Each item was organised with a Must have, Should have, Could have and wont have to be able to better organise resources and prioritise tasks. Following the moscow prioritisation helps us keep on track and assists us in project completion by the appointed deadline. 
 ### Structure
 
 #### Database model
