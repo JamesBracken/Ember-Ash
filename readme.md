@@ -507,7 +507,8 @@ Further assistance can be found [HERE](https://docs.github.com/en/pull-requests/
 
 - python manage.py runserver
 
-11. If you want to open a deployed version of your app see the steps below in **Heroku deployment**
+11. If you want to open a deployed version of your app see the steps below in 
+**Heroku deployment**
 
 ### Additional setup DB, CLoudinary, Heroku, env.py
 **Adding your database**
